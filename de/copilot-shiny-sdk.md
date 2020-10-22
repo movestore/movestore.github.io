@@ -1,7 +1,7 @@
 # MoveApps `Shiny Module` Übersicht
 Diese Dokumentation beschreibt die Grundlagen um Shiny Module für MoveApps zu entwickeln. Weitere Informationen zu Shiny und Shiny Modules finden Sie unter https://shiny.rstudio.com/tutorial bzw. https://shiny.rstudio.com/articles/modules.html
 
-Für die Entwicklung solcher Shiny Module wird ein R-Projekt zur Verfügung gestellt [copilot-shiny-sdk.zip](https://develop.movestore.org/documentation/copilot-shiny-sdk.zip ':ignore'). Dieses R-Projekt kann als Ausgangspunkt für die Entwicklung deiner App genutzt werden.
+Für die Entwicklung solcher Shiny Module wird ein R-Projekt zur Verfügung gestellt [copilot-shiny-sdk.zip](copilot-shiny-sdk.zip ':ignore'). Dieses R-Projekt kann als Ausgangspunkt für die Entwicklung deiner App genutzt werden.
 
 ## Wie schreibt man ein Shiny Module für MoveApps?
 Um Shiny Module für MoveApps entwickeln zu können, müssen mindestens die beiden Funktionen `shinyModuleUserInterface` und `shinyModule` bereitgestellt werden. Diese Funktionen müssen in einer Datei namens `ShinyModule.R` abgelegt sein.
@@ -49,11 +49,11 @@ Um Parameter bzw. Einstellungen aus MoveApps in dem ShinyModules zu erhalten, m�
   ]
 }
 ```
-
+ 
 Beim Aufruf des Shiny Modules werden diese dann als Parameter an das Shiny Module übergeben.
 
 ```
-# Mit Parametern/Einstellungen aus MoveApps
+# Mit Parametern/Einstellungen aus MoveApps 
 shinyModule <- function(input, output, session, username, password) {
     # Do something with the data
 }
@@ -63,7 +63,7 @@ shinyModule <- function(input, output, session, username, password) {
 ```
 shinyModuleUserInterface <- function(id, label, username, password) {
   ns <- NS(id)
-  # Any user interface with username and password
+  # Any user interface with username and password 
 }
 ```
 
@@ -86,7 +86,7 @@ shinyModule <- function(input, output, session, data) {
 ```
 shinyModuleUserInterface <- function(id, label, username, password) {
   ns <- NS(id)
-  # Any user interface with username and password
+  # Any user interface with username and password 
 }
 
 shinyModule <- function(input, output, session, username, password, data) {
@@ -95,7 +95,7 @@ shinyModule <- function(input, output, session, username, password, data) {
 ```
 
 ## Shiny Module in automatischen Workflow integrieren
-Shiny Module können auch in einen automatischen Worfklow integriert werden, ohne dass der Benutzer hier mit der App interagieren muss. Dadurch kann der Workflow ohne Unterbrechungen automatisch ausgeführt werden.
+Shiny Module können auch in einen automatischen Worfklow integriert werden, ohne dass der Benutzer hier mit der App interagieren muss. Dadurch kann der Workflow ohne Unterbrechungen automatisch ausgeführt werden. 
 
 ## Input
 Für den Input gelten hier die gleichen Vorgaben wie bereits weiter oben beschrieben ([Input aus vorhergehender App](/de/copilot-shiny-sdk#input-predecessor-app)).
@@ -122,7 +122,7 @@ shinyModuleConfiguration <- function(id, input) {
 
 shinyModuleUserInterface <- function(id, label, username, password) {
   ns <- NS(id)
-  # Any user interface with username and password
+  # Any user interface with username and password 
 }
 
 shinyModule <- function(input, output, session, username, password, data) {
@@ -130,3 +130,4 @@ shinyModule <- function(input, output, session, username, password, data) {
   return(reactive({ modifiedData() }))
 }
 ```
+

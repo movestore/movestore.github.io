@@ -1,29 +1,29 @@
 # Appspec.json
 
-Die Datei `appspec.json` dient dazu eine App innerhalb von MoveApps zu definieren. Hierbei werden Abhängigkeiten und auch Einstellungen der App definiert. 
+Die Datei `appspec.json` dient dazu eine App innerhalb von MoveApps zu definieren. Hierbei werden Abhängigkeiten und auch Einstellungen der App definiert. Einige der Einstellungen sind obligatorisch und haben eine festgelegte Liste möglicher Werte, andere sind optional.
 
 
 ## Einstellungen/Parameter 
 
-Um dem Benutzer die Möglichkeit zu geben innerhalb von MoveApps eine App zu konfigurieren, können für eine App Einstellungen definiert werden.
-Der Benutzer kann in der Oberfläche diese Einstellungen verändern und die Werte werden beim Aufruf der App entsprechend als Paramter übergeben. 
+Um dem Benutzer die Möglichkeit zu geben innerhalb von MoveApps eine App zu konfigurieren, können für eine App bestimmte Einstellungen definiert werden.
+Der Benutzer kann in der Oberfläche diese Einstellungen verändern und die Werte werden beim Aufruf der App entsprechend als Paramter übergeben. Andere Einstellungen in der `appspec.json`sind zur möglichen Publikation und Nachverfolgbarkeit der App gedacht.
 
 ## Validator
 
-Um eine `appspec.json` zu erstellen, zu testen und auch zu verifizieren gibt es einen [Settings Editor](/apps/settingseditor ':ignore'). Mithilfe diesem Tool ist es einfach und schnell möglich die Settings zu definieren und auch visuell darzustellen.
+Um eine `appspec.json` zu erstellen, zu testen und auch zu verifizieren gibt es einen [Settings Editor](/apps/settingseditor ':ignore'). Mithilfe dieses Tools ist es einfach und schnell möglich die Settings zu definieren, visuell darzustellen und auf Validität zu testen.
 
 ### Einstellungs-Typen
 Es gibt verschiedene Einstellungs-Typen: 
-- [Zahlen Eingabe](de/integer.md)
-- [Gleitkommazahl Eingabe](de/double.md)
-- [Text Eingabe](de/string.md)
+- [Texteingabe](de/string.md)
+- [Eingabe ganzer Zahlen](de/integer.md)
+- [Eingabe reeller Zahlen](de/double.md)
 - [Datumsauswahl](de/instant.md)
-- [Dropdown](de/dropdown.md)
 - [Radiobuttons](de/radiobuttons.md)
-- [Checkbox](de/checkbox.md)
+- [Checkboxes](de/checkbox.md)
+- [Dropdown](de/dropdown.md)
 
 
-### Beispiel der Einstellungen in appspec.json
+### Beispiel
 
 ```json
 {
@@ -73,4 +73,35 @@ Im folgenden beispielhaft die Abhängigkeiten einer R-App, welche die Bibliothek
   }
 }
 ```
+
+## Artefakte
+Falls eine App [Artefakte](de/copilot-r-sdk.md#Artefakte) erzeugt, muss dies in der `appspec.json` angegeben werden. Der Typ und die Menge der Artefakte ist hierbei nicht zu definieren. Es ist sogar ohne Fehler möglich, dass unter bestimmten Bedingungen kein Artefakt ausgegeben werden.
+```json
+{
+  "settings": [],
+  "dependencies": {
+  "R": []
+  },
+  "createsArtifacts": true
+}
+```
+
+## Lizenz
+Geben Sie zur weiteren Verwendung und Veröffentlichung an, welche Lizenzvereinbarung Sie für Ihre App verwenden möchten.
+
+## Sprache
+
+
+## Schlüsselwörter
+
+
+## Autoren
+
+
+## Finanzierung
+
+
+## Referenzen
+
+
 

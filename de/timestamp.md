@@ -1,4 +1,4 @@
-# Datumsauswahl
+# Datum
 Um dem Benutzer die Möglichkeit zu geben ein Datum auszuwählen, kann eine Einstellung vom Typ `INSTANT` verwendet werden.
 
 ## Beispiel
