@@ -1,7 +1,6 @@
-#Veröffentlichung einer App
+# Veröffentlichung einer App
 
 Zur Anerkennung, Rückverfolgbarkeit und Dokumentation können Apps, die auf MoveApps laufen, mit einer DOI veröffentlich werden. Dies wird von unserer Bibliothek unterstützt und ist ein automatisierter Prozess.
-
 
 
 ## Wie publiziere ich eine App

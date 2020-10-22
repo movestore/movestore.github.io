@@ -1,4 +1,4 @@
-#Publication of Apps
+# Publication of Apps
 
 For recognition, tracability and documentation, Apps that are running on MoveApps can be published with a DOI. This will be supported by our library and is an automatised process.
 

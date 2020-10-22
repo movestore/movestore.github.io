@@ -19,7 +19,8 @@ By clicking on the “+” behind an App, you can select additional Apps to filt
 ![](../files/Workflow_addApp.png)
 
 ## Run the workflow
-The completed Workflow can be started with “Start Workflow”. By this the Apps are started and executed one after the other. This can be followed by the change in colour of the action point in each App container (bottom right). The Workflow continues running even if the site moveapps.org is left and results can be looked up and downloaded later. With “rerun” or “stop workflow” the run of the Workflow can be restarted or stopped prematurely. Each Workflow that contains only simple R Apps can be scheduled to run (once or regularly) in an automatic mode at a fixed date and time. This option can be selected in the menu next to “Start Workflow”. There, also the export of the workflow can be initialised.
+The completed Workflow can be started with “Start Workflow”. By this the Apps are started and executed one after the other. This can be followed by the change in colour of the action point in each App container (bottom right). The Workflow continues running even if the site moveapps.org is left and results can be looked up and downloaded later. With “rerun” or “stop workflow” the run of the Workflow can be restarted or stopped prematurely. Each Workflow that contains only simple R Apps can be scheduled to run (once or regularly) in an automatic mode at a fixed date and time. This option (`Schedule Instance`) can be selected in the menu next to “Start Workflow”. There, also the export of the workflow can be initialised or you can be redirected to [publish your Workflow](publish_workflow).
+
 
 ![](../files/Workflow_menu.png)
 
