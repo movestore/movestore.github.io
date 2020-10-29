@@ -13,4 +13,4 @@ A checkbox is used to configure true / false value. This option is presented to 
 }
 ```
 
-!> The `defaultValue` must be either `null`, `true` or `false`. It annot be a string such as `"False"`.
+!> The `defaultValue` must be either `null`, `true` or `false`. It cannot be a string, such as `"False"`.

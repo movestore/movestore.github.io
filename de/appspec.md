@@ -6,7 +6,7 @@ Die Datei `appspec.json` dient dazu eine App innerhalb von MoveApps zu definiere
 ## Einstellungen/Parameter 
 
 Um dem Benutzer die Möglichkeit zu geben innerhalb von MoveApps eine App zu konfigurieren, können für eine App bestimmte Einstellungen definiert werden.
-Der Benutzer kann in der Oberfläche diese Einstellungen verändern und die Werte werden beim Aufruf der App entsprechend als Paramter übergeben. Andere Einstellungen in der `appspec.json`sind zur möglichen Publikation und Nachverfolgbarkeit der App gedacht.
+Der Benutzer kann in der Oberfläche diese Einstellungen verändern und die Werte werden beim Aufruf der App entsprechend als Parameter übergeben. Andere Einstellungen in der `appspec.json`sind zur möglichen Publikation und Nachverfolgbarkeit der App gedacht.
 
 ## Validator
 
@@ -47,7 +47,7 @@ Es gibt verschiedene Einstellungs-Typen:
 ```
 ## Abhängigkeiten
 
-In diesem Abschnitt müssen alle Abhängigkeiten zu Bibliotheken der App definiert werden. Dies sind Abhängigkeiten welche die App zur Bau- und / oder zur Laufzeitzeit benötigt. Zu jeder Bibliothek kann (optional) definiert werden in welcher Version diese geladen werden muss.
+In diesem Abschnitt müssen alle Abhängigkeiten zu Bibliotheken der App definiert werden. Dies sind Abhängigkeiten welche die App zur Bau- und / oder zur Laufzeit benötigt. Zu jeder Bibliothek kann (optional) definiert werden, in welcher Version diese geladen werden muss.
 
 !> Für bestimmte Bibliotheken (etwa `shiny`) gelten besondere Regeln; diese können etwa nur in einer bestimmten Version verlangt werden.
 
@@ -55,7 +55,7 @@ Um die Definition aller Abhängigkeiten bereits vor der Einreichung zu prüfen k
 
 ### Beispiel 
 
-Im folgenden beispielhaft die Abhängigkeiten einer R-App, welche die Bibliothek `prettyunits` und `futile.logger` benötigt:
+Im Folgenden beispielhaft die Abhängigkeiten einer R-App, welche die Bibliothek `prettyunits` und `futile.logger` benötigt:
 
 ```json
 {
@@ -75,7 +75,7 @@ Im folgenden beispielhaft die Abhängigkeiten einer R-App, welche die Bibliothek
 ```
 
 ## Artefakte
-Falls eine App [Artefakte](de/copilot-r-sdk.md#Artefakte) erzeugt, muss dies in der `appspec.json` angegeben werden. Der Typ und die Menge der Artefakte ist hierbei nicht zu definieren. Es ist sogar ohne Fehler möglich, dass unter bestimmten Bedingungen kein Artefakt ausgegeben werden.
+Falls eine App [Artefakte](de/copilot-r-sdk.md#Artefakte) erzeugt, muss dies in der `appspec.json` angegeben werden. Der Typ und die Menge der Artefakte sind hierbei nicht zu definieren. Es ist sogar ohne Fehler möglich, dass unter bestimmten Bedingungen (z.B. keine Daten für ein best. Individuum) kein Artefakt ausgegeben wird.
 ```json
 {
   "settings": [],

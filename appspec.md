@@ -77,7 +77,7 @@ Following is an example of the dependencies of an R App that requires libraries 
 ```
 
 ## Artefacts
-If the App creates [Artefacts](copilot-r-sdk.md#Artefacts) this must be stated in the `appspec.json`. They type and amount of artefacts does not have to be defined. It is even possible without error that under certain data circumstances no artefact are returned.
+If the App creates [Artefacts](copilot-r-sdk.md#Artefacts) this must be stated in the `appspec.json`. The type and amount of artefacts do not have to be defined. Note that also with this setting, it is possible that (e.g. if there are no data for an animal) no artefact are returned without inducing an error.
 ```json
 {
   "settings": [],

@@ -1,10 +1,10 @@
 # MoveApps `R Function` Overview
 This document describes the basics to write your own R functions for MoveApps.
 
-We provide an R Project (copilot-r-sdk.zip.) that can be used as a starting point for the development of your App.
+We provide an R Project [(copilot-r-sdk.zip)](copilot-r-sdk.zip ':ignore') that can be used as a starting point for the development of your App.
 
 ## How to write an R Function for MoveApps
-It is highly advisory to use the SDK to write your R functions for MoveApps, as many errors can already be solved before submitting the App to the MoveApps platform.
+It is highly advisable to use the SDK to write your R functions for MoveApps, as many errors can be solved before submitting the App to the MoveApps platform.
 
 First, an R function called `rFunction` must be created. 
 ```
@@ -21,8 +21,9 @@ rFunction = function(username, password) {
 }
 ```
 
-##### Limitations
-- You cannot use  `data` as parameter name. This is reserved for the input that is passed on from the previous App.
+##### Limitation
+- You cannot use  `data` as a parameter name. This is reserved for the input that is passed on from the previous App.
+
 
 #### Input from previous App
 In order to be able to use the result of the previous App in the Workflow, the last parameter of the R function must be named `data`.
@@ -42,7 +43,7 @@ rFunction = function(username, password, data) {
 ```
 
 ### Output
-The result of the function must be defined as a return value at the end of the function code. Then, this objecct (`data`) can be processed accordingly as input in the next App of the Workflow.
+The result of the function must be defined as a return value at the end of the function code. Then, this object (`data`) can be processed accordingly as input in the next App of the Workflow.
 ```
 rFunction = function(username, password) {
     # Do something
@@ -51,7 +52,7 @@ rFunction = function(username, password) {
 ```
 
 ### Artefacts
-MoveApps allows the creation and saving of different files directly by the R function, like e.g. csv, pdf, png, ..., so called `artefacts`. Those can be created by the usual R command for writing of the specific type of file. It is important to set the path for saving as `paste0(Sys.getenv(x = "APP_ARTIFACTS_DIR", "/tmp/"),"*.***")` (`*.***` is the name of the file, see example for csv and png below) and add the row `"createsArtifacts": true` in the [appspec.json](appspec.md). After running the App, the artefacts can then be downloaded from the `Show Downloads` list.
+MoveApps allows the creation and saving of different files directly through the R function (e.g. csv, pdf, png), so called `artefacts`. Those artefacts can be created by the usual R command for saving the specific type of file. It is important to set the path for saving as `paste0(Sys.getenv(x = "APP_ARTIFACTS_DIR", "/tmp/"),"*.***")` (`*.***` is the name of the file, see example for csv and png below) and add the row `"createsArtifacts": true` in the [appspec.json](appspec.md). After running the App, the artefacts can then be downloaded from the `Show Downloads` list.
 ```
 rFunction = function(username, password, data) {
     # Do something

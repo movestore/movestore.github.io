@@ -14,11 +14,11 @@ Um Ihren Workflow offiziell veröffentlichen zu können, ist eine Standardliste 
 
 ### Beschreibung des Workflows
 
-### Authoren und Mitarbeiter
+### Autoren und Mitwirkende
 
 ### Lizenz
 
 ### Schlüsselwörter
 
-### Referenz
+### Referenzen
 

@@ -1,13 +1,13 @@
 # MoveApps `Shiny Module` Übersicht
-Diese Dokumentation beschreibt die Grundlagen um Shiny Module für MoveApps zu entwickeln. Weitere Informationen zu Shiny und Shiny Modules finden Sie unter https://shiny.rstudio.com/tutorial bzw. https://shiny.rstudio.com/articles/modules.html
+Diese Dokumentation beschreibt die Grundlagen um Shiny Module für MoveApps zu entwickeln. Weitere Informationen zu Shiny und Shiny Modulen finden Sie unter https://shiny.rstudio.com/tutorial bzw. https://shiny.rstudio.com/articles/modules.html
 
-Für die Entwicklung solcher Shiny Module wird ein R-Projekt zur Verfügung gestellt [copilot-shiny-sdk.zip](copilot-shiny-sdk.zip ':ignore'). Dieses R-Projekt kann als Ausgangspunkt für die Entwicklung deiner App genutzt werden.
+Für die Entwicklung solcher Shiny Module wird ein R-Projekt zur Verfügung gestellt [copilot-shiny-sdk.zip](copilot-shiny-sdk.zip ':ignore'). Dieses R-Projekt können Sie als Ausgangspunkt für die Entwicklung Ihrer App nutzen.
 
 ## Wie schreibt man ein Shiny Module für MoveApps?
-Um Shiny Module für MoveApps entwickeln zu können, müssen mindestens die beiden Funktionen `shinyModuleUserInterface` und `shinyModule` bereitgestellt werden. Diese Funktionen müssen in einer Datei namens `ShinyModule.R` abgelegt sein.
+Um Shiny-Module für MoveApps entwickeln zu können, müssen mindestens die beiden Funktionen `shinyModuleUserInterface` und `shinyModule` bereitgestellt werden. Diese Funktionen müssen in einer Datei namens `ShinyModule.R` abgelegt sein.
 
 ### User Interface - shinyModuleUserInterface()
-Innerhalb dieser Funktion muss das Shiny-User-Interface definiert werden. Hier ist wichtig, dass die UI Objekte mittels dem Shiny Namespace `ns` erzeugt werden.
+Innerhalb dieser Funktion muss das Shiny-User-Interface definiert werden. Hier ist wichtig, dass die UI-Objekte mittels dem Shiny Namespace `ns` erzeugt werden.
 ```
 shinyModuleUserInterface <- function(id, label) {
   ns <- NS(id)
@@ -26,7 +26,7 @@ shinyModule <- function(input, output, session) {}
 
 ### Input
 #### Parameter aus MoveApps
-Um Parameter bzw. Einstellungen aus MoveApps in dem ShinyModules zu erhalten, müssen diese in der [appspec.json](de/appspec.md) definiert sein.
+Um Parameter bzw. Einstellungen aus MoveApps im ShinyModul zu erhalten, müssen diese in der [appspec.json](de/appspec.md) definiert sein.
 
 ```
 # appsec.json
@@ -50,16 +50,16 @@ Um Parameter bzw. Einstellungen aus MoveApps in dem ShinyModules zu erhalten, m�
 }
 ```
  
-Beim Aufruf des Shiny Modules werden diese dann als Parameter an das Shiny Module übergeben.
+Beim Aufruf des Shiny Modules werden diese dann als Parameter an das Shiny-Modul übergeben.
 
 ```
-# Mit Parametern/Einstellungen aus MoveApps 
+# with parameters/settings from MoveApps 
 shinyModule <- function(input, output, session, username, password) {
     # Do something with the data
 }
 ```
 
-!> Wichtig ist, dass auch alle Parameter an die `shinyModuleUserInterface` Funktion mitübergeben werden. Hier kann dann z.B. schon das UI mit diesen Parametern initialisiert werden
+!> Wichtig ist, dass auch alle Parameter an die `shinyModuleUserInterface` Funktion mitübergeben werden. Hier kann z.B. schon das UI mit diesen Parametern initialisiert werden
 ```
 shinyModuleUserInterface <- function(id, label, username, password) {
   ns <- NS(id)
@@ -67,11 +67,11 @@ shinyModuleUserInterface <- function(id, label, username, password) {
 }
 ```
 
-#### Limitierungen
+#### Limitierung
 !> Der Name `data` kann nicht als ID für eine Einstellung benutzt werden, da dieser Name bereits für die Ausgabe der vorherigen App reserviert ist.
 
 #### Input aus vorhergehender App :id=input-predecessor-app
-Um das Ergebnis der vorhergehenden App in deiner App verwenden zu können, muss der letzte Parameter der `shinyModule` Funktion `data` benannt werden.
+Um das Ergebnis der vorhergehenden App in Ihrer App verwenden zu können, muss der letzte Parameter der `shinyModule` Funktion mit `data` benannt werden.
 ```
 # With input from previous app
 shinyModule <- function(input, output, session, data) {
@@ -95,7 +95,7 @@ shinyModule <- function(input, output, session, username, password, data) {
 ```
 
 ## Shiny Module in automatischen Workflow integrieren
-Shiny Module können auch in einen automatischen Worfklow integriert werden, ohne dass der Benutzer hier mit der App interagieren muss. Dadurch kann der Workflow ohne Unterbrechungen automatisch ausgeführt werden. 
+Shiny Module können auch in einen automatischen Workflow integriert werden, ohne dass der Benutzer hier mit der App interagieren muss. Dadurch kann der Workflow ohne Unterbrechungen automatisch ausgeführt werden. 
 
 ## Input
 Für den Input gelten hier die gleichen Vorgaben wie bereits weiter oben beschrieben ([Input aus vorhergehender App](/de/copilot-shiny-sdk#input-predecessor-app)).
@@ -110,7 +110,7 @@ shinyModule <- function(input, output, session, username, password, data) {
 ```
 
 ## Shiny Module mittels Shiny UI konfigurieren
-Shiny Module können auch mittels Shiny UI konfiguriert werden. Hierzu muss die App, wie auch bei der normalen Konfiguration, diese Parameter in der [appspec.json](de/appspec.md) definieren. Um die Konfiguration nun zurück zu MoveApps übertragen zu können, muss eine neue Funktion `shinyModuleConfiguration` erstellt werden. Innerhalb dieser Funktion müssen die Parameter in eine Liste mit den jeweiligen Namen eingetragen werden. Sobald diese Funktion im ShinyModule definiert ist, erscheint ein Button im Shiny UI, welcher es erlaubt diese neue Konfiguration zurück an MoveApps zu übertragen.
+Shiny-Module können auch mittels Shiny UI konfiguriert werden. Hierzu muss die App, wie auch bei der normalen Konfiguration, diese Parameter in der [appspec.json](de/appspec.md) definieren. Um die Konfiguration nun zurück zu MoveApps übertragen zu können, muss eine neue Funktion `shinyModuleConfiguration` erstellt werden. Innerhalb dieser Funktion müssen die Parameter in eine Liste mit den jeweiligen Namen eingetragen werden. Sobald diese Funktion im ShinyModule definiert ist, erscheint ein Button im Shiny UI, welcher es erlaubt diese neue Konfiguration zurück an MoveApps zu übertragen.
 ```
 shinyModuleConfiguration <- function(id, input) {
   ns <- NS(id)

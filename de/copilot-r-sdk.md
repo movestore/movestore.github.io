@@ -1,8 +1,8 @@
 # MoveApps `R-Function` Übersicht
-Diese Dokumentation beschreibt die Grundlagen um eigene R-Funktionen für den MoveApps zu entwickeln. 
+Diese Dokumentation beschreibt die Grundlagen um eigene R-Funktionen für MoveApps zu entwickeln. 
 
-Für die Entwicklung solcher R Funktionen wird ein R-Projekt zur Verfügung gestellt [copilot-r-sdk.zip](copilot-r-sdk.zip ':ignore'). Dieses R-Projekt kann als Ausgangspunkt für die Entwicklung deiner App genutzt werden.
-``
+Für die Entwicklung von R-Funktionen wird ein R-Projekt zur Verfügung gestellt [(copilot-r-sdk.zip)](copilot-r-sdk.zip ':ignore'). Dieses R-Projekt können Sie als Ausgangspunkt für die Entwicklung Ihrer App nutzen.
+
 ## Wie schreibt man R-Funktionen für MoveApps?
 Um eine R-Funktion aufrufen zu können, muss das SDK verwendet werden. 
 Hierfür muss zuerst eine Funktion mit dem Namen `rFunction` erstellt werden.
@@ -11,9 +11,9 @@ rFunction = function() {}
 ```
 
 ### Input
+
 #### Parameter aus MoveApps
-Um Parameter bzw. Einstellungnen aus MoveApps in der R-Funktion zu erhalten, müssen diese in der [appspec.json](de/appspec.md) definiert werden. 
-Beim Aufruf der Funktion werden diese als Parameter an die R-Funktion übergeben.
+Um Parameter bzw. Einstellungen aus MoveApps in der R-Funktion zu erhalten, müssen diese in der [appspec.json](de/appspec.md) definiert werden. Beim Aufruf der Funktion werden diese als Parameter an die R-Funktion übergeben.
 ```
 # Mit Parametern/Einstellungen aus MoveApps 
 rFunction = function(username, password) {
@@ -21,11 +21,12 @@ rFunction = function(username, password) {
 }
 ```
 
-##### Limitierungen
+##### Limitierung
 !> Der Name `data` kann nicht als ID für eine Einstellung benutzt werden, da dieser Name bereits für die Ausgabe der vorherigen App reserviert ist.
 
+
 #### Input aus vorhergehender App
-Um das Ergebnis der vorhergehenden App im Workflow verwenden zu können, muss der letzte Parameter der R-Funktion `data` benannt werden.
+Um das Ergebnis der vorhergehenden App im Workflow verwenden zu können, muss der letzte Parameter der R-Funktion mit `data` benannt werden.
 ```
 # Mit Ergebnis der vorhergehenden App
 rFunction = function(data) {
@@ -52,7 +53,7 @@ rFunction = function(username, password) {
 ```
 
 ### Artefakte
-MoveApps erlaubt das Erzeugen und Speichern von verschiedensten Dateien in der R-Function, wie z.B. csv, pdf, png, ..., sogenannten `Artefakten`. Diese werden mit dem normalen R-Befehl zum Schreiben der spezifischen Datei erzeugt. Wichtig ist es, den Speicherpfad als `paste0(Sys.getenv(x = "APP_ARTIFACTS_DIR", "/tmp/"),"*.***")` festzulegen (`*.***` ist der Dateiname, siehe Beispiel für csv und png unten) und in der [appspec.json](de/appspec.md) die Zeile `"createsArtifacts": true` einzufügen.  Die Artefakte können dann nach dem Laufen der App unter `Show Downloads` heruntergeladen werden.
+MoveApps erlaubt das Erzeugen und Speichern von verschiedensten Dateien in der R-Function, wie z.B. csv, pdf, png, ..., sogenannten `Artefakten`. Diese werden mit dem normalen R-Befehl zum Schreiben der spezifischen Datei erzeugt. Wichtig ist es, den Speicherpfad als `paste0(Sys.getenv(x = "APP_ARTIFACTS_DIR", "/tmp/"),"*.***")` festzulegen (`*.***` ist der Dateiname, siehe Beispiel für csv und png unten) und in der [appspec.json](de/appspec.md) die Zeile `"createsArtifacts": true` einzufügen.  Die Artefakte können nach dem Laufen der App unter `Show Downloads` heruntergeladen werden.
 ```
 rFunction = function(username, password, data) {
     # Do something
