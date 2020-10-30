@@ -1,6 +1,6 @@
 # Publication of Workflows
 
-To make your work reproducible, we allow the publication of workflows with a DOI. That includes the list and order of combined Apps, the selected Settings and is in some way dependent on the input data set. This publication will be supported by our library and is an automatic process.
+To make your work reproducible, we allow the publication of workflows with a DOI. That includes the list and order of combined Apps, the selected Settings and is in some way dependent on the input data set. This publication will be supported by our library and is an automated process.
 
 ## How to publish your Workflow
 NOT YET FINAL

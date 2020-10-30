@@ -1,6 +1,6 @@
 # Publication of Apps
 
-For recognition, trackability and documentation, Apps that are running on MoveApps can be published with a DOI in specified versions. This will be supported by our library and is an automatised process.
+For recognition, trackability and documentation, Apps that are running on MoveApps can be published with a DOI in specified versions. This will be supported by our library and is an automated process.
 
 ## How to publish your Apps
 NOT YET
