@@ -1,11 +1,5 @@
 # Veröffentlichung einer App
 
-Zur Anerkennung, Rückverfolgbarkeit und Dokumentation können Apps, die auf MoveApps laufen, in einer definierten Version veröffentlich werden. Dies wird von unserer Bibliothek unterstützt und ist ein automatisierter Prozess.
-
-
-## Wie publiziere ich eine App
-NOCH NICHT
-
 
 ## Zur Veröffentlichung erforderliche Informationen
 Um Ihre App offiziell veröffentlichen zu können, ist eine Standardliste mit Informationen über die App, ihre Autoren und andere Eigenschaften erforderlich.
@@ -21,3 +15,6 @@ Die meisten Eigenschaften, die sich zwischen App-Versionen unterscheiden können
 Bei der Veröffentlichung der App müssen einige Eigenschaften von Hand in eine Webmaske eingetragen werden. Dazu gehören eine endgültige Beschreibung und ... (?)
 
 TBC
+
+##Zitierbarkeit einer App
+Zur Anerkennung und Dokumentation können Apps, die auf MoveApps laufen, zitiert werden. Über einen Button (WO?) kann für jede App ein Zitationsvorschlag in verschiedenen Zitierstilen ausgegeben werden. 
