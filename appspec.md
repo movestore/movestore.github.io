@@ -11,7 +11,7 @@ In order to give the user the ability to configure an App within MoveApps, the s
 
 ## Validator
 
-For creation, test and verification of the `appspec.json` there is the [Settings Editor](/apps/settingseditor ':ignore'). With its help you can quickly and easily define and visualise your settings.
+For creation, test and verification of the `appspec.json` there is the [Settings Editor](https://moveapps.org/apps/settingseditor ':ignore'). With its help you can quickly and easily define and visualise your settings.
 
 ### Settings types
 There are different types of settings:
@@ -52,7 +52,7 @@ In this part of the file, all libraries on which the App depends have to be list
 
 !> Special rules apply to certain libraries (such as e.g. shiny); these can only be required in a certain version.
 
-The [Settings Editor](apps/settingseditor) can be used to check the definition of all dependencies before submission.
+The [Settings Editor](https://moveapps.org/apps/settingseditor) can be used to check the definition of all dependencies before submission.
 
 
 ### Example 
