@@ -106,8 +106,52 @@ For further use and publication, please specify which license agreement you want
 ## References
 
 
+-------------
+## Lisen zu Optionen (aus Trello Ticket)
+Hierfür soll als Pflicht gelten: Engabe (1) einer sinnvollen Licence mit URL (auszuwählen aus der Liste siehe unten) und (2) mindestens ein keyword (Freitext).
+Desweiteren soll rückkontrolliert werden, dass reference type aus der Data Cite Liste (siehe unten) ist, language vom Typ ISO 639-2 (B) ist und contributor role aus der dritten Liste (siehe unten)
 
+### Lizenz Options:
 
+- The “GNU General Public License” version 3 -https://spdx.org/licenses/GPL-3.0-or-later.html#licenseText
+- The “MIT License”-https://spdx.org/licenses/MIT.html#licenseText
+- The “GNU Affero General Public License” version 3-https://spdx.org/licenses/AGPL-3.0-or-later.html#licenseText
+- The “BSD 3-clause License”-https://spdx.org/licenses/BSD-3-Clause.html#licenseText
+- The “Creative Commons Attribution-Share Alike International License” version 4.0-https://spdx.org/licenses/CC-BY-SA-4.0.html#licenseTex
+
+### Data Cite Options:
+
+- *IsCitedBy/Cites
+- *IsSupplementTo/IsSupplementedBy
+- IsContinuedBy/Continues
+- Describes/IsDescribedBy
+- HasMetadata/IsMetadataFor
+- *HasVersion/IsVersionOf
+- *IsNewVersionOf/IsPreviousVersionOf
+- IsPartOf/HasPart
+- *IsReferencedBy/References
+- IsDocumentedBy/Documents
+- IsCompiledBy/Compiles
+- IsVariantFormOf/IsOriginalFormOf
+- IsIdenticalTo
+- IsReviewedBy/Reviews
+- IsDerivedFrom/IsSourceOf
+- IsRequiredBy/Requires
+- Obsoletes/IsObsoletedBy
+
+### Contributor Role List (can be more than one, comma separated):
+
+author
+compiler
+copyright holder
+creator
+contributor
+contractor
+data contributor
+funder
+reviewer
+translator
+maintainer
 
 
 
