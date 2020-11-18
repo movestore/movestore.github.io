@@ -156,7 +156,7 @@ For better accessibility of the Apps, please provide keywords that characterise 
 ```
 
 ## People
-For future publication and citability, people involved in the development of the App shall be listed. All people can have one or more `roles` that must be selected from the below list. Note that it is mandatory to provide one person that is `creator` of the App and that this person has a valid E-mail address assigned.
+For future publication and citability, people involved in the development of the App shall be listed. All people can have one or more `roles` that must be selected from the below list. Note that it is mandatory to provide one person that is `author` of the App and that this person has a valid E-mail address assigned.
 
 ### List of roles
 
