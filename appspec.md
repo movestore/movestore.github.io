@@ -103,11 +103,8 @@ For further use and publication, it is mandatory to specify which license agreem
 ```json
 {
   "settings": [],
-  "dependencies": {
-  "R": []
-  },
   "license": {
-  "key": "MIT"
+    "key": "MIT"
   }
 }
 ```
@@ -120,12 +117,6 @@ It is also mandatory to specify the language in which your App Description and D
 ```json
 {
   "settings": [],
-  "dependencies": {
-  "R": []
-  },
-  "license": {
-  "key": "MIT"
-  },
   "language": "eng"
 }
 ```
@@ -138,22 +129,15 @@ For better accessibility of the Apps, please provide keywords that characterise 
 ```json
 {
   "settings": [],
-  "dependencies": {
-  "R": []
-  },
-  "license": {
-  "key": "MIT"
-  },
-  "language": "eng",
   "keywords": [
-  "movement",
-  "example"
+    "movement",
+    "example"
   ]
 }
 ```
 
 ## People
-For future publication and citability, people involved in the development of the App shall be listed. All people can have one or more `roles` that must be selected from the below list. Note that it is mandatory to provide one person that is `author` of the App and that this person has a valid E-mail address assigned.
+For future publication and citability, people involved in the development of the App shall be listed. All people can have one or more `roles` that must be selected from the below list. Note that it is mandatory to provide one person that is `author` of the App and that this person has a valid Email address assigned.
 
 ### List of roles
 
@@ -174,16 +158,6 @@ For future publication and citability, people involved in the development of the
 ```json
 {
   "settings": [],
-  "dependencies": {
-  "R": []
-  },
-  "license": {
-  "key": "MIT"
-  },
-  "language": "eng",
-  "keywords": [
-  "movement"
-  ],
   "people": [
     {
       "firstName": "Charles",
@@ -210,34 +184,9 @@ To acknowledge your funding parties, please add a funding statement. It consists
 ```json
 {
   "settings": [],
-  "dependencies": {
-  "R": []
-  },
-  "license": {
-  "key": "MIT"
-  },
-  "language": "eng",
-  "keywords": [
-  "movement"
-  ],
-  "people": [
-    {
-      "firstName": "Charles",
-      "middleInitials": null,
-      "lastName": "Darwin",
-      "email": "creator@example.com",
-      "roles": [
-        "author",
-        "creator"
-      ],
-      "orcid": null,
-      "affiliation": null,
-      "affiliationRor": null
-    }
-  ],
   "funding":[
-  "name": "Your Funding Agency",
-  "comment": "grant 123"
+    "name": "Your Funding Agency",
+    "comment": "grant 123"
   ]
 }
 ```
@@ -269,36 +218,11 @@ References of various types can be added to make background information about yo
 ```json
 {
   "settings": [],
-  "dependencies": {
-  "R": []
-  },
-  "license": {
-  "key": "MIT"
-  },
-  "language": "eng",
-  "keywords": [
-  "movement"
-  ],
-  "people": [
-    {
-      "firstName": "Charles",
-      "middleInitials": null,
-      "lastName": "Darwin",
-      "email": "creator@example.com",
-      "roles": [
-        "author",
-        "creator"
-      ],
-      "orcid": null,
-      "affiliation": null,
-      "affiliationRor": null
-    }
-  ],
   "references":[
   {
-  "type": "IsReferencedBy"
-  "note": "Darwin, C. 1859. The Origin of Species. John Murray, London",
-  "url": "www.testpage.org"
+    "type": "IsReferencedBy"
+    "note": "Darwin, C. 1859. The Origin of Species. John Murray, London",
+    "url": "www.testpage.org"
   }
  ]
 }
@@ -317,7 +241,14 @@ Each App requires a detailed Documentation of how it works, how it can be config
 - Parameters (name and description)
 - Null or error handling for each parameter and output data
 
-
+```json
+{
+  "settings": [],
+  "documentation": {
+    "url": "https://github.com/example-user/example-app/blob/master/README.md"
+  }
+}
+```
 
 
 
