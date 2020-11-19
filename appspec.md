@@ -13,13 +13,13 @@ For creation, test and verification of the `appspec.json` there is the [Settings
 In order to give the user the ability to configure an App within MoveApps, the settings (of parameters) for the App must be defined. Once the App is running, the user can thus change settings via the MoveApps interface and the values of parameters are transferred to the App when it is started.
 
 There are different types of settings:
-  - [Text](de/string.md)
-  - [Integer numbers](de/integer.md)
-  - [Real numbers](de/double.md)
-  - [Date selection](de/timestamp.md)
-  - [Radiobuttons](de/radiobuttons.md)
-  - [Checkboxes](de/checkbox.md)
-  - [Dropdown](de/dropdown.md) 
+  - [Text](string.md)
+  - [Integer numbers](integer.md)
+  - [Real numbers](double.md)
+  - [Date selection](timestamp.md)
+  - [Radiobuttons](radiobuttons.md)
+  - [Checkboxes](checkbox.md)
+  - [Dropdown](dropdown.md) 
 
 
 #### Example
