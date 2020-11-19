@@ -91,7 +91,7 @@ If the App creates [Artefacts](copilot-r-sdk.md#Artefacts) this must be stated i
 ```
 
 ## License
-For further use and publication, it is mandatory to specify which license agreement you want to use for your App. At the moment there are five options (see list below), the keys of which have to be entered.
+For further use and publication, it is mandatory to specify which license agreement you want to use for your App. At the moment there are five options (see list below), the keys of which have to be entered. Please consult [this website](https://choosealicense.com/) for help with choosing the most appropriate license for your App.
 
 ### List of license keys
 

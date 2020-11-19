@@ -2,53 +2,55 @@
 
 ![](../files/Workflow_example.png)
 
-The existing Apps can be combined in a workflow, one after the other. These workflows can then be used for specific use cases. 
+Within MoveApps, existing Apps can be combined into a Workflow, allowing you to define an ordered set of steps to access, process and analyse data. These Workflows can then be saved, edited and used for specific use cases. 
 
-Every Workflow starts with an App that loads data into the system (e.g. from Movebank or Dropbox). The data are then passed on to the next App in the appropriate format and analysed by it accordingly. Every App requires a defined input type (presently only Movement data: positions with date-timestamps and animal ID) and can pass on output of a defined type (presently Movement) or ends in an interactive UI (R-Shiny). 
+Every Workflow starts with an App that loads data into the system (e.g. from [Movebank](www.movebank.org) or Dropbox). The data are then passed on to the next App in the appropriate format and analysed by it accordingly. Every App requires a defined input type (presently only Movement data: positions with date-timestamps and animal ID) and can pass on output of a defined type (presently Movement) or ends in an interactive UI (R-Shiny). 
 
-Some Apps produce output artefacts which can be downloaded as files, in formats such as .pdf or .csv. Movement output data can also be downloaded (in R format .rds).
+Some Apps produce output artefacts, which can be downloaded as files, in formats such as .pdf or .csv. Movement output data can also be downloaded (in R format .rds).
 
-## Create a new workflow
-In the menu `Workflows` you can initiate a new Workflow with `Create New Workflow`. After providing a name for the Workflow you can select a Data Source. Now choose either a Movebank download or download from your personal cloud storage on Google Drive or Dropbox. Both Data Sources require taht you specify parameters and settings. After providing these, the Workflow area with the initial App appears (see Figure below). Note that additional Data Sources can be downloaded by adding e.g. another Movebank download App (see below). All data sets will be combined, thus allowing the joined analysis of data from e.g. different Movebank studies.
+## Create a new Workflow
+From the main menu, select `Workflows` and then `Create New Workflow`. After providing a name for the Workflow, you will be asked to select a Data Source. Now choose to retreive data from either Movebank or your personal cloud storage on Google Drive or Dropbox. For the latter option the data have to be provided as MoveStacks in `.rds` format for R. Both Data Sources require that you specify parameters and settings. After providing these, the Workflow area with the initial App appears (see Figure below). Note that additional Data Sources can be downloaded by adding e.g. another instance of the Movebank download App (see below). All data sets will be combined, thus allowing the joined analysis of data from e.g. different Movebank studies.
 
 ![](../files/Workflow_movebank.png)
 
-## Combine Apps to a workflow
-By clicking on the “+” behind an App, you can select additional Apps to filter, analyse or visualise the downloaded data. You can also insert an App between two already selected Apps, if they are compatibe with the required input and output types (usually input: Movement and output: Movement). In the list of Apps to choose from only those are listed that comply with the required input and output types for the specific position in your Workflow. In the list of available Apps, you can see the descriptions of each App and can read additional information by clicking on “Details”. On the top right-hand corner, the list can be filtered by keywords.
+## Combine Apps to a Workflow
+By clicking on the “+” to the rigth of an App, you can browse and select the next App to add to your Workflow for filtering, analysis or visualisation of the downloaded data. You can also insert Apps within the Workflow if they are compatibe with the required input and output types (usually input: Movement and output: Movement). The list of Apps to choose from will only include those that comply with the required input and output types for the specific position in your Workflow. In the list of available Apps, you can see the descriptions of each App and can read additional information by clicking on “Details”. On the top right-hand corner, the list can be filtered by keywords.
 
 ![](../files/Workflow_addApp.png)
 
 ## Run the workflow
-The completed Workflow can be initiated by clicking `Start Workflow`. The Apps are then executed one after the other. This process is illustrated by a change in colour of the action point in each App container (bottom right). The Workflow continues running even if the site moveapps.org is left and results can be looked up and downloaded later. With `Rerun` or `Stop workflow` the run of the Workflow can be restarted or stopped prematurely. Each Workflow that contains R Apps only can be scheduled to run (once or regularly) in an automatic mode at a fixed date and time. This option (`Schedule Instance`) can be selected in the menu next to `Start Workflow`. From there, you can also export or select to [publish your Workflow](publish_workflow).
+Select `Start Workflow` to begin running the Apps wihtin a Workflow in the order that you have arranged them. You can follow the progress of the Workflow by the change in colour of the action point in the bottom right of each App container.
+
+The Workflow continues running even if you leave the site moveapps.org, and results can be looked up and downloaded later. Select `Rerun` or `Stop workflow` to interrupt the run of the Workflow. Each Workflow can also be scheduled to run (once or regularly) in an automatic mode at a fixed date and time. This option (`Schedule Instance`) can be selected in the menu next to `Start Workflow`. From there, you can also export or select to [publish your Workflow](publish_workflow).
 
 
 ![](../files/Workflow_menu.png)
 
 ## Menus, Settings and Error logs
-In each App-container of a Workflow there is a menu next to the App name. The R Apps show the following menu points:
+There is a menu on the right of each App container in a Workflow. The R-Apps include the following options:
 
-	- Settings:  The parameters of the App can be reselected and changed
-	- Show Downloads: The available data for download (Output, Artefacts, Meta data, Data overview) are listed.
-	- Pin to this App: The output of the App is fixed in the Workflow so that when rerunning the Workflow only the Apps further behind are reexecuted. The App you pinned and all preceding Apps are underlaid in grey. The `Pin` can be removed any time by clicking on `unpin` below in the greyed out area.
-	- Show Logs: The data protocols can be examined. This is especially useful for troubleshooting unexpected results or error messages.
-	- Delete: Removes the App from your Workflow.
+	- Settings:  View or change App parameters.
+	- Show Downloads: View and download available outputs from teh App (Movement Output, Artefacts, Meta data, Data overview).
+	- Pin to this App: By pinning the Workflow to an App, you will retain the results of thie App and all Apps preceding it in the Workflow, so that only subsequent Apps are re-executed when you re-run the Workflow. The App you pinned and all preceding Apps are underlaid in grey. The `Pin` can be removed any time by clicking on `unpin` below in the greyed out area.
+	- Show Logs: View the data protocols, which can contain important information if you receive errors or unexpected results.
+	- Delete: Remove the App from your Workflow.
 
 ![](../files/App_menu_R.png)
 ![](../files/Download_List.png)
 ![](../files/App_Pin.png)
 
 ## Data overview of App output
-Each App that returns data creates a short summary of the output data, which can be accessed via the green button that appears at the right side of the App container. Here, the bounding box and time range of the positions are given, as well as the number of different animals, the total number of positions (events) and the number of positions for each individual animal. Finally, the names of all available data variables are listed. This summary can also be downloaded as a file.
+Each App that returns data creates a short summary of the output data, which can be accessed via the green info button that appears on the right side of the App container. This summary includes the bounding box and time range of the positions as well as the number of animals, the total number of positions (events) and the number of positions for each individual animal. Finally, the names of all available data variables are listed. This summary can also be downloaded as a file.
 
 ![](../files/CargoAgent_Overview.png)
 
 ## Shiny R and User Interfaces
-For R-Shiny Apps that return User Interfaces (UI), the UI can be accessed after the run of the Workflow via `Open Results` or via `Shiny UI` in the App menu. There, settings can directly be adapted and data can be examined, depending on the options that the App developer has programmed. There are also R-Shiny Apps that have output data (Movement) and the UI is used e.g. to filter the data. For such Apps, the UI can only be accessed via `Shiny UI` in the App menu.
+For R-Shiny Apps that return User Interfaces (UI), the UI can be accessed after the run of the Workflow via `Open Results` or via `Shiny UI` in the App menu. There, you can examine results and edit settings, depending on the options that the App developer has programmed. There are also R-Shiny Apps that have output data (Movement) and the UI is used e.g. to filter the data. For such Apps, the UI can only be accessed via `Shiny UI` in the App menu.
 
 ![](../files/App_menu_shiny.png)
 
 ## Workflow Instances
-Each workflow can be run and saved in several Instances (i.e. the same Apps are combined in the same order, but their settings differ). It is important to note that changes in the selection and order of components (Apps) in one Workflow Instance affect the other existing Instances, namely the Workflow structure (not the settings) is synchronised.
+Each Workflow can be run and saved in several Instances, allowing you to combine the same Apps in the same order, but with different settings. It is important to note that changes in the selection and order of Apps (not their settings) in one Workflow Instance will be applied to all other Instances of the Workflow.
 
 Every additional Workflow Instance must be initialised in the Workflow overview (via the main menu) of the respective Workflow by clicking `Start new Instance`. In the menu of each Instance you can adapt the description of the Workflow (`Edit Workflow Instance Details`) and the Instance can be deleted. Additionally, with this menu the description of the Workflow can be changed or Workflows can be deleted.
 
