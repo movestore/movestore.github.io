@@ -83,9 +83,6 @@ If the App creates [Artefacts](copilot-r-sdk.md#Artefacts) this must be stated i
 ```json
 {
   "settings": [],
-  "dependencies": {
-  "R": []
-  },
   "createsArtifacts": true
 }
 ```
