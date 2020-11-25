@@ -18,8 +18,9 @@
     - [Dropdown](dropdown.md)
 	
 - Publication
-  - [Publication of Apps](publish_app.md)
+  - [Citation of Apps](cite_app.md)
   - [Publication of Workflows](publish_workflow.md)
+  - [Selecting your License](license.md)
 
 - Discussions
   - [What is next?](whatsnext.md)
