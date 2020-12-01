@@ -1,6 +1,6 @@
 # Appspec.json
 
-The `appspec.json` file is used to define an App within MoveApps. 
+The `appspec.json` file is used to define an App within MoveApps.
 Here, dependencies, settings and documentation properties of the App are defined. Few of the settings are mandatory and have a fixed list of possible values, others are optional.
 
 
@@ -19,7 +19,7 @@ There are different types of settings:
   - [Date selection](timestamp.md)
   - [Radiobuttons](radiobuttons.md)
   - [Checkboxes](checkbox.md)
-  - [Dropdown](dropdown.md) 
+  - [Dropdown](dropdown.md)
 
 
 #### Example
@@ -53,7 +53,7 @@ In this part of the file, all libraries on which the App depends have to be list
 The [Settings Editor](https://moveapps.org/apps/settingseditor) can be used to check the definition of all dependencies before submission.
 
 
-#### Example 
+#### Example
 
 Following is an example of the dependencies of an R App that requires libraries (packages) `prettyunits` and `futile.logger`:
 
@@ -64,7 +64,7 @@ Following is an example of the dependencies of an R App that requires libraries 
     "R": [
       {
         "name": "prettyunits",
-        "version": "1.1.1" 
+        "version": "1.1.1"
       },
       {
         "name": "futile.logger"
@@ -92,11 +92,11 @@ For further use and publication, it is mandatory to specify which license agreem
 
 ### List of license keys
 
-- `GPL-3`: [The “GNU General Public License” version 3](https://spdx.org/licenses/GPL-3.0-or-later.html#licenseText)
+- `GPL-3.0-or-later`: [The “GNU General Public License” version 3 or later](https://spdx.org/licenses/GPL-3.0-or-later.html#licenseText)
 - `MIT`: [The “MIT License”](https://spdx.org/licenses/MIT.html#licenseText)
-- `AGPL-3`: [The “GNU Affero General Public License” version 3](https://spdx.org/licenses/AGPL-3.0-or-later.html#licenseText)
-- `BSD-3-Clause`: [The “BSD 3-clause License”](https://spdx.org/licenses/BSD-3-Clause.html#licenseText)
-- `CC-BY-SA-4`: [The “Creative Commons Attribution-Share Alike International License” version 4.0](https://spdx.org/licenses/CC-BY-SA-4.0.html#licenseTex)
+- `AGPL-3.0-or-later`: [The “GNU Affero General Public License” version 3 or later](https://spdx.org/licenses/AGPL-3.0-or-later.html#licenseText)
+- `BSD-3-Clause`: [The “3-clause BSD License”](https://spdx.org/licenses/BSD-3-Clause.html#licenseText)
+- `CC-BY-SA-4.0`: [The “Creative Commons Attribution Share Alike 4.0 International License” version 4.0](https://spdx.org/licenses/CC-BY-SA-4.0.html#licenseText)
 
 #### Example
 
@@ -151,7 +151,6 @@ For future publication and citability, people involved in the development of the
 - funder
 - reviewer
 - translator
-- maintainer
 
 #### Example
 
@@ -249,19 +248,3 @@ Each App requires a detailed Documentation of how it works, how it can be config
   }
 }
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
