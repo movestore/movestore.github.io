@@ -1,7 +1,9 @@
 # MoveApps `R-Function` Übersicht
-Diese Dokumentation beschreibt die Grundlagen um eigene R-Funktionen für MoveApps zu entwickeln. 
+Diese Dokumentation beschreibt die Grundlagen um eigene R-Funktionen für MoveApps zu entwickeln.
 
-Für die Entwicklung von R-Funktionen wird ein R-Projekt zur Verfügung gestellt [(copilot-r-sdk.zip)](copilot-r-sdk.zip ':ignore'). Dieses R-Projekt können Sie als Ausgangspunkt für die Entwicklung Ihrer App nutzen.
+Für die Entwicklung von R-Funktionen wird ein R-Projekt zur Verfügung
+gestellt [(copilot-r-sdk.zip)](https://moveapps.org/documentation/copilot-r-sdk.zip ':ignore'). Dieses R-Projekt können
+Sie als Ausgangspunkt für die Entwicklung Ihrer App nutzen.
 
 ## Wie schreibt man R-Funktionen für MoveApps?
 Um eine R-Funktion aufrufen zu können, muss das SDK verwendet werden. 

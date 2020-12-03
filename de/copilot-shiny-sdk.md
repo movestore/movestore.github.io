@@ -1,7 +1,11 @@
 # MoveApps `Shiny Module` Übersicht
-Diese Dokumentation beschreibt die Grundlagen um Shiny Module für MoveApps zu entwickeln. Weitere Informationen zu Shiny und Shiny Modulen finden Sie unter https://shiny.rstudio.com/tutorial bzw. https://shiny.rstudio.com/articles/modules.html
+Diese Dokumentation beschreibt die Grundlagen um Shiny Module für MoveApps zu entwickeln. Weitere Informationen zu Shiny
+und Shiny Modulen finden Sie unter https://shiny.rstudio.com/tutorial
+bzw. https://shiny.rstudio.com/articles/modules.html
 
-Für die Entwicklung solcher Shiny Module wird ein R-Projekt zur Verfügung gestellt [copilot-shiny-sdk.zip](copilot-shiny-sdk.zip ':ignore'). Dieses R-Projekt können Sie als Ausgangspunkt für die Entwicklung Ihrer App nutzen.
+Für die Entwicklung solcher Shiny Module wird ein R-Projekt zur Verfügung
+gestellt [copilot-shiny-sdk.zip](https://moveapps.org/documentation/copilot-shiny-sdk.zip ':ignore'). Dieses R-Projekt
+können Sie als Ausgangspunkt für die Entwicklung Ihrer App nutzen.
 
 ## Wie schreibt man ein Shiny Module für MoveApps?
 Um Shiny-Module für MoveApps entwickeln zu können, müssen mindestens die beiden Funktionen `shinyModuleUserInterface` und `shinyModule` bereitgestellt werden. Diese Funktionen müssen in einer Datei namens `ShinyModule.R` abgelegt sein.
