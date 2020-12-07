@@ -25,3 +25,4 @@
 - Discussions
   - [What is next?](whatsnext.md)
   - [Join us!](reachout.md)
+  - [Support and report errors](support.md)
