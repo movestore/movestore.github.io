@@ -1,7 +1,11 @@
 - Tutorials
 
   - [How to create your own App](create_app.md)
+  - [Hello world! Your first App](hello_world_app.md)
+  - [How to manage your Apps with Github and Rstudio](manage_app_github.md)
+  
   - [How to compile a Workflow](create_workflow.md)
+  - [Hello world! Your first Workflow](hello_world_workflow.md)
   
 - Reference
   - SDK (software development kit)
@@ -26,3 +30,9 @@
   - [What is next?](whatsnext.md)
   - [Join us!](reachout.md)
   - [Support and report errors](support.md)
+  
+- Terms of Use
+  - [General Terms of use](terms_of_use.md)
+  - [Data Policy](data_policy.md)
+  - [Privacy Policy](privacy_policy.md)
+  - [Citation guidelines](citation_guide.md)
