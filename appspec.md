@@ -88,7 +88,7 @@ If the App creates [Artefacts](copilot-r-sdk.md#Artefacts) this must be stated i
 ```
 
 ## License
-For further use and publication, it is mandatory to specify which license agreement you want to use for your App. At the moment there are five options (see list below), the keys of which have to be entered. Please consult [this website](https://choosealicense.com/) for help with choosing the most appropriate license for your App.
+For further use and publication, it is mandatory to specify which license agreement you want to use for your App. At the moment there are five options (see list below), the keys of which have to be entered. Please see our [License documentation](license.md) and consult [this website](https://choosealicense.com/) for help with choosing the most appropriate license for your App.
 
 ### List of license keys
 
@@ -110,7 +110,7 @@ For further use and publication, it is mandatory to specify which license agreem
 ```
 
 ## Language
-It is also mandatory to specify the language in which your App Description and Documentation is given. Please select from the Type ISO 639-2 (B) language definition list. Typically, our Apps are developed in english language: `eng`.
+It is also mandatory to specify the language in which your App Description and Documentation are given. Please select from the Type ISO 639-2 (B) language definition list. Typically, our Apps are developed in English language: `eng`.
 
 #### Example
 
@@ -228,12 +228,12 @@ References of various types can be added to make background information about yo
 ```
 
 ## Documentation
-Each App requires a detailed Documentation of how it works, how it can be configured and what happens in error/null cases. Please provide a link to such a Documentation. By default this should be the README file in the respective github repository. Please include the below listed points:
+Each App requires a detailed Documentation of how it works, how it can be configured and what happens in error/null cases. Please provide a link to such Documentation. By default this should be the README file in the respective github repository. Please include the below listed points or use the [README template](files/README_template.md)
 
-- Name of the App in MoveApps.
-- Name of the github repository containing the source code.
-- The App Description as provided in MoveApps.
-- Some detailed Documentation text describing the App.
+- Name of the App in MoveApps
+- Name of the github repository containing the source code
+- The App Description as provided in MoveApps
+- Some detailed Documentation text describing the App
 - Input data type
 - Output data type
 - Artefacts (name and description)
