@@ -12,6 +12,8 @@ Here an example selecting all data points of a given calender year is given. Ple
 args[["year"]] = 2014
 ```
 
+## Adapt and run the App
+
 Adapt the code in `RFunction.R` to add a pdf artefact function that plots your positions with the appropriate heading. See the complete file code below. Note that the file path `("hello_world.pdf")` is your local project folder. For later submission to the MoveApps platform this needs to be changed to `(paste0(Sys.getenv(x = "APP_ARTIFACTS_DIR", "/tmp/"),"hello_world.pdf"))`.
 
 ```
@@ -29,4 +31,6 @@ rFunction = function(year, data) {
 
 There you go with a first running MoveApps App that can select all locations of a given calender year and even returns a pdf plot of those locations. Congratulations!
 
-Before submission of your first App to the MoveApps platform, please add an [appspec.json](appspec.md) file to your Github repo and write a [README documentation](files/README_template.md). See also our more detailed tutorial [How to create your own App](create_app.md).
+## Further steps
+
+Before submission of your first App to the MoveApps platform, please add an [appspec.json](appspec.md) file to your GitHub repo and write a [README documentation](files/README_template.md). See also our more detailed tutorial [How to create your own App](create_app.md).
