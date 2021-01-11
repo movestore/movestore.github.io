@@ -1,6 +1,6 @@
-## MoveApps Scope and Documentation
+## MoveApps Documentation
 
-MoveApps serves as a platform that allows the exchange and easy use of **code for the analysis of movement data**. Our scope is thus limited to methods for the manipulation of movement tracks for visualisation and parameter extraction to describe movement behaviours of all kinds of animals. The outcomes are meant to be used for answering biological and ecological questions as well as monitoring and management/conservation applications.
+MoveApps serves as a platform that allows the exchange and easy use of code for the  [**analysis of movement data**](scope.md).
 
 Code developers are encouraged to share (a slightly adapted version of) their movement track analysis code ([How to create your own App](create_app.md)) which then other people can use without knowledge of programming. Users can configure and stitch together analysis Apps to create a Workflow ([How to compile a Workflow](create_workflow.md)).
 

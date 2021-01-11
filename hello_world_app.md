@@ -31,6 +31,9 @@ rFunction = function(year, data) {
 
 There you go with a first running MoveApps App that can select all locations of a given calender year and even returns a pdf plot of those locations. Congratulations!
 
+![](../files/hello_world_pdf.png)
+
+
 ## Further steps
 
 Before submission of your first App to the MoveApps platform, please add an [appspec.json](appspec.md) file to your GitHub repo and write a [README documentation](files/README_template.md). See also our more detailed tutorial [How to create your own App](create_app.md).

@@ -1,5 +1,5 @@
+- [Scope](scope.md)
 - Tutorials
-
   - [How to create your own App](create_app.md)
   - [Hello world! Your first App](hello_world_app.md)
   - [How to manage your Apps with Github and Rstudio](manage_app_github.md)
@@ -20,6 +20,7 @@
     - [Radiobuttons](radiobuttons.md)
     - [Checkboxes](checkbox.md)
     - [Dropdown](dropdown.md)
+  - [Documentation](files/README_template.md)
 	
 - Publication
   - [Citation of Apps](cite_app.md)

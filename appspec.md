@@ -6,7 +6,7 @@ Here, dependencies, settings and documentation properties of the App are defined
 
 ## Validator
 
-For creation, test and verification of the `appspec.json` there is the [Settings Editor](https://moveapps.org/apps/settingseditor ':ignore'). With its help you can quickly and easily define and visualise your settings. If errors occur, suggestions for improvement are given.
+For creation, test and verification of the `appspec.json` there is the [Settings Editor](https://develop.moveapps.org/apps/settingseditor ':ignore'). With its help you can quickly and easily define and visualise your settings. If errors occur, suggestions for improvement are given.
 
 ## Settings
 

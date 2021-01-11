@@ -4,7 +4,7 @@ Shiny Modules can be found at  https://shiny.rstudio.com/tutorial and https://sh
 respectively.
 
 An R Project is provided for the development of Shiny
-Modules [copilot-shiny-sdk.zip](https://moveapps.org/documentation/copilot-shiny-sdk.zip ':ignore'). This R Project can
+Modules [copilot-shiny-sdk.zip](https://develop.moveapps.org/documentation/copilot-shiny-sdk.zip ':ignore'). This R Project can
 and should be used as a starting point for the development of your R-Shiny App.
 
 ## How to write a Shiny Module for MoveApps
