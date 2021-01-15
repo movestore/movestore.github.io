@@ -1,4 +1,4 @@
-# Hello World! - create your first Apps
+# Hello World! - create your first App
 
 Please follow the instructions below and create your first App that runs in the R Copilot Software Development Kit ([R SDK](copilot-r-sdk.md)) in RStudio. This is meant to be an example for future Apps that can be submittd to and then run on MoveApps.
 

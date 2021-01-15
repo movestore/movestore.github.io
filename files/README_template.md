@@ -1,8 +1,11 @@
-# README template for App Documentation
+# App Documentation
+
+All App developers are obliged to provide a complete documentation of their App, so that future users understand run details, results and possible error occurances. Please fill in the below template and use it as your README file in your GibHub repository.
 
 -------------------
+# README template 
 
-# Name of App
+## Name of App
 
 MoveApps
 

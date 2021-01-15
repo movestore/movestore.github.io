@@ -1,12 +1,13 @@
 - [Scope](scope.md)
+- [Funding](funding.md)
+
 - Tutorials
-  - [How to create your own App](create_app.md)
   - [Hello world! Your first App](hello_world_app.md)
-  - [How to manage your Apps with Github and Rstudio](manage_app_github.md)
-  
-  - [How to compile a Workflow](create_workflow.md)
+  - [How to create your own App](create_app.md)
+  - [Manage your Apps with GitHub and Rstudio](manage_app_github.md) 
   - [Hello world! Your first Workflow](hello_world_workflow.md)
-  
+  - [How to compile a Workflow](create_workflow.md)
+    
 - Reference
   - SDK (software development kit)
     - [Copilot R SDK](copilot-r-sdk.md) 
@@ -21,6 +22,10 @@
     - [Checkboxes](checkbox.md)
     - [Dropdown](dropdown.md)
   - [Documentation](files/README_template.md)
+
+- Features
+  - [Share Workflows](share_workflow.md)	
+  - [Scheduled Workflow Runs](scheduled_runs.md)
 	
 - Publication
   - [Citation of Apps](cite_app.md)
@@ -32,7 +37,7 @@
   - [Join us!](reachout.md)
   - [Support and report errors](support.md)
   
-- Terms of Use
+- Terms of Use (provisional)
   - [General Terms of use](terms_of_use.md)
   - [Data Policy](data_policy.md)
   - [Privacy Policy](privacy_policy.md)

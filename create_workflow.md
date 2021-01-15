@@ -13,15 +13,15 @@ From the main menu, select `Workflows` and then `Create New Workflow`. After pro
 
 ![](../files/Workflow_movebank.png)
 
-## Combine Apps to a Workflow
+## Add Apps to a Workflow
 By clicking on the “+” to the rigth of an App, you can browse and select the next App to add to your Workflow for filtering, analysis or visualisation of the downloaded data. You can also insert Apps within the Workflow if they are compatibe with the required input and output types (usually input: Movement and output: Movement). The list of Apps to choose from will only include those that comply with the required input and output types for the specific position in your Workflow. In the list of available Apps, you can see the descriptions of each App and can read additional information by clicking on “Details”. On the top right-hand corner, the list can be filtered by keywords.
 
 ![](../files/Workflow_addApp.png)
 
 ## Run the workflow
-Select `Start Workflow` to begin running the Apps wihtin a Workflow in the order that you have arranged them. You can follow the progress of the Workflow by the change in colour of the action point in the bottom right of each App container.
+Select `Start Workflow` to begin running the Apps within a Workflow in the order that you have arranged them. You can follow the progress of the Workflow by the change in colour of the action point in the bottom right of each App container.
 
-The Workflow continues running even if you leave the site moveapps.org, and results can be looked up and downloaded later. Select `Rerun` or `Stop workflow` to interrupt the run of the Workflow. Each Workflow can also be scheduled to run (once or regularly) in an automatic mode at a fixed date and time. This option (`Schedule Instance`) can be selected in the menu next to `Start Workflow`. From there, you can also export or select to [publish your Workflow](publish_workflow).
+The Workflow continues running even if you leave the site moveapps.org, and results can be looked up and downloaded later. Select `Rerun` or `Stop workflow` to interrupt the run of the Workflow. Each Workflow can also be [scheduled to run](scheduled_run.md) regularely in an automatic mode at a fixed date and time. This option (`Schedule Instance`) can be selected in the menu next to `Start Workflow`.
 
 
 ![](../files/Workflow_menu.png)
@@ -30,17 +30,23 @@ The Workflow continues running even if you leave the site moveapps.org, and resu
 There is a menu on the right of each App container in a Workflow. The R-Apps include the following options:
 
 	- Settings:  View or change App parameters.
-	- Show Downloads: View and download available outputs from teh App (Movement Output, Artefacts, Meta data, Data overview).
+	- App Details: View all information and details about the App
 	- Pin to this App: By pinning the Workflow to an App, you will retain the results of thie App and all Apps preceding it in the Workflow, so that only subsequent Apps are re-executed when you re-run the Workflow. The App you pinned and all preceding Apps are underlaid in grey. The `Pin` can be removed any time by clicking on `unpin` below in the greyed out area.
+	- Update App: If a new version of the App is available it can be updated here.
 	- Show Logs: View the data protocols, which can contain important information if you receive errors or unexpected results.
 	- Delete: Remove the App from your Workflow.
 
 ![](../files/App_menu_R.png)
-![](../files/Download_List.png)
 ![](../files/App_Pin.png)
 
+## Output download menu
+Next to the Run Workflow button, you can access all output files that the Workflow is generating. The .rds data output files of each App can be downloaded separately as well as all by the Apps created artefacts. In case of one or more .pdf artefacts, it is also possible to download a bundled pdf, unsecured or as encrypted file for sensitive tracking data (see buttons on top right).
+
+![](../files/output_button.png)
+![](../files/output_save_view.png)
+
 ## Data overview of App output
-Each App that returns data creates a short summary of the output data, which can be accessed via the green info button that appears on the right side of the App container. This summary includes the bounding box and time range of the positions as well as the number of animals, the total number of positions (events) and the number of positions for each individual animal. Finally, the names of all available data variables are listed. This summary can also be downloaded as a file.
+Each App that returns data creates a short summary of the output data, which can be accessed via the green info button that appears on the right side of the App container. This summary includes the bounding box and time range of the positions as well as the number of animals, the total number of positions (events) and the number of positions for each individual animal. It provides a list of the animals' species and tag sensors. Finally, the names of all available data variables (that provide any non-empty data) are listed. Note the seciong "Unexpected Results?" at the bottom that provides helpful comments if errors occur.
 
 ![](../files/CargoAgent_Overview.png)
 
@@ -52,7 +58,7 @@ For R-Shiny Apps that return User Interfaces (UI), the UI can be accessed after 
 ## Workflow Instances
 Each Workflow can be run and saved in several Instances, allowing you to combine the same Apps in the same order, but with different settings. It is important to note that changes in the selection and order of Apps (not their settings) in one Workflow Instance will be applied to all other Instances of the Workflow.
 
-Every additional Workflow Instance must be initialised in the Workflow overview (via the main menu) of the respective Workflow by clicking `Start new Instance`. In the menu of each Instance you can adapt the description of the Workflow (`Edit Workflow Instance Details`) and the Instance can be deleted. Additionally, with this menu the description of the Workflow can be changed or Workflows can be deleted.
+Every additional Workflow Instance must be initialised in the Workflow overview (via the main menu) of the respective Workflow by clicking `Start new Instance`. In the menu of each Instance you can adapt the description of the Workflow (`Edit Workflow Instance Details`) and the Instance can be deleted. 
 
 ![](../files/Workflow_start.png)
 
