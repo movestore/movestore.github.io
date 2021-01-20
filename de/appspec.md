@@ -10,7 +10,9 @@ Der Benutzer kann in der Oberfläche diese Einstellungen verändern und die Wert
 
 ## Validator
 
-Um eine `appspec.json` zu erstellen, zu testen und auch zu verifizieren gibt es einen [Settings Editor](https://moveapps.org/apps/settingseditor ':ignore'). Mithilfe dieses Tools ist es einfach und schnell möglich die Settings zu definieren, visuell darzustellen und auf Validität zu testen.
+Um eine `appspec.json` zu erstellen, zu testen und auch zu verifizieren gibt es
+einen [Settings Editor](https://www.moveapps.org/apps/settingseditor ':ignore'). Mithilfe dieses Tools ist es einfach
+und schnell möglich die Settings zu definieren, visuell darzustellen und auf Validität zu testen.
 
 ### Einstellungs-Typen
 Es gibt verschiedene Einstellungs-Typen: 
@@ -49,9 +51,11 @@ Es gibt verschiedene Einstellungs-Typen:
 
 In diesem Abschnitt müssen alle Abhängigkeiten zu Bibliotheken der App definiert werden. Dies sind Abhängigkeiten welche die App zur Bau- und / oder zur Laufzeit benötigt. Zu jeder Bibliothek kann (optional) definiert werden, in welcher Version diese geladen werden muss.
 
-!> Für bestimmte Bibliotheken (etwa `shiny`) gelten besondere Regeln; diese können etwa nur in einer bestimmten Version verlangt werden.
+!> Für bestimmte Bibliotheken (etwa `shiny`) gelten besondere Regeln; diese können etwa nur in einer bestimmten Version
+verlangt werden.
 
-Um die Definition aller Abhängigkeiten bereits vor der Einreichung zu prüfen kann der [Settings Editor](https://moveapps.org/apps/settingseditor) genutzt werden.
+Um die Definition aller Abhängigkeiten bereits vor der Einreichung zu prüfen kann
+der [Settings Editor](https://www.moveapps.org/apps/settingseditor) genutzt werden.
 
 ### Beispiel 
 

@@ -6,7 +6,9 @@ Here, dependencies, settings and documentation properties of the App are defined
 
 ## Validator
 
-For creation, test and verification of the `appspec.json` there is the [Settings Editor](https://develop.moveapps.org/apps/settingseditor ':ignore'). With its help you can quickly and easily define and visualise your settings. If errors occur, suggestions for improvement are given.
+For creation, test and verification of the `appspec.json` there is
+the [Settings Editor](https://www.moveapps.org/apps/settingseditor ':ignore'). With its help you can quickly and easily
+define and visualise your settings. If errors occur, suggestions for improvement are given.
 
 ## Settings
 
@@ -50,7 +52,8 @@ In this part of the file, all libraries on which the App depends have to be list
 
 !> Special rules apply to certain libraries (such as e.g. shiny); these can only be required in a certain version.
 
-The [Settings Editor](https://moveapps.org/apps/settingseditor) can be used to check the definition of all dependencies before submission.
+The [Settings Editor](https://www.moveapps.org/apps/settingseditor) can be used to check the definition of all
+dependencies before submission.
 
 
 #### Example
