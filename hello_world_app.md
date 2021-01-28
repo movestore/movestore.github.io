@@ -43,4 +43,4 @@ There you go with a first running MoveApps App that can select all locations of 
 
 ## Further steps
 
-Before submission of your first App to the MoveApps platform, please add an [appspec.json](appspec.md) file to your GitHub repo and write a [README documentation](files/README_template.md). See also our more detailed tutorial [How to create your own App](create_app.md).
+Before submission of your first App to the MoveApps platform, please add an [appspec.json](appspec.md) file to your GitHub repository and write a [README documentation](files/README_template.md). See also our more detailed tutorial [How to create your own App](create_app.md).
