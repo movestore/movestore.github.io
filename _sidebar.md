@@ -14,7 +14,7 @@
     - [Copilot Shiny SDK](copilot-shiny-sdk.md)
   - [appspec.json](appspec.md)
     - [Dependencies](appspec.md#Dependencies)
-    - [Artefacts](appsec.md#Artefacts)
+    - [Artefacts](appspec.md#Artefacts)
     - [License](appspec.md#License)
     - [Language](appspec.md#Language)
     - [Keywords](appspec.md#Keywords)
