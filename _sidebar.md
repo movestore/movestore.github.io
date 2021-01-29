@@ -46,8 +46,8 @@
   - [Join us!](reachout.md)
   - [Support and report errors](support.md)
 
-- Terms of Use (provisional)
-  - [General Terms of use](terms_of_use.md)
-  - [Data Policy](data_policy.md)
+- Terms of Use
+  - [General MoveApps Terms](terms_of_use.md)
+  - [Software Policy](software_policy.md)
   - [Privacy Policy](privacy_policy.md)
   - [Citation guidelines](citation_guide.md)
