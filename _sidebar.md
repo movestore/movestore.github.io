@@ -30,7 +30,7 @@
     - [Radiobuttons](radiobuttons.md)
     - [Checkboxes](checkbox.md)
     - [Dropdown](dropdown.md)
-  - [Documentation](files/README_template.md)
+  - [App Documentation](files/README_template.md)
 
 - Features
   - [Share Workflows](share_workflow.md)
