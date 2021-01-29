@@ -32,3 +32,5 @@ To cite Workflows published in the Movebank Data Repository, you can simply incl
 The following citation can be used to refer to the MoveApps platform:
 
 *Kölzsch A, Scharf A, Davidson SC, Lohr A, Vinciguerra CM, Lang I, Schneider G, Kays R, Wikelski M, Safi K. [year]. MoveApps: platform to share and use movement data analysis tools. Hosted by the Max Planck Institute of Animal Behavior. www.moveapps.org, accessed on [date].*
+
+1 February 2021

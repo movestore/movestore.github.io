@@ -131,3 +131,5 @@ As an individual whose personal data are gathered as part of the aforementioned 
 -	Revocation of consent (Article 7 (3) GDPR)
 
 -	Right to complain to the regulator (Article 77 GDPR). For the MPG, this is the Bavarian Data Protection Authority (BayLDA), Postbox 606, 91511 Ansbach, Germany
+
+1 February 2021
