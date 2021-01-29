@@ -80,8 +80,6 @@ Data of users registered on www.moveapps.org may be used in the following ways:
 
 -	Users of the MoveApps platform can share own Workflows with other registered users. For this, they need to know the nickname of the other user.
 
--	If the user has submitted own Apps to the MoveApps platform, his Nickname can be displayed as App author in an App Showcase on the public part of www.moveapps.org.
-
 The purpose of this data use is to pursue our and the public’s interests to make data analysis methods discoverable and facilitate the sharing of analysis methods and collaborative data analysis for beneficial use, including research and wildlife management and conservation (article 6(1)(f) of the GDPR). Beyond what is described above, the Max-Planck-Society does not share lists of users or contact information and does not sell user data to third parties.
 
 
