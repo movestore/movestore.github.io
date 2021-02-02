@@ -1,6 +1,3 @@
-- [Scope](scope.md)
-- [Funding](funding.md)
-
 - Tutorials
   - [Hello world! Your first App](hello_world_app.md)
   - [How to create your own App](create_app.md)
@@ -45,9 +42,3 @@
   - [What is next?](whatsnext.md)
   - [Join us!](reachout.md)
   - [Support and report errors](support.md)
-
-- Terms of Use
-  - [General MoveApps Terms](terms_of_use.md)
-  - [Software Policy](software_policy.md)
-  - [Privacy Policy](privacy_policy.md)
-  - [Citation guidelines](citation_guide.md)

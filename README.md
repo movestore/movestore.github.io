@@ -1,6 +1,6 @@
 ## MoveApps Documentation
 
-MoveApps serves as a platform that allows the exchange and easy use of code for the  [**analysis of movement data**](scope.md).
+MoveApps serves as a platform that allows the exchange and easy use of code for the  [**analysis of movement data**](https://www.moveapps.org/imprint#Scope).
 
 Code developers are encouraged to share (a slightly adapted version of) their movement track analysis code ([How to create your own App](create_app.md)) which then other people can use without knowledge of programming. Users can configure and stitch together analysis Apps to create a Workflow ([How to compile a Workflow](create_workflow.md)).
 
