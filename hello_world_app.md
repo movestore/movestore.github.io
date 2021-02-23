@@ -10,7 +10,7 @@ MoveApps substitute that behaves (almost) like the online system. The second inc
 into which all your App code is supposed to go.
 
 Here an example selecting all data points of a given calender year is given. Please try it out with the example data
-set `input.rds`: Let the file `copilot-sdk.R` run which is then calling upon the function rFunction() that is defined
+set `input2.rds`: Let the file `copilot-sdk.R` run which is then calling upon the function rFunction() that is defined
 in `RFunction.R`. An `output.rds` file is created with all locations of the input data set of the selectet year. Note
 that the year selection is specified in line 20 of `copilot-sdk.R` and can be adapted there. In the MoveApps platform
 this parameter is provided by an interactive input window.
@@ -21,18 +21,20 @@ args[["year"]] = 2014
 
 ## Adapt and run the App
 
-Adapt the code in `RFunction.R` to add a pdf artefact function that plots your positions with the appropriate heading. See the complete file code below. Note that the file path `("hello_world.pdf")` is your local project folder. For later submission to the MoveApps platform this needs to be changed to `(paste0(Sys.getenv(x = "APP_ARTIFACTS_DIR", "/tmp/"),"hello_world.pdf"))`.
+Adapt the code in `RFunction.R` to add a pdf artefact function that plots your positions with the appropriate heading. See the complete file code below. Note that for plotting we must overwrite `data` in the first line and return it explicitely at the end. The file path `("hello_world.pdf")` is your local project folder; for later submission to the MoveApps platform this needs to be changed to `(paste0(Sys.getenv(x = "APP_ARTIFACTS_DIR", "/tmp/"),"hello_world.pdf"))`.
 
 ```
 library('move')
 library('lubridate')
 
 rFunction = function(year, data) {
-  data[year(data@timestamps) == year]
+  data <- data[year(data@timestamps) == year]
   
   pdf("hello_world.pdf")
   plot(data,main="Hello World!")
   dev.off()
+  
+  return(data)
 }
 ```
 

@@ -10,7 +10,7 @@ MoveApps Apps should be developed in your usual compiler/editor and thoroughly t
 ![](../files/Appdevel_rstudio.png)
 
 ## Creation of the App
-After you have successfully written a functioning App, loaded it (together with the [appspec.json](appspec.md)) into a GitHub repository and created a `Tag` (via `Release`) you can add it to MoveApps. To do this, select `Applications / Create new Application` from the menu and fill out the form. For the App name please stick to our convention of Title Case without hyphens (e.g. `My New App`). When you have successfully created the App, it will be listed in the overview `Applications / Your Applications`.
+After you have successfully written a functioning App, loaded it (together with the [appspec.json](appspec.md)) into a GitHub repository and created a `Tag` (via `Release`) you can add it to MoveApps. To do this, select `Applications / Create new Application` from the menu and fill out the form. For the App name please stick to our convention of Title Case without hyphens (e.g. `My New App`). The link to your repository has to end with `.git`; please add it manually if necessary. One example is `https://github.com/movestore/MorningReport.git`. When you have successfully created the App, it will be listed in the overview `Applications / Your Applications`.
 
 ![](../files/Appdevel_createNewApp.png)
 
