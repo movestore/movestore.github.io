@@ -144,16 +144,16 @@ For future publication and citability, people involved in the development of the
 
 ### List of roles
 
-- author
-- compiler
-- copyright holder
-- creator
-- contributor
-- contractor
-- data contributor
-- funder
-- reviewer
-- translator
+- author (A person, family, or organization responsible for creating a work that is primarily textual in content, regardless of media type. Use also for persons, etc., creating a new work by paraphrasing, rewriting, or adapting works by another creator such that the modification has substantially changed the nature and content of the original or changed the medium of expression.)
+- compiler (A person, family, or organization responsible for creating a new work through the act of compilation, e.g., selecting, arranging, aggregating, and editing data, information, etc.)
+- copyright holder (A person or organization to whom copy and legal rights have been granted or transferred for the intellectual content of a work.)
+- creator (A person or organization responsible for the intellectual or artistic content of a resource.)
+- contributor (A person, family or organization responsible for making contributions to the resource.)
+- contractor (A person or organization relevant to a resource, who enters into a contract with another person or organization.)
+- data contributor (A person or organization that submits data for inclusion in a database or other collection of data.)
+- funder (A person or organization that furnished financial support for the production of the work.)
+- reviewer (A person or organization responsible for the review of a book, motion picture, performance, etc.)
+- translator (A person or organization who renders a text from one language into another, or from an older form of a language into the modern form.)
 
 #### Example
 
@@ -194,26 +194,26 @@ To acknowledge your funding parties, please add a funding statement. It consists
 ```
 
 ## References
-References of various types can be added to make background information about your App accessible. Only a certain list of reference types are permitted, please consult the list below. References are not mandatory.
+References of various types can be added to make background information about your App accessible. Only a certain list of reference types are permitted, please consult the list below. In the descriptions `A` refers to the App or the workflow and `B` is another digital resource that is referenced. References are not mandatory.
 
-### Referece types
-- IsCitedBy/Cites
-- IsSupplementTo/IsSupplementedBy
-- IsContinuedBy/Continues
-- Describes/IsDescribedBy
-- HasMetadata/IsMetadataFor
-- HasVersion/IsVersionOf
-- IsNewVersionOf/IsPreviousVersionOf
-- IsPartOf/HasPart
-- IsReferencedBy/References
-- IsDocumentedBy/Documents
-- IsCompiledBy/Compiles
-- IsVariantFormOf/IsOriginalFormOf
-- IsIdenticalTo
-- IsReviewedBy/Reviews
-- IsDerivedFrom/IsSourceOf
-- IsRequiredBy/Requires
-- Obsoletes/IsObsoletedBy
+### Reference types
+- IsCitedBy/Cites (indicates that B includes A in a citation/indicates that A includes B in a citation)
+- IsSupplementTo/IsSupplementedBy (indicates that A is a supplement to B/indicates that B is a supplement  to A)
+- IsContinuedBy/Continues (indicates A is continued by the work B/indicates A is a continuation of the work B)
+- Describes/IsDescribedBy (indicates A describes B/indicates A is described by B)
+- HasMetadata/IsMetadataFor (indicates resource A has additional metadata B/indicates additional metadata A for a resource B)
+- HasVersion/IsVersionOf (indicates A has a version (B)/ indicates A is a version of B)
+- IsNewVersionOf/IsPreviousVersionOf (indicates A is a new edition of B, where the new edition has been modified or updated/indicates A is a previous edition of B)
+- IsPartOf/HasPart (indicates A is a portion of B/indicates A includes the part B)
+- IsReferencedBy/References (indicates A is used as a source of information by B/indicates B is used as a source of information for A)
+- IsDocumentedBy/Documents (indicates B is documentation about/explaining A; e.g.points to software documentation/indicates A is documentation about B; e.g. points to software documentation)
+- IsCompiledBy/Compiles (indicates B is used to compile or create A/indicates B is the result of a compile or creation event using A)
+- IsVariantFormOf/IsOriginalFormOf (indicates A is a variant or different form of B/indicates A is the original form of B)
+- IsIdenticalTo (indicates that A is identical to B)
+- IsReviewedBy/Reviews (indicates that A is reviewed by B/indicates that A is a review of B)
+- IsDerivedFrom/IsSourceOf (indicates B is a source upon which A is based/indicates A is a source upon which  B is based)
+- IsRequiredBy/Requires (indicates A is required by B/indicates A requires B)
+- Obsoletes/IsObsoletedBy (indicates A replaces B/indicates A is replaced by B)
 
 #### Examples
 

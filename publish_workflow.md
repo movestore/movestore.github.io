@@ -26,13 +26,13 @@ Please write a detailed description of the Workflow, what you have created it fo
 You can include one or several instances of your Workflow in a publication. Please name each of those with a meaningful title as well as enrich it with a description. You can use this description to let people know how each of your instance configurations differ from one another.
 
 #### Workflow contributors (people)
-List the names and affiliations of all authors and other contributors to the Workflow. Each person can have one or more different roles.
+List the names and affiliations of all authors and other contributors to the Workflow. Each person can have one or more different [roles](appspec.md#People).
 
 #### Workflow funding
 Please list the funding sources that have supported you while developing your Workflow.
 
 #### Workflow references
-Please list all main references that you have used and will need for further work with your Workflow publication.
+Please list all main references that you have used and will need for further work with your Workflow publication. See [here](appsepc.md#References) for possible Referece types.
 
 #### License
 Chose a license under which you want to share/publish your Workflow and which users of it must abide to. See our [recommendations](license.md) as help for your selection.
