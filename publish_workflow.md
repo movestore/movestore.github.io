@@ -32,7 +32,7 @@ List the names and affiliations of all authors and other contributors to the Wor
 Please list the funding sources that have supported you while developing your Workflow.
 
 #### Workflow references
-Please list all main references that you have used and will need for further work with your Workflow publication. See [here](appspec.md#References) for possible Reference types.
+Please list all main references that you have used and will need for further work with your Workflow publication. See for possible [Reference types](appspec.md#References).
 
 #### License
 Chose a license under which you want to share/publish your Workflow and which users of it must abide to. See our [recommendations](license.md) as help for your selection.
