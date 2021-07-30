@@ -140,20 +140,18 @@ For better accessibility of the Apps, please provide keywords that characterise 
 ```
 
 ## People
-For future publication and citability, people involved in the development of the App shall be listed. All people can have one or more `roles` that must be selected from the below list. Note that it is mandatory to provide one person that is `author` of the App and that this person has a valid Email address assigned.
+For future publication and citability, people involved in the development of the App shall be listed. All people can have one or more `roles` that must be selected from the below list. Note that it is mandatory to provide one person that is `author` of the App and that this person has a valid Email address assigned. The same roles can be assigned to people involved in a published workflow.
 
 ### List of roles
 
-- **author** (A person, family, or organization responsible for creating a work that is primarily textual in content, regardless of media type. Use also for persons, etc., creating a new work by paraphrasing, rewriting, or adapting works by another creator such that the modification has substantially changed the nature and content of the original or changed the medium of expression.)
-- **compiler** (A person, family, or organization responsible for creating a new work through the act of compilation, e.g., selecting, arranging, aggregating, and editing data, information, etc.)
-- **copyright holder** (A person or organization to whom copy and legal rights have been granted or transferred for the intellectual content of a work.)
-- **creator** (A person or organization responsible for the intellectual or artistic content of a resource.)
-- **contributor** (A person, family or organization responsible for making contributions to the resource.)
-- **contractor** (A person or organization relevant to a resource, who enters into a contract with another person or organization.)
-- **data contributor** (A person or organization that submits data for inclusion in a database or other collection of data.)
-- **funder** (A person or organization that furnished financial support for the production of the work.)
-- **reviewer** (A person or organization responsible for the review of a book, motion picture, performance, etc.)
-- **translator** (A person or organization who renders a text from one language into another, or from an older form of a language into the modern form.)
+- **author** e.g. the developer of an App or the creator of a workflow. Use this role for the main people responsible for an App/workflow. (A person, family, or organization responsible for creating a work that is primarily textual in content, regardless of media type. Use also for persons, etc., creating a new work by paraphrasing, rewriting, or adapting works by another creator such that the modification has substantially changed the nature and content of the original or changed the medium of expression.)
+- **copyright holder** e.g. the person that holds intellectual property rights for an App/ a workflow. (A person or organization to whom copy and legal rights have been granted or transferred for the intellectual content of a work.)
+- **creator** e.g. the developer of an App or the creator of a workflow. Semantically synonymous to author. Use author instead. (A person or organization responsible for the intellectual or artistic content of a resource.)
+- **contributor** e.g. a person that contributed code to an App or helped with creating a workflow, but is not the main person responsible. (A person, family or organization responsible for making contributions to the resource. If a more specific role is available, prefer that, e.g. author, compiler.)
+- **data contributor** e.g. a person that owns/published the data sets an analysis workflow runs on.(A person or organization that submits data for inclusion in a database or other collection of data.)
+- **funder** e.g. a single person responsible for funding of an App or workflow. Please use the funding fields (below) for funding by organisations. (A person or organization that furnished financial support for the production of the work.)
+- **reviewer** e.g. a  person that reviewed the App/workflow or executed quality control.(A person or organization responsible for the review of a book, motion picture, performance, etc.)
+- **translator** e.g. a person that translates documentation and supplementary material for an App or workflow from one language to another. (A person or organization who renders a text from one language into another, or from an older form of a language into the modern form.)
 
 #### Example
 
@@ -194,26 +192,23 @@ To acknowledge your funding parties, please add a funding statement. It consists
 ```
 
 ## References
-References of various types can be added to make background information about your App accessible. Only a certain list of reference types are permitted, please consult the list below. In the descriptions `A` refers to the App or the workflow and `B` is another digital resource that is referenced. References are not mandatory.
+References of various types can be added to make background information about your App accessible. Only a certain list of reference types are permitted, please consult the list below. In the descriptions `A` refers to the App or the workflow and `B` is another digital resource that is referenced. References are not mandatory. The same types of references can be assigned to a published workflow.
 
 ### Reference types
-- **IsCitedBy/Cites** (indicates that B includes A in a citation/indicates that A includes B in a citation)
-- **IsSupplementTo/IsSupplementedBy** (indicates that A is a supplement to B/indicates that B is a supplement  to A)
-- **IsContinuedBy/Continues** (indicates A is continued by the work B/indicates A is a continuation of the work B)
-- **Describes/IsDescribedBy** (indicates A describes B/indicates A is described by B)
-- **HasMetadata/IsMetadataFor** (indicates resource A has additional metadata B/indicates additional metadata A for a resource B)
-- **HasVersion/IsVersionOf** (indicates A has a version (B)/ indicates A is a version of B)
-- **IsNewVersionOf/IsPreviousVersionOf** (indicates A is a new edition of B, where the new edition has been modified or updated/indicates A is a previous edition of B)
-- **IsPartOf/HasPart** (indicates A is a portion of B/indicates A includes the part B)
-- **IsReferencedBy/References** (indicates A is used as a source of information by B/indicates B is used as a source of information for A)
-- **IsDocumentedBy/Documents** (indicates B is documentation about/explaining A; e.g.points to software documentation/indicates A is documentation about B; e.g. points to software documentation)
-- **IsCompiledBy/Compiles** (indicates B is used to compile or create A/indicates B is the result of a compile or creation event using A)
-- **IsVariantFormOf/IsOriginalFormOf** (indicates A is a variant or different form of B/indicates A is the original form of B)
-- **IsIdenticalTo** (indicates that A is identical to B)
-- **IsReviewedBy/Reviews** (indicates that A is reviewed by B/indicates that A is a review of B)
-- **IsDerivedFrom/IsSourceOf** (indicates B is a source upon which A is based/indicates A is a source upon which  B is based)
-- **IsRequiredBy/Requires** (indicates A is required by B/indicates A requires B)
-- **Obsoletes/IsObsoletedBy** (indicates A replaces B/indicates A is replaced by B)
+- **IsCitedBy/Cites** use this relation if you know of another resource that uses the App/workflow or if the App/workflow is based on another piece of software/work and you want to credit. (indicates that B includes A in a citation/indicates that A includes B in a citation)
+- **IsSupplementTo/IsSupplementedBy** use this relation if the App/workflow can be used as supplementary material to another resource or publication. The App/workflow can also be supplemental material to a publication if it supports it, but isn't essential for its understanding. (indicates that A is a supplement to B/indicates that B is a supplement  to A)
+- **IsContinuedBy/Continues** use this relation to link to a resource that continues ideas of the App/workflow in another resource (e.g. a new App). For new versions of the same App/workflow please use the relations 'IsNewVersionOf/IsPreviousVersionOf'. (indicates A is continued by the work B/indicates A is a continuation of the work B)
+- **Describes/IsDescribedBy** use this relation to link to a publication in which the App/workflow is described, e.g. as a method used in your research. (indicates A describes B/indicates A is described by B)
+- **HasMetadata/IsMetadataFor** use this relation to link to a resource that includes additional meta information about the App/workflow. To reference a documentation please use the relation 'IsDocumentedBy' instead.(indicates resource A has additional metadata B/indicates additional metadata A for a resource B)
+- **HasVersion/IsVersionOf** use this relation to link to another version of the App/workflow. To indicate a specific relation between the versions, please use the relation 'IsNewVersionOf/IsPreviousVersionOf'. (indicates A has a version (B)/ indicates A is a version of B)
+- **IsNewVersionOf/IsPreviousVersionOf** use this relation to link to another version of the App/workflow. If you know the type of the version relation (e.g. if another App is a newer version) please use this relation as it is more specific than the general 'VersionOf' relation. App versions in MoveApps are automatically linked to your App.(indicates A is a new edition of B, where the new edition has been modified or updated/indicates A is a previous edition of B)
+- **IsPartOf/HasPart** use this relation if the App/workflow is a part of a bigger collection and you want to link to it. If on the other hand there are specific smaller parts of the App/worklfow published elswhere, you can indicate this by using the 'IsPartOf' relation. (indicates A is a portion of B/indicates A includes the part B)
+- **IsDocumentedBy/Documents** use this relation to link to another document that serves as a documentation for the App/workflow. This is an addition to the App documentation that you submit for an App via Git. (indicates B is documentation about/explaining A; e.g.points to software documentation/indicates A is documentation about B; e.g. points to software documentation)
+- **IsVariantFormOf/IsOriginalFormOf** use this if the App/workflow is a result of a variation of another App/workflow or if other Apps/workflows are created with your resource as a base. (indicates A is a variant or different form of B/indicates A is the original form of B)
+- **IsIdenticalTo** use this relation to link to other locations where you might have published the App/workflow additionally in the exact same form. (indicates that A is identical to B)
+- **IsReviewedBy/Reviews** use this relation to link to a document that functions as a review for the App/workflow. This could be the assesment of a peer reviewer or colleague that thoroughly evaluated the App/workflow and published the result. (indicates that A is reviewed by B/indicates that A is a review of B)
+- **IsRequiredBy/Requires** use this relation to link to a resource that the App/workflow requires to be used. This might be a specific package or library that you want to highlight. It is not necessary to add this information as the metadata for each App automatically includes all used software packages. (indicates A is required by B/indicates A requires B)
+- **Obsoletes/IsObsoletedBy** use this to signal that the App/workflow makes another resource obsolete. This makes it a special relation of a version. Use this if you want to signal that the related resource should not be used anymore in the future. (indicates A replaces B/indicates A is replaced by B)
 
 #### Examples
 

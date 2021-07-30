@@ -10,7 +10,7 @@ First, define with whom you want to share your Workflow. You can select to `Shar
 
 Second, you can select which of the Workflow instances you want to share. The selection of at least one of them is mandatory.
 
-Finally, there are two kinds of messages that you can provide to the Workflow receipient(s). One is a general, free text message that allows you to describe your Workflow and point out why you are sharing it. The other is the Datasource Message, which is by default filled in with the settings of the data source selection App of all selected Workflow instances. This allows the new user to download the same data from e.g. Movebank as the original user, but with his/her private account. Note, that the data source details can be edited, replaced or deleted.
+Finally, there are two kinds of messages that you can provide to the Workflow receipient(s). One is a general, free text message that allows you to describe your Workflow and point out why you are sharing it. The other is the Datasource Message, which is by default filled in with the settings of the data source selection App of all selected Workflow instances. This allows the new user to download the same data from e.g. Movebank as the original user, but with his/her private account. The data message also appears during the configuration of the Movebank Download App once the workflow has been loaded/accepted (see below), so that the user can easily adapt it. Note, that the data source details can be edited, replaced or deleted before sharing.
 
 Once finished, please press Share Workflow.
 
