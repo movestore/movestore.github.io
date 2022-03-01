@@ -19,7 +19,15 @@ It is possible to have an E-mail sent to the user's E-mail address after each of
 
 Note that there is an App that has been developed to modify the E-mail message of the scheduled runs based on results from the workflow: the Email Alert App. It creates a text file called `email_alert_text.txt` that will be automatically added to the text of the E-mail message. It allows, e.g. an alert message to be sent if a certain condition is fulfilled in the analysed data set.
 
+![](../files/schedule_email.png)
+
+![](../files/output_email_api.png)
+
 ## Access Workflow products via API link
-Each output product of a workflow can be remotely adressed and downloaded via a secured, stable http link that can be created by our API functionality. To create such a link, please click the API Access button at the top of the output window. This directs you to a site to `Register for Artefacts/Products API Access`. Here, you need to create a user name and password that can be used to access the http links for this workflow (only). Please store these details somewhere for later use. The stable links for each product/artefact can be accessed by clicking on the link in the sentence:  `You can use this overview as your entrypoint to get stable links to your artefacts.`
+Each output product of a workflow can be remotely adressed and downloaded via a secured, stable http link that can be created by our API functionality. To create such a link, please click the API Access button at the top of the output window. This directs you to a site to `Register for Artefacts/Products API Access`. Here, you need to create a user name and password that can be used to access the http links for this workflow (only). Please store these details somewhere for later use. The stable links for each product/artefact can be accessed by clicking on the link in:  You can use `this overview` as your entrypoint to get stable links to your artefacts.
+
+![](../files/API_register.png)
 
 To access the overview of the product http links, you have to enter the previously created user name and password into your preferred browser. An XML list will be shown that provides the links. Note that these links are defined by the position of the App in the workflow and the name of the product file. Thus, the link is stable only if the Apps in the workflow stay in the same order and the products of the Apps keep the same name. Each time the workflow is now run, the product changes and is accessible via the stable link. So, it is possible to integrate the secure link into another web page, and the file can be automatically updated each time the workflow has run.
+
+![](../files/API_link_list.png)
