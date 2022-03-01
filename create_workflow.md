@@ -21,7 +21,7 @@ By clicking on the “+” to the rigth of an App, you can browse, search and se
 ## Run the workflow
 Select `Start Workflow` to begin running the Apps within a Workflow in the order that you have arranged them. You can follow the progress of the Workflow by the change in colour of the action point in the bottom right of each App container. Note that there is not indication yet, when the workflow is finished, but the output files have become available.
 
-The Workflow continues running even if you leave the site moveapps.org, and results can be looked up and downloaded later. Select `Rerun` or `Stop workflow` to interrupt the run of the Workflow. Each Workflow can also be [scheduled to run](scheduled_run.md) regularely in an automatic mode at a fixed date and time. This option (`Schedule Instance`) can be selected in the menu next to `Start Workflow`.
+The Workflow continues running even if you leave the site moveapps.org, and results can be looked up and downloaded later. Select `Rerun` or `Stop workflow` to interrupt the run of the Workflow. Each Workflow can also be [scheduled to run](scheduled_runs.md) regularely in an automatic mode at a fixed date and time. This option (`Schedule Instance`) can be selected in the menu next to `Start Workflow`.
 
 
 ![](../files/Workflow_menu.png)
