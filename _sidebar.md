@@ -31,7 +31,7 @@
 
 - Features
   - [Share Workflows](share_workflow.md)
-  - [Scheduled Workflow Runs](scheduled_runs.md)
+  - [Scheduled Workflow Runs and Remote Access (E-mail, API)](scheduled_runs.md)
 
 - Publication
   - [Citation of Apps](cite_app.md)

@@ -1,7 +1,5 @@
 # Publication of Workflows
 
-!> **_NOTE:_**  This feature isn't yet available. We plan on implementing it during spring/summer 2021. Stay tuned!
-
 To make your work reproducible, we offer the publication of Workflows in combination with published papers and data sets.
 
 ## Publication with DOI

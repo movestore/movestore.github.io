@@ -1,7 +1,7 @@
 # Manage your MoveApps Apps with GitHub and RStudio
 
 ## Create GitHub repository
-On your personal GitHub dashboard create a new repository. Specify its name and provide a short desription. If you have connected your GitHub account in MoveApps, you can use `public`as well as `private` repositories, we recommend `public` for tracability and collaboration in the platform. Furthermore, we recommend to add a README file, which can hold your App Documentation and add a .gitignore file. You can choose a license here, but this will be required of you also later in the process of submitting the App to MoveApps.
+On your personal GitHub dashboard create a new repository. Specify its name and provide a short desription. If you have connected your GitHub account in MoveApps, you can use `public`as well as `private` repositories, we recommend `public` for traceability and collaboration in the platform. Furthermore, we recommend to add a README file, which can hold your App Documentation and add a .gitignore file. You can choose a license here, but this will be required of you also later in the process of submitting the App to MoveApps.
 
 ![](../files/Github_newRepo.png)
 

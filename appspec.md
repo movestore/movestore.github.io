@@ -194,7 +194,12 @@ To acknowledge your funding parties, please add a funding statement. It consists
 ## References
 References of various types can be added to make background information about your App accessible. Only a certain list of reference types are permitted, please consult the list below. In the descriptions `A` refers to the App or the workflow and `B` is another digital resource that is referenced. References are not mandatory. The same types of references can be assigned to a published workflow.
 
+If your App heavily depends on a specific package/library to function, adding this reference as `Requires` is highly appreciated. It might motivate e.g. R-package developers helping to improve the App.
+
+
 ### Reference types
+Please consider including a reference to e.g. an R-package if your App depends heavily on (a) specific function(s) from it. Use the **Requires** reference type (see below). Also indicating papers that describe the developed methods is highly recommended, e.g. using the reference type **IsDescribedBy**.
+
 - **IsCitedBy/Cites** use this relation if you know of another resource that uses the App/workflow or if the App/workflow is based on another piece of software/work and you want to credit. (indicates that B includes A in a citation/indicates that A includes B in a citation)
 - **IsSupplementTo/IsSupplementedBy** use this relation if the App/workflow can be used as supplementary material to another resource or publication. The App/workflow can also be supplemental material to a publication if it supports it, but isn't essential for its understanding. (indicates that A is a supplement to B/indicates that B is a supplement  to A)
 - **IsContinuedBy/Continues** use this relation to link to a resource that continues ideas of the App/workflow in another resource (e.g. a new App). For new versions of the same App/workflow please use the relations 'IsNewVersionOf/IsPreviousVersionOf'. (indicates A is continued by the work B/indicates A is a continuation of the work B)
@@ -207,7 +212,7 @@ References of various types can be added to make background information about yo
 - **IsVariantFormOf/IsOriginalFormOf** use this if the App/workflow is a result of a variation of another App/workflow or if other Apps/workflows are created with your resource as a base. (indicates A is a variant or different form of B/indicates A is the original form of B)
 - **IsIdenticalTo** use this relation to link to other locations where you might have published the App/workflow additionally in the exact same form. (indicates that A is identical to B)
 - **IsReviewedBy/Reviews** use this relation to link to a document that functions as a review for the App/workflow. This could be the assesment of a peer reviewer or colleague that thoroughly evaluated the App/workflow and published the result. (indicates that A is reviewed by B/indicates that A is a review of B)
-- **IsRequiredBy/Requires** use this relation to link to a resource that the App/workflow requires to be used. This might be a specific package or library that you want to highlight. It is not necessary to add this information as the metadata for each App automatically includes all used software packages. (indicates A is required by B/indicates A requires B)
+- **IsRequiredBy/Requires** use this relation to link to a resource that the App/workflow requires to be used. This might be a specific package or library that you want to highlight. It is not necessary to add this information as the metadata for each App automatically includes all used software packages, but if your App depends heavily on a specific package to function, adding this reference is highly appreciated. (indicates A is required by B/indicates A requires B)
 - **Obsoletes/IsObsoletedBy** use this to signal that the App/workflow makes another resource obsolete. This makes it a special relation of a version. Use this if you want to signal that the related resource should not be used anymore in the future. (indicates A replaces B/indicates A is replaced by B)
 
 #### Examples
