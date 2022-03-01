@@ -42,7 +42,7 @@ There is a menu on the right of each App container in a Workflow. The R-Apps inc
 ## Output download menu
 Next to the Run Workflow button, you can access all output files that the Workflow is generating. The .rds data output files of each App can be downloaded separately as well as all by the Apps created productss. In case of one or more .pdf products, it is also possible to download a bundled pdf, unsecured or as encrypted file for sensitive tracking data (see buttons on top right).
 
-Note that it is possible to select products from Apps for inclusion in E-mail attachments (see [scheduling](scheduled_run.md)). At the top of the page, you can access our [API service](scheduled_run.md#Access Workflow products via API link) that allows to create a stable http link to any of the products created by the workflow.
+Note that it is possible to select products from Apps for inclusion in E-mail attachments (see [scheduling](scheduled_runs.md)). At the top of the page, you can access our [API service](scheduled_runs.md#Access Workflow products via API link) that allows to create a stable http link to any of the products created by the workflow.
 
 ![](../files/output_button.png)
 ![](../files/output_save_view.png)
