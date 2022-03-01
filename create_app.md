@@ -6,7 +6,7 @@ Apps to be submitted must be managed in a public [GitHub](https://github.com) re
 
 
 ## Overview of necessary steps to develop an App
-### (see details below)
+*(details below)*
 
 1. **Develop the App code** locally (in RStudio) and save it to a file called `RFunction.R` or `ShinyModule.R`. (currently only R Apps possible, more to come)
 
