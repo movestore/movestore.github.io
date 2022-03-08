@@ -6,7 +6,9 @@ For replication, collaboration or other joined work, it is possible to share you
 
 To share one of your Workflows, you need to select `Share` in the Workflow menu at the Workflow overview. In the Share Workflow dialog you then have fill in several details.
 
-First, define with whom you want to share your Workflow. You can select to `Share with all users on MoveApps` and/or select one or more specific MoveApps users by searching for their nicknames, that you should personally ask of the person(s) beforehand. Only users that have agreed that their nicknames can be used for this option during the registration process can be found here. In case of specific users being invited, they will get an email about the invitation.
+First, define with whom you want to share your Workflow. You can select to `Share with all users on MoveApps` and/or select one or more specific MoveApps users by searching for their nicknames, that you should personally ask of the person(s) beforehand. Only users that have agreed that their nicknames can be used for this option during the registration process can be found here. In case of specific users being invited, they will get an E-mail about the invitation.
+
+![](../files/allow_profile_discov.png)
 
 Second, you can select which of the Workflow instances you want to share. The selection of at least one of them is mandatory.
 
