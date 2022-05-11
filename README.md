@@ -1,4 +1,4 @@
-## MoveApps Documentation
+## MoveApps User Manual
 
 MoveApps serves as a platform that allows the exchange and easy use of code for the  [**analysis of movement data**](https://www.moveapps.org/imprint#Scope).
 
