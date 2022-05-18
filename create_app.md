@@ -10,7 +10,7 @@ Apps to be submitted must be managed in a public [GitHub](https://github.com) re
 
 1. **Develop the App code** locally (in RStudio) and save it to a file called `RFunction.R` or `ShinyModule.R`. (currently only R Apps possible, more to come)
 
-2. **Test your App** locally using the file `copilot-*-sdk.R` which behaves (almost) like the online MoveApps system.
+2. **Test your App** locally using the file `copilot-*-sdk.R` which behaves (almost) like the online MoveApps system. Note that before submission to MoveApps, all Apps must be tested locally to run for the [four provided data sets](../files/inputs_MoveApps_SmokeTesting.zip) (smoke testing). Furthermore, we strongly suggest automatic unit tests (e.g. using the R package `testthat`) that will soon become mandatory and integrated into the App submission process.  
 
 3. **Write App specifications** into the file `appspec.json` to define the App's metadata and the user interface for MoveApps users to specify App parameters. Test this file for compliance in the [Settings editor](https://www.moveapps.org/apps/settingseditor ':ignore').
 
@@ -31,6 +31,11 @@ MoveApps Apps should be developed in your usual compiler/editor and thoroughly t
 Note that there is only one possible input and output object type: move::moveStack in `rds` file format. You can use the `input.rds`and `input2.rds` files from the SDK as examples. The `logger.R` file is included in the SDKs for communication functionality functions in MoveApps. In the file, functions are defined that can be used by the App developer to give information messages, warnings, errors, etc. to the user in MoveApps. Please use these functions in your Apps.
 
 ![](../files/Appdevel_rstudio.png)
+
+## Testing the App
+Before submission to MoveApps, all App must be thoroughly tested locally using the file `copilot-*-sdk.R`, which behaves (almost) like the online MoveApps system. So far, manual testing has worked fine for us, however we require that all Apps must be tested to run for the [four provided data sets](../files/inputs_MoveApps_SmokeTesting.zip) (smoke testing). The datasets are (1) local movements of pigeons, (2) migration tracks of geese, (3) a multiyear track of a white stork and (4) a high-resolution track of local movement of a goat on Mount Etna. 
+
+Furthermore, we strongly suggest automatic unit tests (e.g. using the R package `testthat`) that will soon become mandatory and integrated into the App submission process.  
 
 ## Initiation/Creation of the App
 After you have successfully written a functioning App, loaded it (together with the [appspec.json](appspec.md)) into a GitHub repository and described its details in the `README.md` file, you can initiate it on MoveApps. To do this, select `Applications / Create new Application` from the menu and fill out the form. For the App name please stick to our convention of Title Case without hyphens (e.g. `My New App`). The link to your repository has to end with `.git`; please add it manually if necessary. One example is `https://github.com/movestore/MorningReport.git`. The input type is usually MOVEMENT (i.e. R move:moveStack) and output types can be MOVEMENT or USERUI. Note that an App with USERUI output always ends the workflow. For intermediatry R-Shiny Apps that shall transfer data to a next App in a workflow, output type MOVEMENT has to be selected. When you have successfully created the App, it will be listed in the overview `Applications / Your Applications`
