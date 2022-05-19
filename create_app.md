@@ -10,7 +10,7 @@ Apps to be submitted must be managed in a public [GitHub](https://github.com) re
 
 1. **Develop the App code** locally (in RStudio) and save it to a file called `RFunction.R` or `ShinyModule.R`. (currently only R Apps possible, more to come)
 
-2. **Test your App** locally using the file `copilot-*-sdk.R` which behaves (almost) like the online MoveApps system. Note that before submission to MoveApps, all Apps must be tested locally to run for the [four provided data sets](https://www.moveapps.org/documentation/inputs_MoveApps_SmokeTesting.zip) (smoke testing). Furthermore, we strongly suggest automatic unit tests (e.g. using the R package `testthat`) that will soon become mandatory and integrated into the App submission process.  
+2. **Test your App** locally using the file `copilot-*-sdk.R` which behaves (almost) like the online MoveApps system. Note that before submission to MoveApps, all Apps must be tested locally to run for the [four provided data sets](https://docs.moveapps.org/files/inputs_MoveApps_SmokeTesting.zip) (smoke testing). Furthermore, we strongly suggest automatic unit tests (e.g. using the R package `testthat`) that will soon become mandatory and integrated into the App submission process.  
 
 3. **Write App specifications** into the file `appspec.json` to define the App's metadata and the user interface for MoveApps users to specify App parameters. Test this file for compliance in the [Settings editor](https://www.moveapps.org/apps/settingseditor ':ignore').
 
@@ -33,7 +33,7 @@ Note that there is only one possible input and output object type: move::moveSta
 ![](../files/Appdevel_rstudio.png)
 
 ## Testing the App
-Before submission to MoveApps, all App must be thoroughly tested locally using the file `copilot-*-sdk.R`, which behaves (almost) like the online MoveApps system. So far, manual testing has worked fine for us, however we require that all Apps must be tested to run for the [four provided data sets](https://www.moveapps.org/documentation/inputs_MoveApps_SmokeTesting.zip) (smoke testing). The datasets are (1) local movements of pigeons, (2) migration tracks of geese, (3) a multiyear track of a white stork and (4) a high-resolution track of local movement of a goat on Mount Etna. 
+Before submission to MoveApps, all App must be thoroughly tested locally using the file `copilot-*-sdk.R`, which behaves (almost) like the online MoveApps system. So far, manual testing has worked fine for us, however we require that all Apps must be tested to run for the [four provided data sets](https://docs.moveapps.org/files/inputs_MoveApps_SmokeTesting.zip) (smoke testing). The datasets are (1) local movements of pigeons, (2) migration tracks of geese, (3) a multiyear track of a white stork and (4) a high-resolution track of local movement of a goat on Mount Etna. 
 
 Furthermore, we strongly suggest automatic unit tests (e.g. using the R package `testthat`) that will soon become mandatory and integrated into the App submission process.  
 
