@@ -1,5 +1,5 @@
 # Input of real numbers
-To allow the user to input real numbers (with comma) you can use the type `DOUBLE`
+To allow the user to input real numbers (with comma) you can use the type `DOUBLE`.
 
 ## Example
 
