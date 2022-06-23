@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <meta charset="UTF-8">
+    <title>MoveApps Web-Partner API example</title>
+</head>
+
+<body>
+    <h2>API for analysis output files functional</h2>
+    <p>Try out integrating files that you have produced with a MoveApps workflow into your own personal webpage! They are then automatically updated when scheduling workflow runs.</p>
+    <p>See here tracks of our favourite Max Planck species: White storks that were born in Radolfzell moving during the past 12 weeks, updated every morning to integrate new location data transmitted by the tags to Movebank and MoveApps.</p>
+
+    <video width="400" controls autoplay loop>
+        <!-- TODO: switch to www -->
+        <source
+            src="https://87d74a1d-8c4b-431d-91f8-1442823def39:FOQ0L7N7*PQHTx+J$51K&7+unlsru0gn@develop.moveapps.org/web-partner/v1/workflowInstances/87d74a1d-8c4b-431d-91f8-1442823def39/apps/1/artifacts/animation_moveVis.mp4"
+            type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div id="modifiedAt"></div>
+
+    <script>
+        // The MoveApps Webpartner-API credentials provided by the "output" section of the workflow:
+        let username = '87d74a1d-8c4b-431d-91f8-1442823def39' // TODO: switch to www '8b536ed8-a681-4786-aa01-b26040106f9f'
+        // Keep in mind that this token will be visibile to the public. That is okay for workflows which generate public resources (aka artifacts).
+        // If your workflow produces sensitive resources consider consuming the artifacts by a own backend system in order to hide this token from the public.
+        let token = 'FOQ0L7N7*PQHTx+J$51K&7+unlsru0gn' // TODO: switch to www 'bdl@2nq@9SD!i31a1M7HxG7GQG93IQ0a'
+
+        // fetch the `/artifacts/index` endpoint in order to get some metadata
+        fetch(
+            `https://develop.moveapps.org/web-partner/v1/workflowInstances/${username}/artifacts/index`,
+            // TODO: switch to www 'https://www.moveapps.org/web-partner/v1/workflowInstances/8b536ed8-a681-4786-aa01-b26040106f9f/artifacts/index',
+            {
+                method: 'GET',
+                headers: {
+                    'Authorization': 'Basic ' + btoa(username + ":" + token),
+                    'Accept': 'application/json' // supported response content types are `application/json` and `application/xml`
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('success!', data);
+                let animationArtifact = data.artifacts[0]
+                if (animationArtifact.fileName === 'animation_moveVis.mp4') {
+                    document.getElementById('modifiedAt').innerHTML = `Modified at ${animationArtifact.modifiedAt}`
+                } else {
+                    console.warn('selected artifact is not the expected one! has the worklfow- / output-configuration changed?', animationArtifact)
+                }
+            })
+            .catch(function (err) {
+                console.warn('Something went wrong.', err);
+            });
+    </script>
+</body>
