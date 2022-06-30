@@ -1,6 +1,6 @@
 # Share Workflows with other Users
 
-For replication, collaboration or other joined work, it is possible to share your Workflow with other users. A Workflow can be (1) shared globally with all MoveApps users or (2) specific users can be invited by their nickname. The receipients can load the shared or any public Workflow into their account and edit it there independently of the original Workflow and its creator. Note that users have 30 days to accept an individually shared Workflow, public Workflows stay available longer.
+For replication, collaboration or other joined work, it is possible to share your Workflow with other users.  A Workflow can be (1) shared globally with all MoveApps users or (2) specific users can be invited by their nickname. The receipients can load the shared or any public Workflow into their account and edit it there independently of the original Workflow and its creator. The Workflow will be availabe with all Apps in the same versions as shared by the creator originally, they can be updated by the receiving user. Note that users have 30 days to accept an individually shared Workflow, public Workflows stay available permanently.
 
 ## How to share your Workflow
 
