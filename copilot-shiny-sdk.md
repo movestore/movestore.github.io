@@ -11,24 +11,62 @@ can and should be used as a starting point for the development of your R-Shiny A
 In order to be able to develop Shiny Modules for MoveApps, at least the two functions `shinyModuleUserInterface` and `shinyModule` must be provided. These functions must be stored in a file called `ShinyModule.R`.
 
 ### User Interface - shinyModuleUserInterface()
-Within this function the Shiny User interface (UI) must be defined . It is important that the UI objects are created using the Shiny namespace `ns`.
+Within this function the Shiny User interface (UI) must be defined . All input and output and brush IDs that appear in the function body needs to be wrapped in a call to the namespace function `ns()`.
 ```
 shinyModuleUserInterface <- function(id, label) {
   ns <- NS(id)
 
   fluidPage(
     textInput(ns("my-textinput"), h3("Text input"), value = "Enter text...")
+    uiOutput(ns("indivUI"))
   )
 }
 ```
 
-### Logic - shinyModule()
-This function contains the own logic of the Shiny Module.
+When using `shinydashboard`, the `dashboardPage()` has to be wrapped in a `tagList()`, and all IDs of the inputs/outputs need to be wrapped in the `ns()` function. 
+
+*NOTE: if you know a better way of modularizing a shinydashboard app, please get in touch with ascharf@ab.mpg.de, thanks!*
+
 ```
-shinyModule <- function(input, output, session) {}
+shinyModuleUserInterface <- function(id, label) {
+  ns <- NS(id) ## all IDs of UI functions need to be wrapped in ns()
+  tagList(
+    dashboardPage(
+      dashboardHeader(title = "my app title"),
+      dashboardSidebar(uiOutput(ns("Sidebar"))), 
+      dashboardBody(uiOutput(ns("TabUI")))
+    )
+  )
+}
+```
+
+
+### Server module - shinyModule()
+This function contains the module server functions. When `uiOutput`/`renderUI` is used, the IDs of the inputs/outputs also need to be wrapped in the `ns()`.
+
+```
+shinyModule <- function(input, output, session) {
+  ns <- session$ns
+  output$indivUI <- renderUI({
+    selectInput(ns("indiv"), "Individuals", namesIndiv(data), multiple = TRUE)
+  })
+  
+}
 ```
 
 ### Input
+
+#### Input from the previous App
+In order to use the result of the previous App in your App, the last parameter of the `shinyModule` function must be named `data`, referring to the data input.
+```
+# With input from previous App
+shinyModule <- function(input, output, session, data) {
+    # Do something with the data
+}
+```
+
+!> The data parameter, in turn, is **not** passed on to the `shinyModuleUserInterface` function.
+
 
 #### MoveApps parameters
 In order to receive parameters or settings from MoveApps in the Shiny Module, they must be defined in the [appspec.json](appspec.md) file.
@@ -76,17 +114,6 @@ shinyModuleUserInterface <- function(id, label, username, password) {
 #### Limitation
 !> The name `data` cannot be used as an identifier for a setting, because this name is reserved for the output of the previous App.
 
-#### Input from the previous App
-In order to use the result of the previous App in your App, the last parameter of the `shinyModule` function must be named `data`, referring to the data input.
-```
-# With input from previous App
-shinyModule <- function(input, output, session, data) {
-    # Do something with the data
-}
-```
-
-!> The data parameter, in turn, is **not** passed on to the `shinyModuleUserInterface` function.
-
 
 #### Combination of data from the previous App and settings
 ```
@@ -100,20 +127,31 @@ shinyModule <- function(input, output, session, username, password, data) {
 }
 ```
 
-## Integrate Shiny Modules into an automatic Workflow
-Shiny Modules can also be integrated into an automatic Workflow without the user having to interact with the App directly. This allows the Workflow to run automatically without interruptions.
+## Integrate Shiny Apps into an automatic Workflow
+Shiny Apps can also be integrated into an automatic Workflow without the user having to interact with the App directly. This allows the Workflow to run automatically without interruptions.
 
-## Input
+### Input
 The same requirements apply to the input as already described above [(Input from the previous App)](copilot-shiny-sdk#input-predecessor-app).
 
-## Output
-Shiny Modules can be integrated into an automatic Workflow and the newly calculated data object passed on to subsequent Apps. To do this, the `shinyModule` function must return the data object as reactive output.
+### Output
+Shiny Apps can be integrated into an automatic Workflow and the newly calculated data object passed on to subsequent Apps. To do this, the `shinyModule` function must return the data object as reactive output.
 ```
-shinyModule <- function(input, output, session, username, password, data) {
-    # Do something with username, password and data
+shinyModule <- function(input, output, session, data) {
+    # Do something with the data
     return(reactive({ modifiedData() }))
 }
 ```
+
+If the Shiny App is not modifying the input data (e.g. only visualization), than the input data can be passed on unmodified to the next App. To do this, the `shinyModule` function must return the data object as reactive output. If no data is passed on, the app is the endpoint of a workflow.
+```
+shinyModule <- function(input, output, session, data) {
+  current <- reactiveVal(data)
+  # Do something with the data
+  return(reactive({ current() }))
+}
+```
+
+
 
 ## Configure Shiny Modules using the Shiny UI
 Shiny Modules can also be configured using the Shiny UI. To do this, as with the normal configuration via the MoveApps interface, the App must define these parameters in [appspec.json](appspec.md). To be able to transfer the configuration back to MoveApps, a new `shinyModuleConfiguration` function must be created. Within this function, the parameters must be entered in a list with the respective names. As soon as this function is defined in the `ShinyModule`, a button appears in the Shiny UI, which allows this new configuration to be transferred back to MoveApps.
