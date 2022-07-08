@@ -57,7 +57,7 @@ MoveApps allows the creation and saving of different files directly through the 
 ```
 rFunction = function(username, password, data) {
     # Do something
-    write.csv(artefact, file = paste0(Sys.getenv(x = "APP_ARTIFACTS_DIR", "/tmp/"),"artefact.csv")
+    write.csv(artefact, file = paste0(Sys.getenv(x = "APP_ARTIFACTS_DIR", "/tmp/"),"artefact.csv"))
 	png(paste0(Sys.getenv(x = "APP_ARTIFACTS_DIR", "/tmp/"),"artefact.png"))
 	# Plot your image
 	dev.off()
