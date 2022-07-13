@@ -3,7 +3,7 @@
   - [How to create your own App](create_app.md)
   - [Manage your Apps with GitHub and Rstudio](manage_app_github.md)
   - [Hello world! Your first Workflow](hello_world_workflow.md)
-  - [How to compile a Workflow](create_workflow.md)
+  - [How to create a Workflow](create_workflow.md)
 
 - Reference
   - SDK (software development kit)
