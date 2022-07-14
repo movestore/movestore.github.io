@@ -151,7 +151,7 @@ shinyModule <- function(input, output, session, username, password, data) {
 ```
 
 ## Integrate Shiny Apps into an automatic Workflow
-Shiny Apps can also be integrated into an automatic Workflow without the user having to interact with the App directly. This allows the Workflow to run automatically without interruptions. A "`Store configuration`" button will always appear on the bottom left side of the Shiny App which the user can use to store the final settings of the Shiny App that should be used in the workflow.
+Shiny Apps can also be integrated into an automatic Workflow without the user having to interact with the App directly. This allows the Workflow to run automatically without interruptions. A "`Store configuration`" button will always appear on the bottom left side of the Shiny App which the user can use to store the final settings of the Shiny App that should be used in the workflow. **NOTE: currently the `Store configuration` option is not available or working for all Shiny Apps. If parameters are not set through the `appspec` and `shinyModuleConfiguration` (see above), the configuration cannot be currently stored for future runs of the workflow. We are working on fixing this issue.**
 
 ### Input
 The same requirements apply to the input as already described above [(Input from the previous App)](copilot-shiny-sdk#input-predecessor-app).
