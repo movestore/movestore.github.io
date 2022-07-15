@@ -29,12 +29,12 @@ The Workflow continues running even if you leave the site moveapps.org, and resu
 ## Menus, Settings and Error logs
 There is a menu on the right of each App container in a Workflow. The R-Apps include the following options:
 
-	- Settings: View or change App parameters.
-	- App Details: View all information and details about the App
-	- Pin to this App: By pinning the Workflow to an App, you will retain the results of this App and all Apps preceding it in the Workflow, so that only subsequent Apps are re-executed when you re-run the Workflow. The App you pinned and all preceding Apps are underlaid in grey. Note that Shiny-Apps close the running UI if pinned, but retain the output data. The `Pin` can be removed any time by clicking on `unpin` below in the greyed out area.
-	- Update App: If a new version of the App is available it can be updated here.
-	- Show Logs: View the data protocols, which can contain important information if you receive errors or unexpected results.
-	- Delete: Remove the App from your Workflow.
+- Settings: View or change App parameters.
+- App Details: View all information and details about the App
+- Pin to this App: By pinning the Workflow to an App, you will retain the results of this App and all Apps preceding it in the Workflow, so that only subsequent Apps are re-executed when you re-run the Workflow. The App you pinned and all preceding Apps are underlaid in grey. Note that Shiny-Apps close the running UI if pinned, but retain the output data. The `Pin` can be removed any time by clicking on `unpin` below in the greyed out area.
+- Update App: If a new version of the App is available it can be updated here.
+- Show Logs: View the data protocols, which can contain important information if you receive errors or unexpected results.
+- Delete: Remove the App from your Workflow.
 
 ![](../files/App_menu_R.png)
 ![](../files/App_Pin.png)

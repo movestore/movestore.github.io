@@ -1,6 +1,7 @@
 - Tutorials
   - [Hello world! Your first App](hello_world_app.md)
   - [How to create your own App](create_app.md)
+  - [Tips and tricks for the move::moveStack object](move_object_tips.md)
   - [Manage your Apps with GitHub and Rstudio](manage_app_github.md)
   - [Hello world! Your first Workflow](hello_world_workflow.md)
   - [How to create a Workflow](create_workflow.md)
