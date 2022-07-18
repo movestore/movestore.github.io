@@ -6,6 +6,7 @@ In the R package `move` there are two object classes for tracking data, for sing
 
 Currently MoveApps only accepts input data (and produces output data) that are of class `MoveStack`. Therefore make sure that your code will always output a `MoveStack`, even when it only contains one individual (details below).
 
+
 ## Handeling of `MoveStack` for MoveApps
 #### - Working on each individual separatly
 Using the functions `split()` and `moveStack()`:
@@ -44,12 +45,14 @@ The move package contains some handy function to extract information form the `M
 - `n.locs()`: returns the number of locations per individual
 - `sensor()`: returns the sensor used to record the tracking data
 
+
 ## Transforming `Movestack` into other clases
 The `MoveStack` can be easily transformed into other classes (more details [here](https://bartk.gitlab.io/move/articles/move.html#storing-loading-and-exporting-move-objects)):
 
 - `as.data.frame()`: creates a `data.frame` including all information contained in the `MoveStack`.
 - `as(myMoveStackObject,"SpatialPointsDataFrame")`: transforms the `MoveStack` to a `SpatialPointsDataFrame`
 - `as(myMoveStackObject,"ltraj")`: transforms the `MoveStack` to a `ltraj` object from the R package `adehabitatLT`.
+
 
 ## Transforming other clases to a `MoveStack`
 Other packages work with movement data in other classes. The following classes can be transformed using the `move()` function into a `Move/MoveStack` object (more details [here](https://bartk.gitlab.io/move/reference/move.html) and [here](https://bartk.gitlab.io/move/articles/move.html#import-movement-objects-of-other-packages)):
@@ -61,12 +64,13 @@ Other packages work with movement data in other classes. The following classes c
 - `binClstPath` or `binClstStck` from the library `EMbC`
 - `data.frame` containing data downloaded from Movebank, i.e. with Movebank column names. The mandatory columns are: "timestamp", "location.long", "location.lat", "individual.local.identifier", "sensor.type" (column names can be either with "." or "_"). The assumptions is that the coordinates are in lat/long; timestamp format is \"%Y-%m-%d %H:%M:%S\"; timezone is UTC. 
 
+
 ## Handy functions
-- split(): split `MoveStack` into a list of `Move` objects
-- projection(): get the projection of the data
-- spTransform(): to reproject the `MoveStack` into a different projection
-- equalProj(): check if all `Move/MoveStack` objects have the same projection
-- plot(),points(),lines(): for plotting the tracks
+- `split()`: split `MoveStack` into a list of `Move` objects
+- `projection()`,`crs()`: get the projection of the data
+- `spTransform()`: to reproject the `MoveStack` into a different projection
+- `equalProj()`: check if all `Move/MoveStack` objects have the same projection
+-` plot()`,`points()`,`lines()`: for plotting the tracks
 - example for plotting tracks with leaflet [here](https://bartk.gitlab.io/move/articles/leafletPlot.html)
 - for plotting with `ggplot` transform the `MoveStack` into a `data.frame`, or create own data.frame by extracting the needed elements
 
