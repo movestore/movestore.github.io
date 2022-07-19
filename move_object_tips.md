@@ -9,9 +9,9 @@ Currently MoveApps only accepts input data (and produces output data) that are o
 
 ## Handeling of `MoveStack` for MoveApps
 #### - Working on each individual separatly
-Using the functions `split()` and `moveStack()`:
+Using the functions `move::split()` and `moveStack()`:
 
-- `split(myMoveStackObject)`: this function creates a list of move objects upon which calculations per individuals can be done. More details [here.](https://bartk.gitlab.io/move/reference/split.html)
+- `move::split(myMoveStackObject)`: this function creates a list of move objects upon which calculations per individuals can be done. More details [here.](https://bartk.gitlab.io/move/reference/split.html)
 
 - `moveStack(X, forceTz="UTC")`: this function creates a `MoveStack`. "X" can be a list of `Move` objects, a list of `MoveStack` objects or a list of `Move` and `MoveStack` objects. Use the argument `forceTz` to ensure to maintain the time zone of the data, if this argument is left empty, the local time zone of the PC will be taken. More details [here.](https://bartk.gitlab.io/move/reference/moveStack.html)
 
@@ -66,11 +66,11 @@ Other packages work with movement data in other classes. The following classes c
 
 
 ## Handy functions
-- `split()`: split `MoveStack` into a list of `Move` objects
+- `move::split()`: split `MoveStack` into a list of `Move` objects
 - `projection()`,`crs()`: get the projection of the data
 - `spTransform()`: to reproject the `MoveStack` into a different projection
 - `equalProj()`: check if all `Move/MoveStack` objects have the same projection
--` plot()`,`points()`,`lines()`: for plotting the tracks
+- `plot()`,`points()`,`lines()`: for plotting the tracks
 - example for plotting tracks with leaflet [here](https://bartk.gitlab.io/move/articles/leafletPlot.html)
 - for plotting with `ggplot` transform the `MoveStack` into a `data.frame`, or create own data.frame by extracting the needed elements
 
