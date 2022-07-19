@@ -29,7 +29,7 @@
       - Settings Types
         - [Text](string.md)
         - [Integer numbers](integer.md)
-      	- [Real numbers](double.md)
+        - [Real numbers](double.md)
         - [Date selection](timestamp.md)
         - [Radiobuttons](radiobuttons.md)
         - [Checkboxes](checkbox.md)
