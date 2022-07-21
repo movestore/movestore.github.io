@@ -1,4 +1,4 @@
-# Hello World! Create your first Workflow
+# Hello world! A Workflow example
 
 Please follow the instructions below and create your first running Workflow on MoveApps. Once you have registered in MoveApps, you can start.
 

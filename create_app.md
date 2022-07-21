@@ -1,4 +1,4 @@
-# How do I create my own App?
+# How to create an App
 
 Apps to be submitted must be managed in a public [GitHub](https://github.com) repository. The repository should contain the program code for executing the App (named `RFunction.R` for R-Apps or `ShinyModule.R` for R-Shiny-Apps), a specification of the App represented by an [appspec.json](appspec.md) file and a [documentation file](files/README_template.md), which can be the repository README.
 

@@ -1,6 +1,6 @@
 - Workflows 
   - Tutorials
-    - [Hello world! Your first Workflow](hello_world_workflow.md)
+    - [Hello world! A Workflow example](hello_world_workflow.md)
     - [How to create a Workflow](create_workflow.md)
   - Features
     - [Share Workflows](share_workflow.md)
@@ -8,8 +8,8 @@
   
 - Apps 
   - Tutorials
-      - [Hello world! Your first App](hello_world_app.md)
-      - [How to create your own App](create_app.md)
+      - [Hello world! An App example](hello_world_app.md)
+      - [How to create an App](create_app.md)
       - [Tips and tricks for the move::moveStack object](move_object_tips.md)
       - [Manage your Apps with GitHub and Rstudio](manage_app_github.md)
   - Reference
@@ -17,6 +17,7 @@
       - [Copilot R SDK](copilot-r-sdk.md)
       - [Copilot Shiny SDK](copilot-shiny-sdk.md)
     - [appspec.json](appspec.md)
+      - [Settings Editor](https://www.moveapps.org/apps/settingseditor ':ignore')
       - [Dependencies](appspec.md#Dependencies)
       - [Artefacts](appspec.md#Artefacts)
       - [License](appspec.md#License)
@@ -34,7 +35,7 @@
         - [Radiobuttons](radiobuttons.md)
         - [Checkboxes](checkbox.md)
         - [Dropdown](dropdown.md)
-    - [App Documentation](files/README_template.md) 
+    - [App Documentation](README_file_description.md) 
 
 - Publication
   - [Citation of Apps](cite_app.md)

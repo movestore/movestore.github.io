@@ -1,4 +1,4 @@
-# Hello World! - create your first App
+# Hello world! An App example
 
 Please follow the instructions below and create your first App that runs in the Copilot R Software Development Kit ([Copilot R SDK](copilot-r-sdk.md)) in RStudio. This is meant to be an example for future Apps that can be submittd to and then run on MoveApps.
 
@@ -45,4 +45,4 @@ There you go with a first running MoveApps App that can select all locations of 
 
 ## Further steps
 
-Before submission of your first App to the MoveApps platform, you need to thoroughly test your App, add an [appspec.json](appspec.md) file to your Git repository and write a [README documentation](files/README_template.md). See our more detailed tutorial [How to create your own App](create_app.md).
+Before submission of your first App to the MoveApps platform, you need to thoroughly test your App, add an [appspec.json](appspec.md) file to your Git repository and write a [README documentation](files/README_template.md). See our more detailed tutorial [How to create an App](create_app.md).
