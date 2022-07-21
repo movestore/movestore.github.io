@@ -17,6 +17,14 @@
       - [Copilot R SDK](copilot-r-sdk.md)
       - [Copilot Shiny SDK](copilot-shiny-sdk.md)
     - [appspec.json](appspec.md)
+      - Settings
+        - [Text](string.md)
+        - [Integer numbers](integer.md)
+        - [Real numbers](double.md)
+        - [Date selection](timestamp.md)
+        - [Radiobuttons](radiobuttons.md)
+        - [Checkboxes](checkbox.md)
+        - [Dropdown](dropdown.md)
       - [Settings Editor](https://www.moveapps.org/apps/settingseditor ':ignore')
       - [Dependencies](appspec.md#Dependencies)
       - [Artefacts](appspec.md#Artefacts)
@@ -27,14 +35,6 @@
       - [Funding](appspec.md#Funding)
       - [References](appspec.md#References)
       - [Documentation](appspec.md#Documentation)
-      - Settings Types
-        - [Text](string.md)
-        - [Integer numbers](integer.md)
-        - [Real numbers](double.md)
-        - [Date selection](timestamp.md)
-        - [Radiobuttons](radiobuttons.md)
-        - [Checkboxes](checkbox.md)
-        - [Dropdown](dropdown.md)
     - [App Documentation](README_file_description.md) 
 
 - Publication
