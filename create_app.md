@@ -1,6 +1,6 @@
 # How to create an App
 
-Apps to be submitted must be managed in a public [GitHub](https://github.com) repository. The repository should contain the program code for executing the App (named `RFunction.R` for R-Apps or `ShinyModule.R` for R-Shiny-Apps), a specification of the App represented by an [appspec.json](appspec.md) file and a [documentation file](files/README_template.md), which can be the repository README.
+Apps to be submitted must be managed in a public [GitHub](https://github.com) repository. The repository should contain the program code for executing the App (named `RFunction.R` for R-Apps or `ShinyModule.R` for R-Shiny-Apps), a specification of the App represented by an [appspec.json](appspec.md) file and a [documentation file](README_file_description.md), which can be the repository README.
 
 ![](../files/Appdevel_github.png)
 
@@ -14,7 +14,7 @@ Apps to be submitted must be managed in a public [GitHub](https://github.com) re
 
 3. **Write App specifications** into the file `appspec.json` to define the App's metadata and the user interface for MoveApps users to specify App parameters. Test this file for compliance in the [Settings editor](https://www.moveapps.org/apps/settingseditor ':ignore').
 
-4. **Write a documentation file** about the detailed function and use of the App, incl. possible error cases. Usually use `README.md` for it ([see template](files/README_template.md)).
+4. **Write a documentation file** about the detailed function and use of the App, incl. possible error cases. Usually use [`README.md`](README_file_description.md) for it.
 
 5. **Create a new GitHub repository** where the following three files need to be copied to: `appspec.json`, `RFunction.R` (for R-files) or `ShinyModule.R` (for R-Shiny-Apps) and a documentation file (mostly the Readme.md was used for this purpose). Additional files can be included (see image above), but are not necessary.
 
