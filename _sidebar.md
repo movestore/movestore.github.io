@@ -35,11 +35,11 @@
       - [References](appspec.md#References)
       - [Documentation](appspec.md#Documentation)
     - [App Documentation](README_file_description.md) 
-    - Quick links
-      - [Settings Editor](https://www.moveapps.org/apps/settingseditor ':ignore')
-      - [Template R Function App](https://github.com/movestore/Template_R_Function_App ':ignore')
-      - [Template R Shiny App](https://github.com/movestore/Template_R_Shiny_App ':ignore')
-      - [Template R Shinydashboard App](https://github.com/movestore/Template_R_Shinydashboard_App ':ignore')
+  - Quick links
+    - [Settings Editor](https://www.moveapps.org/apps/settingseditor ':ignore')
+    - [Template R Function App](https://github.com/movestore/Template_R_Function_App ':ignore')
+    - [Template R Shiny App](https://github.com/movestore/Template_R_Shiny_App ':ignore')
+    - [Template R Shinydashboard App](https://github.com/movestore/Template_R_Shinydashboard_App ':ignore')
       
 
 - Publication
