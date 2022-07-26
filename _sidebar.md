@@ -13,11 +13,11 @@
       - [Tips and tricks for the move::moveStack object](move_object_tips.md)
       - [Manage your Apps with GitHub and Rstudio](manage_app_github.md)
   - Reference
-    - SDK (software development kit)
+    - App Code
       - [Copilot R SDK](copilot-r-sdk.md)
       - [Copilot Shiny SDK](copilot-shiny-sdk.md)
-    - [appspec.json](appspec.md)
-      - Settings
+    - [App Specification](appspec.md)
+      - [Settings](appspec.md#Settings)
         - [Text](string.md)
         - [Integer numbers](integer.md)
         - [Real numbers](double.md)
@@ -25,7 +25,6 @@
         - [Radiobuttons](radiobuttons.md)
         - [Checkboxes](checkbox.md)
         - [Dropdown](dropdown.md)
-      - [Settings Editor](https://www.moveapps.org/apps/settingseditor ':ignore')
       - [Dependencies](appspec.md#Dependencies)
       - [Artefacts](appspec.md#Artefacts)
       - [License](appspec.md#License)
@@ -36,6 +35,12 @@
       - [References](appspec.md#References)
       - [Documentation](appspec.md#Documentation)
     - [App Documentation](README_file_description.md) 
+    - Quick links
+      - [Settings Editor](https://www.moveapps.org/apps/settingseditor ':ignore')
+      - [Template R Function App](https://github.com/movestore/Template_R_Function_App ':ignore')
+      - [Template R Shiny App](https://github.com/movestore/Template_R_Shiny_App ':ignore')
+      - [Template R Shinydashboard App](https://github.com/movestore/Template_R_Shinydashboard_App ':ignore')
+      
 
 - Publication
   - [Citation of Apps](cite_app.md)
