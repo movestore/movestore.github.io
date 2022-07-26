@@ -14,8 +14,8 @@
       - [Manage your Apps with GitHub and Rstudio](manage_app_github.md)
   - Reference
     - App Code
-      - [Copilot R SDK](copilot-r-sdk.md)
-      - [Copilot Shiny SDK](copilot-shiny-sdk.md)
+      - [R Functions](copilot-r-sdk.md)
+      - [R Shiny](copilot-shiny-sdk.md)
     - [App Specification](appspec.md)
       - [Settings](appspec.md#Settings)
         - [Text](string.md)
