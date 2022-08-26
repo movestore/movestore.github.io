@@ -4,8 +4,8 @@
     - [How to create a Workflow](create_workflow.md)
   - Features
     - [Share Workflows](share_workflow.md)
-    - [Scheduled Workflow Runs and Remote Access (E-mail, API)](scheduled_runs.md#Scheduled Workflow Runs and Remote Access)
-    - [Access Workflow products via API link](scheduled_runs.md#Access Workflow products via API link)
+    - [Scheduled Workflow Runs and Remote Access (E-mail, API)](scheduled_runs.md)
+    - [Access Workflow products via API link](API.md)
   
 - Apps 
   - Tutorials
