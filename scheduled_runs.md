@@ -23,7 +23,7 @@ Note that there is an App that has been developed to modify the E-mail message o
 
 ![](../files/output_email_api.png)
 
-## Access Workflow products via API link
+# Access Workflow products via API link
 
 ### Create API links
 
