@@ -222,7 +222,7 @@ Please consider including a reference to e.g. an R-package if your App depends h
   "settings": [],
   "references":[
   {
-    "type": "IsReferencedBy"
+    "type": "IsReferencedBy",
     "note": "Darwin, C. 1859. The Origin of Species. John Murray, London",
     "url": "www.testpage.org"
   }
