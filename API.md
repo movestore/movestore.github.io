@@ -1,8 +1,8 @@
 # Access Workflow products via API link
 
-### Create API links
+## Create API links
 
-Each output product of a workflow can be remotely adressed and downloaded via a secured, stable http link that can be created by our API functionality. To create such a link, please click the API Access button at the top of the output window. This directs you to a site to `Register for Artefacts/Products API Access`. Here, you need to create a user name and password that can be used to access the http links for this workflow (only). Please store these details somewhere for later use. The stable links for each product/artefact can be accessed by clicking on the link in:  You can use `this overview` as your entrypoint to get stable links to your artefacts.
+Each output product of a workflow can be remotely adressed and downloaded via a secured, stable http link that can be created by our API functionality. This can be done for scheduled as well as manually run workflow, always the most up-to-date artefact is accessed by the link. To create such a stable http link, please click the API Access button at the top of the output window. This directs you to a site to `Register for Artefacts/Products API Access`. Here, you need to create a user name and password that can be used to access the http links for this workflow (only). Please store these details somewhere for later use. The stable links for each product/artefact can be accessed by clicking on the link in:  You can use `this overview` as your entrypoint to get stable links to your artefacts.
 
 ![](../files/API_register.png)
 
@@ -10,7 +10,7 @@ To access the overview of the product http links, you have to enter the previous
 
 ![](../files/API_link_list.png)
 
-### Integrate API links into your website
+## Integrate API links into your website
 
 Please have a look at our [landing page](https://www.moveapps.org). In the news section about API integration we have integrated an animation artifact from a scheduled workflow that is running on MoveApps daily. The details of how we integrated it into the site can be used as an example for you to follow. See the code on our [github repository](https://github.com/movestore/movestore.github.io/blob/master/web-partner-api/example.html) and the showcase below.
 
