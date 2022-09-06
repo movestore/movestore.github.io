@@ -1,6 +1,6 @@
 # App Documentation
 
-All App developers are obliged to provide a complete documentation of their App, so that future users understand run details, results and possible error occurrences. Below you can find a detailed explanation of each item that should be contained in the README file. A template can be found in the provided example files [copilot-r-sdk.zip](https://www.moveapps.org/documentation/copilot-r-sdk.zip ':ignore') and [copilot-shiny-sdk.zip](https://www.moveapps.org/documentation/copilot-shiny-sdk.zip ':ignore').
+All App developers are obliged to provide a complete documentation of their App, so that future users understand run details, results and possible error occurrences. Below you can find a detailed explanation of each item that should be contained in the README file. Template files are available in our GitHub templates: [Template R Function App](https://github.com/movestore/Template_R_Function_App ':ignore'), [Template R Shiny App](https://github.com/movestore/Template_R_Shiny_App ':ignore'), [Template R Shinydashboard App](https://github.com/movestore/Template_R_Shinydashboard_App ':ignore').
 
 - **Name of App**: give the App a name, please stick to our convention of Title Case without hyphens (e.g. My New App)
 
