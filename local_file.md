@@ -20,6 +20,7 @@ Planung für die App-Entwicklung:
 - die `id` der `LOCAL_FILE`-Setting wird in der `RFunction.R` referenziert um an die Workflow-Nutzer-Dateien zu gelangen
 - falls ich die Default-Dateien als Fallback bereitstellen kann müssen diese im GIT Repository bereitgestellt werden und in der `appspec.json` per `providedAppFiles` kommuniziert werden (für Review, Build-Prozess).
 - in meinem App-Code (`RFunction.R`) kann ich die Workflow-Nutzer-Dateien bzw. mein bereitgestellten Fallback laden per `paste0(getAppFilePath("road_files"),"GRIP_roads_NASAY2Y.shp")` (Details siehe `app-files.R` im _SDK_s)
+- die Funktion `rFunction` in der `RFunction.R` muss als Parameter die Setting-ID jeder `LOCAL_FILE`-Setting erwarten (wie für jede Setting) [`rFunction <- function(data, road_files=NULL)`]. Diese sind aber nicht von Bedeutung für den App-Developer - es werden nur einige Meta-Daten übergeben und *nicht der Inhalt der App-Files*.
 
 ## Example
 
