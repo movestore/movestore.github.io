@@ -52,12 +52,12 @@ rFunction = function(username, department) {
 ```
 
 ### Artefakte
-MoveApps erlaubt das Erzeugen und Speichern von verschiedensten Dateien in der R-Function, wie z.B. csv, pdf, png, ..., sogenannten `Artefakten`. Diese werden mit dem normalen R-Befehl zum Schreiben der spezifischen Datei erzeugt. Wichtig ist es, den Speicherpfad als `paste0(Sys.getenv(x = "APP_ARTIFACTS_DIR", "/tmp/"),"*.***")` festzulegen (`*.***` ist der Dateiname, siehe Beispiel für csv und png unten) und in der [appspec.json](de/appspec.md) die Zeile `"createsArtifacts": true` einzufügen.  Die Artefakte können nach dem Laufen der App unter `Show Downloads` heruntergeladen werden.
+MoveApps erlaubt das Erzeugen und Speichern von verschiedensten Dateien in der R-Function, wie z.B. csv, pdf, png, ..., sogenannten `Artefakten`. Diese werden mit dem normalen R-Befehl zum Schreiben der spezifischen Datei erzeugt. Wichtig ist es, den Speicherpfad mit Hilfe von `appArtifactPath("*.***")` festzulegen (`*.***` ist der Dateiname, siehe Beispiel für csv und png unten) und in der [appspec.json](de/appspec.md) die Zeile `"createsArtifacts": true` einzufügen.  Die Artefakte können nach dem Laufen der App unter `Show Downloads` heruntergeladen werden.
 ```
 rFunction = function(username, department, data) {
     # Do something
-    write.csv(artefact, file = paste0(Sys.getenv(x = "APP_ARTIFACTS_DIR", "/tmp/"),"artefact.csv")
-	png(paste0(Sys.getenv(x = "APP_ARTIFACTS_DIR", "/tmp/"),"artefact.png"))
+    write.csv(artefact, file = paste0(appArtifactPath("artefact.csv")
+	png(appArtifactPath("artefact.png"))
 	# Plot your image
 	dev.off()
 }

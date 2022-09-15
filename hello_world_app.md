@@ -14,7 +14,7 @@ args[["year"]] = 2014
 
 ## Adapt and run the App
 
-Adapt the code in `RFunction.R` to add a pdf product function that plots your positions with the appropriate heading. See the complete file code below. To pass on data from this App to a next App, the modified data object (i.e. `data_red`) or the original `data` object, must be explicitly returned at the end of the function using `return()`. The file path `(paste0(Sys.getenv(x = "APP_ARTIFACTS_DIR", "/tmp/"),"hello_world.pdf"))` flexibly writes the pdf product to your `tmp` folder if run locally, or to the appropriate folder within the MoveApps platform. The latter must be kept for proper functionality in the platform.
+Adapt the code in `RFunction.R` to add a pdf product function that plots your positions with the appropriate heading. See the complete file code below. To pass on data from this App to a next App, the modified data object (i.e. `data_red`) or the original `data` object, must be explicitly returned at the end of the function using `return()`. The file path `appArtifactPath("hello_world.pdf")` flexibly writes the pdf product to your folder set via environment variable `APP_ARTIFACTS_DIR` if run locally (default is the output directory of the current working directory of the SDK `./data/output/artifacts`), or to the appropriate folder within the MoveApps platform.
 
 
 ```
@@ -24,7 +24,7 @@ library('lubridate')
 rFunction = function(year, data) {
   data_red <- data[year(data@timestamps) == year]
   
-  pdf(paste0(Sys.getenv(x = "APP_ARTIFACTS_DIR", "/tmp/"),"hello_world.pdf"))
+  pdf(appArtifactPath("hello_world.pdf"))
   plot(data_red, main="Hello World!")
   dev.off()
   
