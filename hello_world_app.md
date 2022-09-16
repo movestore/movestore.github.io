@@ -4,9 +4,9 @@ Please follow the instructions below and create your first App that runs in the 
 
 ## Download SDK example
 
-Please download the [Template R Function App](https://github.com/movestore/Template_R_Function_App ':ignore'), as a zip file ( via "Code" -> "Download ZIP"), unzip and save it to your computer. Start the R project `Template_R_Function_App.Rproj` in RStudio. The included file `copilot-sdk.R` is a local MoveApps substitute that behaves (almost) like the online system. Therefore, this file should not be adapted. The second included R-file `RFunction.R` is the file into which all your App code is supposed to go.
+Please download the [Template R Function App](https://github.com/movestore/Template_R_Function_App ':ignore'), as a zip file ( via "Code" -> "Download ZIP"), unzip and save it to your computer. Start the R project `Template_R_Function_App.Rproj` in RStudio. The included file `co-pilot-sdk.R` is a local MoveApps substitute that behaves (almost) like the online system. Therefore, this file should not be adapted. The second included R-file `RFunction.R` is the file into which all your App code is supposed to go.
 
-Here, an example selecting all data points of a given calender year is given. Please try it out with the example data set `input2_geese.rds`: Change the 8th line of the file `copilot-sdk.R` to `inputFileName = "input2_geese.rds"` and run it locally. The running code is then calling upon the function `rFunction()` that is defined in `RFunction.R`. An `output.rds` file is created with all locations of the input data set of the selected year. Note that the year selection is specified in line 24 of `copilot-sdk.R` and can be adapted there. In the MoveApps platform this parameter is provided by an interactive input window.
+Here, an example selecting all data points of a given calender year is given. Please try it out with the example data set `input2_geese.rds`: Change the 8th line of the file `co-pilot-sdk.R` to `inputFileName = "input2_geese.rds"` and run it locally. The running code is then calling upon the function `rFunction()` that is defined in `RFunction.R`. An `output.rds` file is created with all locations of the input data set of the selected year. Note that the year selection is specified in line 24 of `co-pilot-sdk.R` and can be adapted there. In the MoveApps platform this parameter is provided by an interactive input window.
 
 ```
 args[["year"]] = 2014
@@ -14,7 +14,7 @@ args[["year"]] = 2014
 
 ## Adapt and run the App
 
-Adapt the code in `RFunction.R` to add a pdf product function that plots your positions with the appropriate heading. See the complete file code below. To pass on data from this App to a next App, the modified data object (i.e. `data_red`) or the original `data` object, must be explicitly returned at the end of the function using `return()`. The file path `(paste0(Sys.getenv(x = "APP_ARTIFACTS_DIR", "/tmp/"),"hello_world.pdf"))` flexibly writes the pdf product to your `tmp` folder if run locally, or to the appropriate folder within the MoveApps platform. The latter must be kept for proper functionality in the platform.
+Adapt the code in `RFunction.R` to add a pdf product function that plots your positions with the appropriate heading. See the complete file code below. To pass on data from this App to a next App, the modified data object (i.e. `data_red`) or the original `data` object, must be explicitly returned at the end of the function using `return()`. The file path `appArtifactPath("hello_world.pdf")` flexibly writes the pdf product to your folder set via environment variable `APP_ARTIFACTS_DIR` if run locally (default is the output directory of the current working directory of the SDK `./data/output/artifacts`), or to the appropriate folder within the MoveApps platform.
 
 
 ```
@@ -24,7 +24,7 @@ library('lubridate')
 rFunction = function(year, data) {
   data_red <- data[year(data@timestamps) == year]
   
-  pdf(paste0(Sys.getenv(x = "APP_ARTIFACTS_DIR", "/tmp/"),"hello_world.pdf"))
+  pdf(appArtifactPath("hello_world.pdf"))
   plot(data_red, main="Hello World!")
   dev.off()
   

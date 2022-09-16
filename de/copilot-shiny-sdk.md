@@ -3,10 +3,6 @@ Diese Dokumentation beschreibt die Grundlagen um Shiny Module für MoveApps zu e
 und Shiny Modulen finden Sie unter https://shiny.rstudio.com/tutorial
 bzw. https://shiny.rstudio.com/articles/modules.html
 
-Für die Entwicklung solcher Shiny Module wird ein R-Projekt zur Verfügung
-gestellt [copilot-shiny-sdk.zip](https://www.moveapps.org/documentation/copilot-shiny-sdk.zip ':ignore'). Dieses
-R-Projekt können Sie als Ausgangspunkt für die Entwicklung Ihrer App nutzen.
-
 ## Wie schreibt man ein Shiny Module für MoveApps?
 Um Shiny-Module für MoveApps entwickeln zu können, müssen mindestens die beiden Funktionen `shinyModuleUserInterface` und `shinyModule` bereitgestellt werden. Diese Funktionen müssen in einer Datei namens `ShinyModule.R` abgelegt sein.
 
@@ -44,9 +40,9 @@ Um Parameter bzw. Einstellungen aus MoveApps im ShinyModul zu erhalten, müssen 
         "defaultValue": null
     },
     {
-        "id": "password",
-        "name": "Password",
-        "description": "Enter password...",
+        "id": "department",
+        "name": "Department",
+        "description": "Enter department...",
         "type": "STRING",
         "defaultValue": null
     },
@@ -58,16 +54,16 @@ Beim Aufruf des Shiny Modules werden diese dann als Parameter an das Shiny-Modul
 
 ```
 # with parameters/settings from MoveApps 
-shinyModule <- function(input, output, session, username, password) {
+shinyModule <- function(input, output, session, username, department) {
     # Do something with the data
 }
 ```
 
 !> Wichtig ist, dass auch alle Parameter an die `shinyModuleUserInterface` Funktion mitübergeben werden. Hier kann z.B. schon das UI mit diesen Parametern initialisiert werden
 ```
-shinyModuleUserInterface <- function(id, label, username, password) {
+shinyModuleUserInterface <- function(id, label, username, department) {
   ns <- NS(id)
-  # Any user interface with username and password 
+  # Any user interface with username and department 
 }
 ```
 
@@ -88,13 +84,13 @@ shinyModule <- function(input, output, session, data) {
 
 #### Kombination aus Daten der vorhergehenden App und Einstellungen
 ```
-shinyModuleUserInterface <- function(id, label, username, password) {
+shinyModuleUserInterface <- function(id, label, username, department) {
   ns <- NS(id)
-  # Any user interface with username and password 
+  # Any user interface with username and department 
 }
 
-shinyModule <- function(input, output, session, username, password, data) {
-  # Do something with username, password and data
+shinyModule <- function(input, output, session, username, department, data) {
+  # Do something with username, department and data
 }
 ```
 
@@ -107,8 +103,8 @@ Für den Input gelten hier die gleichen Vorgaben wie bereits weiter oben beschri
 ## Output
 Auch Shiny Module können in einen automatisch Workflow integriert werden und das neu berechnete Data-Objekt an nachfolgende Apps weiterreichen. Hierzu muss die `shinyModule` Funktion das Data-Objekt als reaktiven Output zurückgeben.
 ```
-shinyModule <- function(input, output, session, username, password, data) {
-    # Do something with username, password and data
+shinyModule <- function(input, output, session, username, department, data) {
+    # Do something with username, department and data
     return(reactive({ modifiedData() }))
 }
 ```
@@ -120,17 +116,17 @@ shinyModuleConfiguration <- function(id, input) {
   ns <- NS(id)
   configuration <- list()
   configuration["username"] <- input[[ns('username')]]
-  configuration["password"] <- input[[ns('password')]]
+  configuration["department"] <- input[[ns('department')]]
   configuration
 }
 
-shinyModuleUserInterface <- function(id, label, username, password) {
+shinyModuleUserInterface <- function(id, label, username, department) {
   ns <- NS(id)
-  # Any user interface with username and password 
+  # Any user interface with username and department 
 }
 
-shinyModule <- function(input, output, session, username, password, data) {
-  # Do something with username, password and data
+shinyModule <- function(input, output, session, username, department, data) {
+  # Do something with username, department and data
   return(reactive({ modifiedData() }))
 }
 ```

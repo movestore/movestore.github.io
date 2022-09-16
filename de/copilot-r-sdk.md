@@ -1,9 +1,6 @@
 # MoveApps `R-Function` Übersicht
 Diese Dokumentation beschreibt die Grundlagen um eigene R-Funktionen für MoveApps zu entwickeln.
 
-Für die Entwicklung von R-Funktionen wird ein R-Projekt zur Verfügung
-gestellt [(copilot-r-sdk.zip)](https://www.moveapps.org/documentation/copilot-r-sdk.zip ':ignore'). Dieses R-Projekt
-können Sie als Ausgangspunkt für die Entwicklung Ihrer App nutzen.
 
 ## Wie schreibt man R-Funktionen für MoveApps?
 Um eine R-Funktion aufrufen zu können, muss das SDK verwendet werden. 
@@ -18,7 +15,7 @@ rFunction = function() {}
 Um Parameter bzw. Einstellungen aus MoveApps in der R-Funktion zu erhalten, müssen diese in der [appspec.json](de/appspec.md) definiert werden. Beim Aufruf der Funktion werden diese als Parameter an die R-Funktion übergeben.
 ```
 # Mit Parametern/Einstellungen aus MoveApps 
-rFunction = function(username, password) {
+rFunction = function(username, department) {
    # Do something with the parameters
 }
 ```
@@ -39,7 +36,7 @@ rFunction = function(data) {
 ### Kombination aus Daten der vorhergehenden App und Einstellungen
 ```
 # Mit Parametern und den Daten der vorhergehenden App
-rFunction = function(username, password, data) {
+rFunction = function(username, department, data) {
     # Do something
 }
 ```
@@ -48,19 +45,19 @@ rFunction = function(username, password, data) {
 Um das Ergebnis an MoveApps zurückzugeben, muss das Ergebnis entsprechend am Ende der R-Funktion als Rückgabewert definiert werden.
 Dieses Objekt kann entsprechend in der nächsten App innerhalb des Workflows verarbeitet werden. 
 ```
-rFunction = function(username, password) {
+rFunction = function(username, department) {
     # Do something
     result
 }
 ```
 
 ### Artefakte
-MoveApps erlaubt das Erzeugen und Speichern von verschiedensten Dateien in der R-Function, wie z.B. csv, pdf, png, ..., sogenannten `Artefakten`. Diese werden mit dem normalen R-Befehl zum Schreiben der spezifischen Datei erzeugt. Wichtig ist es, den Speicherpfad als `paste0(Sys.getenv(x = "APP_ARTIFACTS_DIR", "/tmp/"),"*.***")` festzulegen (`*.***` ist der Dateiname, siehe Beispiel für csv und png unten) und in der [appspec.json](de/appspec.md) die Zeile `"createsArtifacts": true` einzufügen.  Die Artefakte können nach dem Laufen der App unter `Show Downloads` heruntergeladen werden.
+MoveApps erlaubt das Erzeugen und Speichern von verschiedensten Dateien in der R-Function, wie z.B. csv, pdf, png, ..., sogenannten `Artefakten`. Diese werden mit dem normalen R-Befehl zum Schreiben der spezifischen Datei erzeugt. Wichtig ist es, den Speicherpfad mit Hilfe von `appArtifactPath("*.***")` festzulegen (`*.***` ist der Dateiname, siehe Beispiel für csv und png unten) und in der [appspec.json](de/appspec.md) die Zeile `"createsArtifacts": true` einzufügen.  Die Artefakte können nach dem Laufen der App unter `Show Downloads` heruntergeladen werden.
 ```
-rFunction = function(username, password, data) {
+rFunction = function(username, department, data) {
     # Do something
-    write.csv(artefact, file = paste0(Sys.getenv(x = "APP_ARTIFACTS_DIR", "/tmp/"),"artefact.csv")
-	png(paste0(Sys.getenv(x = "APP_ARTIFACTS_DIR", "/tmp/"),"artefact.png"))
+    write.csv(artefact, file = paste0(appArtifactPath("artefact.csv")
+	png(appArtifactPath("artefact.png"))
 	# Plot your image
 	dev.off()
 }
