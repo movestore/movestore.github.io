@@ -3,9 +3,7 @@ This documentation describes the basics for developing R-Shiny modules for MoveA
 Shiny Modules can be found at  https://shiny.rstudio.com/tutorial and https://shiny.rstudio.com/articles/modules.html,
 respectively.
 
-An R Project is provided for the development of Shiny
-Modules [copilot-shiny-sdk.zip](https://www.moveapps.org/documentation/copilot-shiny-sdk.zip ':ignore'). This R Project
-can and should be used as a starting point for the development of your R-Shiny App.
+Feel free to use these GitHub templates: [Template R Shiny App](https://github.com/movestore/Template_R_Shiny_App ':ignore'), [Template R Shinydashboard App](https://github.com/movestore/Template_R_Shinydashboard_App ':ignore')
 
 ## How to write a Shiny Module for MoveApps
 In order to be able to develop Shiny Modules for MoveApps, at least the two functions `shinyModuleUserInterface` and `shinyModule` must be provided. These functions must be stored in a file called `ShinyModule.R`.
@@ -83,9 +81,9 @@ There is the possibility to ask the user to define parameters/settings before in
         "defaultValue": null
     },
     {
-        "id": "password",
-        "name": "Password",
-        "description": "Enter password...",
+        "id": "department",
+        "name": "Department",
+        "description": "Enter department...",
         "type": "STRING",
         "defaultValue": null
     },
@@ -97,7 +95,7 @@ When the Shiny App is called, these settings are transferred to the Shiny Module
 
 ```
 #with parameters/settings from MoveApps 
-shinyModule <- function(input, output, session, username, password) {
+shinyModule <- function(input, output, session, username, department) {
     # Do something with the data
 }
 ```
@@ -105,9 +103,9 @@ shinyModule <- function(input, output, session, username, password) {
 !> It is important that all parameters are also transferred to the `shinyModuleUserInterface` function. Here, the UI can be initialized with these parameters.
 
 ```
-shinyModuleUserInterface <- function(id, label, username, password) {
+shinyModuleUserInterface <- function(id, label, username, department) {
   ns <- NS(id)
-  # Any user interface with username and password 
+  # Any user interface with username and department 
 }
 ```
 ##### Linkage of App settings and the Shiny UI
@@ -118,17 +116,17 @@ shinyModuleConfiguration <- function(id, input) {
   ns <- NS(id)
   configuration <- list()
   configuration["username"] <- input[[ns('username')]]
-  configuration["password"] <- input[[ns('password')]]
+  configuration["department"] <- input[[ns('department')]]
   configuration
 }
 
-shinyModuleUserInterface <- function(id, label, username, password) {
+shinyModuleUserInterface <- function(id, label, username, department) {
   ns <- NS(id)
-  # Any user interface with username and password 
+  # Any user interface with username and department 
 }
 
-shinyModule <- function(input, output, session, username, password, data) {
-  # Do something with username, password and data
+shinyModule <- function(input, output, session, username, department, data) {
+  # Do something with username, department and data
   return(reactive({ modifiedData() }))
 }
 ```
@@ -140,13 +138,13 @@ shinyModule <- function(input, output, session, username, password, data) {
 
 #### Combination of data from the previous App and settings
 ```
-shinyModuleUserInterface <- function(id, label, username, password) {
+shinyModuleUserInterface <- function(id, label, username, department) {
   ns <- NS(id)
-  # Any user interface with username and password 
+  # Any user interface with username and department 
 }
 
-shinyModule <- function(input, output, session, username, password, data) {
-  # Do something with username, password and data
+shinyModule <- function(input, output, session, username, department, data) {
+  # Do something with username, department and data
 }
 ```
 
