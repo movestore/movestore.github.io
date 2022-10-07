@@ -10,7 +10,7 @@ There are different types of settings:
   - [Radiobuttons](radiobuttons.md)
   - [Checkboxes](checkbox.md)
   - [Dropdown](dropdown.md)
-  - [Local file](local_file.md)
+  - [Auxiliary](auxiliary.md)
 
 
 #### Example

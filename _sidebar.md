@@ -26,6 +26,7 @@
         - [Radiobuttons](radiobuttons.md)
         - [Checkboxes](checkbox.md)
         - [Dropdown](dropdown.md)
+		- [Auxiliary](auxiliary.md)
       - [Dependencies](dependencies_appspec.md)
       - [Artefacts](artefacts_appspec.md)
       - [License](license_appspec.md)
