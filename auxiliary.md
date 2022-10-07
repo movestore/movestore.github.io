@@ -15,7 +15,8 @@ Note that any combination of the three types of auxiliary files can be integrate
 
 ## Fixed auxiliary files
 
-Any auxiliary files that the App developer wants to provided as fixed files have to be provided in the GitHub repository. The names of the files have to fit with the file names as used in the App's function code. For review and container building in MoveApps, the provision of these files has to be communicated in the `appspec.json` specification file via `providedAppFiles`. 
+Any auxiliary files that the App developer wants to provided as fixed files have to be provided in the GitHub repository. The names of the files have to fit with the file names as used in the App's function code. For review and container building in MoveApps, the provision of these files has to be communicated in the `appspec.json` specification file via `providedAppFiles`.
+ 
 Please keep the files in (a) seperate folder(s) in the GitHub repository, the folder name is required as input for the `providedAppFiles` specification (`from`). The `settingId` sets the name of the folder in the App container (on MoveApps) into which the content of the `providedAppFiles` folder is bundled and from where it can be called by the App's function code at run time (see example below and details in the`app-files.R` of the [SDKs](https://github.com/movestore/Template_R_Function_App/blob/master/src/io/app_files.R)).
 
 #### Example
