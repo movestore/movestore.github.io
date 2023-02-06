@@ -53,8 +53,7 @@ Each App that returns data creates a summary of the output data, which can be ac
 ![](../files/CargoAgent_Overview.png)
 
 ## Shiny R and User Interfaces
-For R-Shiny Apps that return User Interfaces (UI), the UI can be accessed after the run of the Workflow via `Open App UI`. There, you can examine results and edit settings, depending on the options that the App developer has programmed. On the bottom left corner of each Shiny App the button `Store configuraton` will store the current settings of the app for future workflow runs. **NOTE: currently the `Store configuration` option is not available or working for all Shiny Apps. We are working on fixing this issue.**
-
+For R-Shiny Apps that return User Interfaces (UI), the UI can be accessed after the run of the Workflow via `Open App UI`. There, you can examine results and edit settings, depending on the options that the App developer has programmed. On the bottom left corner of each Shiny App the button `Store settings` will store the current settings of the app for future workflow runs. When apps are deleted or added to the workflow, all subsequent apps will reset to the default values.
 ![](../files/App_menu_shiny.png)
 
 ## Workflow Instances

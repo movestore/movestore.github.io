@@ -66,90 +66,16 @@ shinyModule <- function(input, output, session, data) {
 !> The data parameter, in turn, is **not** passed on to the `shinyModuleUserInterface` function.
 
 
-#### MoveApps parameters
-There is the possibility to ask the user to define parameters/settings before initializing a Shiny App. These parameters have to be defined in the [appspec.json](appspec.md) file.
-
-```
-# appsec.json
-{
-  "settings": [
-    {
-        "id": "username",
-        "name": "Username",
-        "description": "Enter username...",
-        "type": "STRING",
-        "defaultValue": null
-    },
-    {
-        "id": "department",
-        "name": "Department",
-        "description": "Enter department...",
-        "type": "STRING",
-        "defaultValue": null
-    },
-  ]
-}
-```
- 
-When the Shiny App is called, these settings are transferred to the Shiny Module as parameters.
-
-```
-#with parameters/settings from MoveApps 
-shinyModule <- function(input, output, session, username, department) {
-    # Do something with the data
-}
-```
-
-!> It is important that all parameters are also transferred to the `shinyModuleUserInterface` function. Here, the UI can be initialized with these parameters.
-
-```
-shinyModuleUserInterface <- function(id, label, username, department) {
-  ns <- NS(id)
-  # Any user interface with username and department 
-}
-```
-##### Linkage of App settings and the Shiny UI
-The Shiny UI and the App settings can be linked, i.e. when values are changed in the UI of the App, the initial values in the App settings are also changed accordingly. To do this, as with the normal configuration via the MoveApps interface, the App must define these parameters in [appspec.json](appspec.md). To be able to transfer the configuration back to MoveApps, a new `shinyModuleConfiguration` function must be created. Within this function, the parameters must be entered in a list with the respective names. When the button "`Store configuration`" is clicked the new configuration is transferred back to the App settings.
-
-```
-shinyModuleConfiguration <- function(id, input) {
-  ns <- NS(id)
-  configuration <- list()
-  configuration["username"] <- input[[ns('username')]]
-  configuration["department"] <- input[[ns('department')]]
-  configuration
-}
-
-shinyModuleUserInterface <- function(id, label, username, department) {
-  ns <- NS(id)
-  # Any user interface with username and department 
-}
-
-shinyModule <- function(input, output, session, username, department, data) {
-  # Do something with username, department and data
-  return(reactive({ modifiedData() }))
-}
-```
+#### Store Settings
+A button called `Store settings` will appear automatically on the bottom left side of the Shiny App. Here the user can store the personalized settings for subsequent runs of a workflow. The values stored are those that are entered and modified in the user interface function `shinyModuleUserInterface()`. This is achieved by using the `shiny::bookmarkButton()` embedded in the `ui` function in the moveapps system (see `./src/moveapps.R` in the template for reference).
 
 
 #### Limitation
 !> The name `data` cannot be used as an identifier for a setting, because this name is reserved for the output of the previous App.
 
 
-#### Combination of data from the previous App and settings
-```
-shinyModuleUserInterface <- function(id, label, username, department) {
-  ns <- NS(id)
-  # Any user interface with username and department 
-}
-
-shinyModule <- function(input, output, session, username, department, data) {
-  # Do something with username, department and data
-}
-```
-
 ## Integrate Shiny Apps into an automatic Workflow
-Shiny Apps can also be integrated into an automatic Workflow without the user having to interact with the App directly. This allows the Workflow to run automatically without interruptions. A "`Store configuration`" button will always appear on the bottom left side of the Shiny App which the user can use to store the final settings of the Shiny App that should be used in the workflow. **NOTE: currently the `Store configuration` option is not available or working for all Shiny Apps. If parameters are not set through the `appspec` and `shinyModuleConfiguration` (see above), the configuration cannot be currently stored for future runs of the workflow. We are working on fixing this issue.**
+Shiny Apps can also be integrated into an automatic Workflow without the user having to interact with the App directly. This allows the Workflow to run automatically without interruptions. A "`Store settings`" button will always appear on the bottom left side of the Shiny App which the user can use to store the final settings of the Shiny App that should be used in the workflow.
 
 ### Input
 The same requirements apply to the input as already described above [(Input from the previous App)](copilot-shiny-sdk#input-predecessor-app).
@@ -163,7 +89,7 @@ shinyModule <- function(input, output, session, data) {
 }
 ```
 
-If the Shiny App is not modifying the input data (e.g. only visualization), than the input data can be passed on unmodified to the next App. To do this, the `shinyModule` function must return the data object as reactive output. If no data is passed on, the app is the endpoint of a workflow.
+If the Shiny App is not modifying the input data (e.g. only visualization), than the input data must be passed on unmodified to the next App. To do this, the `shinyModule` function must return the data object as reactive output. 
 ```
 shinyModule <- function(input, output, session, data) {
   current <- reactiveVal(data)
