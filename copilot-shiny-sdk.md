@@ -69,6 +69,8 @@ shinyModule <- function(input, output, session, data) {
 #### Store Settings
 A button called `Store settings` will appear automatically on the bottom left side of the Shiny App. Here the user can store the personalized settings for subsequent runs of a workflow. The values stored are those that are entered and modified in the user interface function `shinyModuleUserInterface()`. This is achieved by using the `shiny::bookmarkButton()` embedded in the `ui` function in the moveapps system (see `./src/moveapps.R` in the template for reference).
 
+When `shiny::bookmarkButton()` is used locally, after clicking on the button by default a folder named "shiny_bookmarks" is created which contains a file named "input.rds". This "input.rds" file can be downloaded from the App on Moveapps by downloading the file "Stored Settings", enabeling the use of the same settings also locally.
+
 
 #### Limitation
 !> The name `data` cannot be used as an identifier for a setting, because this name is reserved for the output of the previous App.
