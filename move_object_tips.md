@@ -49,7 +49,7 @@ The move package contains some handy function to extract information form the `M
 ## Transforming `Movestack` into other clases
 The `MoveStack` can be easily transformed into other classes (more details [here](https://bartk.gitlab.io/move/articles/move.html#storing-loading-and-exporting-move-objects)):
 
-- `as.data.frame()`: creates a `data.frame` including all information contained in the `MoveStack`.
+- `as.data.frame()`: creates a `data.frame` including all information contained in the `MoveStack`. (See section *"Choosing the wrong columns!"* below)
 - `as(myMoveStackObject,"SpatialPointsDataFrame")`: transforms the `MoveStack` to a `SpatialPointsDataFrame`
 - `as(myMoveStackObject,"ltraj")`: transforms the `MoveStack` to a `ltraj` object from the R package `adehabitatLT`.
 
@@ -86,4 +86,19 @@ The `@data` slot elements can be accessed directly via `myMoveStackObject$column
 
 [Here](https://bartk.gitlab.io/move/reference/MoveStack-class.html) detailed explanations of each slot can be found.
 
+## :warning: Choosing the wrong columns!
+There are some misleading similarities among columns that can accidentally lead to choosing the wrong ones. Here the most common mistakes:
 
+1. retrieving the **timestamps** from a `moveStack`:
+
+- `myMoveStackObject$timestamp` mostly exists, but these timestamps are **not** the ones that are used by the `moveStack`, they may not be formatted as `POSIXct`, and/or be in another timezone.
+- <u>always use</u> `timestamps(myMoveStackObject)` to access the timestamps
+- when the `moveStack` is converted into a `data.frame`, the column corresponding to date and time is **`timestamps`**, and not *timestamp*
+
+2. retrieving **coordinates** from a `moveStack`:
+
+- `myMoveStackObject$location.long` & `myMoveStackObject$location.lat` mostly exist, but these coordinates are **not** the ones used by the `moveStack` and might be in another projection than 'projection(myMoveStackObject)' / 'crs(myMoveStackObject)'
+- <u>always use</u> `coordinates(myMoveStackObject)` to access the coordinates
+- when the `moveStack` is converted into a `data.frame`, the columns corresponding to the coordinates of the moveStack will mostly be `coords.x1`/`coords.x2`, but under circumstances they can also be `location.lat`/`location.long`. When both are present, always use `coords.x1/coords.x2`.
+
+**NOTE**: these inconsistencies, and misleading similarities are being dealt with in the soon to come `move2` library  
