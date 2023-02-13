@@ -41,9 +41,24 @@ Before submission to MoveApps, all App must be thoroughly tested locally using t
 
 Furthermore, we strongly suggest automatic unit tests (e.g. using the R package `testthat`) that will soon become mandatory and integrated into the App submission process.  
 
-## Initiation/Creation of the App
-After you have successfully written a functioning App, loaded it (together with the [appspec.json](appspec.md)) into a GitHub repository and described its details in the `README.md` file, you can initiate it on MoveApps. To do this, select `Applications / Create new Application` from the menu and fill out the form. For the App name please stick to our convention of Title Case without hyphens (e.g. `My New App`). The link to your repository has to end with `.git`; please add it manually if necessary (example: `https://github.com/movestore/MorningReport.git`). The input type is usually MOVEMENT (i.e. R move:moveStack) and output types can be MOVEMENT or USERUI. Note that an App with USERUI output always ends the workflow. For intermediary R-Shiny Apps that shall transfer data to a next App in a workflow, output type MOVEMENT has to be selected. When you have successfully created the App, it will be listed in the overview `Applications / Your Applications`
-![](../files/Appdevel_createNewApp.png)
+## Initialization/Creation of the App
+After you have successfully written a functioning App, loaded it (together with the [appspec.json](appspec.md)) into a GitHub repository and described its details in the `README.md` file, you can initiate it on MoveApps.
+
+To do this, select `Applications / Initialize a new Application` from the menu and fill out the form. For the App name please stick to our convention of Title Case without hyphens (e.g. `My New App`). The description should be identical with the short description in yor documentation README. You can add a Warning Note that will be highlighted to any MoveApps user adding your App to a workflow. Note that both Title, Description and Warning note can be edited at any time.
+
+The link to your repository has to end with `.git`; please add it manually if necessary (example: `https://github.com/movestore/MorningReport.git`). 
+Each App is defined by an input and output type (IO types) and runtime environment that have to be specified. Possible environmentas are R, R-shiny and Python (very soon!). 
+
+![](../files/initializeApp.png)
+![](../files/InitApp_IOtype.png)
+
+Input and output types have long been restricted to move::moveStack, but can now be extended to any other movement related data types. Check with types are available in the dropdown list. If you need a new IO type for your App, please go to "request a new IO type". Please describe your request to us, link to the documentation of the new IO type and adapt our [cargo agent repository](https://github.com/movestore/cargo-agent-r) accordingly, with creating and linking to a pull request. See the [README](https://github.com/movestore/cargo-agent-r#readme) there for details. Once an administrator has approved your IO type request, it will be available on the platform. Make sure to also provide transforamtion Apps to/from other IO types to widen the usability of your App on MoveApps.
+
+![](../files/ReqNewIOtype.png)
+![](../files/ReqNewIOtype2.png)
+
+Note that repository link, IO types and runtime environment will be fixed to the App and cannot be changed afterwards. When you have successfully created the App, it will be listed in the overview `Applications / Your Applications`
+
 
 ## Creation of a new App version
 In order to create your first (or any updated new) App version, you must create a `Tag` (via `Release`) of your GitHub repository in its present state. After you have created the `Tag`, go to the MoveApps site and press the `Add Version` button in the detailed view of your App (via `Applications / Your Applications / AppName / Details`).
