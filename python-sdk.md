@@ -106,7 +106,7 @@ A [proper implementation](app/app.py) of this hook specification looks like this
 
 `./appspec.json`: define the settings UI on MoveApps. Users of your App can enter their configuration values.
 
-![](../files/app-configuration-ui.png)
+![img.png](../files/app-configuration-ui.png)
 
 ```
 "settings": [
@@ -254,7 +254,7 @@ With this mechanism it is also possible to let the user _overwrite_ your provide
 ]
 ```
 
-![](../files/app-configuration-local-file.png)
+![img.png](../files/app-configuration-local-file.png)
 
 By using the same helper method for loading the app-file we can use the uploaded file:
 

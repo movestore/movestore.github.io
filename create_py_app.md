@@ -1,10 +1,10 @@
 # How to create a Python App
 
-Apps to be submitted must be managed in a public [GitHub](https://github.com) repository. Python Apps must be developed using the [Python-SDK template](https://github.com/movestore/python-sdk) that we ask you to fork to your personal GitHub space (login and click `Use this Template`). As described there in the develop_README.md or in our [Python App Code definition](python-sdk.md), there are some files and folders that you need to adapt to make your App and some that help you emulate how your App would run on MoveApps locally. We recommend using PyCharm for local development and Conda for dependency management.
+Apps to be submitted must be managed in a public [GitHub](https://github.com) repository. Python Apps must be developed using the [Python-SDK template](https://github.com/movestore/python-sdk) that we ask you to fork to your personal GitHub space (login and click `Use this Template`). As described there in the develop_README.md or in our [MoveApps Python App SDK documentation](python-sdk.md), there are some files and folders that you need to adapt to make your App and some that help you emulate how your App would run on MoveApps locally. We recommend using PyCharm for local development and Conda for dependency management.
 
 
 ## Overview of necessary steps to develop an App
-*(details in [Python App Code definition](python-sdk.md) and below)*
+*(details in [MoveApps Python App SDK documentation](python-sdk.md) and below)*
 
 1. **Open your forked Python SDK project** in your local system, e.g. using Pycharm with Conda.
 
@@ -37,11 +37,11 @@ The link to your repository has to end with `.git`; please add it manually if ne
 Each App is defined by an input and output type (IO types) and runtime environment that have to be specified. Possible environmentas are R, R-shiny and Python (very soon!). 
 
 ![](../files/initializeApp.png)
-![](../files/InitApp_IOtype.png)
+![](../files/InitApp_IOtype2.png)
 
 Input and output types have long been restricted to move::moveStack, but can now be extended to any other movement related data types. After selecting Python as your Runtime Environment, check which types are available in the dropdown list. If you need a new IO type for your App, please go to "request a new IO type". Please describe your request to us, link to the documentation of the new IO type and adapt our [cargo agent repository](https://github.com/movestore/cargo-agent-python) accordingly, with creating and linking to a pull request. See the [README](https://github.com/movestore/cargo-agent-python#readme) there for details. Once an administrator has approved your IO type request, it will be available on the platform. Make sure to also provide transforamtion Apps to/from other IO types to widen the usability of your App on MoveApps. For portability to R and R-shiny Apps also provide code to transfer your data object to one or several csv-files.
 
-![](../files/ReqNewIOtype.png)
+![](../files/ReqNewIOtype3.png)
 ![](../files/ReqNewIOtype2.png)
 
 Note that repository link, runtime environment and IO types will be fixed to the App and cannot be changed afterwards. When you have successfully created the App, it will be listed in the overview `Applications / Your Applications`
