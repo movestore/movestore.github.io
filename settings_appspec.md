@@ -11,7 +11,8 @@ There are different types of settings:
   - [Checkboxes](checkbox.md)
   - [Dropdown](dropdown.md)
   - [Auxiliary](auxiliary.md)
-
+  
+  The [Settings Editor](https://www.moveapps.org/apps/settingseditor) can be used to check the definition of all settings before submission.
 
 #### Example
 ```json

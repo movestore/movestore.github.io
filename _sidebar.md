@@ -8,15 +8,18 @@
     - [Access Workflow products via API link](API.md)
   
 - Apps 
-  - Tutorials
-      - [Hello world! An App example](hello_world_app.md)
-      - [How to create an App](create_app.md)
-      - [Tips and tricks for the move::moveStack object](move_object_tips.md)
-      - [Manage your Apps with GitHub and Rstudio](manage_app_github.md)
+  - R Tutorials
+      - [Hello world! An R App example](hello_world_app.md)
+      - [How to create an R App](create_app.md)
+      - [Tips and tricks for the R move::moveStack object](move_object_tips.md)
+      - [Manage your R Apps with GitHub and Rstudio](manage_app_github.md)
+  - Python Tutorials
+      - [How to create a Python App](create_py_app.md)
   - Reference
     - App Code
-      - [R Functions](copilot-r-sdk.md)
-      - [R Shiny](copilot-shiny-sdk.md)
+      - [R](copilot-r-sdk.md)
+      - [R-Shiny](copilot-shiny-sdk.md)
+	  - [Python](python-sdk.md)
     - [App Specification](appspec.md)
       - [Settings](settings_appspec.md)
         - [Text](string.md)
@@ -42,7 +45,7 @@
     - [Template R Function App](https://github.com/movestore/Template_R_Function_App ':ignore')
     - [Template R Shiny App](https://github.com/movestore/Template_R_Shiny_App ':ignore')
     - [Template R Shinydashboard App](https://github.com/movestore/Template_R_Shinydashboard_App ':ignore')
-      
+	- [Template Python App](https://github.com/movestore/python-sdk ':ignore') 
 
 - Publication
   - [Citation of Apps](cite_app.md)

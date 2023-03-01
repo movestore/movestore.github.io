@@ -4,9 +4,8 @@ In this part of the file, all libraries on which the App depends have to be list
 
 !> Special rules apply to certain libraries (such as e.g. shiny); these can only be required in a certain version.
 
-The [Settings Editor](https://www.moveapps.org/apps/settingseditor) can be used to check the definition of all
-dependencies before submission.
 
+!> Note that for Python Apps this part of the appspec.json is not necessary, because all dependencies are collected from the Conda dependency management file `environment.yml`.
 
 #### Example
 

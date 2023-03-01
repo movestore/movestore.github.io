@@ -21,7 +21,7 @@ For each App that precedes or causes your error occurace, please indicate your s
 If you encountered errors during App development, please mention the link to your Apps' GitHub repository and the R version you are using.
 
 ## Data
-Indicate which data set you have used when your error occured. If possible give the MoveApps team access to it for solving the error. Of course, any data will be considered confidential, and access can be withdrawn once the issue is solved.
+Indicate which data set you have used when your error occured. If possible give the MoveApps team access to it on Movebank or send a subset as file attachment for solving the error. Of course, any data will be considered confidential, and access can be withdrawn once the issue is solved.
 
 ## App Logs
 If applicable, copy and send the logs of the App that led to the error occurance.

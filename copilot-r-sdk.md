@@ -1,12 +1,15 @@
 # MoveApps `R Function` Overview
 This document describes the basics to write your own R functions for MoveApps.
 
-Feel free to use these GitHub templates: [Template R Function App](https://github.com/movestore/Template_R_Function_App ':ignore'), [Template R Shiny App](https://github.com/movestore/Template_R_Shiny_App ':ignore'), [Template R Shinydashboard App](https://github.com/movestore/Template_R_Shinydashboard_App ':ignore')
+Please use this GitHub [Template for R Function Apps](https://github.com/movestore/Template_R_Function_App ':ignore')
 
 ## How to write an R Function for MoveApps
-It is highly advisable to use the SDK to write your R functions for MoveApps, as many errors can be solved before submitting the App to the MoveApps platform.
+It is highly advisable to extensively use the SDK within the template to write your R functions for MoveApps, as many errors can be solved when testing in e.g. R-studio before submitting the App to the MoveApps platform.
 
-First, an R function called `rFunction` must be created. 
+The template includes a file `co-pilot-sdk.R` which can be used for testing after the below RFunction.R file has been completed. When running this file in the R-studio project it emulates how MoveApps would behave when running your App (i.e. the RFunction.R)
+
+
+After having defined and loaded the packages that your code will require, in your RFunction.R file, an R function called `rFunction` must be created.
 ```
 rFunction = function(data) {}
 ```
@@ -22,11 +25,11 @@ rFunction = function(data, year) {
 ```
 
 ##### Limitation
-- You cannot use  `data` as a parameter name. This is reserved for the input that is passed on from the previous App.
+- You cannot use  `data` as a parameter name. This is reserved for the input that is passed on from the previous App, see below.
 
 
 #### Input from previous App
-In order to be able to use the result of the previous App in the Workflow, the last parameter of the R function must be named `data`.
+In order to be able to use the result of the previous App in the Workflow, the last parameter of the R function must be named `data`. Note that the data type (IO type) of `data` is defining your App's input type that you need to specify at App initialization.
 ```
 # With input from other apps
 rFunction = function(data) {
@@ -34,20 +37,13 @@ rFunction = function(data) {
 }
 ```
 
-### Combination of data from the previous app and settings
-```
-# With parameters and data from previous apps
-rFunction = function(year, data) {
-    # Do something
-}
-```
 
 ### Output
-The result of the function must be defined as a return value at the end of the function code. Then, this object (`data`) can be processed accordingly as input in the next App of the Workflow.
+The result of the function must be defined as a return value at the end of the function code. Then, this object (`data`) can be processed accordingly as input in the next App of the Workflow. Note that the data type (IO type) of `result` is defining your App's output type that you need to specify at App initialization.
 ```
 rFunction = function(year) {
     # Do something
-    result
+    return(result)
 }
 ```
 

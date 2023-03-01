@@ -1,4 +1,4 @@
-# How to create an App
+# How to create an R or RShiny App
 
 Apps to be submitted must be managed in a public [GitHub](https://github.com) repository. The repository should contain the program code for executing the App (named `RFunction.R` for R-Apps or `ShinyModule.R` for R-Shiny-Apps), a specification of the App represented by an [appspec.json](appspec.md) file and a [documentation file](README_file_description.md), which can be the repository README. 
 
@@ -11,7 +11,7 @@ Feel free to use these GitHub templates: [Template R Function App](https://githu
 ## Overview of necessary steps to develop an App
 *(details below)*
 
-1. **Develop the App code** locally (in RStudio) and save it to a file called `RFunction.R` or `ShinyModule.R`. (currently only R Apps possible, more to come)
+1. **Develop the App code** locally (in RStudio) and save it to a file called `RFunction.R` or `ShinyModule.R`. (this is applicable only for R and Rshiny Apps, see our [Python Tutorial](create_py_app.md) for the recently integrated an alternative)
 
 2. **Test your App** locally using the file `copilot-*-sdk.R` which behaves (almost) like the online MoveApps system. Note that before submission to MoveApps, all Apps must be tested locally to run for the [four provided data sets](https://docs.moveapps.org/files/inputs_MoveApps_SmokeTesting_Nov2022.zip) (smoke testing, these are also provided in the GitHub templates). Furthermore, we strongly suggest automatic unit tests (e.g. using the R package `testthat`) that will soon become mandatory and integrated into the App submission process.  
 
@@ -52,7 +52,7 @@ Each App is defined by an input and output type (IO types) and runtime environme
 ![](../files/initializeApp.png)
 ![](../files/InitApp_IOtype.png)
 
-Input and output types have long been restricted to move::moveStack, but can now be extended to any other movement related data types. Check with types are available in the dropdown list. If you need a new IO type for your App, please go to "request a new IO type". Please describe your request to us, link to the documentation of the new IO type and adapt our [cargo agent repository](https://github.com/movestore/cargo-agent-r) accordingly, with creating and linking to a pull request. See the [README](https://github.com/movestore/cargo-agent-r#readme) there for details. Once an administrator has approved your IO type request, it will be available on the platform. Make sure to also provide transforamtion Apps to/from other IO types to widen the usability of your App on MoveApps.
+Input and output types have long been restricted to move::moveStack, but can now be extended to any other movement related data types. After selecting R or R-Shiny as your Runtime Environment, check which types are available in the dropdown list. If you need a new IO type for your App, please go to "request a new IO type". Please describe your request to us, link to the documentation of the new IO type and adapt our [cargo agent repository](https://github.com/movestore/cargo-agent-r) accordingly, with creating and linking to a pull request. See the [README](https://github.com/movestore/cargo-agent-r#readme) there for details. Once an administrator has approved your IO type request, it will be available on the platform. Make sure to also provide transforamtion Apps to/from other IO types to widen the usability of your App on MoveApps. For portability to Python Apps also provide code to transfer your data object to one or several csv-files.
 
 ![](../files/ReqNewIOtype.png)
 ![](../files/ReqNewIOtype2.png)
@@ -63,6 +63,8 @@ Note that repository link, IO types and runtime environment will be fixed to the
 ## Creation of a new App version
 In order to create your first (or any updated new) App version, you must create a `Tag` (via `Release`) of your GitHub repository in its present state. After you have created the `Tag`, go to the MoveApps site and press the `Add Version` button in the detailed view of your App (via `Applications / Your Applications / AppName / Details`).
 
-Select the `Tag` from the list of available `Tags` and press `Create Version`. A new App version is only available if your tag creation in GitHub was successful. To submit the new version, you must include a description detailing the changes. After entering this information, click `Save and Submit`. The App is then checked by a MoveApps administrator for functionality, performant `appspec.json` and possible issues regarding our Terms of Use and a docker container for the App is built. After the check and built process were successful, the status of the App version becomes `APPROVED`. From this moment on, the new version of the App becomes accessible to all platform users. Please test it directly, fix any issues and submit a new App version if necessary.
+Select the `Tag` from the list of available `Tags` and press `Create Version`. A new App version is only available if your tag creation in GitHub was successful. To submit the new version, you must include a description detailing the changes and select/update a Category that fits your App. If you want to request an additional Category, please contact info@moveapps.org. After entering this information, click `Save and Submit`.
+
+The App is then checked by a MoveApps administrator for functionality, performant `appspec.json` and possible issues regarding our Terms of Use and a docker container for the App is built. After the check and built process were successful, the status of the App version becomes `APPROVED`. From this moment on, the new version of the App becomes accessible to all platform users. Please test it directly, fix any issues and submit a new App version if necessary.
 
 ![](../files/Appdevel_createNewAppVersion.png)
