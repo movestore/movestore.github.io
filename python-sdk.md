@@ -35,8 +35,7 @@ This template is designed according to a file structure that is necessary for yo
 │       └── output
 ```
 
-1. `./app/app.py`: This is the entrypoint for your App logic. MoveApps will call this class during a workflow execution which includes your App.
-**The class must be named `App` and the file must be named `./app/app.py`, do not alter it!**
+1. `./app/app.py`: This is the entrypoint for your App logic. MoveApps will call this class during a workflow execution which includes your App. **The class must be named `App` and the file must be named `./app/app.py`, do not alter it!**
 1. `./appspec.json`: This file defines the settings and metadata of your App, for details refer to the [MoveApps User Manual](https://docs.moveapps.org/#/appspec)
 1. `./environment.yml`: Definition of the dependencies of your App. We use `conda` as library manager.
 1. `./resources/**`: Resources of the SDK
@@ -107,7 +106,7 @@ A [proper implementation](app/app.py) of this hook specification looks like this
 
 `./appspec.json`: define the settings UI on MoveApps. Users of your App can enter their configuration values.
 
-![img.png](documentation/app-configuration-ui.png)
+![](../files/app-configuration-ui.png)
 
 ```
 "settings": [
@@ -255,7 +254,7 @@ With this mechanism it is also possible to let the user _overwrite_ your provide
 ]
 ```
 
-![img.png](documentation/app-configuration-local-file.png)
+![](../files/app-configuration-local-file.png)
 
 By using the same helper method for loading the app-file we can use the uploaded file:
 
