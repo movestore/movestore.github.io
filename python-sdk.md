@@ -85,13 +85,13 @@ Nothing else.
 
 As mentioned, MoveApps will call your custom App business logic in `./app/app.py`. It will instantiate the class `App`. So do not alter the class name or the file name.
 
-The SDK calls so called `hook`s. These hooks must be implemented by the App. Currently, there is only the following [hook specified in `./sdk/moveapps_spec.py`](sdk/moveapps_spec.py):
+The SDK calls so called `hook`s. These hooks must be implemented by the App. Currently, there is only the following [hook specified in `./sdk/moveapps_spec.py`](https://github.com/movestore/python-sdk/blob/main/sdk/moveapps_spec.py):
 
 ```
 @hook_spec def execute(self, data: TrajectoryCollection, config: dict) -> TrajectoryCollection:
 ```
 
-A [proper implementation](app/app.py) of this hook specification looks like this:
+A [proper implementation](https://github.com/movestore/python-sdk/blob/main/app/app.py) of this hook specification looks like this:
 
 ```
 @hook_impl def execute(self, data: TrajectoryCollection, config: dict) -> TrajectoryCollection:
@@ -195,7 +195,7 @@ plot = data.plot(
 plot.figure.savefig(self.moveapps_io.create_artifacts_file('plot.png'))
 ```
 
-### Include files to your App
+### Include auxiliary files to your App
 
 You can include files to your final App, e.g. a directory containing files of a _Shapefile_.
 
@@ -228,7 +228,7 @@ def _consume_app_file(self):
         # do something with this file
 ```
 
-### Let the user upload files to your App
+### Let the user upload auxiiliary files to your App
 
 Sometimes it is useful that a MoveApps user working with your App can upload his/her own files during runtime. The SDK provides a way to access these uploaded files.
 
