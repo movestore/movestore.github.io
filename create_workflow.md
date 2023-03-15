@@ -14,7 +14,7 @@ From the main menu, select `Workflows` and then `Create New Workflow`. After pro
 ![](../files/Workflow_movebank.png)
 
 ## Add Apps to a Workflow
-By clicking on the “+” to the right of an App, you can browse, search and select the next App to add to your Workflow for filtering, analysis or visualisation of the downloaded data. You can also insert Apps within the Workflow if they are compatible with the required input and output types (usually input: MOVEMENT and output: MOVEMENT). The list of Apps to choose from will only include those that comply with the required input and output types for the specific position in your Workflow. In the list of available Apps, you can see the descriptions of each App and can read additional information by clicking on “Details”. On the top right-hand corner, the list can be filtered by keywords.
+By clicking on the “+” to the right of an App, you can browse, search and select the next App to add to your Workflow for filtering, analysis or visualisation of the downloaded data. You can also insert Apps within the Workflow if they are compatible with the required input and output types (usually input: MOVEMENT and output: MOVEMENT). The list of Apps to choose from will only include those that comply with the required input and output types for the specific position in your Workflow. In the list of available Apps, you can see the descriptions of each App and can read additional information by clicking on “Details”. On the top right-hand corner, the list can be filtered by keywords. Find out more about how to use the wide spectrum of available Apps by using [translator Apps](translator.md).
 
 ![](../files/Workflow_addApp.png)
 

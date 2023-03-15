@@ -2,6 +2,7 @@
   - Tutorials
     - [Hello world! A Workflow example](hello_world_workflow.md)
     - [How to create a Workflow](create_workflow.md)
+    - [How to connect Apps with Translators](translator.md)
   - Features
     - [Share Workflows](share_workflow.md)
     - [Scheduled Workflow Runs and E-mail Notification](scheduled_runs.md)
