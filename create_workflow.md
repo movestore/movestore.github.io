@@ -1,24 +1,27 @@
 # How to create a Workflow
 
-![](../files/WF_example_MigMapper_2023.png)
-
 Within MoveApps, existing Apps can be combined into a Workflow, allowing you to define an ordered set of steps to access, process and analyse data. These Workflows can then be saved, edited and used for specific use cases. 
 
 Every Workflow starts with an App that loads data into the system (e.g. from [Movebank](www.movebank.org), the Movebank Data Repository or Dropbox/Google Drive). The data are then passed on to the next App (in the appropriate format) and analysed by it accordingly. Every App requires data of a defined input type (mostly R move:moveStack, but others are available and the numbers are growing) and can pass on output of a defined type. Some Apps provide an interactive User Interface (R-Shiny). 
 
 Some Apps produce output products/artifacts, which can be downloaded as files, in formats such as .pdf or .csv. App output data can also be downloaded as an object of the defined App output type in R format `.rds` or Python format `pickle`.
 
+![](../files/WF_example_MigMapper_2023.png)
+
 ## Create a new Workflow
 From the main menu, select `Workflows` and then `Create New Workflow`. After providing a name for the Workflow (also consider adding a Workflow Category), you will be asked to select a Data Source. Now choose to retrieve location or non-location data from either Movebank, location data (!) from the Movebank Repository or your personal cloud storage on Google Drive or Dropbox. For the latter option the data have to be provided as an R object of class 'move::MoveStack' saved in `.rds` format or as `.csv` in Movebank format ([see Details](https://github.com/movestore/cloud-provider-download/blob/master/README.md). All Data Sources require that you specify parameters and settings. After providing these, the Workflow area with the initial App appears . Note that additional Data Sources can be downloaded by adding e.g. another instance of the Movebank download App (see below). All data sets will be combined, thus allowing the joined analysis of data from e.g. different Movebank studies.
 
 ![](../files/DataSource_view_Mar2023.png)
+
 ![](../files/Workflow_movebank.png)
 
 #### Non-location Apps
 Note that recently, we have added the option to download non-location data from Movebank. These are e.g. acceleromter, accessory measurement, heart rate or geolocation raw data. In the Movebank Non-Location App, beware of the option to select only studies that contain non-location data. Furthermore, it is only allowed to download one type of non-location data at a time.  Look out for Apps that work with those data types in the App Browser; they should have the IO type "move2::move2_nonloc".
 
 ![](../files/NonLoc_App_view.png)
+
 ![](../files/NonLoc_Download_selectStudy.png)
+
 ![](../files/NonLoc_Download_selectSensor.png)
 
 
@@ -45,6 +48,7 @@ There is a menu on the right of each App container in a Workflow. The R- and Pyt
 - Delete: Remove the App from your Workflow.
 
 ![](../files/App_menu_R.png)
+
 ![](../files/App_Pin.png)
 
 !\> Note that there is a small book icon in the left corner of each App, leading directly to the Github App documentation, where the App developer has provided helpful information that describes when and how the App can be used and how common errors can be solved.
@@ -55,6 +59,7 @@ In addition to the direct click-download of files that appear in the App contain
 Note that it is possible to select products from Apps for inclusion in E-mail attachments (see [scheduling](scheduled_runs.md)). At the top of the page, you can access our [API service](scheduled_runs.md#Access) that allows to create a stable http link to any of the products created by the workflow.
 
 ![](../files/output_button.png)
+
 ![](../files/output_save_view.png)
 
 ## Data overview of App output
