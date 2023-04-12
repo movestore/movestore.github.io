@@ -22,7 +22,7 @@ Once finished, please press Share Workflow.
 ![](../files/Share_WF_2_23.png)
 ![](../files/Share_WF_3_23.png)
 
-!\> Note that as the original `owner` of a public workflow, you can edit the title and description of the workflow and all shared workflow instances, the share message and workflow references/links at any time in the details view (use edit button at the top).
+!\> Note that as the original `owner` of a public workflow, you can edit the title and description of the workflow and all shared workflow instances, the share message and workflow references/links at any time under `Details` in the public workflow table (use edit button at the top).
 
 ## How to accept a shared Workflow
 
@@ -44,4 +44,5 @@ If accepting a public or privately shared workflow into your dashboard, it is im
 In the workflow instance view, all data source Apps show a blue message that the data source settings have to be configured. If a red dot is attached to it, the App has not been configured at all. When clicking the message, one is directed to the settings of the App and can configure them according to the data source message that is presented on the left of the window. Once all data source Apps of all Instances of the accepted workflow have been configured, the data source message can be deleted and the blue message indication will disappear from the Apps in the workflow instance view.
 
 ![](../files/Share_datasource_msg.png)
+
 ![](../files/Share_datasource_1.png)
