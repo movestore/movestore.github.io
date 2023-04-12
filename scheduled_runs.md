@@ -1,6 +1,6 @@
 # Scheduled Workflow Runs and E-mail Notification
 
-Each Workflow instance can be scheduled to run regularely in an automatic mode at a fixed interval. We presently support daily, weekly and monthly intervals. Results (products) of the scheduled runs have to be accessed in the MoveApps output overview, can be sent as E-mail attachments or can be accessed via secure Application Programming Interfaces (APIs), providing http links. In the description field of your Workflow instance view an indication of the next scheduled run is provided.
+Each Workflow instance can be scheduled to run regularely in an automatic mode at a fixed interval. We presently support (X) daily, weekly and monthly intervals. Results (products) of the scheduled runs have to be accessed in the MoveApps output overview, can be sent as E-mail attachments or can be accessed via secure Application Programming Interfaces (APIs), providing http links. In the description field of your Workflow instance view an indication of the time of the next scheduled run is provided.
 
 ![](../files/Schedule_WFI.png)
 

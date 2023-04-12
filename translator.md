@@ -4,10 +4,10 @@
 
 The Apps on MoveApps are based on different programming languages (`R` and `Python`), and within each language each App uses functions that require a specific input type and provide a specific output type. Thus, each App is characterised by those two input/output (IO) types.
 
-In the general overview of all the Apps (`APPS` tab at the top right corner) these IO types are specified in the rightmost column "Input/Output".
+In the general overview of all the Apps (`APP BROWSER` tab at the top right corner) these IO types are specified in the rightmost column "Input/Output".
 ![](../files/Input_Output.png)
 
-Before you start a Workflow, it is advisable to use the general overview of the Apps (`APPS` tab at the top right corner) to find the Apps that you would like to use for your analysis. Some IO types can be translated into each other and Apps of those types can therefore be used in the same workflow. For translations between IO types use the `Translator` Apps (more details below).
+Before you start a Workflow, it is advisable to use the general overview of the Apps (`APP BROWSER` tab at the top right corner) to find the Apps that you would like to use for your analysis. Some IO types can be translated into each other and Apps of those types can therefore be used in the same workflow. For translations between IO types use the `Translator` Apps (more details below).
 
 ## Connecting Apps of different types
 
@@ -21,3 +21,4 @@ In the "Input/Output" column of a `Translator` App one can quickly see what outp
 ![](../files/TranslatorExample.png)
 
 !\> Be aware that not all input/output types can be translated into all other types. These have to be equivalent. E.g. `ctmm::telemetry.list` cannot be translated into a `move2::move2_nonloc` as the first contains location data (e.g. GPS) and the second contains non-location data (e.g. acceleration).
+
