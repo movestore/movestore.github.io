@@ -5,6 +5,7 @@
 The Apps on MoveApps are based on different programming languages (`R` and `Python`), and within each language each App uses functions that require a specific input type and provide a specific output type. Thus, each App is characterised by those two input/output (IO) types.
 
 In the general overview of all the Apps (`APP BROWSER` tab at the top right corner) these IO types are specified in the rightmost column "Input/Output".
+
 ![](../files/Input_Output.png)
 
 Before you start a Workflow, it is advisable to use the general overview of the Apps (`APP BROWSER` tab at the top right corner) to find the Apps that you would like to use for your analysis. Some IO types can be translated into each other and Apps of those types can therefore be used in the same workflow. For translations between IO types use the `Translator` Apps (more details below).
