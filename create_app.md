@@ -5,7 +5,7 @@ All Apps to be submitted must be managed in a public [GitHub](https://github.com
 Feel free to use these GitHub templates: [Template R Function App](https://github.com/movestore/Template_R_Function_App ':ignore'), [Template R Shiny App](https://github.com/movestore/Template_R_Shiny_App ':ignore'), [Template R Shinydashboard App](https://github.com/movestore/Template_R_Shinydashboard_App ':ignore') . Please read the `developer_README` contained in each template for more information about the usage and the optional tools provided with it.
      
 
-![](../files/Appdevel_github.png)
+![](../files/R_template.png)
 
 
 ## Overview of necessary steps to develop an App
