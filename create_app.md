@@ -3,8 +3,7 @@
 All Apps to be submitted must be managed in a public [GitHub](https://github.com) repository. When creating R-Apps, the repository should contain the program code for executing the App (named `RFunction.R` for R-Apps or `ShinyModule.R` for R-Shiny-Apps), a specification of the App represented by an [appspec.json](appspec.md) file and a [documentation file](README_file_description.md), which can be the repository README. 
 
 Feel free to use these GitHub templates: [Template R Function App](https://github.com/movestore/Template_R_Function_App ':ignore'), [Template R Shiny App](https://github.com/movestore/Template_R_Shiny_App ':ignore'), [Template R Shinydashboard App](https://github.com/movestore/Template_R_Shinydashboard_App ':ignore') . Please read the `developer_README` contained in each template for more information about the usage and the optional tools provided with it.
-     
-
+  
 ![](../files/R_template.png)
 
 
@@ -28,6 +27,18 @@ Feel free to use these GitHub templates: [Template R Function App](https://githu
 7. **Initiate the App** on MoveApps (`Create new Application`)
 
 8. **Submit a first App version** to MoveApps (`Add version`). Once the MoveApps administrator has checked it and built it into a Docker container, it becomes available to all users on the platform. Please test it there.
+
+
+## Notes and recommendations
+- As move/sp will be deprecated at the end of 2023, consider working with sf and using the brand-new [move2 package](https://gitlab.com/bartk/move2).
+
+- Join our [EMAC23 coding challenge](https://www.moveapps.org/#news): develop conservation relevant Apps and be invited to our workshop in Germany
+
+- Stepwise App review is on the way
+
+- Don’t be afraid to hand in a preliminary App, a warning message can be applied, and most Apps take time to become used
+
+- Make sure that users of your App are enabled to understand what is required of input data, what happens in the App and how the method works, that they can interpret the results correctly and understand possible issues.
 
 
 ## Writing the App
