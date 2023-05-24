@@ -1,6 +1,6 @@
 # Share Workflows with other Users
 
-For replication, collaboration or other joined work, it is possible to share your Workflow with other users.  A Workflow can be (1) shared globally with all MoveApps users or (2) specific users can be invited by their nickname. The receipients can load the privately shared or any public Workflow into their account and edit it there independently of the original Workflow and its creator. The Workflow will be availabe with all Apps in the same versions as shared by the creator originally, they can be updated by the receiving user (however, without the option to go back). Note that users have 30 days to accept an individually shared Workflow, public Workflows stay available permanently. 
+For replication, collaboration or other joined work, it is possible to share your Workflow with other users.  A Workflow can be (1) shared globally with all MoveApps users or (2) specific users can be invited by their nickname. The recipients can load the privately shared or any public Workflow into their account and edit it there independently of the original Workflow and its creator. The Workflow will be available with all Apps in the same versions as shared by the creator originally, they can be updated by the receiving user (however, without the option to go back). Note that users have 30 days to accept an individually shared Workflow, public Workflows stay available permanently. 
 
 ## How to share your Workflow
 
@@ -12,7 +12,7 @@ First, define with whom you want to share your Workflow. You can select to `Shar
 
 Second, you can select which of the Workflow instances you want to share. The selection of at least one of them is mandatory.
 
-Third, there are two kinds of messages that you can provide to the Workflow receipient(s). One is a general, free text message that allows you to describe your Workflow and point out why you are sharing it. The other is the Datasource Message, which is by default filled in with the settings of the data source selection App of all selected Workflow instances. This allows the new user to download the same data from e.g. Movebank as the original user, but with his/her private account. The data message appears during the configuration of the Movebank Download App once the workflow has been loaded/accepted (see below), so that the user can easily adapt it. Note, that the data source details can be edited, replaced or deleted before sharing.
+Third, there are two kinds of messages that you can provide to the Workflow recipient(s). One is a general, free text message that allows you to describe your Workflow and point out why you are sharing it. The other is the Datasource Message, which is by default filled in with the settings of the data source selection App of all selected Workflow instances. This allows the new user to download the same data from e.g. Movebank as the original user, but with his/her private account. The data message appears during the configuration of the Movebank Download App once the workflow has been loaded/accepted (see below), so that the user can easily adapt it. Note, that the data source details can be edited, replaced or deleted before sharing.
 
 Finally, it is possible to add a link to a workflow, which can, for example, point towards a description of the workflow, a paper that is using it or a more thorough methods description.
 
@@ -26,7 +26,7 @@ Once finished, please press Share Workflow.
 
 ## How to accept a shared Workflow
 
-If a Workflow has been shared with you by another MoveApps user it will appear below in the Workflow overview. It states the nickname of the user that invited you, the names of the Workflow and Workflow instances as well as both meassages. You can decline or accept the invitation. At acceptance the Workflow will be added to your account's list. Note that at the bottom of the Workflow invitation it is indicated for how long it will stay available for you to accept. When adding a shared workflow to your dashboard , it appears in the Category `Imported Privately Shared Workflow`. The category can be adapted afterwards.
+If a Workflow has been shared with you by another MoveApps user it will appear below in the Workflow overview. It states the nickname of the user that invited you, the names of the Workflow and Workflow instances as well as both messages. You can decline or accept the invitation. At acceptance the Workflow will be added to your account's list. Note that at the bottom of the Workflow invitation it is indicated for how long it will stay available for you to accept. When adding a shared workflow to your dashboard , it appears in the Category `Imported Privately Shared Workflow`. The category can be adapted afterwards.
 
 ![](../files/Share_invite_23.png)
 
