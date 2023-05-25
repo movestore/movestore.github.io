@@ -6,6 +6,7 @@ Code developers are encouraged to share (a slightly adapted version of) their mo
 
 Presently, we support R, R-Shiny and Python Apps. These are meant to be provided in such a way that standard Movement data sets of animals or other moving objects can be analysed. It is possible to directly download and analyse data from the [Movebank database](http://www.movebank.org).
 
-![](../files/Workflow_example.png)
 
-![](../files/MigMapper_5OutputGeeseRaster.png)
+![](../files/Workflow_example.png ':size=80%')
+
+![](../files/MigMapper_5OutputGeeseRaster.png ':size=50%')
