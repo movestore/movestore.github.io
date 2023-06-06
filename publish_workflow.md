@@ -3,7 +3,7 @@
 To make your work reproducible, we offer the publication of Workflows in combination with published papers and data sets.
 
 ## Publication with DOI
-If you plan a publication of your Workflow in a scientific paper or a manuscript on bioRxiv, there is the additional option of aquiring a DOI (Digital Object Identifier) for your Workflow. Thereby, your Workflow will become permanently reproducible. The provision of a DOI is arranged by the Communication, Information and Media Centre (KIM) of the University of Konstanz and requires the publication of the related data in the [Movebank Data Repository](https://www.datarepository.movebank.org/). Please contact [mdr.kim@uni-konstanz.de](mdr.kim@uni-konstanz.de).
+If you plan a publication of your Workflow in a scientific paper or a manuscript on bioRxiv, there is the additional option of acquiring a DOI (Digital Object Identifier) for your Workflow. Thereby, your Workflow will become permanently reproducible. The provision of a DOI is arranged by the Communication, Information and Media Centre (KIM) of the University of Konstanz and requires the publication of the related data in the [Movebank Data Repository](https://www.datarepository.movebank.org/). Please contact [mdr.kim@uni-konstanz.de](mdr.kim@uni-konstanz.de).
 
 ## How to publish your Workflow
 In order to have all the required information for the publication of a Workflow gathered, please complete the `Publish` dialog that you can access via the Workflow menu in the Workflow overview. Carefully follow the provided instructions and select Workflow instances to be included. Once you are finished press `Save & Publish` and a message with all relevant information will be sent to our data repository and we will come back to you about it personally. Please add the published workflow also into the list of publicly shared workflows by using the `Share` option, this will become a requirement for publication, as it ensures future reproducibility. Published and shared workflows are fixed and available with the original versions of all included Apps, i.e. they can be run as originally contributed. Apps can be updated if users have added public workflows to their dashboard.
@@ -12,7 +12,7 @@ In order to have all the required information for the publication of a Workflow 
 ![](../files/Workflow_publish2.png)
 
 ## Information required for Publication
-For publication of your Workflow, information about the Workflow, included Apps, liceses, authors, funding, references and other properties are required. All properties of the Apps are automatically taken from the App submission properties and the [appspec.json](appspec.md). In addition, you will provide the following information at publication, if not already provided at the initiation of the Workflow / Workflow Instance.
+For publication of your Workflow, information about the Workflow, included Apps, licenses, authors, funding, references and other properties are required. All properties of the Apps are automatically taken from the App submission properties and the [appspec.json](appspec.md). In addition, you will provide the following information at publication, if not already provided at the initiation of the Workflow / Workflow Instance.
 
 #### Workflow title
 Please name your Workflow with a meaningful title. This will help other users to understand the scope of and the idea behind your Workflow.

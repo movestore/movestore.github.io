@@ -1,6 +1,6 @@
 # Citation of Apps
 
-For recognition, traceability and documentation, Apps that are running on MoveApps can be cited. A formated suggestion of such a citation is provided at the Application Details view for App developers and at the "App Details" point provided in the menu of all Apps of a Workflow. The same details are also available in the interface when adding new Apps to a Workflow. The citation consisnts of the App authors, the date of access, the App name and its version number and finally the GitHub link to the App repository.
+For recognition, traceability and documentation, Apps that are running on MoveApps can be cited. A formatted suggestion of such a citation is provided at the Application Details view for App developers and at the "App Details" point provided in the menu of all Apps of a Workflow. The same details are also available in the interface when adding new Apps to a Workflow. The citation consists of the App authors, the date of access, the App name and its version number and finally the GitHub link to the App repository.
 
 ![](../files/app_cite.png)
 

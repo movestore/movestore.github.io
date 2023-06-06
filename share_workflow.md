@@ -1,6 +1,6 @@
 # Share Workflows with other Users
 
-For replication, collaboration or other joined work, it is possible to share your Workflow with other users.  A Workflow can be (1) shared globally with all MoveApps users or (2) specific users can be invited by their nickname. The recipients can load the privately shared or any public Workflow into their account and edit it there independently of the original Workflow and its creator. The Workflow will be available with all Apps in the same versions as shared by the creator originally, they can be updated by the receiving user (however, without the option to go back). Note that users have 30 days to accept an individually shared Workflow, public Workflows stay available permanently. 
+For replication, collaboration or other joined work, it is possible to share your Workflow with other users.  A Workflow can be shared globally with all MoveApps users or specific users can be invited by their nickname. The recipients can load the privately shared or any public Workflow into their account and edit it there independently of the original Workflow and its creator. The Workflow will be available with all Apps in the same versions as shared by the creator originally, they can be updated by the receiving user (however, without the option to go back). Note that users have 30 days to accept an individually shared Workflow, public Workflows stay available permanently. 
 
 ## How to share your Workflow
 
@@ -39,7 +39,7 @@ All available public Workflows are listed below your Workflow invitations in the
 
 ## Configuration of data source Apps in added Workflows
 
-If accepting a public or privately shared workflow into your dashboard, it is important to realise that any data source Apps (Movebank, Movebank Non-Loc or Cloud Storage Upload) need to be configured, before the workflow can be run. This is important to keep data integrity and security. A pop-up message is pointing this out when adding the workflow to your dashboard.
+If accepting a public or privately shared workflow into your dashboard, it is important to understand that any data source Apps (Movebank, Movebank Non-Loc or Cloud Storage Upload) need to be configured, before the workflow can be run. This is important to keep data integrity and security. A pop-up message is pointing this out when adding the workflow to your dashboard.
 
 In the workflow instance view, all data source Apps show a blue message that the data source settings have to be configured. If a red dot is attached to it, the App has not been configured at all. When clicking the message, one is directed to the settings of the App and can configure them according to the data source message that is presented on the left of the window. Once all data source Apps of all Instances of the accepted workflow have been configured, the data source message can be deleted and the blue message indication will disappear from the Apps in the workflow instance view.
 

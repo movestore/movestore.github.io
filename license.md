@@ -7,7 +7,7 @@ In MoveApps you can choose between four open licenses for your Apps and Workflow
  
 
 #### Summary
-Permissions of this strong copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights. (GitHub, Inc. (n.d.). Licences. Retrieved November 18, 2020, from [https://choosealicense.com/licenses/](https://choosealicense.com/licenses/))
+Permissions of this strong copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights. (GitHub, Inc. (n.d.). Licenses. Retrieved November 18, 2020, from [https://choosealicense.com/licenses/](https://choosealicense.com/licenses/))
 
 
 
@@ -15,7 +15,7 @@ Permissions of this strong copyleft license are conditioned on making available 
 [go to original license text](https://spdx.org/licenses/MIT.html#licenseText)
 
 #### Summary
-A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code. (GitHub, Inc. (n.d.). Licences. Retrieved November 18, 2020, from [https://choosealicense.com/licenses/](https://choosealicense.com/licenses/))
+A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code. (GitHub, Inc. (n.d.). Licenses. Retrieved November 18, 2020, from [https://choosealicense.com/licenses/](https://choosealicense.com/licenses/))
 
 
 
