@@ -13,7 +13,7 @@
   - R Tutorials
       - [Hello world! An R App example](hello_world_app.md)
       - [How to create an R App](create_app.md)
-      - [Tips and tricks for the R move::moveStack object](move_object_tips.md)
+      - [Programming with a move2 object](https://bartk.gitlab.io/move2/articles/programming_move2_object.html ':ignore')
       - [Manage your R Apps with GitHub and Rstudio](manage_app_github.md)
   - Python Tutorials
       - [How to create a Python App](create_py_app.md)
