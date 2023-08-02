@@ -6,7 +6,7 @@ Please use this GitHub [Template for R Function Apps](https://github.com/movesto
 ## How to write an R Function for MoveApps
 It is highly advisable to extensively use the SDK within the template to write your R functions for MoveApps, as many errors can be solved when testing in e.g. R-studio before submitting the App to the MoveApps platform.
 
-The template includes a file `co-pilot-sdk.R` which can be used for testing after the below RFunction.R file has been completed. When running this file in the R-studio project it emulates how MoveApps would behave when running your App (i.e. the RFunction.R)
+The template includes a file `sdk.R` which can be used for testing after the below RFunction.R file has been completed. When running this file in the R-studio project it emulates how MoveApps would behave when running your App (i.e. the RFunction.R)
 
 
 After having defined and loaded the packages that your code will require, in your RFunction.R file, an R function called `rFunction` must be created.
