@@ -3,7 +3,7 @@
     - [Hello world! A Workflow example](hello_world_workflow.md)
     - [How to create a Workflow](create_workflow.md)
     - [Connect Apps of different types with Translators](translator.md)
-	
+
   - Features
     - [Share Workflows](share_workflow.md)
     - [Scheduled Workflow Runs and E-mail Notification](scheduled_runs.md)
@@ -21,7 +21,7 @@
     - App Code
       - [R](copilot-r-sdk.md)
       - [R-Shiny](copilot-shiny-sdk.md)
-	  - [Python](https://github.com/movestore/python-sdk/developer_README.md ':ignore')
+      - [Python](https://github.com/movestore/python-sdk/developer_README.md ':ignore')
     - [App Specification](appspec.md)
       - [Settings](settings_appspec.md)
         - [Text](string.md)
@@ -31,7 +31,6 @@
         - [Radiobuttons](radiobuttons.md)
         - [Checkboxes](checkbox.md)
         - [Dropdown](dropdown.md)
-		- [Auxiliary](auxiliary.md)
       - [Dependencies](dependencies_appspec.md)
       - [Artefacts](artefacts_appspec.md)
       - [License](license_appspec.md)
@@ -42,12 +41,14 @@
       - [References](references_appspec.md)
       - [Documentation](documentation_appspec.md)
     - [App Documentation](README_file_description.md) 
+    - [Auxiliary](auxiliary.md)
+
   - Quick links
     - [Settings Editor](https://www.moveapps.org/apps/settingseditor ':ignore')
     - [Template R Function App](https://github.com/movestore/Template_R_Function_App ':ignore')
     - [Template R Shiny App](https://github.com/movestore/Template_R_Shiny_App ':ignore')
     - [Template R Shinydashboard App](https://github.com/movestore/Template_R_Shinydashboard_App ':ignore')
-	- [Template Python App](https://github.com/movestore/python-sdk ':ignore') 
+    - [Template Python App](https://github.com/movestore/python-sdk ':ignore') 
 
 - Publication
   - [Citation of Apps](cite_app.md)
