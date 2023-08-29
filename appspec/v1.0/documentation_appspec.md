@@ -1,4 +1,7 @@
-# Documentation
+# ~~Documentation~~
+
+!> This attribute is deprecated / not supported any more. It was dropped at `appspec.json` version `1.1`.
+
 Each App requires a detailed Documentation of how it works, how it can be configured and what happens in error/null cases. Please provide a link to such Documentation. By default this should be the README file in the respective github repository. Please include the below listed points or use the README.md provided in the templates.
 
 - Name of the App in MoveApps
