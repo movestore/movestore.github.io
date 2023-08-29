@@ -39,7 +39,8 @@
       - [People](/appspec/current/people_appspec.md)
       - [Funding](/appspec/current/funding_appspec.md)
       - [References](/appspec/current/references_appspec.md)
-      - [Documentation](/appspec/current/documentation_appspec.md)
+      - Deprecated
+        - [Documentation](/appspec/v1.0/documentation_appspec.md)
     - [App Documentation](README_file_description.md) 
     - [Auxiliary](auxiliary.md)
 
