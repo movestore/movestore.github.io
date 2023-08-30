@@ -31,6 +31,7 @@
         - [Radiobuttons](/appspec/current/settings/radiobuttons.md)
         - [Checkboxes](/appspec/current/settings/checkbox.md)
         - [Dropdown](/appspec/current/settings/dropdown.md)
+        - [Local file](/appspec/current/settings/local_file.md)
       - [Dependencies](/appspec/current/dependencies_appspec.md)
       - [Artefacts](/appspec/current/artefacts_appspec.md)
       - [License](/appspec/current/license_appspec.md)
@@ -42,7 +43,7 @@
       - Deprecated
         - [Documentation](/appspec/v1.0/documentation_appspec.md)
     - [App Documentation](README_file_description.md) 
-    - [Auxiliary](auxiliary.md)
+    - [Auxiliary Files](auxiliary.md)
 
   - Quick links
     - [Settings Editor](https://www.moveapps.org/apps/settingseditor ':ignore')
