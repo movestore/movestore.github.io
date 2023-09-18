@@ -21,7 +21,7 @@
     - App Code
       - [R](copilot-r-sdk.md)
       - [R-Shiny](copilot-shiny-sdk.md)
-      - [Python](https://github.com/movestore/python-sdk/developer_README.md ':ignore')
+      - [Python](https://github.com/movestore/python-sdk/blob/main/developer_README.md ':ignore')
     - [App Specification](appspec.md)
       - [Settings](/appspec/current/settings/README.md)
         - [Text](/appspec/current/settings/string.md)
