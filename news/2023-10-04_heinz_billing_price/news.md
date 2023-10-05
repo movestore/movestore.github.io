@@ -1,7 +1,7 @@
 # MoveApps developers win Heinz Billing Prize
 
-<img src="./KoelzschAndrea.png" width="50%">
-<img src="./ScharfAnne.JPG" width="50%">
+![Andrea](KoelzschAndrea.png)
+![Anne](ScharfAnne.JPG)
 
 The Max Planck Society’s 2023 [Heinz Billing Prize](https://www.billingpreis.mpg.de/)
 has been awarded to Andrea Kölzsch and Anne Scharf for the development of MoveApps!
