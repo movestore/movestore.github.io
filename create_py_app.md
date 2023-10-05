@@ -3,7 +3,7 @@
 Apps to be submitted must be managed in a public [GitHub](https://github.com) repository. Python Apps must be developed using the [Python-SDK template](https://github.com/movestore/python-sdk) that we ask you to add to your personal GitHub space (login and click `Use this Template`). As described there in the [develop_README.md](https://github.com/movestore/python-sdk/blob/main/developer_README.md), there are some files and folders that you need to adapt to make your App and some that help you emulate how your App would run on MoveApps locally. We recommend using PyCharm or Visual Studio Code (VSC) for local development and Conda for dependency management.
 
 
-## Overview of necessary steps to develop an App
+## Steps to create an App
 *(details in [MoveApps Python App SDK documentation](python-sdk.md) and below)*
 
 1. **Open your forked Python SDK project** in your local system, e.g. using Pycharm with Conda.
