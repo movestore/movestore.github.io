@@ -42,7 +42,7 @@ The Workflow continues running and results are stored even if you leave the site
 
 ## Menus, Settings and Error logs
 
-There is a menu on the right of each App container in a Workflow. The R- and Python-Apps include the below options. R-Shiny-Apps do not provide Settings in this menu, but directly in the User Interface. Those settings can be stored on MoveApps from within the UI (bookmark feature).
+There is a menu on the right of each App container in a Workflow. The R and Python apps include the below options. R-Shiny-Apps do not provide Settings in this menu, but directly in the User Interface. Those settings can be stored on MoveApps from within the UI (bookmark feature).
 
 - Settings: View or change App parameters.
 - App Details: View all information and details about the App.

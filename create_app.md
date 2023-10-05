@@ -7,18 +7,18 @@ Feel free to use these GitHub templates: [Template R Function App](https://githu
 ![](../files/R_template.png)
 
 
-## Overview of necessary steps to develop an App
-*(details below)*
+## How to create a R or RShiny App
+These are the general step by step process for creating a new R or RShiny app.
 
 1. **Use a template to initialise an App repository** Login to GitHub and go to either the [Template R Function App](https://github.com/movestore/Template_R_Function_App ':ignore'), [Template R Shiny App](https://github.com/movestore/Template_R_Shiny_App ':ignore') or [Template R Shinydashboard App](https://github.com/movestore/Template_R_Shinydashboard_App ':ignore'). Click on `Use this template` to copy the template to a new repository within your GitHub account. Clone this repository to your local system.
 
 1. **Develop the App code within the template** locally (in RStudio) and by adapting the file `RFunction.R` or `ShinyModule.R`. (this is applicable only for R and Rshiny Apps, see our [Python Tutorial](create_py_app.md) for the recently integrated alternative)
 
-2. **Test your App** locally using the file `sdk.R` in combination with `.env` and `app.configuration.json` which emualte running behaviour (almost) like on the online MoveApps system. Note that before submission to MoveApps, all Apps must be tested locally to run for the four provided data sets in the folder `./data/raw`. Furthermore, we require unit tests using `testthat`. Follow the example in the folder `./tests/testthat`.
+2. **Test your App** locally using the file `sdk.R` in combination with `.env` and `app.configuration.json` which emulate running behaviour (almost) like on the online MoveApps system. Note that before submission to MoveApps, all Apps must be tested locally to run for the four provided data sets in the folder `./data/raw`. Furthermore, we require unit tests using `testthat`. Follow the example in the folder `./tests/testthat`.
 
 3. **Write App specifications** into the file `appspec.json` to define the App's metadata and the user interface for MoveApps users to specify App parameters. Test this file for compliance in the [Settings editor](https://www.moveapps.org/apps/settingseditor ':ignore').
 
-4. **Write a documentation file** about the detailed function and use of the App, incl. possible error cases. Usually use the `README.md` which is provided as a tempalte in each of the templates.
+4. **Write a documentation file** about the detailed function and use of the App including possible error cases. Usually use the `README.md` which is provided as a template in each of the templates.
 
 5. **Upload all changes to your GitHub repository** where the following three files are mandatory for running on MoveApps: `appspec.json`, `RFunction.R` (for R-files) or `ShinyModule.R` (for R-Shiny-Apps) and a documentation file (needs to be`README.md`). Additional files can be included (see image above), but are not necessary.
 
@@ -66,9 +66,9 @@ Each App is defined by an input and output type (IO types) and runtime environme
 
 
 ### IO types
-Input and output types have long been restricted to `move::moveStack`, but can now be extended to any other movement related data types. Due to deprecation of the `move`pacakge we discourage use of `move::moveStack` for any new Apps.
+Input and output types have long been restricted to `move::moveStack`, but can now be extended to any other movement related data types. Due to deprecation of the `move` package we discourage use of `move::moveStack` for any new Apps.
 
-After selecting R or R-Shiny as your Runtime Environment, check which types are available in the dropdown list. If you need a new IO type for your App, please go to "request a new IO type". Please describe your request to us, link to the documentation of the new IO type and adapt our [cargo agent repository](https://github.com/movestore/cargo-agent-r) accordingly, with creating and linking to a pull request. See the [README](https://github.com/movestore/cargo-agent-r#readme) there for details. Once an administrator has approved your IO type request, it will be available on the platform. Make sure to also provide transforamtion Apps to/from other IO types to widen the usability of your App on MoveApps. For portability to Python Apps also provide code to transfer your data object to one or several csv-files.
+After selecting R or R-Shiny as your Runtime Environment, check which types are available in the dropdown list. If you need a new IO type for your App, please go to "request a new IO type". Please describe your request to us, link to the documentation of the new IO type and adapt our [cargo agent repository](https://github.com/movestore/cargo-agent-r) accordingly, with creating and linking to a pull request. See the [README](https://github.com/movestore/cargo-agent-r#readme) there for details. Once an administrator has approved your IO type request, it will be available on the platform. Make sure to also provide transformation Apps to/from other IO types to widen the usability of your App on MoveApps. For portability to Python Apps also provide code to transfer your data object to one or several csv-files.
 
 ![](../files/ReqNewIOtype.png)
 ![](../files/ReqNewIOtype2.png)

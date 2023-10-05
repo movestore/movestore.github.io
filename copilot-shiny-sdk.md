@@ -91,7 +91,7 @@ shinyModule <- function(input, output, session, data) {
 }
 ```
 
-If the Shiny App is not modifying the input data (e.g. only visualization), than the input data must be passed on unmodified to the next App. To do this, the `shinyModule` function must return the data object as reactive output. 
+If the Shiny App is not modifying the input data (e.g. only visualisation), than the input data must be passed on unmodified to the next App. To do this, the `shinyModule` function must return the data object as reactive output. 
 ```
 shinyModule <- function(input, output, session, data) {
   current <- reactiveVal(data)

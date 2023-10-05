@@ -1,6 +1,6 @@
 # App Documentation
 
-All App developers are obliged to provide a complete documentation of their App, so that future users understand run details, results and possible error occurrences. Below you can find a detailed explanation of each item that should be contained in the README file. Template files are available in our GitHub templates: [Template R Function App](https://github.com/movestore/Template_R_Function_App ':ignore'), [Template R Shiny App](https://github.com/movestore/Template_R_Shiny_App ':ignore'), [Template R Shinydashboard App](https://github.com/movestore/Template_R_Shinydashboard_App ':ignore').
+All App developers are obliged to provide a complete documentation of their App, so that users can understand the Workflow run details, results and any possible errors. Below you can find a detailed explanation of each item that should be contained in the README file. Template files are available in our GitHub templates: [Template R Function App](https://github.com/movestore/Template_R_Function_App ':ignore'), [Template R Shiny App](https://github.com/movestore/Template_R_Shiny_App ':ignore'), [Template R Shinydashboard App](https://github.com/movestore/Template_R_Shinydashboard_App ':ignore').
 
 - **Name of App**: give the App a name, please stick to our convention of Title Case without hyphens (e.g. My New App)
 
@@ -14,17 +14,17 @@ All App developers are obliged to provide a complete documentation of their App,
 
 - **Documentation**: Enter here a detailed description of your App. What is it intended to be used for. Which steps of analyses are performed and how. Please be explicit about any detail that is important for use and understanding of the App and its outcomes.
 
-- **Input data**: Indicate which type of input data the App requires. Currently only R objects of class `MoveStack` can be used. This will be extend in the future.
+- **Input data**: Indicate which type of input data the App requires. Currently only R objects of class `MoveStack` can be used. This will be extended in the future.
 
   *Example*: MoveStack in Movebank format
 
-- **Output data**: Indicate which type of output data the App produces to be passed on to subsequent apps. Currently only R objects of class `MoveStack` can be used. This will be extend in the future. In case the App does not pass on any data (e.g. a shiny visualization app), it can be also indicated here that no output is produced to be used in subsequent apps.
+- **Output data**: Indicate which type of output data the App produces to be passed on to subsequent apps. Currently only R objects of class `MoveStack` can be used. This will be extend in the future. In case the App does not pass on any data (e.g. a shiny visualisation app), it can be also indicated here that no output is produced to be used in subsequent apps.
 
   *Example:* MoveStack in Movebank format
 
 - **Artefacts**: If the App creates artefacts (e.g. csv, pdf, jpeg, shapefiles, etc), please list them here and describe each.
 
-  *Example:* `rest_overview.csv`: csv-file with Table of all rest site properites
+  *Example:* `rest_overview.csv`: csv-file with Table of all rest site properties.
 
 - **Parameters**: Please list and define all parameters that the App requires to be set, if necessary including their unit. 
 
