@@ -7,8 +7,8 @@ Feel free to use these GitHub templates: [Template R Function App](https://githu
 ![](../files/R_template.png)
 
 
-## How to create a R or RShiny App
-These are the general step by step process for creating a new R or RShiny app.
+## Steps to create an App
+*(details below)*
 
 1. **Use a template to initialise an App repository** Login to GitHub and go to either the [Template R Function App](https://github.com/movestore/Template_R_Function_App ':ignore'), [Template R Shiny App](https://github.com/movestore/Template_R_Shiny_App ':ignore') or [Template R Shinydashboard App](https://github.com/movestore/Template_R_Shinydashboard_App ':ignore'). Click on `Use this template` to copy the template to a new repository within your GitHub account. Clone this repository to your local system.
 
