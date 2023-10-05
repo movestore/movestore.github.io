@@ -16,7 +16,7 @@ If you like, go ahead and click on `Start Workflow` on the top right and, after 
 ![](../files/HelloWorld_MoveApps_CargoAgent.png)
 
 ## Plot your positions in a Shiny User Interface
-Now click on the `+` next to the first App Container to select an App that would analyse or visualise the downloaded data. Let us stay simple and select the visualisaiton App `Static Map` (formerly Simple Map). There is a single variable that has to be configured, namely the edge size of area surrounding the locations on the map. Select `1` for now, this parameter can also be adapted in the UI directly. Now you can `Start Workflow` and `Open App UI` once everything has finished. To reduce run time you can use `Pin to this App` in the Movebank App, which will block it from running again, in case you have let it run before.
+Now click on the `+` next to the first App Container to select an App that would analyse or visualise the downloaded data. Let us stay simple and select the visualisation App `Static Map` (formerly Simple Map). There is a single variable that has to be configured, namely the edge size of area surrounding the locations on the map. Select `1` for now, this parameter can also be adapted in the UI directly. Now you can `Start Workflow` and `Open App UI` once everything has finished. To reduce run time you can use `Pin to this App` in the Movebank App, which will block it from running again, in case you have let it run before.
 
 ![](../files/HelloWorld_addMap.png)
 ![](../files/HelloWorld_OpenAppUI.png)

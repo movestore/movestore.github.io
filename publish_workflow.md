@@ -33,7 +33,7 @@ Please list the funding sources that have supported you while developing your Wo
 Please list all main references that you have used and will need for further work with your Workflow publication. See for possible [Reference types](appspec.md#References).
 
 #### License
-Chose a license under which you want to share/publish your Workflow and which users of it must abide to. See our [recommendations](license.md) as help for your selection.
+Choose a license under which you want to share/publish your Workflow and which users of it must abide to. See our [recommendations](license.md) as help for your selection.
 
 #### Keywords
 Add a list of keywords that describe your Workflow so that it can easily be found by other users.
