@@ -1,6 +1,6 @@
 # EMAC23 Coding Challenge — Closed
 
-![logo](logo_EMAC23CC+W_lowres.png)
+![logo](logo_EMAC23CC+W_lowres.jpg)
 
 Motivated by having been named a [Conservation Tech Award grantee in 2022](https://www.earthranger.com/news/conservation-tech-award-2022),we recently held the EMAC23 coding challenge to Equip MoveApps for Conservation.
 
