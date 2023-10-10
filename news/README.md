@@ -6,9 +6,11 @@ This directory provides the news content of [MoveApps](https://moveapps.org).
 
 ### Directories
 
+`YYYY-MM-DD_~anything`
+
 - each news item belongs to its **own directory**.
-- each directory starts with a **[ISO local date string](https://en.wikipedia.org/wiki/ISO_8601#Calendar_dates)** (w/o time) (eg. `2023-10-09`). This is necessary to order/sort the news items. The newest news item gets selected for the landing page. (the _prefix_)
-- after the date prefix you can add any string to find yourself around. (the _suffix_)
+- **Prefix**: each directory starts with a **[ISO local date string](https://en.wikipedia.org/wiki/ISO_8601#Calendar_dates)** (w/o time) (eg. `2023-10-09`). This is necessary to order/sort the news items. The newest news item gets selected for the landing page. This timestamp is also part of the presentation on MoveApps.
+- **Suffix**: after the date prefix you can add any string to find yourself around.
 - you can add the character '`~`' to the suffix in order to **hide this item on production**. The item is visible on the non-productive MoveApps mirror. Use it to preview the news item.
 
 ### Files
@@ -30,6 +32,7 @@ This directory provides the news content of [MoveApps](https://moveapps.org).
 - images can be referenced an gets displayed directly on MoveApps.
 - there is only **a absolute basic support** for images. Basically there is only 1 rule: images will get 100% of the available (content) width in each viewport.
 - if you need to arrange images eg side-by-side: you have to compose them by yourself w/ your favorite image editing software to create a new single image.
+- use [software to optimize](https://imageoptim.com/online) images for the web and keep an eye on privacy concerns (like `EXIF` data). 
 
 ## GitHub
 
