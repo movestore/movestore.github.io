@@ -6,11 +6,14 @@ This directory provides the news content of [MoveApps](https://moveapps.org).
 
 ### Directories
 
-`YYYY-MM-DD_~anything`
+`YYYY-MM-DD_~anything_but-news-item-headline`
 
 - each news item belongs to its **own directory**.
 - **Prefix**: each directory starts with a **[ISO local date string](https://en.wikipedia.org/wiki/ISO_8601#Calendar_dates)** (w/o time) (eg. `2023-10-09`). This is necessary to order/sort the news items. The newest news item gets selected for the landing page. This timestamp is also part of the presentation on MoveApps.
-- **Suffix**: after the date prefix you can add any string to find yourself around.
+- **Suffix**: after the date prefix you can add any string to find yourself around. This suffix gets also parsed by MoveApps will be presented to the User in the **navigation item in the sidebar**. The following substitutions apply:
+    1. remove of any '`~`'
+    1. replace '`_`' w/ '` `'
+    1. replace '`-`' w/ '` `'
 - you can add the character '`~`' to the suffix in order to **hide this item on production**. The item is visible on the non-productive MoveApps mirror. Use it to preview the news item.
 
 ### Files
