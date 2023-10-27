@@ -36,7 +36,7 @@ Apps to be submitted must be managed in a public [GitHub](https://github.com) re
 ## Notes and recommendations
 - Interactive Python Apps are presently not possible to integrate into MoveApps. We are working on sketching out the details and soon a new App type `Python GUI` will become available. Please let us know if you are interested to submit such an App.
 
-- **Stepwise App review is now implemented!** The new trial stage allows you to test your App in MoveApps before it will become available to all users.
+- **Stepwise App review is now implemented!** The new trial stage allows you to test your App in MoveApps before it will become available to all users. It is life starting 30 Oct 2023.
 
 - Don’t be afraid to hand in a preliminary App, a warning message can be applied.
 

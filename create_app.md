@@ -36,7 +36,7 @@ Feel free to use these GitHub templates: [Template R Function App](https://githu
 ## Notes and recommendations
 - As move/sp will be deprecated at the end of 2023, consider working with sf and using the brand-new [move2 package](https://gitlab.com/bartk/move2), which has recently been added to CRAN. Avoid any use of deprecated R packages.
 
-- **Stepwise App review is now implemented!** The new trial stage allows you to test your App in MoveApps before it will become available to all users.
+- **Stepwise App review is now implemented!** The new trial stage allows you to test your App in MoveApps before it will become available to all users. It is life starting 30 Oct 2023.
 
 - Don’t be afraid to hand in a preliminary App, a warning message can be applied.
 
