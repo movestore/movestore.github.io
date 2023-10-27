@@ -26,15 +26,19 @@ Feel free to use these GitHub templates: [Template R Function App](https://githu
 
 7. **Initiate the App** on MoveApps (`Create new Application`).
 
-8. **Submit a first App version** to MoveApps (`Add version`). Once the MoveApps administrator has checked it and built it into a Docker container, it becomes available to all users on the platform. Please test it there. We will contact you via Github issue if there are any changes necessary.
+8. **Submit a first App version** to MoveApps (`Add version`). One of the MoveApps administrators will check the App and build it into a Docker container for integration to the platform. If the App has built successfully, it will acquire private trial status. You will receive an E-mail.
+
+9. **Test a private trial version** of your App on MoveApps. Build a workflow and test if your App version behaves as expected on the system.
+
+10. **Approve (or retract) your App version** for visibility to all MoveApps users. If it needs adaptions, please retract and submit a new App version.
 
 
 ## Notes and recommendations
 - As move/sp will be deprecated at the end of 2023, consider working with sf and using the brand-new [move2 package](https://gitlab.com/bartk/move2), which has recently been added to CRAN. Avoid any use of deprecated R packages.
 
-- Stepwise App review is on the way, which will allow you to test your App in MoveApps before it will become available to all users.
+- **Stepwise App review is now implemented!** The new trial stage allows you to test your App in MoveApps before it will become available to all users.
 
-- Don’t be afraid to hand in a preliminary App, a warning message can be applied, and most Apps take time to become used.
+- Don’t be afraid to hand in a preliminary App, a warning message can be applied.
 
 - Make sure that users of your App are enabled to understand what is required of input data, what happens in the App and how the method works, that they can interpret the results correctly and understand possible issues.
 
@@ -43,7 +47,7 @@ Feel free to use these GitHub templates: [Template R Function App](https://githu
 MoveApps Apps should be developed in your usual compiler/editor and thoroughly tested before submission to MoveApps. For R and R-Shiny Apps we provide Software Development Kits (SDK) with an R Studio Project that allows Apps to run and perform as if in the MoveApps interface. The GitHub templates [Template R Function App](https://github.com/movestore/Template_R_Function_App ':ignore'), [Template R Shiny App](https://github.com/movestore/Template_R_Shiny_App ':ignore') & [Template R Shinydashboard App](https://github.com/movestore/Template_R_Shinydashboard_App ':ignore'), include all necessary files and example data for testing your app. These templates can either be used as a template to create a repository on your GitHub account, or can be downloaded as a .zip file via "Code" -> "Download ZIP". 
 The App R code has to be saved in one file either named `RFunction.R` ([R-App](copilot-r-sdk.md)) or `ShinyModule.R` ([R-Shiny-App](copilot-shiny-sdk.md)) and will be accessed by `sdk.R` in combination with `.env` (defining the input/output paths) and `app.configuration.json` (defining the App settings) during your developing and tests. Please keep the number of packages (libraries) as low as possible (*advice*: use `list.functions.in.file("RFunction.R")` from R package `NCmisc` to check which libraries are used by your code).
 
-Note that currently the most widely used input and output (IO) object type is `move2_loc` in `rds` file format. You can use the 4 example data sets (`input1.rds`, `input2.rds`, `input3.rds`, `input4.rds`) provided in the GitHub templates. The datasets are (1) local movements of greylag geese, (2) migration tracks of white-fronted geese, (3) a multiyear track of a white stork and (4) a high-resolution track of local movement of a goat on Mount Etna. 
+Note that currently the most widely used input and output (IO) object type is `move2_loc` in `rds` file format. You can use the 4 example data sets (`input1.rds`, `input2.rds`, `input3.rds`, `input4.rds`) provided in the GitHub templates. The datasets are (1) local movements of greylag geese, (2) migration tracks of white-fronted geese, (3) a multiyear track of a white stork and (4) a high-resolution track of local movement of a goat on Mount Etna. Non-location example data sets will soon be added.
 
 The files in the folder `src` are included in the SDKs for communication functionality functions in MoveApps. In these files, functions are defined that can be used by the App developer to give information messages, warnings, errors, etc. to the user in MoveApps. Please use these functions in your Apps. Note that due to the soon (end 2023) deprecation of the `sp` package, on which the `move` package strongly depends, we recommend to use  the`sf` and `move2` packages for App development. There are the `move2::move2_loc` and `move2::move2_nonloc` IO types available and new ones can be requested (see below).
 
@@ -73,14 +77,25 @@ After selecting R or R-Shiny as your Runtime Environment, check which types are 
 ![](../files/ReqNewIOtype.png)
 ![](../files/ReqNewIOtype2.png)
 
-Note that repository link, IO types and runtime environment will be fixed to the App and cannot be changed afterwards. When you have successfully created the App, it will be listed in the overview `Applications / Your Applications`
+Note that repository link, IO types and runtime environment will be fixed to the App and cannot be changed afterwards. When you have successfully created the App, it will be listed in the overview `My Apps / App Overview`
 
 
 ## Creation of a new App version
-In order to create your first (or any updated new) App version, you must create a `Tag` (via `Release`) of your GitHub repository in its present state. After you have created the `Tag`, go to the MoveApps site and press the `Add Version` button in the detailed view of your App (via `Applications / Your Applications / AppName / Details`).
-
-Select the `Tag` from the list of available `Tags` and press `Create Version`. A new App version is only available if your tag creation in GitHub was successful. To submit the new version, you must include a description detailing the changes and select/update a Category that fits your App. If you want to request an additional Category, please suggest it in the interface. A system administrator will integrate it into the system for you or contact you for possible feedback. After entering this information, click `Save and Submit`.
-
-The App is then checked by a MoveApps administrator for functionality, performant `appspec.json` and possible issues regarding our Terms of Use and a docker container for the App is built. After the check and built process were successful, the status of the App version becomes `APPROVED`. From this moment on, the new version of the App becomes accessible to all platform users. Please test it directly, fix any issues and submit a new App version if necessary.
+In order to create your first (or any updated new) App version, you must create a `Tag` (via `Release`) of your GitHub repository in its present state. After you have created the `Tag`, go to the MoveApps site and press the `Add Version` button in the detailed view of your App (via `Applications / Your Applications / AppName / Details`). Select the `Tag` from the list of available `Tags` and press `Create Version`. A new App version is only available if your tag creation in GitHub was successful. To submit the new version, you must include a description detailing the changes and select/update a Category that fits your App. If you want to request an additional Category, please suggest it in the interface. After entering all information, click `Save and Submit`.
 
 ![](../files/Appdevel_createNewAppVersion.png)
+
+The App is then checked by a MoveApps administrator for functionality, performant `appspec.json` and possible issues regarding our Terms of Use and a docker container for the App is initiated for built into a Docker container for intergration into the ssytem. Upon successful review and built, your App version will enter the `TRIAL` stage and you will receive an E-mail from the system, possibly with comments from the administator. In case your App does not pass the review or the building process was unsuccessful, the administrator will reject your App version and you will get an E-mail with details about it. Please address any raised concerns and submit a new App version then.
+
+
+## Testing the Trial version of you App
+
+Once, your App is in status `TRIAL`, it becomes possible for only you (and the system administrators) to add this App to a workflow in your MoveApps account. It appears in the list of Apps possible to add to your workflow (with fitting IO type) in `TRIAL` design (see figure below). Also when included in a workflow, the App will be highlighted with colour as a `TRIAL` App.
+
+![](../files/Trail_AppIntoWF.png)
+![](../files/Trail_IsInWF.png)
+
+Please, create some workflow(s) and test if the App version is working as you expect within the platform. Try it for different data sets and parameter settings, use e.g. the wealth of open data sets on Movebank. If the App is performing good, please select `APPROVE` in the respective App version of the App in your App Overview (`My Apps/App Overview/*your_app_name*`). The App version will aquire the status `APPROVED`and become visible and usable for all registered MoveApps users. In case the App version does not perform as expected, please `RETRACT` it from the system, adapt your code and submit a new version. In the workflow where the `TRAIL` App has been included, it will be marked as `Retracted` and give an error if executed.
+
+![](../files/Trail_AppVersion.png)
+![](../files/Trail_RetractInWF.png)
