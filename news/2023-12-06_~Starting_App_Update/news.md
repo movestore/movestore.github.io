@@ -1,5 +1,9 @@
-# MoveApps Starting App Update
+# Starting Apps Update
 
-![Forum_Screenshot](Forum_Screen.jpg)
+![DataSource_Screenshot](data_source_move2_cut.jpg)
 
-lalalaldajgüoiwaejwpeobjwarüiojaeprojvLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit 
+Related to the deprecation of rgdal, rgeos and maptools within R, we are updating R Apps to work with the quicker and more flexible package move2. Many Apps will receive more functinality and become more stable in the course of this update. However, it may take some time until all necessary Apps are updated.
+
+We have finished updates and extensions of the [Data Source Apps](https://docs.moveapps.org/#/create_workflow?id=create-a-new-workflow), with which workflows can be started. Note that it is now possible to upload data from Movebank, Cloud storage, your local system and other MoveApps workflows. All those Apps create move2 output, that cannot yet be received by all other Apps. Therefore, until all Apps are updated, the use of [Translator Apps](https://docs.moveapps.org/#/translator?id=connecting-apps-of-different-types) will be necessary for being able to harvest the full functionality of MoveApps. 
+
+For a full list of all available Apps please see the [App Browser](https://develop.moveapps.org/apps/browser). There, it is indicated which input and output types each App has and how they can be linked with each other. Please use Translator Apps where necessary, but beware that their use can lead to unexpected behaviour in some cases. Contact [us](mailto:support@moveapps.org), if you need help.
