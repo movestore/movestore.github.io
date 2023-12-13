@@ -54,7 +54,7 @@
 
 - Publication
   - [Citation of Apps](cite_app.md)
-  - [Publication of Workflows](publish_workflow.md)
+  - [Publish/Archive with DOI of Workflows](publish_workflow.md)
   - [Selecting your License](license.md)
 
 - Discussions

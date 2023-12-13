@@ -2,17 +2,17 @@
 
 Within MoveApps, existing Apps can be combined into a Workflow, allowing you to define an ordered set of steps to access, process and analyse data. These Workflows can then be saved, edited and used for specific use cases. 
 
-Every Workflow starts with an App that loads data into the system (e.g. from [Movebank](www.movebank.org), the Movebank Data Repository or Dropbox/Google Drive). The data are then passed on to the next App (in the appropriate format) and analysed by it accordingly. Every App requires data of a defined input type (mostly R move:moveStack, but others are available and the numbers are growing) and can pass on output of a defined type. Some Apps provide an interactive User Interface (R-Shiny). 
+Every Workflow starts with an App that loads data into the system (e.g. from [Movebank](www.movebank.org), the user's local system, Dropbox/Google Drive or an output from another MoveApps workflow). The data are then passed on to the next App (in the appropriate format) and analysed by it accordingly. Every App requires data of a defined input type (mostly R move2_locations, but others are available and the numbers are growing) and can pass on output of a defined type. Some Apps provide an interactive User Interface (R-Shiny). 
 
-Some Apps produce output products/artifacts, which can be downloaded as files, in formats such as .pdf or .csv. App output data can also be downloaded as an object of the defined App output type in R format `.rds` or Python format `pickle`.
+Some Apps produce output products/artifacts, which can be downloaded as files, in formats such as .pdf or .csv. App output data can also be downloaded as an object of the defined App output type in R format `app-output.rds` or Python format `app-output.pickle`. Any App artifacts or outputs are also available via our [API](AIP.md).
 
 ![](../files/WF_example_MigMapper_2023.png)
 
 ## Create a new Workflow
 
-From the main menu, select `Workflows` and then `Create New Workflow`. After providing a name for the Workflow (also consider adding a Workflow Category), you will be asked to select a Data Source. Now choose to retrieve location or non-location data from either Movebank, location data (!) from the Movebank Repository or your personal cloud storage on Google Drive or Dropbox. For the latter option the data have to be provided as an R object of class 'move::MoveStack' saved in `.rds` format or as `.csv` in Movebank format ([see Details](https://github.com/movestore/cloud-provider-download/blob/master/README.md). All Data Sources require that you specify parameters and settings. After providing these, the Workflow area with the initial App appears . Note that additional Data Sources can be downloaded by adding e.g. another instance of the Movebank download App (see below). All data sets will be combined, thus allowing the joined analysis of data from e.g. different Movebank studies.
+From the main menu, select `Workflows` and then `Create New Workflow`. After providing a name for the Workflow (also consider adding a Workflow Category), you will be asked to select a Data Source. Now choose to retrieve location or non-location data from Movebank or another MoveApps workflow, or location data (!) from your local system or your personal cloud storage on Google Drive or Dropbox. For the latter option the data have to be provided as an R object of class 'move2::move2_loc' saved in `.rds` format or as `.csv` containing information about timestamp, x, y and track ID, preferrably in Movebank format ([see Details](https://github.com/movestore/Upload-File-from-Local/blob/master/README.md). All Data Sources require that you specify parameters and settings. After providing these, the Workflow area with the initial App appears . Note that additional Data Sources can be downloaded by adding e.g. another instance of the Movebank download App (see below). All data sets will be combined, thus allowing the joined analysis of data from e.g. different Movebank studies.
 
-![](../files/DataSource_view_Mar2023.png)
+![](../files/DataSource_view_Dec2023.png)
 
 ![](../files/Workflow_movebank.png)
 
