@@ -1,6 +1,7 @@
 # Connect Apps of different types with `Translator` Apps
 
-!\> **Caution! (20 Dec 2023) Unexpected difficulties with the Translator App moveStack to MovingPandas might lead to errors in new workflows that contain Python Apps. We try to solve this asap, but might only be able to finalise changes in January. Meanwhile, please use your old Workflows (with Movebank move1 starting App). Please bear with us, we will inform you when the updates are completed.**
+> [!WARNING]  
+> **Caution! (20 Dec 2023) Unexpected difficulties with the Translator App moveStack to MovingPandas might lead to errors in new workflows that contain Python Apps. We try to solve this asap, but might only be able to finalise changes in January. Meanwhile, please use your old Workflows (with Movebank move1 starting App). Please bear with us, we will inform you when the updates are completed.**
 
 ## How MoveApps works
 
