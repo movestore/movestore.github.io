@@ -1,5 +1,7 @@
 # Connect Apps of different types with `Translator` Apps
 
+!\> **Caution!** (20 Dec 2023) Unexpected difficulties with the Translator App moveStack to MovingPandas might lead to errors in new workflows that contain Python Apps. We try to solve this asap, but might only be able to finalise changes in January. Meanwhile, please use your old Workflows (with Movebank move1 starting App). Please bear with us, we will inform you when the updates are completed.
+
 ## How MoveApps works
 
 The Apps on MoveApps are based on different programming languages (`R` and `Python`), and within each language each App uses functions that require a specific input type and provide a specific output type. Thus, each App is characterised by those two input/output (IO) types.
