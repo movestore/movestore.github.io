@@ -2,7 +2,8 @@
 
 ![DataSource_Screenshot](data_source_move2_cut.jpg)
 
-> :warning: **Caution!** (20 Dec 2023) Unexpected difficulties with the Translator App moveStack to MovingPandas might lead to errors in new workflows that contain Python Apps. We try to solve this asap, but might only be able to finalise changes in January. Meanwhile, please use your old Workflows (with Movebank move1 starting App). Please bear with us, we will inform you when the updates are completed.
+[!WARNING]  
+**Caution!** (20 Dec 2023) Unexpected difficulties with the Translator App moveStack to MovingPandas might lead to errors in new workflows that contain Python Apps. We try to solve this asap, but might only be able to finalise changes in January. Meanwhile, please use your old Workflows (with Movebank move1 starting App). Please bear with us, we will inform you when the updates are completed.
 
 Related to the deprecation of `rgdal`, `rgeos` and `maptools` within R, we are updating R Apps to work with the quicker and more flexible package `move2`. Many Apps will receive more functionality and become more stable in the course of this update. However, it may take some time until all necessary Apps are updated.
 
