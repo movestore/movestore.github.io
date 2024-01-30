@@ -13,3 +13,4 @@ RUN chown $UID:$GID us_nga_egm2008_1.tif
 Example apps:
 
 - https://github.com/movestore/Add_Elevation
+- https://github.com/movestore/Add_Corine_Landcover2018: see first release
