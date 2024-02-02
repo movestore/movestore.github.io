@@ -3,7 +3,7 @@
 ![DataSource_Screenshot](data_source_move2_cut.jpg)
 
   
-**Note** Updates of the Translator Apps moveStack to MovingPandas have been finalised.
+**Note** Updates of the Translator Apps move2_loc to MovingPandas have been finalised.
 
 Related to the deprecation of `rgdal`, `rgeos` and `maptools` within R, we are updating R Apps to work with the quicker and more flexible package `move2`. Many Apps will receive more functionality and become more stable in the course of this update. However, it may take some time until all necessary Apps are updated.
 
