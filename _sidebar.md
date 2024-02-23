@@ -44,6 +44,7 @@
 		- [Artefacts](/appspec/v1.0/artefacts_appspec.md)
     - [App Documentation](README_file_description.md) 
     - [Auxiliary Files](auxiliary.md)
+	- [MoveApps OSM mirror](OSMmirror.md)
 
   - Quick links
     - [Settings Editor](https://www.moveapps.org/apps/settingseditor ':ignore')
