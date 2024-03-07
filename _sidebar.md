@@ -43,6 +43,7 @@
         - [Documentation](/appspec/v1.0/documentation_appspec.md)
 		- [Artefacts](/appspec/v1.0/artefacts_appspec.md)
     - [App Documentation](README_file_description.md) 
+	- [App Deprecation](app_deprecation.md)
     - [Auxiliary Files](auxiliary.md)
 	- [MoveApps OSM mirror](OSMmirror.md)
 

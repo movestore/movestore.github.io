@@ -32,6 +32,8 @@ By clicking on the “+” to the right of an App, you can browse, search and se
 
 ![](../files/Workflow_addApp_2023.png)
 
+!\> Note that [depredated Apps](app_deprecation.md) do not appear in this list. They cannot be added to new Workflows any more, because the App developer has stopped maintainance.
+
 ## Run the workflow
 
 Select `Start Workflow` to begin running the Apps within a Workflow in the order that you have arranged them. You can follow the progress of the Workflow by the change in colour of the action point in the bottom right of each App container. On the right side of the Workflow name there is also an action point which will indicate if the workflow instance is `running` or `stopped`. Note that if the workflow contains a Shiny App its status will be `running` for a few hours, also after finishing, in order to allow the interaction with the App User Interface.
