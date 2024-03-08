@@ -36,7 +36,7 @@ All available public Workflows are listed below your Workflow invitations in the
 
 ![](../files/Share_public_23.png)
 
-!\> Note that public workflows that contain at least one [deprecated App](app_deprecation.md) are marked as `deprecated`, but can still be added to your Dashboard and used.
+!\> Note that public workflows that contain at least one [deprecated App](app_deprecation.md) are marked as `deprecated`, but can still be added to your Dashboard and used (for ensuring reproducibility).
 
 
 ## Configuration of data source Apps in added Workflows
