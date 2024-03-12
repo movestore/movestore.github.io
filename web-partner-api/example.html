@@ -38,7 +38,7 @@
             .then(response => response.json())
             .then(data => {
                 console.log('success!', data);
-                let animationArtifact = data.artifacts[0]
+                let animationArtifact = data.results[3]
                 if (animationArtifact.fileName === 'animation_moveVis.mp4') {
                     document.getElementById('modifiedAt').innerHTML = `Modified at ${animationArtifact.modifiedAt}`
                     return animationArtifact.links.self
