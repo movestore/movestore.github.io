@@ -9,15 +9,35 @@
 </head>
 
 <body>
-    <h2>API for analysis output files functional</h2>
+    <h1>API for analysis output files functional</h1>
     <p>Try out integrating files that you have produced with a MoveApps workflow into your own personal webpage! They are then automatically updated when scheduling workflow runs.</p>
-    <p>See here tracks of our favorite Max Planck species: White storks that were born in Radolfzell moving during the past 12 weeks, updated every morning to integrate new location data transmitted by the tags to Movebank and MoveApps.</p>
 
-    <video width="400" controls loop id="videoElement">
-        Your browser does not support the video tag.
-    </video>
-    <div id="modifiedAt"></div>
+    <section>
+        <h2>Embed content via HTML tags</h2>
+        <b>tbd</b>
+        <ul>
+            <li>Pro: easy - no code</li>
+            <li>Con: no metadata (like file was <code>modifiedAt</code>) accessible</li>
+            <li>Con: not that dynamic - you cannot dynamically react to changes done in the workflow</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Integrate content via JavaScript</h2>
 
+        <p>See here a generated Morning Report PDF</p>
+        <object 
+            id="pdfElement"
+            type="application/pdf"
+            width="100%"
+            height="600px"
+        ></object>
+
+        <p>See here tracks of our favorite Max Planck species: White storks that were born in Radolfzell moving during the past 12 weeks, updated every morning to integrate new location data transmitted by the tags to Movebank and MoveApps.</p>
+        <video width="400" controls loop id="videoElement">
+            Your browser does not support the video tag.
+        </video>
+        <div id="modifiedAt"></div>
+    </section>
     <script>
         // The MoveApps Web-Partner-API credentials provided by the "output" section of the workflow:
         let username = '8b536ed8-a681-4786-aa01-b26040106f9f'
@@ -38,31 +58,55 @@
             .then(response => response.json())
             .then(data => {
                 console.log('success!', data);
+                // a video
                 let animationArtifact = data.results[3]
                 if (animationArtifact.fileName === 'animation_moveVis.mp4') {
-                    document.getElementById('modifiedAt').innerHTML = `Modified at ${animationArtifact.modifiedAt}`
-                    return animationArtifact.links.self
+                    handleVideo(animationArtifact.links.self, animationArtifact.modifiedAt)
                 } else {
-                    console.warn('selected artifact is not the expected one! has the workflow- / output-configuration changed?', animationArtifact)
+                    throw Error('selected artifact is not the expected one! has the workflow- / output-configuration changed?', animationArtifact)
+                }
+                // a pdf
+                let pdfArtifact = data.results[5]
+                if (pdfArtifact.fileName === 'MorningReport_overviewTable.pdf') {
+                    handlePdf(pdfArtifact.links.self)
+                } else {
+                    throw Error('selected artifact is not the expected one! has the workflow- / output-configuration changed?', pdfArtifact)
                 }
             })
-            // chrome does not allow URLs containing username:password@host: https://bugs.chromium.org/p/chromium/issues/detail?id=82250#c7
-            // so we fetch the video content and feed it into the html video element
-            .then(videoUrl => fetch(
-                    videoUrl, 
-                    { 
-                        method: 'GET',
-                        headers: {'Authorization': 'Basic ' + btoa(username + ":" + token)}
-                    }
-                )
-            )
-            // convert video response to blob
-            .then(videoResponse => videoResponse.blob())
-            // set blob as html video-element source
-            .then(videoBlob => {
-                let videoElement = document.getElementById('videoElement')
-                videoElement.src = URL.createObjectURL(videoBlob)
-            })
             .catch(err => console.warn('Something went wrong.', err))
+
+        function handleVideo(src, modifiedAt) {
+            // show the timestamp
+            document.getElementById('modifiedAt').innerHTML = `Modified at ${modifiedAt}`
+            // chrome does not allow URLs containing username:password@host 
+            // https://bugs.chromium.org/p/chromium/issues/detail?id=82250#c7
+            // https://chromestatus.com/feature/5669008342777856
+            // so we fetch the video content and feed it into the html video element
+            fetch(
+                src, 
+                { 
+                    method: 'GET',
+                    headers: {'Authorization': 'Basic ' + btoa(username + ":" + token)}
+                }
+            )
+            // convert response to blob
+            .then(response => response.blob())
+            // set blob as html source
+            .then(blob => document.getElementById('videoElement').src = URL.createObjectURL(blob))
+        }
+
+        function handlePdf(src) {
+            fetch(
+                src, 
+                { 
+                    method: 'GET',
+                    headers: {'Authorization': 'Basic ' + btoa(username + ":" + token)}
+                }
+            )
+            // convert response to blob
+            .then(response => response.blob())
+            // set blob as html source
+            .then(blob => document.getElementById('pdfElement').data = URL.createObjectURL(blob))
+        }
     </script>
 </body>
