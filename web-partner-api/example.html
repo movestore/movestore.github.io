@@ -19,52 +19,70 @@
     <p>Try out integrating files that you have produced with a MoveApps workflow into your own personal webpage! They are then automatically updated when scheduling workflow runs.</p>
 
     <section>
-        <p>The resources provided by the API are protected. You can provide the credentials by a) Basic access authentication or b) API key.</p>
+        <p>The resources provided by the API are protected. You can submit the credentials by a) HTTP basic access authentication or b) an API key.</p>
         <p>
-            Keep in mind that the tokens and/or API-Keys will be visible to the public. 
+            Keep in mind that the tokens and/or API-Keys will be <b>visible to the public</b>.
             That is okay for workflows which generate public resources (aka artifacts).
         </p>
         <p>
-            If your workflow produces sensitive resources consider consuming the artifacts by a own backend system in order to hide this token from the public.
+            If your workflow produces <b>sensitive resources</b> consider consuming the artifacts by a own backend system in order to hide this token from the public.
         </p>
-        <table>
+        <table border="1">
             <tr>
+                <th />
                 <th>Basic Auth</th>
-                <td><code>8b536ed8-a681-4786-aa01-b26040106f9f</code>:<code id="apiToken"></code></td>
+                <th>API key (URL encoded!)</th>
             </th>
             <tr>
-                <th>API key (URL encoded!)</th>
+                <th>User</th>
+                <td colspan="2" style="text-align: center;"><code id="username"></code></td>
+            </tr>
+            <tr>
+                <th>Token</th>
+                <td><code id="apiToken"></code></td>
                 <td><code id="apiTokenUrlEncoded"></code></td>
             </tr>
             <caption>The credentials for this example page. You need to register your own ones at MoveApps.</caption>
         </table>
+
+        <h2>Preparation</h2>
+        <ol>
+            <li>Find the <em>OUTPUT</em> Button at your Workflow-Instance Screen on <a href="https://www.moveapps.org">MoveApps</a></li>
+            <li>In the <em>workflow Instance Output</em></li> Screen localize and press the button <em>API ACCESS</em>
+            <li>Press <em>REGISTER</em></li>
+            <li>Note values of <code>Username</code> and <code>Password</code> (aka Token)</li>
+            <li>Localize and press the link on this screen names <em>this overview</em></li>
+            <li>On this overview all the files produced by your workflow-instance are listed. Use these links to some files for the next sections.</li>
+        </ol>
+        <p> The <a href="http://localhost:8080/web-partner/v1/workflowInstances/d8fcb45e-412d-4002-81d6-0fcbdbd5fa5d/results/index?api-key=cZXqvA45X8LHVME7515CbIybg4dQX4wl">mentioned overview for this example</a> (use something that can parse XML!).</p>
     </section>
 
     <section>
         <h2>Just a basic list of links</h2>
         <ul>
             <!-- keep in mind that this api-keys will be visible to the public -->
-            <li><a href="http://localhost:8080/web-partner/v1/workflowInstances/d8fcb45e-412d-4002-81d6-0fcbdbd5fa5d/apps/1/results/UD_ContourMap_per_Indv_contours_0.5_0.9.pdf?api-key=LAmUg81mhcgNG48nzRzsyWv7r7W0YOSy">some PDF document</a></li>
-            <li><a href="http://localhost:8080/web-partner/v1/workflowInstances/d8fcb45e-412d-4002-81d6-0fcbdbd5fa5d/apps/1/results/UD_contour%3A0.5_0.9.zip?api-key=LAmUg81mhcgNG48nzRzsyWv7r7W0YOSy">some ZIP file</a></li>
+            <li><a href="http://localhost:8080/web-partner/v1/workflowInstances/d8fcb45e-412d-4002-81d6-0fcbdbd5fa5d/apps/1/results/UD_ContourMap_per_Indv_contours_0.5_0.9.pdf?api-key=cZXqvA45X8LHVME7515CbIybg4dQX4wl">some PDF document</a></li>
+            <li><a href="http://localhost:8080/web-partner/v1/workflowInstances/d8fcb45e-412d-4002-81d6-0fcbdbd5fa5d/apps/1/results/UD_contour%3A0.5_0.9.zip?api-key=cZXqvA45X8LHVME7515CbIybg4dQX4wl">some ZIP file</a></li>
         </ul>
     </section>
 
     <section>
         <h2>Embed content via HTML tags</h2>
         <ul>
+            <li>You have to use the access method <code>API Key</code> (Browsers <a href="https://chromestatus.com/feature/5669008342777856">don't allow links with embedded credentials</a>)</li>
             <li>Pro: easy - no code</li>
             <li>Con: no metadata (like file was <code>modifiedAt</code>) accessible</li>
-            <li>Con: not that dynamic - you cannot dynamically react to changes done in the workflow (like dynamic file names)</li>
+            <li>Con: not that dynamic - you cannot react to changes done in the workflow (like dynamic file names)</li>
         </ul>
 
         <!-- keep in mind that this api-keys will be visible to the public -->
         <img 
-            src="http://localhost:8080/web-partner/v1/workflowInstances/d8fcb45e-412d-4002-81d6-0fcbdbd5fa5d/apps/1/results/UD_ContourMap_color_both_contours_0.5_0.9.png?api-key=LAmUg81mhcgNG48nzRzsyWv7r7W0YOSy"
+            src="http://localhost:8080/web-partner/v1/workflowInstances/d8fcb45e-412d-4002-81d6-0fcbdbd5fa5d/apps/1/results/UD_ContourMap_color_both_contours_0.5_0.9.png?api-key=cZXqvA45X8LHVME7515CbIybg4dQX4wl"
             height="400px"
         />
         <!-- keep in mind that this api-keys will be visible to the public -->
         <object 
-            data="http://localhost:8080/web-partner/v1/workflowInstances/d8fcb45e-412d-4002-81d6-0fcbdbd5fa5d/apps/1/results/UD_ContourMap_per_Indv_contours_0.5_0.9.pdf?api-key=LAmUg81mhcgNG48nzRzsyWv7r7W0YOSy"
+            data="http://localhost:8080/web-partner/v1/workflowInstances/d8fcb45e-412d-4002-81d6-0fcbdbd5fa5d/apps/1/results/UD_ContourMap_per_Indv_contours_0.5_0.9.pdf?api-key=cZXqvA45X8LHVME7515CbIybg4dQX4wl"
             type="application/pdf"
             width="100%"
             height="600px"
@@ -73,7 +91,7 @@
     <section>
         <h2>Integrate content via JavaScript</h2>
         <ul>
-            <li>Pro: use metadata (like <code>modifiedAt</code>)</li>
+            <li>Pro: consume and use metadata (like <code>modifiedAt</code>)</li>
             <li>Pro: react to changes in the workflow</li>
             <li>Con: Scripting must be enabled</li>
         </ul>
@@ -99,6 +117,7 @@
         // Keep in mind that this token will be visible to the public. That is okay for workflows which generate public resources (aka artifacts).
         // If your workflow produces sensitive resources consider consuming the artifacts by a own backend system in order to hide this token from the public.
         let token = 'bdl@2nq@9SD!i31a1M7HxG7GQG93IQ0a'
+        document.getElementById('username').innerHTML = username
         document.getElementById('apiToken').innerHTML = token
         document.getElementById('apiTokenUrlEncoded').innerHTML = encodeURI(document.getElementById('apiToken').innerHTML)
         
