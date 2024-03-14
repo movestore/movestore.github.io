@@ -22,7 +22,7 @@
         <p>The resources provided by the API are protected. You can submit the credentials by a) HTTP basic access authentication or b) an API key.</p>
         <p>
             Keep in mind that the tokens and/or API-Keys will be <b>visible to the public</b>.
-            That is okay for workflows which generate public resources (aka artifacts).
+            That is okay for workflows which generate public resources.
         </p>
         <p>
             If your workflow produces <b>sensitive resources</b> consider consuming the artifacts by a own backend system in order to hide this token from the public.
@@ -54,15 +54,15 @@
             <li>Localize and press the link on this screen names <em>this overview</em></li>
             <li>On this overview all the files produced by your workflow-instance are listed. Use these links to some files for the next sections.</li>
         </ol>
-        <p> The <a href="http://localhost:8080/web-partner/v1/workflowInstances/d8fcb45e-412d-4002-81d6-0fcbdbd5fa5d/results/index?api-key=cZXqvA45X8LHVME7515CbIybg4dQX4wl">mentioned overview for this example</a> (use something that can parse XML!).</p>
+        <p> The <a target="_blank" href="http://localhost:8080/web-partner/v1/workflowInstances/d8fcb45e-412d-4002-81d6-0fcbdbd5fa5d/results/index?api-key=cZXqvA45X8LHVME7515CbIybg4dQX4wl">mentioned overview for this example</a> (use something that can parse XML!).</p>
     </section>
 
     <section>
         <h2>Just a basic list of links</h2>
         <ul>
             <!-- keep in mind that this api-keys will be visible to the public -->
-            <li><a href="http://localhost:8080/web-partner/v1/workflowInstances/d8fcb45e-412d-4002-81d6-0fcbdbd5fa5d/apps/1/results/UD_ContourMap_per_Indv_contours_0.5_0.9.pdf?api-key=cZXqvA45X8LHVME7515CbIybg4dQX4wl">some PDF document</a></li>
-            <li><a href="http://localhost:8080/web-partner/v1/workflowInstances/d8fcb45e-412d-4002-81d6-0fcbdbd5fa5d/apps/1/results/UD_contour%3A0.5_0.9.zip?api-key=cZXqvA45X8LHVME7515CbIybg4dQX4wl">some ZIP file</a></li>
+            <li><a target="_blank" href="http://localhost:8080/web-partner/v1/workflowInstances/d8fcb45e-412d-4002-81d6-0fcbdbd5fa5d/apps/1/results/UD_ContourMap_per_Indv_contours_0.5_0.9.pdf?api-key=cZXqvA45X8LHVME7515CbIybg4dQX4wl">some PDF document</a></li>
+            <li><a target="_blank" href="http://localhost:8080/web-partner/v1/workflowInstances/d8fcb45e-412d-4002-81d6-0fcbdbd5fa5d/apps/1/results/UD_contour%3A0.5_0.9.zip?api-key=cZXqvA45X8LHVME7515CbIybg4dQX4wl">some ZIP file</a></li>
         </ul>
     </section>
 
@@ -105,7 +105,7 @@
         ></object>
         <div id="pdfModifiedAt"></div>
 
-        <p>See here tracks of our favorite Max Planck species: White storks that were born in Radolfzell moving during the past 12 weeks, updated every morning to integrate new location data transmitted by the tags to Movebank and MoveApps.</p>
+        <p>See here tracks of our favorite Max Planck species: White storks that were born in Radolfzell.</p>
         <video width="400" controls loop id="videoElement">
             Your browser does not support the video tag.
         </video>
