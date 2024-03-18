@@ -12,6 +12,4 @@ To access the overview of the product http links, you have to enter the previous
 
 ## Integrate API links into your website
 
-Please have a look at our [landing page](https://www.moveapps.org). In the news section about API integration we have integrated an animation artifact from a scheduled workflow that is running on MoveApps daily. The details of how we integrated it into the site can be used as an example for you to follow. See the code on our [github repository](https://github.com/movestore/movestore.github.io/blob/master/web-partner-api/example.html) and the showcase below.
-
-![](../web-partner-api/example.html)
+Please have a look at our [example page](https://docs.moveapps.org/web-partner-api/example.html). We have integrated multiple artifacts from a workflow running on MoveApps. The details of how we integrated it into the site can be used as an example for you to follow. See the code on our [github repository](https://github.com/movestore/movestore.github.io/blob/master/web-partner-api/example.html).
