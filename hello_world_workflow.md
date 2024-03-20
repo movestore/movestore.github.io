@@ -6,7 +6,7 @@ In the instructions below, buttons on the website are shown in `orange`.
 ## Download your data from Movebank
 From the main menu in your `Dashboard`, select `Workflows` and then `Create New Workflow`. After providing a name for the Workflow, you will be asked to `Select A Data Source`. Choose `Movebank Location` and provide your [Movebank](https://www.movebank.org) login details.
 
-![](../files/HelloWorld_selectDataSource.png)
+![](files/HelloWorld_selectDataSource.png)
 
 In a succession of settings windows you can select a study from which you have access to download data, select individual animals, a time window of required data and an option how to deal with duplicate locations. For this example let us select the public study `Migration timing in white-fronted geese (data from Kölzsch et al. 2016)`, note that you can search for studies. For shorter run times in this example let us select data of only two animals, say 700 and 712. As the data sets are not very dense, for now a time window selection is not necessary. Select `Finish` in the final `Overview` window. Your first Workflow made up of one App is available for running.
 
