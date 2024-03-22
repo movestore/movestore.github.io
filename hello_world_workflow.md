@@ -17,16 +17,23 @@ For shorter run times in this example let us select data of only two animals, sa
 
 If you like, go ahead and click on `Start Workflow` on the top right and, after the run is finished, explore the downloaded data (Output Details) in the `Cargo Agent`, which can be accessed via the small green circle appearing on the right side of the App Container (red arrow) once the run is finished. Explore the coloured dots (by hovering over them) that indicate the status of each App's performance (blue arrow). On the right side of the Workflow name there is also a action point which will indicate if the workflow instance is "running" or "stopped" (yellow arrow). Note that if the workflow contains a Shiny App its status will always be "running", also after finishing, in order to allow the interaction with the App UI.
 
-![](files/HelloWorld_MoveApps_CargoAgent.png)
+![](files/HelloWorld_MoveApps_CargoAgent.png ':size=80%')
 
 ## Plot your positions in a Shiny User Interface
-Now click on the `+` next to the first App Container to select an App that would analyse or visualise the downloaded data. Let us stay simple and select the visualisation App `Static Map` (formerly Simple Map). There is a single variable that has to be configured, namely the edge size of area surrounding the locations on the map. Select `1` for now, this parameter can also be adapted in the UI directly. Now you can `Start Workflow` and `Open App UI` once everything has finished. To reduce run time you can use `Pin to this App` in the Movebank App, which will block it from running again, in case you have let it run before.
+Now you add an app to visualise the downloaded data. Let us stay simple and use the visualisation App `Static Map`. From the main menu in your `Dashboard`, select `App Browser` and search for the App. This App requires the input data type `moveStack`. 
 
-![](../files/HelloWorld_addMap.png)
-![](../files/HelloWorld_OpenAppUI.png)
+![](files/HelloWorld_AppBrowser.png ':size=80%')
 
-`Open App UI` opens a Shiny User Interface that provides you with a visualisation of the downloaded locations, different colours per ID and coastlines around for orientation. This is a very simple, but quick way if having a look at your data. Congratulations, this is your first Workflow. Hello World!
+Now go back to the Workflow and click on the `+` next to the first App Container to select an App that would analyse or visualise the downloaded data. The `Movebank Location` App (our first App) has the output data type `move2_loc`, meaning that a `Translator` App is required. `Install` the App move2_loc to moveStack.
 
-![](../files/HelloWorld_SimpleMap.png)
+![](files/HelloWorld_TranslatorApp.png ':size=80%')
 
-Go ahead and also explore what you can download and access from the App Container Menu or the Workflow Menu (just next to the `Output` button). See the [How to create a Workflow](create_workflow.md) for more details.
+Now click on the + next to the Translator App Container and `Install` the App Static Map. Now you can `Start Workflow` and `Open App UI` once everything has finished. To reduce run time you can use `Pin to this App` in the Movebank Location App or in the Translator App, which will block it from running again, in case you have let it run before.
+
+![](files/HelloWorld_OpenAppUI.png ':size=60%')
+
+`Open App UI` opens a Shiny User Interface that provides you with a visualisation of the downloaded locations, different colours per ID and coastlines around for orientation. This is a very simple, but quick way of having a look at your data.
+
+![](files/HelloWorld_SimpleMap.png ':size=80%')
+
+Congratulations, this is your first Workflow. Hello World! Go ahead and also explore what you can download and access from the App Container Menu or the Workflow Menu (just next to the `Output` button). See the [How to create a Workflow](create_workflow.md) for more details.
