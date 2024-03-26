@@ -2,35 +2,35 @@
 
 Within MoveApps, existing Apps can be combined into a Workflow, allowing you to define an ordered set of steps to access, process and analyse data. These Workflows can then be saved, edited and used for specific use cases. 
 
-Every Workflow starts with an App that loads data into the system (e.g. from [Movebank](www.movebank.org), the user's local system, Dropbox/Google Drive or an output from another MoveApps workflow). The data are then passed on to the next App (in the appropriate format) and analysed by it accordingly. Every App requires data of a defined input type (mostly R move2_locations, but others are available and the numbers are growing) and can pass on output of a defined type. Some Apps provide an interactive User Interface (R-Shiny). 
+Every Workflow starts with an App that loads data into the system (e.g. from [Movebank](https://www.movebank.org), the user's local system, Dropbox/Google Drive or an output from another MoveApps workflow). The data are then passed on to the next App and analysed by it accordingly. Every App requires data of a defined input type (mostly R move2_locations, but others are available and the numbers are growing) and can pass on output of a defined type. See [Translator Apps](translator.md) for instructions on how to connect Apps with different output and input types.
 
-Some Apps produce output products/artifacts, which can be downloaded as files, in formats such as .pdf or .csv. App output data can also be downloaded as an object of the defined App output type in R format `app-output.rds` or Python format `app-output.pickle`. Any App artifacts or outputs are also available via our [API](AIP.md).
+Some Apps provide an interactive User Interface (R-Shiny). Some Apps produce output products or artifacts, which can be downloaded as files, in formats such as .pdf or .csv. App output data can also be downloaded as an object of the defined App output type in R format `app-output.rds` or Python format `app-output.pickle`. Any App artifacts or outputs are also available via our [API](API.md).
 
-![](../files/WF_example_MigMapper_2023.png)
+![](files/WF_example_MigMapper_2023.png)
 
 ## Create a new Workflow
 
-From the main menu, select `Workflows` and then `Create New Workflow`. After providing a name for the Workflow (also consider adding a Workflow Category), you will be asked to select a Data Source. Now choose to retrieve location or non-location data from Movebank or another MoveApps workflow, or location data (!) from your local system or your personal cloud storage on Google Drive or Dropbox. For the latter option the data have to be provided as an R object of class 'move2::move2_loc' saved in `.rds` format or as `.csv` containing information about timestamp, x, y and track ID, preferrably in Movebank format ([see Details](https://github.com/movestore/Upload-File-from-Local/blob/master/README.md). All Data Sources require that you specify parameters and settings. After providing these, the Workflow area with the initial App appears . Note that additional Data Sources can be downloaded by adding e.g. another instance of the Movebank download App (see below). All data sets will be combined, thus allowing the joined analysis of data from e.g. different Movebank studies.
+From the main menu, select `Workflows` and then `Create New Workflow`. After providing a name for the Workflow (also consider adding a Workflow Category), you will be asked to `Select A Data Source`. Now choose to retrieve location or non-location data from Movebank or another MoveApps workflow (`Workflow Product Retriever`), or location data (!) from your local system or your personal cloud storage on Google Drive or Dropbox. For the latter option the data have to be provided as an R object of class 'move2::move2_loc' saved in `.rds` format or as `.csv` containing information about timestamp, x, y and track ID, preferrably in Movebank format ([see Details](https://github.com/movestore/Upload-File-from-Local/blob/master/README.md)). All Data Sources require that you specify parameters and settings. After providing these, the Workflow area with the initial App appears . Note that additional Data Sources can be downloaded by adding e.g. another instance of the Movebank download App (see below). All data sets will be combined, thus allowing the joined analysis of data from e.g. different Movebank studies.
 
-![](../files/DataSource_view_Dec2023.png)
+![](files/DataSource_view_Mar2024.png)
 
-![](../files/Workflow_movebank.png)
+![](files/Workflow_movebankLoc.png ':size=60%')
 
 #### Non-location Apps
 
-Note that recently, we have added the option to download non-location data from Movebank. These are e.g. accelerometer, accessory measurement, heart rate or geolocation raw data. In the Movebank Non-Location App, beware of the option to select only studies that contain non-location data. Furthermore, it is only allowed to download one type of non-location data at a time. Look out for Apps that work with those data types in the App Browser; they should have the IO type "move2::move2_nonloc".
+Note that recently, we have added the option to download non-location data from Movebank. These are e.g. accelerometer, accessory measurement, heart rate or geolocation raw data. In the Movebank Non-Location App, beware of the option to select only studies that contain non-location data. Furthermore, it is only allowed to download one type of non-location data at a time. Look out for Apps that work with those data types in the App Browser; they should have the Input/Output type "move2::move2_nonloc".
 
-![](../files/NonLoc_App_view.png)
+![](files/NonLoc_App_view.png)
 
-![](../files/NonLoc_Download_selectStudy.png)
+![](files/NonLoc_Download_selectStudy.png)
 
-![](../files/NonLoc_Download_selectSensor.png)
+![](files/NonLoc_Download_selectSensor.png)
 
 ## Add Apps to a Workflow
 
-By clicking on the “+” to the right of an App, you can browse, search and select the next App to add to your Workflow for filtering, analysis or visualisation of the downloaded data. You can also insert Apps within the Workflow if they are compatible with the required input and output (IO) types. The list of Apps to choose from will only include those that comply with the required IO types for the specific position in your Workflow. In the list of available Apps, you can see the classes, categories, keywords and IO types of each App and can read additional information by clicking on the row or App name. The list can be searched by keywords, filtered by class and/or category or ordered by App name. Find out more about how to use the wide spectrum of available Apps by using [Translator Apps](translator.md).
+By clicking on the `+` to the right of an App, you can browse, search and select the next App to add to your Workflow for filtering, analysis or visualisation of the downloaded data. You can also insert Apps within the Workflow if they are compatible with the required input and output (IO) types. The list of Apps to choose from will only include those that comply with the required IO types for the specific position in your Workflow. In the list of available Apps, you can see the classes, categories, keywords and IO types of each App and can read additional information by clicking on the row or App name. The list can be searched by keywords, filtered by class and/or category or ordered by App name. Find out more about how to use the wide spectrum of available Apps by using [Translator Apps](translator.md).
 
-![](../files/Workflow_addApp_2023.png)
+![](files/Workflow_addApp_2023.png)
 
 !\> Note that [depredated Apps](app_deprecation.md) do not appear in this list. They cannot be added to new Workflows any more, because the App developer has stopped maintainance.
 
@@ -40,7 +40,7 @@ Select `Start Workflow` to begin running the Apps within a Workflow in the order
 
 The Workflow continues running and results are stored even if you leave the site moveapps.org. Any results or artefacts/products files can be looked up and downloaded later. Select `Rerun` or `Stop workflow` to interrupt the run of the Workflow. Each Workflow can also be [scheduled to run](scheduled_runs.md) regularly in an automatic mode at a fixed date and time. This option (`Schedule Instance`) can be selected in the menu next to `Output`.
 
-![](../files/Workflow_menu_2023.png)
+![](files/Workflow_menu_2023.png)
 
 ## Menus, Settings and Error logs
 
@@ -53,9 +53,9 @@ There is a menu on the right of each App container in a Workflow. The R and Pyth
 - Show Logs: View the data protocols, which can contain important information if you receive errors or unexpected results.
 - Delete: Remove the App from your Workflow.
 
-![](../files/App_menu_R.png)
+![](files/App_menu_R.png)
 
-![](../files/App_Pin.png)
+![](files/App_Pin.png)
 
 !\> Note that there is a small book icon in the left corner of each App, leading directly to the Github App documentation, where the App developer has provided helpful information that describes when and how the App can be used and how common errors can be solved.
 
@@ -65,21 +65,21 @@ In addition to the direct click-download of files that appear in the App contain
 
 Note that it is possible to select products from Apps for inclusion in E-mail attachments (see [scheduling](scheduled_runs.md)). At the top of the page, you can access our [API service](scheduled_runs.md#Access) that allows to create a stable http link to any of the products created by the workflow.
 
-![](../files/output_button.png)
+![](files/output_button.png)
 
-![](../files/output_save_view.png)
+![](files/output_save_view.png)
 
 ## Data overview of App output
 
 Each App that returns data creates a summary of the output data (`cargo agent`), which can be accessed via the green info button that appears on the right side of the App container. This summary depends on the output type of the App. For example, for move::moveStack it includes the bounding box, projection, sensors and time range of the data as well as the total number positions (events). There is one section about the animal details including the animal names and the available attributes associated to the individuals, and another section about the track details including the locations per track and available attributes associated to each location of the tracks. Depending on the output type of an App the summary details can differ. Note the section "Unexpected Results?" at the bottom that provides helpful comments if errors occur.
 
-![](../files/CargoAgent_Overview.png)
+![](files/CargoAgent_Overview.png)
 
 ## Shiny R and User Interfaces
 
 For R-Shiny Apps that return User Interfaces (UI), the UI can be accessed after the run of the Workflow via `Open App UI`. There, you can examine results and edit settings, depending on the options that the App developer has programmed. On the bottom left corner of each Shiny App the button `Store settings` will store the current settings of the App for future workflow runs. When Apps are deleted or added to the workflow, all subsequent Apps will reset to the default values. Apps for which settings have been stored will contain in the `App outputs` an item called `Stored Settings`.
 
-![](../files/App_storesettings_shiny.png)
+![](files/App_storesettings_shiny.png)
 
 ## Workflow Instances
 
@@ -89,10 +89,10 @@ Every additional Workflow Instance must be initialised in the Workflow overview 
 
 Once a Instance of a Workflow is opened, one can switch between all instances of the workflow through the menu on the top left side. To select another Workflow, use the button `Workflows`.
 
-![](../files/Workflow_Instance.png)
+![](files/Workflow_Instance.png)
 
 ## Organizing Workflows
 
 Workflows can be grouped by assigning them a Workflow Category name. If no category is assigned, they will appear under "Uncategorized". At any time categories, workflows and instances can be edited, and workflows can be shared or published via the Workflow overview page. When adding workflows that have been privately shared with you, they appear in the Category `Imported Privately Shared Workflow`. Added public workflows are initially stored in the Category `Imported Public Shared Workflows`. Any added workflow are only copies, they can be changed and reworked in any way and the Workflow Category adapted.
 
-![](../files/Workflow_start.png)
+![](files/Workflow_start.png)
