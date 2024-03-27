@@ -28,7 +28,7 @@ Now go back to the Workflow and click on the `+` next to the first App Container
 
 ![](files/HelloWorld_TranslatorApp.png ':size=80%')
 
-Now click on the + next to the Translator App Container and `Install` the App Static Map. Now you can `Start Workflow` and `Open App UI` once everything has finished. To reduce run time you can use `Pin to this App` in the Movebank Location App or in the Translator App, which will block it from running again, in case you have let it run before.
+Now click on the `+` next to the Translator App Container and `Install` the App Static Map. Now you can `Start Workflow` and `Open App UI` once everything has finished. To reduce run time you can use `Pin to this App` in the Movebank Location App or in the Translator App, which will block it from running again, in case you have let it run before.
 
 ![](files/HelloWorld_OpenAppUI.png ':size=60%')
 
