@@ -8,7 +8,7 @@ From the main menu in your `Dashboard`, select `Workflows` and then `Create New 
 
 ![](files/HelloWorld_selectDataSource.png ':size=80%')
 
-In a succession of settings windows you can select a study from which you have access to download data, individual animals, a time window of required data and an option how to deal with duplicate locations.
+In a succession of settings windows you can select a study from which you have access to download data, individual animals, and an option to set a time window of required data.
 For this example let us select the public study `Migration timing in white-fronted geese (data from Kölzsch et al. 2016)`, note that you can search for studies. 
 
 ![](files/HelloWorld_selectStudy.png)
