@@ -20,7 +20,7 @@ If you like, go ahead and click on `Start Workflow` on the top right and, after 
 ![](files/HelloWorld_MoveApps_CargoAgent.png ':size=80%')
 
 ## Plot your positions in a Shiny User Interface
-Now you add an app to visualise the downloaded data. Let us stay simple and use the visualisation App `Static Map`. From the main menu in your `Dashboard`, select `App Browser` and search for the App. This App requires the input data type `moveStack`. 
+Now you add an App to visualise the downloaded data. Let us stay simple and use the visualisation App `Static Map`. From the main menu in your `Dashboard`, select `App Browser` and search for the App. This App requires the input data type `moveStack`. 
 
 ![](files/HelloWorld_AppBrowser.png ':size=80%')
 
