@@ -2,7 +2,7 @@
 
 Within MoveApps, existing Apps can be combined into a Workflow, allowing you to define an ordered set of steps to access, process and analyse data. These Workflows can then be saved, edited and used for specific use cases. 
 
-Every Workflow starts with an App that loads data into the system (e.g. from [Movebank](https://www.movebank.org), the user's local system, Dropbox/Google Drive or an output from another MoveApps workflow). The data are then passed on to the next App and analysed by it accordingly. Every App requires data of a defined input type (mostly R move2_locations, but others are available and the numbers are growing) and can pass on output of a defined type. See [Translator Apps](translator.md) for instructions on how to connect Apps with different output and input types.
+Every Workflow starts with an App that loads data into the system (e.g. from [Movebank](https://www.movebank.org), the user's local system, Dropbox/Google Drive or an output from another MoveApps workflow). The data are then passed on to the next App and analysed by it accordingly. Every App requires data of a defined input type (mostly `move2::move2_loc`, but others are available and the numbers are growing) and can pass on output of a defined type. See [Translator Apps](translator.md) for instructions on how to connect Apps with different output and input types.
 
 Some Apps provide an interactive User Interface (R-Shiny). Some Apps produce output products or artifacts, which can be downloaded as files, in formats such as .pdf or .csv. App output data can also be downloaded as an object of the defined App output type in R format `app-output.rds` or Python format `app-output.pickle`. Any App artifacts or outputs are also available via our [API](API.md).
 
