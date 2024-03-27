@@ -12,9 +12,9 @@ Some Apps provide an interactive User Interface (R-Shiny). Many Apps produce out
 
 From the main menu, select `Workflows` and then `Create New Workflow`. After providing a name for the Workflow (also consider adding a Workflow Category), you will be asked to `Select A Data Source`. Now choose to retrieve location or non-location data from Movebank or another MoveApps workflow (`Workflow Product Retriever`), or location data (!) from your local system or your personal cloud storage on Google Drive or Dropbox. For the latter option the data have to be provided as an R object of class 'move2::move2' saved in `.rds` format or as `.csv` containing information about timestamp, x, y coordinates and track ID, preferably in a Movebank format ([see Details](https://github.com/movestore/Upload-File-from-Local/blob/master/README.md)). All Data Sources require that you specify parameters and settings. After providing these, the Workflow area with the initial App appears . Note that additional Data Sources can be downloaded by adding e.g. another Movebank Location App (see below for instructions on adding Apps). All data sets will be combined, thus allowing the joined analysis of data from e.g. different Movebank studies.
 
-![](files/DataSource_view_Mar2024.png)
+![](files/DataSource_view_Mar2024.png ':size=50%')
 
-![](files/Workflow_movebankLoc.png ':size=60%')
+![](files/Workflow_movebankLoc.png ':size=30%')
 
 #### Non-location Apps
 
@@ -22,15 +22,15 @@ Note that recently, we have added the option to download non-location data from 
 
 ![](files/NonLoc_App_view.png)
 
-![](files/NonLoc_Download_selectStudy.png)
+![](files/NonLoc_Download_selectStudy.png ':size=50%')
 
-![](files/NonLoc_Download_selectSensor.png)
+![](files/NonLoc_Download_selectSensor.png ':size=50%')
 
 ## Add Apps to a Workflow
 
 By clicking on the `+` to the right of an App container, you can browse, search and select the next App to add to your Workflow for filtering, analysis or visualisation of the downloaded data. You can only insert Apps within the Workflow if they are compatible with the required input and output (IO) types. The list of Apps to choose from will only include those that comply with the required IO types for the specific position in your Workflow. In the [App Browser](https://www.moveapps.org/apps/browser) all available Apps are listed, here you can see the classes, categories, keywords and IO types of each App and can read additional information by clicking on the row or App name. The list can be searched by keywords, filtered by class and/or category or ordered by App name. Find out more about how to use the full spectrum of available Apps by using [Translator Apps](translator.md) to transform IO types enabling to connect Apps with different IO types.
 
-![](files/Workflow_addApp_Mar2024.png)
+![](files/Workflow_addApp_Mar2024.png ':size=50%')
 
 !\> Note that [depredated Apps](app_deprecation.md) do not appear in this list by default. Depredated Apps cannot be added to new Workflows any more, because the App developer has stopped maintainance.
 
