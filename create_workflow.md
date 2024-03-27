@@ -6,13 +6,13 @@ Every Workflow starts with an App that loads data into the system (e.g. from [Mo
 
 Some Apps provide an interactive User Interface (R-Shiny). Many Apps produce output products or artifacts, which can be downloaded as files, in formats such as .pdf, .csv, .png, .html among others. App output data can also be downloaded as an object of the defined App output type in R format `app-output.rds` or Python format `app-output.pickle`. Any App artifacts or outputs are also available via our [API](API.md).
 
-![](files/WF_example_MigMapper_2023.png ':class=image-border-rounded')
+![](files/WF_example_MigMapper_2023.png)
 
 ## Create a new Workflow
 
 From the main menu, select `Workflows` and then `Create New Workflow`. After providing a name for the Workflow (also consider adding a Workflow Category), you will be asked to `Select A Data Source`. Now choose to retrieve location or non-location data from Movebank or another MoveApps workflow (`Workflow Product Retriever`), or location data (!) from your local system or your personal cloud storage on Google Drive or Dropbox. For the latter option the data have to be provided as an R object of class 'move2::move2' saved in `.rds` format or as `.csv` containing information about timestamp, x, y coordinates and track ID, preferably in a Movebank format ([see Details](https://github.com/movestore/Upload-File-from-Local/blob/master/README.md)). All Data Sources require that you specify parameters and settings. After providing these, the Workflow area with the initial App appears . Note that additional Data Sources can be downloaded by adding e.g. another Movebank Location App (see below for instructions on adding Apps). All data sets will be combined, thus allowing the joined analysis of data from e.g. different Movebank studies.
 
-![](files/DataSource_view_Mar2024.png ':class=image-60-border-rounded')
+![](files/DataSource_view_Mar2024.png ':size=60%')
 
 ![](files/Workflow_movebankLoc.png ':size=30%')
 
