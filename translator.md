@@ -10,7 +10,7 @@ In the general overview of all the Apps (`APP BROWSER` tab in the header menu) t
 
 ![](files/Input_Output.png ':size=60%')
 
-Before you start a Workflow, it is advisable to use the `APP BROWSER` to find the Apps that you would like to use for your analysis. Some IO types can be translated into each other and Apps of those types can therefore be used in the same workflow. For connecting Apps of different IO types, use the `Translator` Apps.
+Before you start a Workflow, it is advisable to use the `APP BROWSER` to find the Apps that you would like to use for your analysis. Some IO types can be translated into each other and Apps of those types can therefore be used in the same Workflow. For connecting Apps of different IO types, use the `Translator` Apps.
 
 ## Connecting Apps of different types
 
