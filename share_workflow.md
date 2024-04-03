@@ -1,28 +1,34 @@
 # Share Workflows with other Users
 
-For replication, collaboration or other joined work, it is possible to share your Workflow with other users.  A Workflow can be shared globally with all MoveApps users or specific users can be invited by their nickname. The recipients can load the privately shared or any public Workflow into their account and edit it there independently of the original Workflow and its creator. The Workflow will be available with all Apps in the same versions as shared by the creator originally, they can be updated by the receiving user (however, without the option to go back). Note that users have 30 days to accept an individually shared Workflow, public Workflows stay available permanently. 
+For replication, collaboration or other joint work, it is possible to share your Workflow with other users.  A Workflow can be shared globally with all MoveApps users or specific users can be invited by their nickname. The recipients can load the privately shared or any public Workflow into their account and edit it there independently of the original Workflow and its creator. The Workflow will be available with all Apps in the same versions as shared by the creator originally, they can be updated by the receiving user (however, without the option to go back). Note that users have 30 days to accept an individually shared Workflow. Public Workflows stay available permanently. 
 
 ## How to share your Workflow
 
-To share one of your Workflows, you need to select `Share` in the Workflow menu at the Workflow overview. In the Share Workflow dialog you then have fill in several details.
+To share one of your Workflows, you need to select `Share` in the Workflow menu at the `Workflows` overview.
 
-First, define with whom you want to share your Workflow. You can select to `Share with all users on MoveApps` and/or select one or more specific MoveApps users by searching for their nicknames, that you should personally ask of the person(s) beforehand. Only users that have agreed that their nicknames can be used for this option during the registration process can be found here. It is possible to update this setting in the user profile. In case of specific users being invited to receive a shared workflow, they will receive an E-mail about the invitation.
+![](files/Share_WF_overview.png)
 
-![](../files/allow_profile_discov.png)
+In the Share Workflow dialog you then have fill in several details.  
 
-Second, you can select which of the Workflow instances you want to share. The selection of at least one of them is mandatory.
+First, add a description to the Workflow.
 
-Third, there are two kinds of messages that you can provide to the Workflow recipient(s). One is a general, free text message that allows you to describe your Workflow and point out why you are sharing it. The other is the Datasource Message, which is by default filled in with the settings of the data source selection App of all selected Workflow instances. This allows the new user to download the same data from e.g. Movebank as the original user, but with his/her private account. The data message appears during the configuration of the Movebank Download App once the workflow has been loaded/accepted (see below), so that the user can easily adapt it. Note, that the data source details can be edited, replaced or deleted before sharing.
+Second, define with whom you want to share your Workflow. You can select to `Share with all users on MoveApps` and/or select one or more specific MoveApps users by searching for their nicknames, that you should personally ask of the person(s) beforehand (users can find their nickname can be in their `User Profile`). Only users that have agreed that their nicknames can be used for this option during the registration process can be found here. It is possible to update this setting in the user profile. When specific users are invited to receive a shared workflow, they will receive an E-mail about the invitation.
 
-Finally, it is possible to add a link to a workflow, which can, for example, point towards a description of the workflow, a paper that is using it or a more thorough methods description.
+![](files/allow_profile_discov.png)
 
-Once finished, please press Share Workflow.
+Third, you can select which of the Workflow Instances you want to share. The selection of at least one of them is mandatory.
 
-![](../files/Share_WF_1_23.png)
-![](../files/Share_WF_2_23.png)
-![](../files/Share_WF_3_23.png)
+Fourth, there are two kinds of messages that you can provide to the Workflow recipient(s). One is a general, free text Message that allows you to describe your Workflow and point out why you are sharing it. The other is the Datasource Message, which is by default filled in with the settings of the data source selection App of all selected Workflow instances. This allows the new user to download the same data from e.g. Movebank as the original user, but with their private account. The data message appears during the configuration of the Movebank Download App once the workflow has been loaded/accepted (see below), so that the user can easily adapt it. Note, that the data source details can be edited, replaced or deleted before sharing.
 
-!\> Note that as the original `owner` of a public workflow, you can edit the title and description of the workflow and all shared workflow instances, the share message and workflow references/links at any time under `Details` in the public workflow table (use edit button at the top).
+Finally, it is possible to add a url to a Workflow, which can, for example, point towards a description of the workflow, a paper that is using it or a more thorough methods description.
+
+Once finished, please press `Save & Share Workflow`.
+
+![](files/Share_WF_1_23.png)
+![](files/Share_WF_2_23.png)
+![](files/Share_WF_3_23.png)
+
+!\> Note that as the original `owner` of a public workflow, you can edit the title and description of the Workflow and all shared Workflow Instances, the shared message and Workflow references/links at any time under `Details` in the public Workflow table (use edit button at the top).
 
 ## How to accept a shared Workflow
 
