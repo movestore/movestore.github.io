@@ -30,7 +30,7 @@ Note the message above the list of Apps: In our example, it is informing that on
 
 ![](files/FilteredApps_WF.png ':size=100%')
 
-There are a series of Apps in the category `Translator` within the class `Helper` to enable the usage of the wide spectrum of available Apps. These Apps translate data types so Apps that have different IO types can be used in one workflow. After adding a `Translator` App to the Workflow, Apps with another IO type can be added.
+There are a series of Apps in the category `Translator` within the class `Helper` to enable the usage of the wide spectrum of available Apps. These Apps translate data types so Apps that have different IO types can be used in one Workflow. After adding a `Translator` App to the Workflow, Apps with another IO type can be added.
 
 In the "Input/Output" column of a `Translator` App you can quickly see what output/input types are being translated.
 
