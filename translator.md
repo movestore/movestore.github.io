@@ -24,7 +24,7 @@ There are a series of Apps in the category `Translator` within the class `Helper
 
 In the "Input/Output" column of a `Translator` App you can quickly see what output/input types are being translated.
 
-<kbd>![](files/TranslatorExample.png ':size=100x')</kbd>
+<kbd>![](files/TranslatorExample.png ':size=500x')</kbd>
 
 !\> Be aware that not all input/output types can be translated into all other types. These have to be equivalent. E.g. `ctmm::telemetry.list` cannot be translated into a `move2::move2_nonloc` as the first contains location data (e.g. GPS) and the second contains non-location data (e.g. acceleration).
 
