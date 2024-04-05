@@ -18,13 +18,13 @@ When adding a new App to the Workflow by clicking on the `+` only those Apps tha
 
 Note the message above the list of Apps: In our example, it is informing that only Apps that have an input and output type `move::moveStack` are listed. 
 
-![](files/FilteredApps_WF.png ':size=100%')
+<kbd>![](files/FilteredApps_WF.png ':size=1000x')</kbd>
 
 There are a series of Apps in the category `Translator` within the class `Helper` to enable the usage of the wide spectrum of available Apps. These Apps translate data types so Apps that have different IO types can be used in one Workflow. After adding a `Translator` App to the Workflow, Apps with another IO type can be added.
 
 In the "Input/Output" column of a `Translator` App you can quickly see what output/input types are being translated.
 
-![](files/TranslatorExample.png ':size=90%')
+<kbd>![](files/TranslatorExample.png ':size=100x')</kbd>
 
 !\> Be aware that not all input/output types can be translated into all other types. These have to be equivalent. E.g. `ctmm::telemetry.list` cannot be translated into a `move2::move2_nonloc` as the first contains location data (e.g. GPS) and the second contains non-location data (e.g. acceleration).
 
