@@ -6,7 +6,7 @@ For replication, collaboration or other joint work, it is possible to share your
 
 To share one of your Workflows, you need to select `Share` in the Workflow menu at the `Workflows` overview.
 
-![](files/Share_WF_overview.png)
+<kbd>![](files/Share_WF_overview.png)</kbd>
 
 In the Share Workflow dialog you then have fill in several details.  
 
@@ -14,7 +14,7 @@ First, add a description to the Workflow.
 
 Second, define with whom you want to share your Workflow. You can select to `Share with all users on MoveApps` and/or select one or more specific MoveApps users by searching for their nicknames, that you should personally ask of the person(s) beforehand (users can find their nickname in their user `Profile`). Only users that have agreed that their nicknames can be used for this option during the registration process can be found here. It is possible to update this setting in the user `Profile`. When specific users are invited to receive a shared Workflow, they will receive an e-mail about the invitation.
 
-![](files/allow_profile_discov.png)
+<kbd>![](files/allow_profile_discov.png)<kbd/>
 
 Third, you can select which of the Workflow Instances you want to share. The selection of at least one of them is mandatory.
 
@@ -24,33 +24,33 @@ Finally, it is possible to add a url to a Workflow (`Add Reference`), which can,
 
 Once finished, please press `Save & Share Workflow`.
 
-![](files/Share_WF_1_23.png)
+<kbd>![](files/Share_WF_1_23.png)
 ![](files/Share_WF_2_23.png)
-![](files/Share_WF_3_23.png)
+![](files/Share_WF_3_23.png)</kbd>
 
-!\> Note that as the original owner of a public workflow, you can edit the title and Description of the Workflow and all shared Workflow Instances, the shared Message and Workflow references/urls at any time under `Details` in the public Workflow table (use the `Edit` button at the top).
+!\> Note that as the original owner of a public Workflow, you can edit the title and description of the Workflow and all shared Workflow Instances, the shared message and Workflow references/urls at any time under `Details` in the public Workflow table (use the `Edit` button at the top). Note that the shared Workflow itself cannot be changed after sharing it, and that changes to the Workflow in the owner's private Workflow overview will not be incorporated in the shared Workflow.
 
 ## How to accept a shared Workflow
 
-If a Workflow has been shared with you by another MoveApps user it will appear below in the Workflow overview. It states the nickname of the user that invited you, the names of the Workflow and Workflow Instances as well as both messages. You can decline or accept the invitation. At acceptance the Workflow will be added to your account's list. Note that at the bottom of the Workflow invitation it is indicated for how long it will stay available for you to accept. When adding a shared workflow to your dashboard , it appears in the Category `Imported Privately Shared Workflow`. The category can be adapted afterwards.
+If a Workflow has been shared with you by another MoveApps user it will appear in the Workflow overview. It states the nickname of the user that invited you, the names of the Workflow and Workflow Instances as well as both messages. You can decline or accept the invitation. At acceptance the Workflow will be added to your account's list. Note that at the bottom of the Workflow invitation it is indicated for how long it will stay available for you to accept. When accepting the invitation, it appears in the Category `Imported Directly Shared Workflows`. The Category can be adapted afterwards.
 
-![](files/Share_invite_23.png)
+<kbd>![](files/Share_invite_23.png)</kbd>
 
 ## How to find and add public Workflows
 
-All available public Workflows are listed below your Workflow invitations in the Workflow overview. They can be searched for by the Workflow title, description, host user nickname and Workflow instance titles and descriptions.  See the provided details (title, description, shared by, publish date and details) and press `Add` if you want to add it to your list of Workflows. This will create a local copy of the Workflow that you can independently edit. The added public Workflow will initially be stored in the Category `Imported Public Shared Workflows`, which can be adapted afterwards. All public Workflow details pages have stable links that can be used for communication.
+All available public Workflows are listed under "Public Workflows" in the Workflow overview. They can be searched for by the Workflow title, description, host user nickname and Workflow instance titles and descriptions. Take a look at the provided details (title, description, shared by, publish date and details) and press `Add` if you want to add it to your list of Workflows. This will create a local copy of the Workflow that you can independently edit. The added public Workflow will initially be stored in the Category `Imported Public Shared Workflows`, which can be adapted afterwards. All public Workflow details pages have stable links that can be used for communication.
 
-![](files/Share_public_23.png)
+<kbd>![](files/Share_public_23.png)</kbd>
 
-!\> Note that public Workflows that contain at least one [deprecated App](app_deprecation.md) are marked as `deprecated`, but can still be added to your Dashboard and used (for ensuring reproducibility).
+!\> Note that public Workflows that contain at least one [deprecated App](app_deprecation.md) are marked as "deprecated", but can still be added to your Dashboard and used (for ensuring reproducibility).
 
 
 ## Configuration of data source Apps in added Workflows
 
-If accepting a public or privately shared Workflow into your dashboard, it is important to understand that any data source Apps (Movebank, Movebank Non-Loc or Cloud Storage Upload) need to be configured, before the Workflow can be run. This is important to keep data integrity and security. A pop-up message is pointing this out when adding the Workflow to your dashboard.
+If accepting a public or privately shared Workflow into your dashboard, it is important to understand that any data source Apps (e.g. Movebank Location, Upload File from Local System or Workflow Product Retriever) need to be configured, before the Workflow can be run. This is important to keep data integrity and security. A pop-up message is pointing this out when adding the Workflow to your dashboard.
 
-In the Workflow instance view, all data source Apps show a blue message that the data source settings have to be configured. If a red dot is attached to it, the App has not been configured at all. When clicking the message, one is directed to the settings of the App and can configure them according to the data source message that is presented on the left of the window. Once all data source Apps of all Instances of the accepted Workflow have been configured, the data source message can be deleted and the blue message indication will disappear from the Apps in the Workflow instance view.
+In the Workflow Instance view, all data source Apps show a blue message that the data source settings have to be configured. If a red dot is attached to it, the App has not been configured at all. When clicking the message, you are directed to the settings of the App and can configure them according to the data source message that is presented on the left of the window. Once all data source Apps of all Instances of the accepted Workflow have been configured, you can delete the data source message and the blue message indication will disappear from the Apps in the Workflow Instance view.
 
-![](files/Share_datasource_msg.png)
+<kbd>![](files/Share_datasource_msg.png)</kbd>
 
-![](files/Share_datasource_1.png)
+<kbd>![](files/Share_datasource_1.png)</kbd>
