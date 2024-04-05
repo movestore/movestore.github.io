@@ -8,7 +8,17 @@ The Apps on MoveApps are based on different programming languages (currently R a
 
 In the general overview of all the Apps (`APP BROWSER` tab in the header menu) these IO types are specified in the rightmost column "Input/Output".
 
-![](files/Input_Output.png ':size=60%')
+![](files/Input_Output.png ':size=100%')
+![](files/Input_Output.png ':size=10%')
+![](files/Input_Output.png ':size=100x167')
+
+![](files/Input_Output_310_519.png)
+![](files/Input_Output_200_335.png)
+![](files/Input_Output_150_251.png)
+![](files/Input_Output_100_167.png)
+![](files/Input_Output_50_84.png)
+
+<kbd>![](files/Input_Output.png)</kbd>
 
 Before you start a Workflow, it is advisable to use the `APP BROWSER` to find the Apps that you would like to use for your analysis. Some IO types can be translated into each other and Apps of those types can therefore be used in the same Workflow. For connecting Apps of different IO types, use the `Translator` Apps.
 
@@ -20,7 +30,7 @@ Note the message above the list of Apps: In our example, it is informing that on
 
 ![](files/FilteredApps_WF.png ':size=100%')
 
-There are a series of Apps in the category `Translator` within the class `Helper` to enable the usage of the wide spectrum of available Apps. These Apps translate data types so Apps that have different IO types can be used in one workflow. After adding a `Translator` App to the Workflow, Apps with another IO type can be added.
+There are a series of Apps in the category `Translator` within the class `Helper` to enable the usage of the wide spectrum of available Apps. These Apps translate data types so Apps that have different IO types can be used in one Workflow. After adding a `Translator` App to the Workflow, Apps with another IO type can be added.
 
 In the "Input/Output" column of a `Translator` App you can quickly see what output/input types are being translated.
 
