@@ -8,7 +8,7 @@ The Apps on MoveApps are based on different programming languages (currently R a
 
 In the general overview of all the Apps (`APP BROWSER` tab in the header menu) these IO types are specified in the rightmost column "Input/Output".
 
-<kbd>![](files/Input_Output.png ':size=100x')</kbd>
+<kbd>![](files/Input_Output.png ':size=200x')</kbd>
 
 Before you start a Workflow, it is advisable to use the `APP BROWSER` to find the Apps that you would like to use for your analysis. Some IO types can be translated into each other and Apps of those types can therefore be used in the same Workflow. For connecting Apps of different IO types, use the `Translator` Apps.
 
