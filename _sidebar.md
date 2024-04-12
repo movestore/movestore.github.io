@@ -15,6 +15,7 @@
       - [How to create an R App](create_app.md)
       - [Programming with a move2 object](https://bartk.gitlab.io/move2/articles/programming_move2_object.html ':ignore')
       - [Manage your R Apps with GitHub and Rstudio](manage_app_github.md)
+	  - [Parallel computing in MoveApps](parallelcomp.md)
   - Python Tutorials
       - [How to create a Python App](create_py_app.md)
   - Reference
