@@ -1,12 +1,14 @@
 # Hello world! An App example
 
-Please follow the instructions below and run an example App locally in the R Software Development Kit. This is meant to be an example for future Apps that can be submitted to and then run on MoveApps.
+Please follow the instructions below and run an example App locally in the R Software Development Kit (SDK). This is meant to be an example for future Apps that can be submitted to and then run on MoveApps.
 
 ## Use SDK template and run the App locally
 
-Please register or login to your GitHub account and press "Use this template" in GitHub [Template 'R Function App'](https://github.com/movestore/Template_R_Function_App ':ignore'). Start the R project `Template_R_Function_App.Rproj` in RStudio. The included file `sdk.R` is a local MoveApps substitute that behaves (almost) like the online system. Therefore, this file should not be adapted. The two files emulating MoveApps interactive behaviour locally are `.env` which defines the input and output files path (please only adapt the input file path here) and `app-configuration.json` which allows you to adapt the App settings for local testing. Note that the json format is required here The fourth included file that you must use for development is the `RFunction.R`. It is the file into which all your App code is supposed to go and the only R file that is actually integrated into MoveApps when your App is built.
+To get started, please register or login to your [GitHub](https://github.com/) account and go to the GitHub [Template 'R Function App'](https://github.com/movestore/Template_R_Function_App ':ignore'). Press "Use this template" (at the top right) and "Create a new repository". Then, open [RStudio](http://www.rstudio.com/ide) on your local computer and start the R project `Template_R_Function_App.Rproj` if you have downloaded the zip file containing the files of your newly created repository, or clone your GitHub repository by creating a new project from Git Version Control: `File > New Project > Version Control > Git` (see [Manage your R Apps](manage_app_github.md) for instructions). 
 
-Here, an example selecting all data points of a given calender year is given. Please try it out with the example data set `input3.rds` (see line 4 in `.env`). The settings are given in the file `app-configuration.json`, make sure that the year is included in the data set. In the MoveApps platform this parameter is provided by an interactive input window. Finally, you can run the file `sdk.R`, which is calling several supportive code that is emulating MoveApps behaviour as well as the `RFunction.R`. Explore the results that are saved in the folder `./data/output`, as specified in `.env`. Note that we have provided additional example code in the `RFunction.R` for e.g. the use of auxiliary files as settings. For more details see the file `developer_README.md` in the template or [on Github directly](https://github.com/movestore/Template_R_Function_App/blob/master/developer_README.md).
+The included file `sdk.R` is a local MoveApps substitute that behaves (almost) like the online system. Therefore, this file should not be adapted. The two files emulating MoveApps interactive behaviour locally are `.env`, which defines the input and output files path (please only adapt the source file path here), and `app-configuration.json`, which allows you to adapt the App settings for local testing. Note that the json format is required here. The fourth included file that you must use for development is the `RFunction.R`. This is the file into which all your App code is supposed to go and the only R file that is actually integrated into MoveApps when your App is built.
+
+Here, an example selecting all data points of a given calender year is given. Please try it out with the example data set `input1_move2loc_LatLon.rds` (see line 4 in `.env`). The settings are given in the file `app-configuration.json`, make sure that the year is included in the data set. In the MoveApps platform this parameter is provided by an interactive input window. Finally, you can run the file `sdk.R`, which is calling several supportive code that is emulating MoveApps behaviour as well as the `RFunction.R`. Explore the results that are saved in the folder `./data/output`, as specified in `.env`. Note that we have provided additional example code in the `RFunction.R` for e.g. the use of auxiliary files as settings. For more details see the file `developer_README.md` in the template or [on Github directly](https://github.com/movestore/Template_R_Function_App/blob/master/developer_README.md).
 
 
 app-configuration.json
@@ -29,7 +31,7 @@ library('lubridate')
 # logger.fatal(), logger.error(), logger.warn(), logger.info(), logger.debug(), logger.trace()
 
 # Showcase injecting app setting (parameter `year`)
-rFunction = function(data, sdk, year, ...) {
+rFunction <- function(data, sdk, year, ...) {
   logger.info(paste("Welcome to the", sdk))
   result <- if (any(lubridate::year(mt_time(data)) == year)) { 
     data[lubridate::year(mt_time(data)) == year,]
@@ -60,7 +62,7 @@ rFunction = function(data, sdk, year, ...) {
 
 There you go with a first running MoveApps App that can select all locations of a given calender year and even returns a pdf plot of those locations. Try adapting the `RFunction.R` to your needs and run it locally on RStudio before submitting to MoveApps.
 
-![](../files/hello_world_pdf.png)
+<kbd>![](files/hello_world_pdf.png)</kbd>
 
 
 ## Further steps
