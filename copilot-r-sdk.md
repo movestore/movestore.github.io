@@ -18,7 +18,7 @@ rFunction <- function(data) {}
 You can receive parameters or settings for your R function from the MoveApps interface. These parameters must be defined in the [appspec.json](appspec.md) file and are configured by the user within MoveApps. When the function is called, the parameters are passed on to it.
 ```
 # With parameters/settings from MoveApps 
-rFunction <- function(data, year) {
+rFunction <- function(year, data) {
    # Do something with the data and parameters
 }
 ```
@@ -26,7 +26,7 @@ rFunction <- function(data, year) {
 !\>  **Limitation** You cannot use `data` as a parameter name. This is reserved for the input that is passed on from the previous App, see below.
 
 #### Input from previous App
-In order to be able to use the result of the previous App in the Workflow, the first parameter of the R function must be named `data`. Note that the data type (IO type) of `data` is defining your App's input type that you need to specify at App initialization.
+In order to be able to use the result of the previous App in the Workflow, the last parameter of the R function must be named `data`. Note that the data type (IO type) of `data` is defining your App's input type that you need to specify at App initialization.
 ```
 # With input from other apps
 rFunction <- function(data) {
@@ -46,7 +46,7 @@ rFunction <- function(data) {
 ### Artefacts
 MoveApps allows the creation and saving of different files directly through the R function (e.g. csv, pdf, png), so called `artefacts`. Those artefacts can be created by the usual R command for saving the specific type of file. To get a valid path for the artefact use the SDK function `appArtifactPath(*.***)`. `*.***` is the name of the file, see example for csv and png below) and add the row `"createsArtifacts": true` in the [appspec.json](appspec.md). After running the App, the artefacts can then be downloaded by the user from the Workflow `Output` overview.
 ```
-rFunction <- function(data, year) {
+rFunction <- function(year, data) {
     # Do something
     write.csv(artefact, file = appArtifactPath("artefact.csv"))
 	
