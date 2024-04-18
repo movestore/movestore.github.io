@@ -12,7 +12,7 @@ There are different types of settings:
   - [Dropdown](appspec/current/settings/dropdown.md)
   - [Auxiliary](appspec/current/settings/auxiliary.md)
   
-  The [Settings Editor](https://www.moveapps.org/apps/settingseditor) can be used to check the definition of all settings before submission.
+  The [Settings Editor](https://www.moveapps.org/apps/settingseditor) can be used to create and check the definition of all settings before submission.
 
 #### Example
 ```json
