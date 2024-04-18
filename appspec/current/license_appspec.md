@@ -1,5 +1,6 @@
 # License
-For further use and publication, it is mandatory to specify which license agreement you want to use for your App. At the moment there are five options (see list below), the keys of which have to be entered. Please see our [License documentation](license.md) and consult [this website](https://choosealicense.com/) for help with choosing the most appropriate license for your App.
+
+For further use and publication, it is mandatory to specify which license agreement you want to use for your App in the [appspec.json](appspec.md) file. At the moment there are four options (see list below) from which the license key has to be entered. Please see our [License documentation](license.md) and consult [this website](https://choosealicense.com/) for help with choosing the most appropriate license for your App.
 
 ### List of license keys
 
@@ -9,7 +10,6 @@ For further use and publication, it is mandatory to specify which license agreem
 - `BSD-3-Clause`: [The “3-clause BSD License”](https://spdx.org/licenses/BSD-3-Clause.html#licenseText)
 
 #### Example
-
 ```json
 {
   "settings": [],
