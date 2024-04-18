@@ -1,6 +1,6 @@
 # Input of an auxiliary/user file
 
-!> Note that this setting has been created to replace the [`LOCAL_FILE`](appspec/current/user_file.md) setting. 
+!\> Note that this setting has been created to replace the [`LOCAL_FILE`](appspec/current/settings/local_file.md) setting. 
 
 ---
 

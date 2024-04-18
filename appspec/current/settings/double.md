@@ -1,5 +1,5 @@
 # Input of real numbers
-To allow the user to input real numbers (with comma) you can use the type `DOUBLE`.
+To allow the user to input real, or floating-point, numbers with decimals, you can use the type `DOUBLE`.
 
 ## Example
 
@@ -8,7 +8,7 @@ To allow the user to input real numbers (with comma) you can use the type `DOUBL
   "id": "testDouble",
   "name": "Test floating-point number",
   "description": "Select a number.",
-  "type": "DOUBLE",
-  "defaultValue": null
+  "defaultValue": null,
+  "type": "DOUBLE"
 }
 ```

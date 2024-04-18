@@ -1,6 +1,6 @@
 # Input of auxiliary/local files
 
-!> Note that this setting is about to be deprecated. We recommend the new `USER_FILE` setting that allows upload of a file with any name (see limitation below). Upload of multiple files is only possible as .zip files there.
+!> Note that this setting is about to be deprecated. We recommend the new [`USER_FILE`](appspec/current/settings/user_file.md) setting that allows upload of a file with any name (see limitation below). Upload of multiple files is only possible as .zip files there.
 
 ---
 

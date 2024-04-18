@@ -1,24 +1,25 @@
 # Dropdown
-A dropdown allows the user to choose from a larger number of predefined options. 
+A dropdown allows the user to choose one option from a larger number of predefined options. 
 
 ## Example
-
 ```json
 {
   "id": "testDropdown",
   "name": "Test Dropdown",
   "description": "Select an option.",
-  "type": "DROPDOWN",
   "defaultValue": null,
-  "options": [{
+  "type": "DROPDOWN",
+  "options": [
+    {
       "value": null,
       "displayText": "Empty Selection"
     },
     {
       "value": "some-value",
       "displayText": "Some Value"
-    }]
+    }
+  ]
 }
 ```
 
-!> If the `defaultValue` is not `null`, the set value must be available as an option.
+!\> Note that the `defaultValue` must always be available as an option.
