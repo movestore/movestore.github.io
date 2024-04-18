@@ -12,7 +12,7 @@ There are different types of settings:
   - [Dropdown](appspec/current/settings/dropdown.md)
   - [Auxiliary](appspec/current/settings/auxiliary.md)
   
-  The [Settings Editor](https://www.moveapps.org/apps/settingseditor) can be used to create and check the definition of all settings before submission.
+  The [Settings Editor](https://www.moveapps.org/apps/settingseditor) can be used to create and check the definition of all settings in the [appspec.json](appspec.md) file before submission of the App.
 
 #### Example
 ```json
@@ -22,15 +22,15 @@ There are different types of settings:
         "id": "testTimestamp",
         "name": "Test Timestamp",
         "description": "Select a date.",
-        "type": "INSTANT",
-        "defaultValue": null
+        "defaultValue": null,
+		"type": "INSTANT"
     },
     {
         "id": "testNumber",
         "name": "Test Number",
         "description": "Select a number.",
-        "type": "INTEGER",
-        "defaultValue": null
+        "defaultValue": null,
+		"type": "INTEGER"
     }
   ]
 }
