@@ -32,7 +32,7 @@
         - [Radiobuttons](/appspec/current/settings/radiobuttons.md)
         - [Checkboxes](/appspec/current/settings/checkbox.md)
         - [Dropdown](/appspec/current/settings/dropdown.md)
-        - [Local file](/appspec/current/settings/local_file.md)
+		- [User file](/appspec/current/settings/user_file.md)
       - [Dependencies](/appspec/current/dependencies_appspec.md)
       - [License](/appspec/current/license_appspec.md)
       - [Language](/appspec/current/language_appspec.md)
@@ -43,6 +43,7 @@
       - Deprecated
         - [Documentation](/appspec/v1.0/documentation_appspec.md)
 		- [Artefacts](/appspec/v1.0/artefacts_appspec.md)
+		- [Settings: Local file](/appspec/current/settings/local_file.md)
     - [App Documentation](README_file_description.md) 
 	- [App Deprecation](app_deprecation.md)
     - [Auxiliary Files](auxiliary.md)
