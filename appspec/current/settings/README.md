@@ -1,18 +1,19 @@
 # Settings
 
-In order to give the user the ability to configure an App within MoveApps, the settings (of parameters) for the App must be defined. Once the App is running, the user can thus change settings via the MoveApps interface and the values of parameters are transferred to the App when it is started.
+In order to give the user the ability to configure an App within MoveApps, the settings (or parameters) for the App must be defined in the [appspec.json](appspec.md) file. Once the App is running, the user can thus change settings via the MoveApps interface and the values of parameters are transferred to the App when it is started.
 
 There are different types of settings:
-  - [Text](string.md)
-  - [Integer numbers](integer.md)
-  - [Real numbers](double.md)
-  - [Date selection](timestamp.md)
-  - [Radiobuttons](radiobuttons.md)
-  - [Checkboxes](checkbox.md)
-  - [Dropdown](dropdown.md)
-  - [Auxiliary](auxiliary.md)
+  - [Text](appspec/current/settings/string.md)
+  - [Integer numbers](appspec/current/settings/integer.md)
+  - [Real numbers](appspec/current/settings/double.md)
+  - [Date selection](appspec/current/settings/timestamp.md)
+  - [Radiobuttons](appspec/current/settings/radiobuttons.md)
+  - [Checkboxes](appspec/current/settings/checkbox.md)
+  - [Dropdown](appspec/current/settings/dropdown.md)
+  - [Auxiliary/local files](appspec/current/settings/local_file.md)
+  - [Auxiliary/user files](appspec/current/settings/user_file.md)
   
-  The [Settings Editor](https://www.moveapps.org/apps/settingseditor) can be used to check the definition of all settings before submission.
+  The [Settings Editor](https://www.moveapps.org/apps/settingseditor) can be used to create and check the definition of all settings in the [appspec.json](appspec.md) file before submission of the App.
 
 #### Example
 ```json
@@ -22,15 +23,15 @@ There are different types of settings:
         "id": "testTimestamp",
         "name": "Test Timestamp",
         "description": "Select a date.",
-        "type": "INSTANT",
-        "defaultValue": null
+        "defaultValue": null,
+		"type": "INSTANT"
     },
     {
         "id": "testNumber",
         "name": "Test Number",
         "description": "Select a number.",
-        "type": "INTEGER",
-        "defaultValue": null
+        "defaultValue": null,
+		"type": "INTEGER"
     }
   ]
 }

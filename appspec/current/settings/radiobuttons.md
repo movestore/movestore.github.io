@@ -1,6 +1,5 @@
 # Radiobuttons
-Radiobuttons allow the user to choose from a list of predefined options.
-
+Radiobuttons allow the user to choose one option from a list of predefined options. See [Dropdown](appspec/current/settings/dropdown.md) for including a larger number of predefined options.
 
 ## Example
 ```json
@@ -8,8 +7,8 @@ Radiobuttons allow the user to choose from a list of predefined options.
   "id": "testRadioButtons",
   "name": "Test Radiobuttons",
   "description": "Select an option.",
+  "defaultValue": "some-value",
   "type": "RADIOBUTTONS",
-  "defaultValue": null,
   "options": [{
       "value": "some-value",
       "displayText": "Some Value"
@@ -21,4 +20,4 @@ Radiobuttons allow the user to choose from a list of predefined options.
 }
 ```
 
-!> If the `defaultValue` is not zero (`null`), the set value must be available as an option.
+!\> Note that the `defaultValue` must always be available as an option.
