@@ -1,6 +1,6 @@
 # Input of auxiliary/local files
 
-!> Note that this setting is about to be deprecated. We recommend the new `USER_FILE` setting that allows upload of a file with any name (see limitation below). Upload of multiple files is only possible as .zip files there.
+!> Note that this setting has been deprecated. Old Apps are still running, but soon new versions with this setting will not be supported any more. We recommend the new `USER_FILE` setting that allows upload of a file with any name (see limitation below). Upload of multiple files is possible as .zip files there.
 
 ---
 
