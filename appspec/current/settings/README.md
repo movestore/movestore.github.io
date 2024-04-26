@@ -11,7 +11,6 @@ There are different types of settings:
   - [Checkboxes](appspec/current/settings/checkbox.md)
   - [Dropdown](appspec/current/settings/dropdown.md)
   - [Auxiliary/local files](appspec/current/settings/local_file.md)
-  - [Auxiliary/user files](appspec/current/settings/user_file.md)
   
   The [Settings Editor](https://www.moveapps.org/apps/settingseditor) can be used to create and check the definition of all settings in the [appspec.json](appspec.md) file before submission of the App.
 
