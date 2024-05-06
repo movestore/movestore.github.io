@@ -40,7 +40,7 @@ Select `Start Workflow` to begin running the Apps within a Workflow in the order
 
 The Workflow continues running and results are stored even if you leave the site moveapps.org. Any results or artefacts/products files can be looked up and downloaded later. Select `Rerun` or `Stop Workflow` to interrupt the run of the Workflow. Each Workflow can also be [scheduled to run](scheduled_runs.md) regularly in an automatic mode at a fixed date and time. This option (`Schedule Instance`) can be selected in the menu next to `Output`.
 
-<kbd>![](files/Workflow_menu_2023.png 'size=400x')</kbd>
+<kbd>![](files/Workflow_menu_2023.png ':size=400x')</kbd>
 
 ## Menus, Settings and Error logs
 
