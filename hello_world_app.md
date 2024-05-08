@@ -8,18 +8,18 @@ To get started, please register or login to your [GitHub](https://github.com/) a
 
 The included file `sdk.R` is a local MoveApps substitute that behaves (almost) like the online system. Therefore, this file should not be adapted. The two files emulating MoveApps interactive behaviour locally are `.env`, which defines the input and output files path (please only adapt the source file path here), and `app-configuration.json`, which allows you to adapt the App settings for local testing. Note that the json format is required here. The fourth included file that you must use for development is the `RFunction.R`. This is the file into which all your App code is supposed to go and the only R file that is actually integrated into MoveApps when your App is built.
 
-Here, an example selecting all data points of a given calender year is given. Please try it out with the example data set `input1_move2loc_LatLon.rds` (see line 4 in `.env`). The settings are given in the file `app-configuration.json`, make sure that the year is included in the data set. In the MoveApps platform this parameter is provided by an interactive input window. Finally, you can run the file `sdk.R`, which is calling several supportive code that is emulating MoveApps behaviour as well as the `RFunction.R`. Explore the results that are saved in the folder `./data/output`, as specified in `.env`. Note that we have provided additional example code in the `RFunction.R` for e.g. the use of auxiliary files as settings. For more details see the file `developer_README.md` in the template or [on Github directly](https://github.com/movestore/Template_R_Function_App/blob/master/developer_README.md).
+Here, an example selecting all data points of a given calender year is given. Please try it out with the example data set `input4_move2loc_LatLon.rds` (see line 4 in `.env`). The settings are given in the file `app-configuration.json`, make sure that the year is included in the data set. In the MoveApps platform this parameter is provided by an interactive input window. Finally, you can run the file `sdk.R`, which is calling supportive code that is emulating MoveApps behaviour as well as the `RFunction.R`. Explore the results that are saved in the folder `./data/output`, as specified in `.env`. Note that we have provided additional example code in the `RFunction.R` for e.g. the use of auxiliary files as settings. For more details see the file `developer_README.md` in the template or [on Github directly](https://github.com/movestore/Template_R_Function_App/blob/master/developer_README.md).
 
-
-app-configuration.json
+#
+`app-configuration.json`
 ```
 {
     "sdk": "MoveApps R SDK",
-    "year": 2006
+    "year": 2014
 }
 ```
-
-RFunction.R
+#
+`RFunction.R`
 ```
 library('move2')
 library('lubridate')
@@ -44,7 +44,7 @@ rFunction <- function(data, sdk, year, ...) {
     artifact <- appArtifactPath("plot.png")
     logger.info(paste("plotting to artifact:", artifact))
     png(artifact)
-    plot(result)
+    plot(result[mt_track_id_column(result)], max.plot=1)
     dev.off()
   } else {
     logger.warn("nothing to plot")
@@ -59,12 +59,13 @@ rFunction <- function(data, sdk, year, ...) {
   return(result)
 }
 ```
+#
 
 There you go with a first running MoveApps App that can select all locations of a given calender year and even returns a pdf plot of those locations. Try adapting the `RFunction.R` to your needs and run it locally on RStudio before submitting to MoveApps.
 
-<kbd>![](files/hello_world_pdf.png)</kbd>
+<kbd>![](files/hello_world_RApp.png)</kbd>
 
 
 ## Further steps
 
-Before submission of your first App to the MoveApps platform, you need to thoroughly test your App, add an [appspec.json](appspec.md) file to your Git repository and write a [README documentation](README_file_description.md). See our more detailed tutorial [How to create an App](create_app.md).
+Before submission of your first App to the MoveApps platform, you need to thoroughly test your App, add an [appspec.json](appspec.md) file to your GitHub repository and write a [README documentation](README_file_description.md). See our more detailed documentation on [How to create an App](create_app.md).
