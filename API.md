@@ -31,18 +31,17 @@ token <- 'bdl@2nq@9SD!i31a1M7HxG7GQG93IQ0a'
 url <- sprintf("https://www.moveapps.org/web-partner/v1/workflowInstances/%s/artifacts/index", username)
 
 # Send GET request
-r <- GET(url = url, authenticate(username, token))
+req <- GET(url = url, authenticate(username, token))
 
-# Parse the response
-res <- r  %>%  
-  content(as = "parsed", simplifyDataFrame = TRUE)
+# extract content from request
+cont <- content(req, as = "parsed", simplifyDataFrame = TRUE)
 
-# to explore what output is available, explore the res object
-str(res)
+# to explore what output is available, explore the cont object
+str(cont)
 
 # Access/Download first file
 tmp <- tempfile()
-w1 <- GET(res$results$links$self[1], authenticate(username, token), write_disk(tmp))
+w1 <- GET(cont$results$links$self[1], authenticate(username, token), write_disk(tmp))
 
 # Read downloaded file
 movedat <- readRDS(tmp)
