@@ -13,3 +13,40 @@ To access the overview of the product/artefact https links, go to the `Output` w
 ## Integrate API links into your website
 
 Please have a look at our [example page](https://docs.moveapps.org/web-partner-api/example.html). We have integrated multiple artifacts from a Workflow running on MoveApps. The details of how we integrated it into the site can be used as an example for you to follow. See the code of this example page on our [github repository](https://github.com/movestore/movestore.github.io/blob/master/web-partner-api/example.html).
+
+
+## Access App outputs in R via API link
+
+You can access any output of any App of an Workflow via the API link in R. Here an example code:
+
+```r
+library(move2)
+library(httr)
+
+# Credentials from the example page
+username <- '8b536ed8-a681-4786-aa01-b26040106f9f'
+token <- 'bdl@2nq@9SD!i31a1M7HxG7GQG93IQ0a'
+
+# Insert username into URL
+url <- sprintf("https://www.moveapps.org/web-partner/v1/workflowInstances/%s/artifacts/index", username)
+
+# Send GET request
+r <- GET(url = url, authenticate(username, token))
+
+# Parse the response
+res <- r |>
+  content(as = "parsed", simplifyDataFrame = TRUE)
+
+# to explore what output is available, explore the res object
+str(res)
+
+# Access/Download first file
+tmp <- tempfile()
+w1 <- GET(res$results$links$self[1], authenticate(username, token), write_disk(tmp))
+
+# Read downloaded file
+movedat <- readRDS(tmp)
+
+# Plot
+plot(movedat)
+```
