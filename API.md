@@ -34,7 +34,7 @@ url <- sprintf("https://www.moveapps.org/web-partner/v1/workflowInstances/%s/art
 r <- GET(url = url, authenticate(username, token))
 
 # Parse the response
-res <- r |>
+res <- r  %>%  
   content(as = "parsed", simplifyDataFrame = TRUE)
 
 # to explore what output is available, explore the res object
