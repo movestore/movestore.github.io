@@ -2,23 +2,25 @@
 
 All Apps to be submitted must be managed in a public [GitHub](https://github.com) repository. When creating R-Apps, the repository should contain the program code for executing the App (named `RFunction.R` for R-Apps or `ShinyModule.R` for R-Shiny-Apps), a specification of the App represented by an [appspec.json](appspec.md) file and a [documentation file](README_file_description.md), which can be the repository README. 
 
-Feel free to use these GitHub templates: [Template R Function App](https://github.com/movestore/Template_R_Function_App ':ignore'), [Template R Shiny App](https://github.com/movestore/Template_R_Shiny_App ':ignore'), [Template R Shinydashboard App](https://github.com/movestore/Template_R_Shinydashboard_App ':ignore') . Please read the `developer_README.md` contained in each template for more information about the usage and the optional tools provided with it.
+We encourage you to use one of these GitHub templates: [Template R Function App](https://github.com/movestore/Template_R_Function_App ':ignore'), [Template R Shiny App](https://github.com/movestore/Template_R_Shiny_App ':ignore'), [Template R Shinydashboard App](https://github.com/movestore/Template_R_Shinydashboard_App ':ignore') . Please read the `developer_README.md` contained in each template for more information about the usage and the optional tools provided with it.
+
+This description is applicable only for R and Rshiny Apps, see our [Python Tutorial](create_py_app.md) for the recently integrated alternative.
   
-![](../files/TemplateFilesPurpose_R.jpg)
+<kbd>![](files/TemplateFilesPurpose_R.jpg)</kbd>
 
 
 ## Steps to create an App
 *(details below)*
 
-1. **Use a template to initialise an App repository** Login to GitHub and go to either the [Template R Function App](https://github.com/movestore/Template_R_Function_App ':ignore'), [Template R Shiny App](https://github.com/movestore/Template_R_Shiny_App ':ignore') or [Template R Shinydashboard App](https://github.com/movestore/Template_R_Shinydashboard_App ':ignore'). Click on `Use this template` to copy the template to a new repository within your GitHub account. Clone this repository to your local system.
+1. **Use a template to initialise an App repository** Login to GitHub and go to either the [Template R Function App](https://github.com/movestore/Template_R_Function_App ':ignore'), [Template R Shiny App](https://github.com/movestore/Template_R_Shiny_App ':ignore') or [Template R Shinydashboard App](https://github.com/movestore/Template_R_Shinydashboard_App ':ignore'). Click on `Use this template` to copy the template to a new repository within your GitHub account. Clone this repository to your local system (see [Manage your MoveApps Apps with GitHub and RStudio](manage_app_github) for instructions on how to do this).
 
-1. **Develop the App code within the template** locally (in RStudio) and by adapting the file `RFunction.R` or `ShinyModule.R`. (this is applicable only for R and Rshiny Apps, see our [Python Tutorial](create_py_app.md) for the recently integrated alternative)
+1. **Develop the App code within the template** locally (in RStudio) and by adapting the file `RFunction.R` or `ShinyModule.R`.
 
 2. **Test your App** locally using the file `sdk.R` in combination with `.env` and `app.configuration.json` which emulate running behaviour (almost) like on the online MoveApps system. Note that before submission to MoveApps, all Apps must be tested locally to run for the four provided data sets in the folder `./data/raw`. Furthermore, we require unit tests using `testthat`. Follow the example in the folder `./tests/testthat`.
 
-3. **Write App specifications** into the file `appspec.json` to define the App's metadata and the user interface for MoveApps users to specify App parameters. Test this file for compliance in the [Settings editor](https://www.moveapps.org/apps/settingseditor ':ignore').
+3. **Write App specifications** into the file `appspec.json` to define the App's metadata and the user interface for MoveApps users to specify App parameters (see [App specifications](appspec.md)). Test this file for compliance in the [Settings editor](https://www.moveapps.org/apps/settingseditor ':ignore').
 
-4. **Write a documentation file** about the detailed function and use of the App including possible error cases. Usually use the `README.md` which is provided as a template in each of the templates.
+4. **Write a documentation file** about the detailed function and use of the App including possible error cases. We recommend using the `README.md`, which is provided as a template in each of the App templates.
 
 5. **Upload all changes to your GitHub repository** where the following three files are mandatory for running on MoveApps: `appspec.json`, `RFunction.R` (for R-files) or `ShinyModule.R` (for R-Shiny-Apps) and a documentation file (needs to be`README.md`). Additional files can be included (see image above), but are not necessary.
 
@@ -26,17 +28,17 @@ Feel free to use these GitHub templates: [Template R Function App](https://githu
 
 7. **Initiate the App** on MoveApps (`Create new Application`).
 
-8. **Submit a first App version** to MoveApps (`Add version`). One of the MoveApps administrators will check the App and build it into a Docker container for integration to the platform. If the App has built successfully, it will acquire private trial status. You will receive an E-mail.
+8. **Submit a first App version** to MoveApps (`Add version`). One of the MoveApps administrators will check the App and build it into a Docker container for integration to the platform. If the App has built successfully, it will acquire private trial status. You will receive an e-mail.
 
-9. **Test a private trial version** of your App on MoveApps. Build a workflow and test if your App version behaves as expected on the system.
+9. **Test a private trial version** of your App on MoveApps. Build a Workflow and test if your App version behaves as expected on the system.
 
 10. **Approve (or retract) your App version** for visibility to all MoveApps users. If it needs adaptions, please retract and submit a new App version.
 
 
 ## Notes and recommendations
-- As move/sp will be deprecated at the end of 2023, consider working with sf and using the brand-new [move2 package](https://gitlab.com/bartk/move2), which has recently been added to CRAN. Avoid any use of deprecated R packages.
+- As the R packages move and sp will be deprecated at the end of 2023, consider working with sf and using the brand-new [move2 package](https://bartk.gitlab.io/move2/index.html), which has recently been added to CRAN. Avoid any use of deprecated R packages.
 
-- **Stepwise App review is now implemented!** The new trial stage allows you to test your App in MoveApps before it will become available to all users. It is life starting 30 Oct 2023.
+- **Stepwise App review is now implemented!** The new trial stage allows you to test your App in MoveApps before it will become available to all users.
 
 - Don’t be afraid to hand in a preliminary App, a warning message can be applied.
 
@@ -51,7 +53,7 @@ Note that currently the most widely used input and output (IO) object type is `m
 
 The files in the folder `src` are included in the SDKs for communication functionality functions in MoveApps. In these files, functions are defined that can be used by the App developer to give information messages, warnings, errors, etc. to the user in MoveApps. Please use these functions in your Apps. Note that due to the soon (end 2023) deprecation of the `sp` package, on which the `move` package strongly depends, we recommend to use  the`sf` and `move2` packages for App development. There are the `move2::move2_loc` and `move2::move2_nonloc` IO types available and new ones can be requested (see below).
 
-![](../files/Appdevel_rstudio.png)
+<kbd>![](files/Appdevel_rstudio.png)</kbd>
 
 ## Testing the App
 Before submission to MoveApps, all App must be thoroughly tested locally using the file `sdk.R`, which behaves (almost) like the online MoveApps system. Recently, we have added unit tests to the template using the `testthat`package. Please adapt the file `./tests/testthat/test_RFunction.R` to work with your App code. 
@@ -65,8 +67,8 @@ To do this, select `Applications / Initialize a new Application` from the menu a
 The link to your repository has to end with `.git`; please add it manually if necessary (example: `https://github.com/movestore/MorningReport.git`). 
 Each App is defined by an input and output type (IO types) and runtime environment that have to be specified. Possible environments are R, R-shiny and Python. 
 
-![](../files/initializeApp.png)
-![](../files/InitApp_IOtype.png)
+<kbd>![](files/initializeApp.png)
+![](files/InitApp_IOtype.png)</kbd>
 
 
 ### IO types
@@ -74,8 +76,8 @@ Input and output types have long been restricted to `move::moveStack`, but can n
 
 After selecting R or R-Shiny as your Runtime Environment, check which types are available in the dropdown list. If you need a new IO type for your App, please go to "request a new IO type". Please describe your request to us, link to the documentation of the new IO type and adapt our [cargo agent repository](https://github.com/movestore/cargo-agent-r) accordingly, with creating and linking to a pull request. See the [README](https://github.com/movestore/cargo-agent-r#readme) there for details. Once an administrator has approved your IO type request, it will be available on the platform. Make sure to also provide transformation Apps to/from other IO types to widen the usability of your App on MoveApps. For portability to Python Apps also provide code to transfer your data object to one or several csv-files.
 
-![](../files/ReqNewIOtype.png)
-![](../files/ReqNewIOtype2.png)
+<kbd>![](files/ReqNewIOtype.png)
+![](files/ReqNewIOtype2.png)</kbd>
 
 Note that repository link, IO types and runtime environment will be fixed to the App and cannot be changed afterwards. When you have successfully created the App, it will be listed in the overview `My Apps / App Overview`
 
@@ -83,19 +85,18 @@ Note that repository link, IO types and runtime environment will be fixed to the
 ## Creation of a new App version
 In order to create your first (or any updated new) App version, you must create a `Tag` (via `Release`) of your GitHub repository in its present state. After you have created the `Tag`, go to the MoveApps site and press the `Add Version` button in the detailed view of your App (via `Applications / Your Applications / AppName / Details`). Select the `Tag` from the list of available `Tags` and press `Create Version`. A new App version is only available if your tag creation in GitHub was successful. To submit the new version, you must include a description detailing the changes and select/update a Category that fits your App. If you want to request an additional Category, please suggest it in the interface. After entering all information, click `Save and Submit`.
 
-![](../files/Appdevel_createNewAppVersion.png)
+<kbd>![](files/Appdevel_createNewAppVersion.png)</kbd>
 
 The App is then checked by a MoveApps administrator for functionality, performant `appspec.json` and possible issues regarding our Terms of Use and a docker container for the App is initiated for built into a Docker container for intergration into the ssytem. Upon successful review and built, your App version will enter the `TRIAL` stage and you will receive an E-mail from the system, possibly with comments from the administator. In case your App does not pass the review or the building process was unsuccessful, the administrator will reject your App version and you will get an E-mail with details about it. Please address any raised concerns and submit a new App version then.
 
 
 ## Testing the Trial version of you App
+Once, your App is in status `TRIAL`, it becomes possible for only you (and the system administrators) to add this App to a Workflow in your MoveApps account. It appears in the list of Apps possible to add to your Workflow (with fitting IO type) in `TRIAL` design (see figure below). Also when included in a Workflow, the App will be highlighted with colour as a `TRIAL` App.
 
-Once, your App is in status `TRIAL`, it becomes possible for only you (and the system administrators) to add this App to a workflow in your MoveApps account. It appears in the list of Apps possible to add to your workflow (with fitting IO type) in `TRIAL` design (see figure below). Also when included in a workflow, the App will be highlighted with colour as a `TRIAL` App.
+<kbd>![](files/Trail_AppIntoWF.png)</kbd>
+<kbd>![](files/Trail_IsInWF.png)</kbd>
 
-![](../files/Trail_AppIntoWF.png)
-![](../files/Trail_IsInWF.png)
+Please, create some Workflow(s) and test if the App version is working as you expect within the platform. Try it for different data sets and parameter settings, use e.g. the wealth of open data sets on Movebank. If the App is performing good, please select `APPROVE` in the respective App version of the App in your App Overview (`My Apps/App Overview/*your_app_name*`). The App version will aquire the status `APPROVED`and become visible and usable for all registered MoveApps users. In case the App version does not perform as expected, please `RETRACT` it from the system, adapt your code and submit a new version. In the Workflow where the `TRAIL` App has been included, it will be marked as `Retracted` and give an error if executed.
 
-Please, create some workflow(s) and test if the App version is working as you expect within the platform. Try it for different data sets and parameter settings, use e.g. the wealth of open data sets on Movebank. If the App is performing good, please select `APPROVE` in the respective App version of the App in your App Overview (`My Apps/App Overview/*your_app_name*`). The App version will aquire the status `APPROVED`and become visible and usable for all registered MoveApps users. In case the App version does not perform as expected, please `RETRACT` it from the system, adapt your code and submit a new version. In the workflow where the `TRAIL` App has been included, it will be marked as `Retracted` and give an error if executed.
-
-![](../files/Trail_AppVersion.png)
-![](../files/Trail_RetractInWF.png)
+<kbd>![](files/Trial_AppVersion.png)</kbd>
+<kbd>![](files/Trial_RetractInWF.png)</kbd>
