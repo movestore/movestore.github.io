@@ -13,7 +13,7 @@
   - R Tutorials
       - [Hello world! An R App example](hello_world_app.md)
       - [How to create an R App](create_app.md)
-      - [Programming with a move2 object](https://bartk.gitlab.io/move2/articles/programming_move2_object.html ':ignore')
+      - [Programming with I/O type 'move2::move2_**'](programing_move2.md)
       - [Manage your R Apps with GitHub and Rstudio](manage_app_github.md)
 	  - [Parallel computing in MoveApps](parallelcomp.md)
   - Python Tutorials
