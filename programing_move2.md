@@ -35,17 +35,17 @@ dt2 <- mutate_track_data(dt2, attrbX="t")
 ## merging the subsets into one track
 dt3 <- mt_stack(dt1,dt2,.track_combine="merge_list")
 mt_track_data(dt3)
-#> # A tibble: 2 × 2
-#>   track  attrbX   
-#>   <chr>  <list>   
-#> 1 indv_A <chr [2]>
-#> 2 indv_B <chr [2]>
+# # A tibble: 2 × 2
+#   track  attrbX   
+#   <chr>  <list>   
+# 1 indv_A <chr [2]>
+# 2 indv_B <chr [2]>
 mt_track_data(dt3)$attrbX
-#> [[1]]
-#> [1] "w" "t"
-#> 
-#> [[2]]
-#> [1] "w" "t"
+# [[1]]
+# [1] "w" "t"
+# 
+# [[2]]
+# [1] "w" "t"
 ```
 
 Here one example how to deal with it if you need to flatten the list
