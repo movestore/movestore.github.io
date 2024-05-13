@@ -36,7 +36,7 @@ This description is applicable only for R and Rshiny Apps, see our [Python Tutor
 
 
 ## Notes and recommendations
-- As the R packages move and sp will be deprecated at the end of 2023, consider working with sf and using the brand-new [move2 package](https://gitlab.com/bartk/move2), which has recently been added to CRAN. Avoid any use of deprecated R packages.
+- As the R packages move and sp will be deprecated at the end of 2023, consider working with sf and using the brand-new [move2 package](https://bartk.gitlab.io/move2/index.html), which has recently been added to CRAN. Avoid any use of deprecated R packages.
 
 - **Stepwise App review is now implemented!** The new trial stage allows you to test your App in MoveApps before it will become available to all users.
 
