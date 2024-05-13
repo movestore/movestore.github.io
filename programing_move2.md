@@ -21,7 +21,7 @@ If in your App you are using information of the track data table, take into acco
 This might happen in your App, but can also come from a manipulation in a previously used App. Please account for this possibility in your App (if relevant) to avoid unnecessary errors.
 
 Here an example of an object containing a list in the track data table
-```r
+``` r
 library("move2")
 library("dplyr")
 ## creating 2 subsets of 2 tracks
@@ -30,11 +30,11 @@ dt1 <- mt_set_track_data(dt1, as_tibble(mt_track_data(dt1)))
 dt2 <- mt_sim_brownian_motion(t = 8:10,start_location = c(1, 1),tracks=c("indv_A","indv_B"))
 dt2 <- mt_set_track_data(dt2, as_tibble(mt_track_data(dt2)))
 ## adding to each subset a different value for one track attribute
-dt1 <- dt1 %>% mutate_track_data(attrbX="w")
-dt2 <- dt2 %>% mutate_track_data(attrbX="t")
+dt1 <- mutate_track_data(dt1, attrbX="w")
+dt2 <- mutate_track_data(dt2, attrbX="t")
 ## merging the subsets into one track
 dt3 <- mt_stack(dt1,dt2,.track_combine="merge_list")
-mt_track_data(dt3) %>% select(tail(names(.), 2))
+mt_track_data(dt3)
 #> # A tibble: 2 × 2
 #>   track  attrbX   
 #>   <chr>  <list>   
