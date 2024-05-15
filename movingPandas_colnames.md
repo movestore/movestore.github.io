@@ -4,7 +4,7 @@ Currently every Workflow has to start with an App the downloads or reads in data
 
 !\> Note that timestamps are stored as the index 
 
-#### Example
+##### Example
 ```
 # Fetch the name of the column containing the timestamps
 time_col_name = data.to_point_gdf().index.name
@@ -19,7 +19,7 @@ data_traj = data_filtered.trajectories[0].copy()
 
 When manipulating the data in the App, it is crucial to ensure that the data that is passed on, contains the timestamp and track IDs information in the same manner as the incoming object, so that the subsequent App is able to fetch this information in the same way.
 
-##### Exampe
+##### Example
 ```
 ## comming soon
 ```
