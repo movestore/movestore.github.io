@@ -18,6 +18,7 @@
 	  - [Parallel computing in MoveApps](parallelcomp.md)
   - Python Tutorials
       - [How to create a Python App](create_py_app.md)
+      - [Programming with I/O type MovingPandas.TrajectoryCollection](movingPandas_colnames)
   - Reference
     - App Code
       - [R](copilot-r-sdk.md)
