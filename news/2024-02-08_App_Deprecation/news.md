@@ -1,6 +1,6 @@
 # App Deprecation
 
-![App_Deprecation_Screenshot](deprec_news.jpg)
+![App_Deprecation_Screenshot](deprec_news2.jpg)
 
 By updating Apps to new functionality, many old Apps have recently been [deprecated](https://docs.moveapps.org/#/app_deprecation). For quick recognition, the titles of deprecated Apps appear stroke through in any appearance on the platform (existing Workflows, public Workflows, App browser). However, they are still fully functional. See the App details of deprecated Apps in your Workflow for the Deprecation message, which includes a message from the App developer and a suggested replacement. Note that deprecated Apps cannot be added to any new Workflows.
 
