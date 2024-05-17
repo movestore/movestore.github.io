@@ -40,7 +40,7 @@ This description is applicable only for R and Rshiny Apps, see our [Python Tutor
 
 - **Stepwise App review is now implemented!** The new trial stage allows you to test your App in MoveApps before it will become available to all users.
 
-- Don’t be afraid to hand in a preliminary App, a warning message can be applied.
+- Don’t be afraid to hand in a preliminary App, you can add a warning message that can be seen by all users.
 
 - Make sure that users of your App are enabled to understand what is required of input data, what happens in the App and how the method works, that they can interpret the results correctly and understand possible issues.
 
@@ -56,7 +56,9 @@ The files in the folder `src` are included in the SDKs for communication functio
 <kbd>![](files/Appdevel_rstudio.png)</kbd>
 
 ## Testing the App
-Before submission to MoveApps, all App must be thoroughly tested locally using the file `sdk.R`, which behaves (almost) like the online MoveApps system. Recently, we have added unit tests to the template using the `testthat`package. Please adapt the file `./tests/testthat/test_RFunction.R` to work with your App code. 
+Before submission to MoveApps, all App must be thoroughly tested locally using the file `sdk.R`, which behaves (almost) like the online MoveApps system. Recently, we have added unit tests to the template using the `testthat`package. Please adapt the file `./tests/testthat/test_RFunction.R` to work with your App code.
+
+Note that the template contains several example data sets that you should use to test your App.
 
 
 ## Initialization/Creation of the App
@@ -96,7 +98,9 @@ Once, your App is in status `TRIAL`, it becomes possible for only you (and the s
 <kbd>![](files/Trail_AppIntoWF.png)</kbd>
 <kbd>![](files/Trail_IsInWF.png)</kbd>
 
-Please, create some Workflow(s) and test if the App version is working as you expect within the platform. Try it for different data sets and parameter settings, use e.g. the wealth of open data sets on Movebank. If the App is performing good, please select `APPROVE` in the respective App version of the App in your App Overview (`My Apps/App Overview/*your_app_name*`). The App version will aquire the status `APPROVED`and become visible and usable for all registered MoveApps users. In case the App version does not perform as expected, please `RETRACT` it from the system, adapt your code and submit a new version. In the Workflow where the `TRAIL` App has been included, it will be marked as `Retracted` and give an error if executed.
+Please, create some Workflow(s) and test if the App version is working as you expect within the platform. Try it for different data sets and parameter settings, use e.g. the wealth of open data sets on Movebank.  Have a look at [this compilcation of edge case data sets](https://github.com/movestore/Movebank_Example_Datasets) for more intensive testing and development.
+
+If the App is performing good, please select `APPROVE` in the respective App version of the App in your App Overview (`My Apps/App Overview/*your_app_name*`). The App version will aquire the status `APPROVED`and become visible and usable for all registered MoveApps users. In case the App version does not perform as expected, please `RETRACT` it from the system, adapt your code and submit a new version. In the Workflow where the `TRAIL` App has been included, it will be marked as `Retracted` and give an error if executed.
 
 <kbd>![](files/Trial_AppVersion.png)</kbd>
 <kbd>![](files/Trial_RetractInWF.png)</kbd>
