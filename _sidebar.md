@@ -10,6 +10,7 @@
     - [Access Workflow products via API link](API.md)
   
 - Apps 
+  - [Coding best practices for MoveApps](best_practices_coding.md)
   - [How to run Apps locally](run_app_locally.md)
   - R Tutorials
       - [Hello world! An R App example](hello_world_app.md)

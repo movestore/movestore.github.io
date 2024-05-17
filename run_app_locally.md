@@ -5,7 +5,7 @@ Any App on MoveApps can be downloaded from GitHub and run locally. This can be u
 ### Getting the code
 You can directly download the code as a `.zip` (`Code > Download ZIP`) file from the repository of the App. If you have suggestions to fix/improve/enhance an App, the easiest will be if you `Fork` the repository, do changes and make a pull request to the original repository. 
 
-<kbd>![](files/fork_app.png ':size=300x')</kbd>
+<kbd>![](files/fork_app.png ':size=600x')</kbd>
 
 ### Running the App locally
 Once you have the code locally (details on how to clone your GitHub repository locally for R Apps [here](manage_Rapp_github.md) and for Python Apps [here](manage_Pyapp_github.md)), you can run the App emulating (almost) the online MoveApps system. You will need the following files:
