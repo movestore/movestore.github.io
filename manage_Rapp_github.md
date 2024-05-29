@@ -26,7 +26,8 @@ Another way to work on your local system is by using the GitHub Desktop, which i
 
 ## Keep your repositories up to date (Sync with templates)
 To ensure that you can test your App emulating the current MoveApps environment, we have put in place a "*Template Synchronization GH action*". Once a week GitHub checks if there are updates for your App (see in [this image](create_app.md) which files are checked/ will be ignored), and makes a pull request (PR). This feature was introduced in June 2023. If you created your App before this date, you can manually add this functionality:
-!\> Only use this option if your App is written for input data of class `move2`!! 
+
+!\> Do not use this option if your App is still written for input data of class `move`!! 
 
 1. Ensure that the Actions permissions are correctly set. In your GitHub repository go to `Settings > Actions > General` and make sure that in the section `Workflow permissions` the options "*Read and write permissions*" is selected and "*Allow GitHub Actions to create and approve pull requests*" is ticked. `Save` your changes.
 
@@ -35,10 +36,11 @@ To ensure that you can test your App emulating the current MoveApps environment,
 2. Manually add the folder `.github` from the corresponding template to your fork. ([Template R Function App](https://github.com/movestore/Template_R_Function_App ':ignore'), [Template R Shiny App](https://github.com/movestore/Template_R_Shiny_App ':ignore') or [Template R Shinydashboard App](https://github.com/movestore/Template_R_Shinydashboard_App ':ignore'))
 
 3. Once these files are added you can manually execute the GH action named *.github/workflows/template-sync.yml*.
-To do this, in your GitHub repository go to `Actions > .github/workflows/template-sync.yml > Run workflow > Run workflow`
+To do this, in your GitHub repository go to `Actions > .github/workflows/template-sync.yml > Run workflow > Run workflow`.
+You only have to do this once. Thereafter the synchronization will happen automatically. 
 
 <kbd>![](files/sync_R_template.png)</kbd>
 
-4. If you are using the `Template R Function App`, after merging the generated pull request add the file `app-configuration.json` manually to the root directory of your App.
+4. If you are using the `Template R Function App`, after merging the generated pull request, add the file `app-configuration.json` manually to the root directory of your App.
 
 
