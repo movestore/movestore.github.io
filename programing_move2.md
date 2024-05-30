@@ -1,6 +1,6 @@
 ## Notes on programming with the object of class `move2`
 
-Currently the `move2::move2_loc` is the most common I/O type in MoveApps. This I/O type is a object of class `move2` which is restricted to only contain location events. The `move2` object allows also to contain non location events, and a mix of both. The I/O type `move2::move2_nonloc` is also a object of class `move2` restricted to only contain non location events. The following applyes to both I/O types as both are objects of class `move2`.
+Currently the `move2::move2_loc` is the most common I/O type in MoveApps. This I/O type is a object of class `move2` which is restricted to only contain location events. The `move2` object allows also to contain non location events, and a mix of both. The I/O type `move2::move2_nonloc` is also a object of class `move2` restricted to only contain non location events. The following applies to both I/O types as both are objects of class `move2`.
 
 The `move2` object flexibly accepts any column to be defining the timestamps or the track ids. To avoid downstream errors, please do not use hardcoded column names for timestamps and track ids within your Apps, but use the available functions to retrieve this information:
 
@@ -8,6 +8,8 @@ The `move2` object flexibly accepts any column to be defining the timestamps or 
 -   `mt_track_id()`: returns a vector of the track id associated to each event
 -   `mt_time_column()`: returns the name of the column containing the timestamps used by the `move2` object
 -   `mt_track_id_column()`: returns the name of the column containing the track ids used by the `move2` object
+
+- `sf::st_coordinates()`: returns the coordinates of the events from the track(s) of a `move2` object
 
 To get an overview of the structure and a detailed explanation of the `move2` object please check out this vignette: [Programming with a move2 object](https://bartk.gitlab.io/move2/articles/programming_move2_object.html). At the end of this vignette you can also find a list of the most important functions to extract information of the `move2` object and other useful functions.
 
