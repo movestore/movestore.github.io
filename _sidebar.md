@@ -11,13 +11,13 @@
   
 - Apps 
   - [Coding best practices for MoveApps](best_practices_coding.md)
+  - [Parallel computing in MoveApps](parallelcomp.md)
   - [How to run Apps locally](run_app_locally.md)
   - R Tutorials
       - [Hello world! An R App example](hello_world_app.md)
       - [How to create an R App](create_app.md)
       - [Programming with I/O type 'move2::move2_**'](programing_move2.md)
       - [Manage your R Apps with GitHub and Rstudio](manage_Rapp_github.md)
-      - [Parallel computing in MoveApps](parallelcomp.md)
   - Python Tutorials
       - [How to create a Python App](create_py_app.md)
       - [Programming with I/O type MovingPandas.TrajectoryCollection](movingPandas_colnames.md)
