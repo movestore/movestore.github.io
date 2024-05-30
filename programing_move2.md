@@ -9,7 +9,6 @@ The `move2` object flexibly accepts any column to be defining the timestamps or 
 -   `mt_time_column()`: returns the name of the column containing the timestamps used by the `move2` object
 -   `mt_track_id_column()`: returns the name of the column containing the track ids used by the `move2` object
 
-Note that locations can most generically be addressed using the `sf` package, as the `move2` objects are of this class.
 -	`st_coordinates()`: returns locations of each even in the track for type `move2_loc`.
 
 To get an overview of the structure and a detailed explanation of the `move2` object please check out this vignette: [Programming with a move2 object](https://bartk.gitlab.io/move2/articles/programming_move2_object.html). At the end of this vignette you can also find a list of the most important functions to extract information of the `move2` object and other useful functions.
