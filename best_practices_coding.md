@@ -15,7 +15,7 @@ If your App only works with data in `EPSG:4326` or if they must be projected, yo
 In the templates we provide test data (`data/raw/`) in `EPSG:4326` and also projected data to ease testing the Apps. 
 
 ### Time zones
-All data that is uploaded from Movebank into MoveApps will have timestamps in `UTC`. Sometimes for local studies it makes sense to transform the timestamps into the local timezone to better interpret the results. Feel free to do that for your App if needed. *Please do not pass on data as an output with timestamps in a different timezone than UTC, but reproject it*. Lots of tracking data span across different timezones, which makes "local timezone" non-existent.
+All tracking data that is uploaded into MoveApps will have timestamps in `UTC`. Sometimes for local studies it makes sense to transform the timestamps into the local timezone to better interpret the results. Feel free to do that for your App if needed. *Please do not pass on data as an output with timestamps in a different timezone than UTC, but always transform it back to UTC*. Lots of tracking data span across different timezones, which makes "local timezone" non-existent.
 
 ### Acknowledgements and references
 If your App is based mainly on a single library (that you did not author), we advise to give credit to the authors of this library. The best way to acknowledge them is in the `appspecs.json` file in the [reference](appspec/current/references_appspec.md) section, and in the documentation of the App. 
