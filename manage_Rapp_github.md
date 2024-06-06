@@ -25,7 +25,7 @@ Another way to work on your local system is by using the GitHub Desktop, which i
 <kbd>![](files/GitDesktop_Overview.png)</kbd>
 
 ## Keep your repositories up to date (Sync with templates)
-To ensure that you can test your App emulating the current MoveApps environment, we have put in place a "*Template Synchronization GH action*". Once a week GitHub checks if there are updates for your App (see in [this image](create_app.md) which files are checked/ will be ignored), and makes a pull request (PR). This feature was introduced in June 2023. If you created your App before this date, you can manually add this functionality:
+To ensure that you can test your App emulating the current MoveApps environment, we have put in place a "*Template Synchronization GH action*". Once a week GitHub checks if there are updates for your App (see in [this image](create_app.md#how-to-create-an-r-or-rshiny-app) which files are checked/ will be ignored), and makes a pull request (PR). This feature was introduced in June 2023. If you created your App before this date, you can manually add this functionality:
 
 !\> Do not use this option if your App is still written for input data of class `move`!! 
 
