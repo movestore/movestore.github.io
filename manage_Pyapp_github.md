@@ -25,11 +25,14 @@ Another way to work on your local system is by using the GitHub Desktop, which i
 <kbd>![](files/GitDesktop_Overview.png)</kbd>
 
 ## Keep your repositories up to date (Sync with templates)
-To ensure that you can test your App emulating the current MoveApps environment, we have put in place a "*Template Synchronization GH action*". Once a week GitHub checks if there are updates for your App (see in [this image](create_py_app.md#how-to-create-a-python-app) which files are checked/ will be ignored), and makes a pull request (PR). This feature was introduced in October 2023. If you created your App before this date, you can manually add this functionality:
+To ensure that you can test your App emulating the current MoveApps environment, we have put in place a "*Template Synchronization GH action*". Once a week GitHub checks if there are updates for your App (see in [this image](create_py_app.md#how-to-create-a-python-app) which files are checked/ will be ignored), and makes a pull request (PR).
 
-1. Ensure that the Actions permissions are correctly set. In your GitHub repository go to `Settings > Actions > General` and make sure that in the section `Workflow permissions` the options "*Read and write permissions*" is selected and "*Allow GitHub Actions to create and approve pull requests*" is ticked. `Save` your changes.
+Ensure that the Actions permissions are correctly set. In your GitHub repository go to `Settings > Actions > General` and make sure that in the section `Workflow permissions` the options "*Read and write permissions*" is selected and "*Allow GitHub Actions to create and approve pull requests*" is ticked. `Save` your changes.
 
 <kbd>![](files/github_action_permission.png)</kbd>
+
+This feature was introduced in June 2023. If you created your App before this date, you can manually add this functionality:
+1. Ensure that the Actions permissions are correctly set (see above).
 
 2. Manually add the folder `.github` from the [Template Python App](https://github.com/movestore/python-sdk) to your fork.
 
