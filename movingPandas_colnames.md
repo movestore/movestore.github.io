@@ -21,5 +21,43 @@ When manipulating the data in the App, it is crucial to ensure that the data tha
 
 ##### Example
 ```
-## comming soon
+# Create an example data frame
+df = pd.DataFrame([
+    {'timestamp_utc': "2024-01-01 09:00:00", 'coords_x': 9.103366, 'coords_y': 47.729496, 'track_id': 'ID_1'},
+    {'timestamp_utc': "2024-01-02 09:00:00", 'coords_x': 8.108276, 'coords_y': 47.530281, 'track_id': 'ID_1'},
+    {'timestamp_utc': "2024-01-03 09:00:00", 'coords_x': 7.191592, 'coords_y': 47.132766, 'track_id': 'ID_1'},
+    {'timestamp_utc': "2024-01-04 09:00:00", 'coords_x': 6.244543, 'coords_y': 46.547009, 'track_id': 'ID_1'},
+    {'timestamp_utc': "2024-01-05 09:00:00", 'coords_x': 5.828817, 'coords_y': 45.952891, 'track_id': 'ID_1'}
+])
+
+# Create a trajectory collection from the example data frame
+data = mpd.TrajectoryCollection(
+    df,
+    traj_id_col='track_id',        # Indicate the column containing the track ID
+    t='timestamp_utc',             # Indicate the column containing the timestamps
+    crs='epsg:4326',
+    x='coords_x', y='coords_y'     # Indicate the columns containing the x and y coordinates
+)
+
+
+# It is also possible to first set the timestamps as index
+df = df.set_index('timestamp_utc')
+
+data = mpd.TrajectoryCollection(
+    df,
+    traj_id_col='track_id',        # Indicate the column containing the track ID
+    crs='epsg:4326',
+    x='coords_x', y='coords_y'     # Indicate the columns containing the x and y coordinates
+)
+
+# Or to create a trajectory collection from a GeoDataFrame
+df_g = GeoDataFrame(df, geometry=gpd.points_from_xy(df.coords_x, df.coords_y), crs='epsg:4326')
+
+data = mpd.TrajectoryCollection(
+    df_g,
+    traj_id='track_id',        # Indicate the column containing the track ID
+    t='timestamp_utc',         # Indicate the column containing the timestamps - only necessary if the timestamps are not the index
+    crs='epsg:4326'
+)
+
 ```
