@@ -61,7 +61,7 @@ rFunction <- function(data, sdk, year, ...) {
 ```
 #
 
-There you go with a first running MoveApps App that can select all locations of a given calender year and even returns a pdf plot of those locations. Try adapting the `RFunction.R` to your needs and run it locally on RStudio before submitting to MoveApps.
+There you go with a first running MoveApps App that can select all locations of a given calender year and even returns a plot of those locations. Try adapting the `RFunction.R` to your needs and run it locally on RStudio before submitting to MoveApps.
 
 <kbd>![](files/hello_world_RApp.png)</kbd>
 
