@@ -12,15 +12,27 @@ Alternatively, if you have downloaded the files from one of our templates locall
 ## Clone your GitHub repository
 To comfortably work on your local system, develop your code and test your App locally emulating (almost) the online MoveApps system, you can clone your GitHub repository. 
 
-*(more details coming soon)*
+### with PyCharm
+Open PyCharm and create a New Project from Version Control: `File > Project from Version Control` or `Get from VCS`. Then enter the URL of your GitHub repository (`Code > Local > HTTPS` in GitHub), or log in to GitHub, GitHub Enterprise, or GitLab and select your local project directory name. That's it, you can now use PyCharm to develop and test your code locally and push and pull updates to your project via `Git` in the main menu. The commit window indicates files that have changed and can be pushed to your GitHub respository. Note that it is required to commit your changes with a small description of the changes.
 
+<kbd>![](files/PyCharm_Clone.png ':size=600')</kbd>
+<kbd>![](files/PyCharm_GitOverview.png ':size=400')</kbd>
+
+### with GitHub Desktop
+Another way to work on your local system is by using the GitHub Desktop, which is a software programme often used for Version Control with Git and GitHub. It requires the installation of that programme. Once you have opened GitHub Desktop you can clone a GitHub repository under `File > Clone repository`, where you can select your repositories (once your account is connected) and clone them to local folders. New files will then be highlighted to be pushed and pulled whenever you open GitHub Desktop. Also here commits and descriptions thereof are required, very comfortably in a small window below the list of changed files.
+
+<kbd>![](files/GitDesktop_Clone.png)</kbd>
+<kbd>![](files/GitDesktop_Overview.png)</kbd>
 
 ## Keep your repositories up to date (Sync with templates)
-To ensure that you can test your App emulating the current MoveApps environment, we have put in place a "*Template Synchronization GH action*". Once a week GitHub checks if there are updates for your App (see in [this image](create_py_app.md) which files are checked/ will be ignored), and makes a pull request (PR). This feature was introduced in October 2023. If you created your App before this date, you can manually add this functionality:
+To ensure that you can test your App emulating the current MoveApps environment, we have put in place a "*Template Synchronization GH action*". Once a week GitHub checks if there are updates for your App (see in [this image](create_py_app.md#how-to-create-a-python-app) which files are checked/ will be ignored), and makes a pull request (PR).
 
-1. Ensure that the Actions permissions are correctly set. In your GitHub repository go to `Settings > Actions > General` and make sure that in the section `Workflow permissions` the options "*Read and write permissions*" is selected and "*Allow GitHub Actions to create and approve pull requests*" is ticked. `Save` your changes.
+Ensure that the Actions permissions are correctly set. In your GitHub repository go to `Settings > Actions > General` and make sure that in the section `Workflow permissions` the options "*Read and write permissions*" is selected and "*Allow GitHub Actions to create and approve pull requests*" is ticked. `Save` your changes.
 
 <kbd>![](files/github_action_permission.png)</kbd>
+
+This feature was introduced in June 2023. If you created your App before this date, you can manually add this functionality:
+1. Ensure that the Actions permissions are correctly set (see above).
 
 2. Manually add the folder `.github` from the [Template Python App](https://github.com/movestore/python-sdk) to your fork.
 
