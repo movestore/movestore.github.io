@@ -1,4 +1,4 @@
-# Manage your MoveApps Apps with GitHub
+# Manage your MoveApps Apps with GitHub and PyCharm
 
 ## Create GitHub repository
 Preferably use directly one of our templates ([see details](create_py_app.md)). Click on `Use this template` to copy the template to a new repository within your GitHub account. Specify its name (this can be the name of the App) and provide a short description. In order for our system to access files from your repository it has to be `public`, also for traceability and collaboration in the platform this openness is beneficial. Make sure that you activate to be notified of all activity in the repository (see Watch/Unwatch after creating the repository), so that any issues that users might report about the App will reach you.
