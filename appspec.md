@@ -1,6 +1,6 @@
 # Appspec.json
 
-The `appspec.json` file is used to define the parameters of an App within MoveApps. Here, dependencies, settings and documentation properties of the App are defined. Some of the parameters are mandatory and have a fixed list of possible values, others are optional. Take a look at the menu on the left for detailed descriptions and guidelines for each of the parameters that can be defined.
+The `appspec.json` file is used to define the specifications of an App within MoveApps. Here, dependencies, settings and documentation properties of the App are defined. Some of the specifications are mandatory and have a fixed list of possible values, others are optional. Take a look at the menu on the left for detailed descriptions and guidelines for each of the specifications that can be defined.
 
 
 ## Validator
