@@ -12,8 +12,7 @@ Apps to be submitted must be managed in a public [GitHub](https://github.com) re
 
 2. **Create the Conda environment** by `conda env create -n APP_NAME --file environment.yml` or by clicking on the top left option in the PyCharm window. When using a terminal, make sure to activate the environment by `conda activate APP_NAME`.
 
-3. **Ensure that our template runs properly on your system**
-**Execute `python sdk.py`** or run `sdk.py` interactively to ensure that our template runs properly on your system. Ensure the SDK executes the vanilla template App code (i.e. without alterations and without additional libraries). Everything is set up correctly if no error occurs and you see something like _Welcome to the {'app-name': 'MoveApps Python SDK'}_.
+3. **Ensure that our template runs properly on your system** Execute `python sdk.py` in a terminal or run `sdk.py` interactively to ensure that our template runs properly on your system. Ensure the SDK executes the vanilla template App code (i.e. without alterations and without additional libraries). Everything is set up correctly if no error occurs and you see something like _Welcome to the {'app-name': 'MoveApps Python SDK'}_.
 
 4. **Develop your App code** locally within our template (e.g. in PyCharm) in  the file `./app/app.py`. MoveApps will call your custom App business logic and will instantiate the class `App`. Take a look at the [develop_README.md](https://github.com/movestore/Template_Python_App/blob/main/developer_README.md) for more information. Note that it is possible to add additional `.py` files to `./app/` from which functions can be imported into the main `app.py` file.
 
