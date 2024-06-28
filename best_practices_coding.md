@@ -12,7 +12,7 @@ Currently, all data that is uploaded from Movebank into MoveApps will be in `EPS
 
 If your App only works with data in `EPSG:4326` or if they must be projected, you can always reproject the data for the purposes of your App, and then either pass on the data with the changed or original projection. If the projection of the input and output data will be different we recommend to inform about this in the documentation and also with a message in the logs using e.g. the `logger.info()` function.
 
-In the templates we provide test data (`data/raw/`) in `EPSG:4326` and also projected data to ease testing the Apps. 
+In the templates (see [here](create_app.md) and [here](create_py_app.md)) we provide test data (in `data/raw/` for R and in `resources/samples/` for Python) in `EPSG:4326` and also projected data to ease testing the Apps. 
 
 ### Time zones
 All tracking data that is uploaded into MoveApps will have timestamps in `UTC`. Sometimes for local studies it makes sense to transform the timestamps into the local timezone to better interpret the results. Feel free to do that for your App if needed. *Please do not pass on data as an output with timestamps in a different timezone than UTC, but always transform it back to UTC*. Lots of tracking data span across different timezones, which makes a "local timezone" non-existent.
