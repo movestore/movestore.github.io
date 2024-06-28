@@ -20,7 +20,7 @@ All App developers are obliged to provide a complete documentation of their App,
 
 - **Output data**: Indicate which type of output data the App produces to be passed on to subsequent apps. In case the App does not pass on any data (e.g. a shiny visualisation app), it can be also indicated here that no output is produced to be used in subsequent apps.
 
-  *Example:* MovingPandas TrajectoryCollection
+  *Example:* MovingPandas.TrajectoryCollection
 
 - **Artefacts**: If the App creates artefacts (e.g. csv, pdf, jpeg, shapefiles, etc), please list them here and describe each.
 
