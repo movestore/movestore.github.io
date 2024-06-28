@@ -16,7 +16,7 @@ All App developers are obliged to provide a complete documentation of their App,
 
 - **Input data**: Indicate which type of input data the App requires. Note that it is possible to [request new input/output types](https://www.moveapps.org/apps/io-type/request).
 
-  *Example*: move2 location object
+  *Example*: move2::move2_loc
 
 - **Output data**: Indicate which type of output data the App produces to be passed on to subsequent apps. In case the App does not pass on any data (e.g. a shiny visualisation app), it can be also indicated here that no output is produced to be used in subsequent apps.
 
