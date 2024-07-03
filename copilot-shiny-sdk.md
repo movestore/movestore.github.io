@@ -1,7 +1,7 @@
 # MoveApps `Shiny Module` overview
 This documentation describes the basics for developing R-Shiny modules for MoveApps. Further information on Shiny and Shiny Modules can be found at  https://shiny.rstudio.com/tutorial and https://shiny.rstudio.com/articles/modules.html, respectively.
 
-Please use these GitHub templates: [Template R Shiny App](https://github.com/movestore/Template_R_Shiny_App ':ignore'), [Template R Shinydashboard App](https://github.com/movestore/Template_R_Shinydashboard_App ':ignore')
+Please use one of these GitHub templates: [Template R Shiny App](https://github.com/movestore/Template_R_Shiny_App ':ignore'), [Template R Shinydashboard App](https://github.com/movestore/Template_R_Shinydashboard_App ':ignore')
 
 ## How to write a Shiny Module for MoveApps
 In order to develop Shiny Modules for MoveApps, at least the two functions `shinyModuleUserInterface` and `shinyModule` must be provided. These functions must be stored in a file called `ShinyModule.R`.
@@ -65,14 +65,14 @@ shinyModule <- function(input, output, session, data) {
 
 
 #### Store Settings
-A button called `Store settings` will appear automatically on the bottom left side of the Shiny App. Here the user can store the personalized settings for subsequent runs of a workflow. The values stored are those that are entered and modified in the user interface function `shinyModuleUserInterface()`. This is achieved by using the `shiny::bookmarkButton()` embedded in the `ui` function in the moveapps system (see `./src/moveapps.R` in the template for reference).
+A button called `Store settings` will appear automatically on the bottom left side of the Shiny App. Here the user can store the personalized settings for subsequent runs of a Workflow. The values stored are those that are entered and modified in the user interface function `shinyModuleUserInterface()`. This is achieved by using the `shiny::bookmarkButton()` embedded in the `ui` function in the MoveApps system (see `./src/moveapps.R` in the template for reference).
 
-When `shiny::bookmarkButton()` is used locally, after clicking on the button by default a folder named "shiny_bookmarks" is created which contains a file named "input.rds". This "input.rds" file can be downloaded from the App on Moveapps by downloading the file "Stored Settings", enabeling the use of the same settings also locally.
+When `shiny::bookmarkButton()` is used locally, after clicking on the button by default a folder named `shiny_bookmarks` is created which contains a file named `input.rds`. This `input.rds` file can be downloaded from the App on MoveApps by downloading the file `Stored Settings`, enabeling the use of the same settings also locally.
 
 !\>  **Limitation** You cannot use `data` as a parameter name. This is reserved for the input that is passed on from the previous App.
 
 ## Integrate Shiny Apps into an automatic Workflow
-Shiny Apps can also be integrated into an automatic Workflow without the user having to interact with the App directly. This allows the Workflow to run automatically without interruptions. A "`Store settings`" button will always appear on the bottom left side of the Shiny App which the user can use to store the final settings of the Shiny App that should be used in the workflow.
+Shiny Apps can also be integrated into an automatic Workflow without the user having to interact with the App directly. This allows the Workflow to run automatically without interruptions. A `Store settings` button will always appear on the bottom left side of the Shiny App, which the user can use to store the final settings of the Shiny App that should be used in the Workflow.
 
 ### Input
 The same requirements apply to the input as already described above ([Input from the previous App](copilot-shiny-sdk.md#input-from-the-previous-app)).
@@ -96,9 +96,9 @@ shinyModule <- function(input, output, session, data) {
 ```
 
 ### Artefacts
-MoveApps allows the creation and saving of different files directly through the R function (e.g. csv, pdf, png), so called `artefacts`. Those artefacts can be created by the usual R command for saving the specific type of file. To get a valid path for the artefact use the SDK function `appArtifactPath(*.***)` (`*.***` is the name of the file, see example for csv and png below) and add the row `"createsArtifacts": true` in the [appspec.json](appspec.md). After running the App, the artefacts can then be downloaded from the `Show Downloads` list.
+MoveApps allows the creation and saving of different files directly through the R function (e.g. csv, pdf, png), so called `artefacts`. Those artefacts can be created by the usual R command for saving the specific type of file. To get a valid path for the artefact use the SDK function `appArtifactPath(*.***)` (`*.***` is the name of the file, see example for csv and png below) and add the row `"createsArtifacts": true` in the [appspec.json](appspec.md). After running the App, the artefacts can then be downloaded from the `App Outputs` list.
 ```
-rFunction = function(year, data) {
+rFunction <- function(year, data) {
     # Do something
     write.csv(artefact, file = appArtifactPath("artefact.csv"))
 	png(appArtifactPath("artefact.png"))
