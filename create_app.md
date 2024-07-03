@@ -103,4 +103,4 @@ Please, create some Workflow(s) and test if the App version is working as you ex
 If the App is performing good, please select `APPROVE` in the respective App version of the App in your App Overview (`My Apps/App Overview/*your_app_name*`). The App version will aquire the status `APPROVED`and become visible and usable for all registered MoveApps users. In case the App version does not perform as expected, please `RETRACT` it from the system, adapt your code and submit a new version. In the Workflow where the `TRAIL` App has been included, it will be marked as `Retracted` and give an error if executed.
 
 <kbd>![](files/Trial_AppVersion.png)</kbd>
-<kbd>![](files/Trial_RetractInWF.png)</kbd>
+<kbd>![](files/Trial_RetractedErrorMsg.png)</kbd>
