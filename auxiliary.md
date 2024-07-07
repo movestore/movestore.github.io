@@ -4,24 +4,23 @@ It is possible to design Apps that require auxiliary files, like e.g. a map with
 
  1. **Fixed auxiliary file** that the App developer provides in the GitHub repository. This file will be used for all analyses independent of the input data sets. We advice these data to be of global coverage.
 
- 2. **Local upload auxiliary file** that had to be provided by the App user when the workflow is created, i.e. during configuration of the App settings. It can be overwritten whenever necessary. If the App user has not uploaded the required auxiliary file, the App cannot run correctly.
+ 2. **Local upload auxiliary file** that is provided by the App user when the workflow is created, i.e. during configuration of the App settings. It can be overwritten whenever necessary. If an auxiliary file is required by the App and the user has not uploaded one, the App cannot run correctly.
 
  3. **Local upload auxiliary file with fixed fallback file** that is a combination of the above. The App developer provides a fallback file in the GitHub repository. This file will be used if the App user does not upload the required auxiliary file. However, if the App user does upload the required auxiliary file with correct extension from their local system, the fallback file is not used, but the uploaded one. This file can be overwritten whenever necessary.
  
-The App developer has the responsibility to decide if an auxiliary file is necessary for their App and if it can be an advantage to allow the App user to upload such a file to the App. We advice the provision of fixed auxiliary files or sensible fallback auxiliary files, so that the App can still run if the App user does not or cannot provide any file during App configuration. Often, it might be possible to provide a global map of lower resolution as fallback, but allow local upload of regional, higher resolution maps for analysis with tracks of that region. 
+Any combination of these three types of auxiliary files can be integrated into an App.
+
+The App developer has the responsibility to decide if an auxiliary file is necessary for their App and if it can be an advantage to allow the App user to upload such a file to the App. We advise developers to provide a fixed auxiliary file or sensible fallback auxiliary files, so that the App can still run if the App user does not or cannot provide any file during App configuration. For example, it might be possible to provide a global map of lower resolution as fallback, but allow local upload of regional, higher resolution maps for analysis with tracks of that region. If the auxiliary file is optional, the code should be tested thoroughly to ensure that the App runs successfully with and without this file.  
 
 In the past, the `LOCAL_FILE` setting required the App developer to define the exact name of the auxiliary file that the App users had to provide in line with the instructions, with the introduction of the `USER_FILE` setting this is not necessary any more. However, only one file can be uploaded per `USER_FILE` setting, else the use of zipping is necessary.
- 
-Note that any combination of the three types of auxiliary files can be integrated into an App.
 
+!> Note that local testing of Apps with auxiliary files is possible with the SDK (Software Development Kit) only if the folder for these files is called `provided-app-files`. 
 
 ## Fixed auxiliary files
 
 Any auxiliary files that the App developer wants to provide as fixed files have to be saved in the GitHub repository. The names of the files have to fit with the file names as used in the App's function code. For review and container building in MoveApps, the provision of these files has to be communicated in the [`appspec.json`](appspec.md) specification file via `providedAppFiles`.
  
 Please keep the files in (a) separate folder(s) in the GitHub repository, the folder name is required as input for the `providedAppFiles` specification (`from`). The `settingId` sets the name of the folder in the App container (on MoveApps) into which the content of the `providedAppFiles` folder is bundled and from where it can be called by the App's function code at run time (see example below and details in the Templates for [R](https://github.com/movestore/Template_R_Function_App/blob/master/src/io/app_files.R), [R Shiny](https://github.com/movestore/Template_R_Shiny_App/blob/master/src/io/app_files.R), [R Shinydashboard](https://github.com/movestore/Template_R_Shinydashboard_App/blob/master/src/io/app_files.R), and [Python](https://github.com/movestore/Template_Python_App/blob/main/sdk/moveapps_io.py) Apps).
-
-!> Note that local testing of Apps with auxiliary files is possible with the SDK (Software Development Kit) only, if the folder for these files is called `provided-app-files`. 
 
 #### Example
 
