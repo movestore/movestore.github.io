@@ -124,4 +124,4 @@ getAuxiliaryFilePath("app_file2")
 
 You cannot add files larger than 100MB to your repository as [GitHub blocks larger them](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github). The solution is to add the files to your release. To do this go to `Releases > Draft a new release` in your GitHub repository and add your files.
 
-After submitting your App on MoveApps, please inform about us (support@moveapps.org) about the addition of the large files to the release so we can do the necessary adjustments while building your App.
+After submitting your App on MoveApps, please inform us (support@moveapps.org) about the addition of the large file(s) to the release so we can perform the necessary adjustments while building your App.
