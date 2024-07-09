@@ -20,4 +20,6 @@ Radiobuttons allow the user to choose one option from a list of predefined optio
 }
 ```
 
-!\> Note that the `defaultValue` must always be available as an option.
+!\> Note that the `defaultValue` must always be available as an option for the user to be able to return to the default settings of the App.
+
+!\> If the `defaultValue` argument is removed, the user is obliged to select one of the options, but cannot return to the default setting of no option being selected. This is useful if one option must be selected for the App to work, but the developer does not want to set a default. 
