@@ -16,6 +16,8 @@ In the past, the `LOCAL_FILE` setting required the App developer to define the e
 
 !> Note that local testing of Apps with auxiliary files is possible with the SDK (Software Development Kit) only if the folder for these files is called `provided-app-files`. 
 
+!> If your fixed or fallback file is larger than 100MB GitHub will not allow it to be uploaded to the repository. At the end of this page you can find the instructions to overcome this issue.
+
 ## Fixed auxiliary files
 
 Any auxiliary files that the App developer wants to provide as fixed files have to be saved in the GitHub repository. The names of the files have to fit with the file names as used in the App's function code. For review and container building in MoveApps, the provision of these files has to be communicated in the [`appspec.json`](appspec.md) specification file via `providedAppFiles`.
@@ -117,3 +119,9 @@ getAuxiliaryFilePath("app_file1")
 ...
 getAuxiliaryFilePath("app_file2")
 ```
+
+## Adding large fixed or fallback files to an App
+
+You cannot add files larger than 100MB to your repository as [GitHub blocks larger them](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github). The solution is to add the files to your release. To do this go to `Releases > Draft a new release` in your GitHub repository and add your files.
+
+After submitting your App on MoveApps, please inform about us (support@moveapps.org) about the addition of the large files to the release so we can do the necessary adjustments while building your App.
