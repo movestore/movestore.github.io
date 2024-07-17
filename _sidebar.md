@@ -19,15 +19,14 @@
       - [How to create an R App](create_app.md)
       - [Programming with I/O type 'move2::move2_**'](programing_move2.md)
       - [Manage your R Apps with GitHub and Rstudio](manage_Rapp_github.md)
+	  - [R App details](copilot-r-sdk.md)
+      - [R-Shiny App details](copilot-shiny-sdk.md)
   - Python Tutorials
       - [How to create a Python App](create_py_app.md)
       - [Programming with I/O type MovingPandas.TrajectoryCollection](movingPandas_colnames.md)
       - [Manage your Python Apps with GitHub](manage_Pyapp_github.md)
+	  - [Python App details](https://github.com/movestore/python-sdk/blob/main/developer_README.md ':ignore')
   - Reference
-    - App Code
-      - [R](copilot-r-sdk.md)
-      - [R-Shiny](copilot-shiny-sdk.md)
-      - [Python](https://github.com/movestore/python-sdk/blob/main/developer_README.md ':ignore')
     - [App Specification](appspec.md)
       - [Settings](/appspec/current/settings/README.md)
         - [Text](/appspec/current/settings/string.md)
