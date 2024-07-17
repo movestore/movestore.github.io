@@ -11,7 +11,7 @@ See below to find out how to get started.
 
 The navigation bar at the top of the MoveApps website contains several buttons. If not all buttons are show, they can be accessed through the menu on the right.
 
-<kbd>![MoveApps navigation bar](files/MoveApps_navigationbar_2.png 'size:800x')</kbd>
+<kbd>![MoveApps navigation bar](files/MoveApps_navigationbar.png 'size:800x')</kbd>
 
 - **App browser**: here you find an overview of all existing Apps with Categories and other information.
 - **News**: important new features and exciting MoveApps news will be presented here.
@@ -30,7 +30,7 @@ After logging in, the header also contains buttons to your Dashboard and to your
 
 If you want to use existing MoveApps Apps to analyse your data, please take a look at the **Workflows** section in the menu of the MoveApps manual.
 
-<kbd>![MoveApps menu Workflows](files/Manual_Menu_Workflows.png 'size:800x')</kbd>
+<kbd>![MoveApps menu Workflows](files/Manual_Menu_Workflows.png 'size:400x')</kbd>
 
 Here, you will find tutorials on how to build a Workflow (i.e. a sequence of Apps to import, process and analyse your data) and explanations on other Workflow features. We recommend starting with [Hello world! - A Workflow example](hello_world_workflow.md).
 
@@ -40,6 +40,6 @@ To find out which Apps are currently available to be used, take a look at the [A
 ## Getting started - creating new Apps
 Code developers (i.e. anyone who creates code to process and analyse movement data) are encouraged to upload new Apps. Currently, we support R, R-Shiny and Python Apps. These are meant to be provided in such a way that standard movement data sets of animals or other moving objects can be analysed. If you want to submit a new App, please take a look at the **Apps** section in the menu of the MoveApps manual.
 
-<kbd>![MoveApps menu Apps](files/Manual_Menu_Apps.png 'size:800x')</kbd>
+<kbd>![MoveApps menu Apps](files/Manual_Menu_Apps.png 'size:400x')</kbd>
 
 We recommend you to take a look at the [Coding best practises](best_practices_coding.md) and the information on [Input/Output types](IO_types.md). We have created **R Tutorials** for R and R-Shiny Apps, and **Python Tutorials** for Python Apps. When starting to write an App, please carefully follow the steps [to create an R or R-Shiny App](create_app.md), or [to create a Python App](create_py_app.md).
