@@ -1,8 +1,8 @@
 # MoveApps User Manual
 
-[MoveApps](https://www.moveapps.org/) serves as a platform that allows the exchange and easy use of code for the [**analysis of movement data**](https://www.moveapps.org/imprint#Scope).
+[MoveApps](https://www.moveapps.org/ ':ignore') serves as a platform that allows the exchange and easy use of code for the [**analysis of movement data**](https://www.moveapps.org/imprint#Scope ':ignore').
 
-Code developers (i.e. anyone who creates code to process and analyse movement data) are encouraged to share (a slightly adapted version of) their movement analysis code, which other people can then use *without knowledge of programming*. Users can configure and stitch together analysis Apps (i.e. modules that perform an analysis step) to create a Workflow that imports and analyses their data. MoveApps runs fully online and therefore, users do not need to install any software on their computer. It is possible to directly download and analyse data from the [Movebank database](http://www.movebank.org), or to upload files.
+Code developers (i.e. anyone who creates code to process and analyse movement data) are encouraged to share (a slightly adapted version of) their movement analysis code, which other people can then use *without knowledge of programming*. Users can configure and stitch together analysis Apps (i.e. modules that perform an analysis step) to create a Workflow that imports and analyses their data. MoveApps runs fully online and therefore, users do not need to install any software on their computer. It is possible to directly download and analyse data from the [Movebank database](http://www.movebank.org ':ignore'), or to upload files.
 
 See below to find out how to get started.
 
@@ -34,7 +34,7 @@ If you want to use existing MoveApps Apps to analyse your data, please take a lo
 
 Here, you will find tutorials on how to build a Workflow (i.e. a sequence of Apps to import, process and analyse your data) and explanations on other Workflow features. We recommend starting with [Hello world! - A Workflow example](hello_world_workflow.md).
 
-To find out which Apps are currently available to be used, take a look at the [App browser](https://www.moveapps.org/apps/browser).
+To find out which Apps are currently available to be used, take a look at the [App browser](https://www.moveapps.org/apps/browser ':ignore').
 
 
 ## Getting started - creating new Apps
