@@ -20,7 +20,7 @@ From the main menu, select `Workflows` and then `Create New Workflow`. After pro
 
 Note that recently, we have added the option to download non-location data from Movebank. These are e.g. accelerometer, accessory measurement, heart rate or geolocation raw data. In the Movebank Non-Location App, beware of the option to select only studies that contain non-location data. Furthermore, it is only allowed to download one type of non-location data at a time. Look out for Apps that work with those data types in the App Browser; they should have the Input/Output type "move2::move2_nonloc".
 
-<kbd>![](files/NonLoc_App_view.png ':size=100x')</kbd>
+<kbd>![](files/NonLoc_App_view.png ':size=600x')</kbd>
 
 <kbd>![](files/NonLoc_Download_selectStudy.png ':size=900x')</kbd>
 
