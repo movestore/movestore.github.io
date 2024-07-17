@@ -2,9 +2,10 @@
 
 [MoveApps](https://www.moveapps.org/) serves as a platform that allows the exchange and easy use of code for the [**analysis of movement data**](https://www.moveapps.org/imprint#Scope).
 
-Code developers are encouraged to share (a slightly adapted version of) their movement analysis code, which other people can then use *without knowledge of programming*. Users can configure and stitch together analysis Apps to create a Workflow that imports and analyses their data. See below to find out how to get started.
+Code developers (i.e. anyone who creates code to process and analyse movement data) are encouraged to share (a slightly adapted version of) their movement analysis code, which other people can then use *without knowledge of programming*. Users can configure and stitch together analysis Apps (i.e. modules that perform an analysis step) to create a Workflow that imports and analyses their data. MoveApps runs fully online and therefore, users do not need to install any software on their computer. It is possible to directly download and analyse data from the [Movebank database](http://www.movebank.org), or to upload files.
 
-It is possible to directly download and analyse data from the [Movebank database](http://www.movebank.org), or to upload files.
+See below to find out how to get started.
+
 
 ## Navigating the MoveApps website
 
