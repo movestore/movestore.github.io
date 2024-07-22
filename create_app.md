@@ -71,10 +71,7 @@ Each App is defined by an input and output type (IO types) and runtime environme
 ### IO types
 Input and output types have long been restricted to `move::moveStack`, but can now be extended to any other movement related data types. Due to deprecation of the `move` package we discourage use of `move::moveStack` for any new Apps. Please use `move2::move2_loc` instead.
 
-After selecting R or R-Shiny as your Runtime Environment, check which types are available in the dropdown list. If you need a new IO type for your App, please go to `request a new IO type`. Please describe your request to us, link to the documentation of the new IO type and adapt our [cargo agent repository](https://github.com/movestore/cargo-agent-r) accordingly, with creating and linking to a pull request. See the [README](https://github.com/movestore/cargo-agent-r#readme) there for details. Once an administrator has approved your IO type request, it will be available on the platform. If it makes sense you can also provide [Translator Apps](translator.md) to/from other IO types to widen the usability of your App on MoveApps.
-
-<kbd>![](files/ReqNewIOtype.png)
-![](files/ReqNewIOtype2.png)</kbd>
+After selecting R or R-Shiny as your Runtime Environment, check which IO types are available in the dropdown list. If you need a new IO type for your App, please check out the instructions on how to [request a new IO type](IO_types.md).
 
 Note that the repository link, IO types and runtime environment will be fixed to the App and cannot be changed afterwards. When you have successfully created the App, it will be listed in the overview `My Apps > App Overview`
 

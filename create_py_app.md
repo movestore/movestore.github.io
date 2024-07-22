@@ -55,10 +55,7 @@ Each App is defined by an input and output type (IO types) and runtime environme
 ![](files/InitApp_IOtype2.png)</kbd>
 
 ### Input and Output types
-Input and output (IO) types for Python are so far restricted to MovingPandas Trajectory Collections. Those can easily be transformed to GeoPandas objects. However, IO types can now be extended to any other movement related data types. After selecting Python as your Runtime Environment, check which types are available in the dropdown list. If you need a new IO type for your App, please go to `request a new IO type`. Please describe your request to us, link to the documentation of the new IO type and adapt our [cargo agent repository](https://github.com/movestore/cargo-agent-python) accordingly, by creating and linking to a pull request. See the [README](https://github.com/movestore/cargo-agent-python#readme) for details. Once an administrator has approved your IO type request, it will be available on the platform. If it makes sense you can also provide [Translator Apps](translator.md) to/from other IO types to widen the usability of your App on MoveApps.
-
-<kbd>![](files/ReqNewIOtype3.png)
-![](files/ReqNewIOtype2.png)</kbd>
+Input and output (IO) types for Python are so far restricted to MovingPandas Trajectory Collections. Those can easily be transformed to GeoPandas objects. However, IO types can now be extended to any other movement related data types. After selecting Python as your Runtime Environment, check which types are available in the dropdown list. If you need a new IO type for your App, please check out the instructions on how to [request a new IO type](IO_types.md).
 
 Note that the repository link, Runtime Environment and IO types will be fixed to the App and cannot be changed afterwards. When you have successfully created the App, it will be listed in the overview `My Apps > App Overview`
 
