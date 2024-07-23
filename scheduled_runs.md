@@ -34,3 +34,5 @@ It is possible to have an E-mail sent to the user's E-mail address after each of
 <kbd><img src="files/output_email_api.png" width="750"></kbd>
 
 Note that there is an App that has been developed to modify the E-mail message of the scheduled runs based on results from the Workflow: the ["Email Alert"](https://www.moveapps.org/apps/browser/362b42c7-d7a2-4fa6-8d08-b3ddae002f9e) App. It creates a text file called `email_alert_text.txt` that will be automatically added to the text of the E-mail message. It allows, e.g. an alert message to be sent if a certain condition is fulfilled in the analysed data set.
+
+!\> Beware that changes of Animal names in your Movebank study will lead to errors in scheduled runs that include data download from Movebank. For solving this issue, go back to the Movebank App settings and reselect the correct Animals.
