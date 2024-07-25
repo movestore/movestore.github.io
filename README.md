@@ -9,7 +9,7 @@ See below to find out how to get started.
 
 ## Navigating the MoveApps website
 
-The navigation bar at the top of the MoveApps website contains several buttons. If not all buttons are show, they can be accessed through the menu on the right.
+The navigation bar at the top of the MoveApps website contains several buttons. If not all buttons are shown, they can be accessed through the menu on the right.
 
 <kbd>![MoveApps navigation bar](files/MoveApps_navigationbar.png 'size:600x')</kbd>
 
