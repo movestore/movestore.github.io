@@ -11,7 +11,7 @@ See below to find out how to get started.
 
 The navigation bar at the top of the MoveApps website contains several buttons. If not all buttons are show, they can be accessed through the menu on the right.
 
-<kbd>![MoveApps navigation bar](files/MoveApps_navigationbar.png 'size:800x')</kbd>
+<kbd>![MoveApps navigation bar](files/MoveApps_navigationbar.png 'size:600x')</kbd>
 
 - **App browser**: here you find an overview of all existing Apps with Categories and other information.
 - **News**: important new features and exciting MoveApps news will be presented here.
