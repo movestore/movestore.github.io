@@ -19,7 +19,7 @@
       - [How to create an R App](create_app.md)
       - [Programming with IO type 'move2::move2_**'](programing_move2.md)
       - [Manage your R Apps with GitHub and Rstudio](manage_Rapp_github.md)
-      - [R App details](copilot-r-sdk.md)
+      - [Writing R App code](copilot-r-sdk.md)
       - [R-Shiny App details](copilot-shiny-sdk.md)
   - Python Tutorials
       - [How to create a Python App](create_py_app.md)
