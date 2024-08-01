@@ -1,6 +1,6 @@
 ## Notes on programming with the object of class `move2`
 
-Currently the `move2::move2_loc` is the most common input/output (I/O) type in MoveApps. This I/O type is an object of class `move2` which is restricted to only contain location events. The `move2` object allows also to contain non location events, and a mix of both. The I/O type `move2::move2_nonloc` is also a object of class `move2` restricted to only contain non location events. The following applies to both I/O types as both are objects of class `move2`.
+Currently, the `move2::move2_loc` is the most common input/output (IO) type in MoveApps. This IO type is an object of class `move2` which is restricted to only contain location events. The `move2` object allows also to contain non location events, and a mix of both. The IO type `move2::move2_nonloc` is also a object of class `move2` restricted to only contain non location events. The following applies to both IO types as both are objects of class `move2`.
 
 The `move2` object flexibly accepts any column to be defining the timestamps or the track IDs. To avoid downstream errors, please do not use hardcoded column names for timestamps and track IDs within your Apps, but use the available functions to retrieve this information:
 
