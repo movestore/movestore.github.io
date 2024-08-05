@@ -47,6 +47,8 @@ rFunction <- function(data) {
 You can receive parameters or settings for your R function from the MoveApps interface. These parameters/settings must be defined in the [appspec.json](appspec.md) file (also see [settings](appspec/current/settings/README.md)) and are configured by the user within MoveApps. When the function is called, the parameters are passed on to it. You can use the MoveApps [Settings Editor](https://www.moveapps.org/apps/settingseditor ':ignore') to generate the App configuration for the `appspec.json` file.
 
 ##### Example
+<kbd>![](files/sdk_settings_example.png)</kbd>
+
 ```
 *appspec.json*
 
