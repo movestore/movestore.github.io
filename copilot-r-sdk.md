@@ -88,7 +88,7 @@ rFunction <- function(data, line_width, legend) {
 ```
 Note: the `app-configuration.json` file is only needed during the App development to simulate an App run locally.
 
-!\>  **Limitation** You cannot use `data` as a parameter name. This is reserved for the input that is passed on from the previous App (see above).
+!\>  **Limitation**: you cannot use `data` as a parameter name. This is reserved for the input that is passed on from the previous App (see above).
 
 
 #### Auxiliary input files
@@ -131,7 +131,7 @@ rFunction <- function(data, year) {
 }
 ```
 
-**Note**: Only files are permitted to act as MoveApps App artifact! If your app produces a directory as an App artifact you have to bundle it eg. by zipping it. In other words: at the moment your App completes its work there must be only files (i.e. no folders) present in APP_ARTIFACTS_DIR.
+!\> **Note**: Only files are permitted to act as MoveApps App artifact! If your app produces a directory as an App artifact you have to bundle it eg. by zipping it. In other words: at the moment your App completes its work there must be only files (i.e. no folders) present in APP_ARTIFACTS_DIR.
 
 ##### Example for zipping:
 ```
