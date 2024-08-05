@@ -95,17 +95,40 @@ shinyModule <- function(input, output, session, data) {
 }
 ```
 
-### Artefacts
-MoveApps allows the creation and saving of different files directly through the R function (e.g. csv, pdf, png), so called `artefacts`. Those artefacts can be created by the usual R command for saving the specific type of file. To get a valid path for the artefact use the SDK function `appArtifactPath(*.***)` (`*.***` is the name of the file, see example for csv and png below) and add the row `"createsArtifacts": true` in the [appspec.json](appspec.md). After running the App, the artefacts can then be downloaded from the `App Outputs` list.
+### Producing App artifacts
+MoveApps allows the creation and saving of different files directly through the R function (e.g. csv, pdf, png), so called `arteficts`. Those artifacts can be created by the usual R command for saving the specific type of file. To get a valid path for the artefact use the SDK function `appArtifactPath(*.***)` (`*.***` is the name of the file, see example for csv and png below). After running the App, the artefacts can then be downloaded from the `App Outputs` list.
+
+##### Example
 ```
+* R code*
+
 rFunction <- function(year, data) {
     # Do something
     write.csv(artefact, file = appArtifactPath("artefact.csv"))
+	
 	png(appArtifactPath("artefact.png"))
 	# Plot your image
 	dev.off()
 }
 ```
+
+!\> **Note**: Only files are permitted to act as MoveApps App artifact! If your app produces a directory as an App artifact you have to bundle it eg. by zipping it. In other words: at the moment your App completes its work there must be only files (i.e. no folders) present in APP_ARTIFACTS_DIR.
+
+##### Example for zipping:
+```
+*R code*
+
+library('zip')
+dir.create(targetDirFiles <- tempdir())
+...
+# add any files to targetDirFiles
+...
+zip_file <- appArtifactPath(paste0("myfiles.zip"))
+zip::zip(zip_file, 
+    files = list.files(targetDirFiles, full.names = TRUE),
+    mode = "cherry-pick")
+```
+
 
 ### Auxiliary files
 It is possible to design Apps that require auxiliary files, e.g. a map with environmental information, that are useful for analysis with the tracking data. There are three types of auxiliary files (see below). For more details and how do integrate the full functionality into an App see the [detailed description](auxiliary.md).
