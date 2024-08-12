@@ -1,16 +1,15 @@
 # Input of an auxiliary/user file
 
-!> Note that this setting has been created to replace the [`LOCAL_FILE`](appspec/current/settings/local_file.md) setting. 
+!> Note that this setting has been created to replace the deprecated [`LOCAL_FILE`](appspec/current/settings/local_file.md) setting. 
 
----
 
 It is possible to design Apps that require auxiliary files, e.g. a map with environmental information, that are useful for analysis with the tracking data. The App needs the auxiliary files during its run time. Therefore, they have to be either provided permanently by the App developer or uploaded to MoveApps from a local system by the App user. This leads to three types of auxiliary files that are described in more details in the section about [Auxiliary Files](auxiliary.md).
 
-In the `appspec.json`, these auxiliary files can be adressed by a setting named `USER_FILE` that defines a single own auxiliary file that the user can upload in the process of Workflow setup. The settings window has to be defined as specified in the below example. Note that (different from the  soon to be deprecated `LOCAL_FILE` setting) the name of the file does not have to exactly match any name, but the file type/extension only, which the App developer should provide to the users in the settings description. That way we overcome the problem that wrong file names have led to App errors in the past. However, this improvement comes at the price that upload of multiple files is only possible as .zip files or by adding several `USER_FILE` settings. Note that handling of zip-files (i.e. unzip) must be adressed in the code of the respective App.
+In the `appspec.json`, these auxiliary files can be adressed by a setting named `USER_FILE` that defines a single own auxiliary file that the user can upload in the process of Workflow setup. The settings window has to be defined as specified in the below example. Note that (different from the deprecated `LOCAL_FILE` setting) the name of the file does not have to exactly match any name, but the file type/extension only, which the App developer should provide to the users in the settings description. That way we overcome the problem that wrong file names have led to App errors in the past. However, this improvement comes at the price that upload of multiple files is only possible as .zip files or by adding several `USER_FILE` settings. Note that handling of zip-files (i.e. unzip) must be adressed in the code of the respective App.
 
 
 ```
-appspec.json
+*appspec.json*
 
 {
   "id": "app_file1",
@@ -32,7 +31,7 @@ If the App developer can/wants to provide fallback auxiliary files (which we rec
 
 
 ```
-appspec.json
+*appspec.json*
 
 "providedAppFiles": [
   {
