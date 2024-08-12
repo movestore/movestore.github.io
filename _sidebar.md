@@ -20,12 +20,12 @@
       - [Programming with IO type 'move2::move2_**'](programing_move2.md)
       - [Manage your R Apps with GitHub and Rstudio](manage_Rapp_github.md)
       - [Writing R App code](copilot-r-sdk.md)
-      - [R-Shiny App details](copilot-shiny-sdk.md)
+      - [Writing R-Shiny App code](copilot-shiny-sdk.md)
   - Python Tutorials
       - [How to create a Python App](create_py_app.md)
       - [Programming with IO type MovingPandas.TrajectoryCollection](movingPandas_colnames.md)
       - [Manage your Python Apps with GitHub](manage_Pyapp_github.md)
-      - [Python App details](https://github.com/movestore/python-sdk/blob/main/developer_README.md ':ignore')
+      - [Writing Python App code](copilot-python-sdk.md)
   - Reference
     - [App Specification](appspec.md)
       - [Settings](/appspec/current/settings/README.md)
@@ -58,7 +58,7 @@
     - [Template R Function App](https://github.com/movestore/Template_R_Function_App ':ignore')
     - [Template R Shiny App](https://github.com/movestore/Template_R_Shiny_App ':ignore')
     - [Template R Shinydashboard App](https://github.com/movestore/Template_R_Shinydashboard_App ':ignore')
-    - [Template Python App](https://github.com/movestore/python-sdk ':ignore') 
+    - [Template Python App](https://github.com/movestore/Template_Python_App ':ignore') 
 
 - Publication
   - [Citation of Apps](cite_app.md)
