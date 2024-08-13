@@ -14,6 +14,7 @@ Please use this GitHub [Template R Function App](https://github.com/movestore/Te
 ## Creating the function
 After having defined and loaded the packages that your code will require, an R function called `rFunction` must be created in your `RFunction.R` file.
 
+##### Example
 ```
 *R code*
 
@@ -135,7 +136,7 @@ rFunction <- function(data, year) {
 
 !\> **Note**: Only files are permitted to act as MoveApps App artifact! If your app produces a directory as an App artifact you have to bundle it eg. by zipping it. In other words: at the moment your App completes its work there must be only files (i.e. no folders) present in APP_ARTIFACTS_DIR.
 
-##### Example for zipping:
+##### Example for zipping
 ```
 *R code*
 
