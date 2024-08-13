@@ -1,10 +1,12 @@
 # How to create an R or RShiny App
 
-All Apps to be submitted must be managed in a public [GitHub](https://github.com) repository. When creating R Apps, the repository should contain the program code for executing the App (in a file named `RFunction.R` for R-Apps or `ShinyModule.R` for R-Shiny Apps), a specification of the App represented by an [appspec.json](appspec.md) file and a [documentation file](README_file_description.md), which needs to be the repository README.
+Here you find a step-by-step guide on creating a MoveApps R App. **Please carefully follow the steps below to create an App.**
+
+All Apps to be submitted must be managed in a public [GitHub](https://github.com ':ignore') repository. When creating R Apps, the repository should contain the program code for executing the App (in a file named `RFunction.R` for R-Apps or `ShinyModule.R` for R-Shiny Apps), a specification of the App represented by an [`appspec.json`](appspec.md) file and a documentation file (called `README.md`), which needs to be the repository README.
 
 For R and R-Shiny Apps we provide templates containing Software Development Kits (SDK) with an RStudio Project that allows Apps to run and perform as if in the MoveApps interface. We encourage you to use one of these GitHub templates: [Template R Function App](https://github.com/movestore/Template_R_Function_App ':ignore'), [Template R Shiny App](https://github.com/movestore/Template_R_Shiny_App ':ignore'), [Template R Shinydashboard App](https://github.com/movestore/Template_R_Shinydashboard_App ':ignore') . Please read the `developer_README.md` contained in each template for more information about the usage and the optional tools provided with it. The GitHub templates include all necessary files and example data for testing your App. 
 
-The following image contains an overview of the files in each of the templates and whether they need to be adapted or not. Please carefully follow the steps to create and App below.
+The following image contains an overview of the files in each of the templates and whether they need to be adapted or not.
   
 ![](files/TemplateFilesPurpose_R.jpg)
 
@@ -79,7 +81,7 @@ The link to your repository (**Repository URL**) has to end with `.git`; please 
 
 <kbd>![](files/initializeApp_sub2.png ':size=600x')</kbd>
 
-Each App is defined by a runtime environment and an input and output type (IO types) that have to be specified. Possible environments are R, R-Shiny and Python. Input and output types have long been restricted to `move::moveStack`, but can now be extended to any other movement related data types. Due to deprecation of the `move` package we discourage use of `move::moveStack` for any new Apps. Please use `move2::move2_loc` instead.
+Each App is defined by a **Runtime Environment** and an **Input Type** and **Output Type** (IO types) that have to be specified. Possible environments are R, R-Shiny and Python. Input and output types have long been restricted to `move::moveStack`, but can now be extended to any other movement related data types. Due to deprecation of the `move` package we discourage use of `move::moveStack` for any new Apps. Please use `move2::move2_loc` instead.
 
 After selecting R or R-Shiny as your Runtime Environment, check which IO types are available in the dropdown list. If you need a new IO type for your App, please check out the instructions on how to [request a new IO type](IO_types.md).
 
