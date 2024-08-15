@@ -39,7 +39,9 @@ More information on the files in the template and their functions can be found i
 
 
 ### Step 4: Develop the App code locally within the template
-MoveApps Apps can be developed in your usual compiler/editor (e.g. PyCharm). The App Python code has to be saved in the file `./app/app.py`. MoveApps will call your custom App business logic and will instantiate the class `App`. Note that it is possible to add additional `.py` files to `./app/` from which functions can be imported into the main `app.py` file. We provide instructions on [writing Python App code](copilot-python-sdk.md), including information on input files and parameters.
+MoveApps Apps can be developed in your usual compiler/editor (e.g. PyCharm). The App Python code has to be saved in the file `./app/app.py`. MoveApps will call your custom App business logic and will instantiate the class `App`. Note that it is possible to add additional `.py` files to `./app/**` from which functions can be imported into the main `app.py` file. We provide instructions on [writing Python App code](copilot-python-sdk.md), including information on input files and parameters.
+
+!\> The class must be named `App` and the file must be named `./app/app.py`, do not alter it.
 
 
 ### Step 5: Test your App locally
