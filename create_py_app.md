@@ -65,7 +65,7 @@ Write about the detailed function and use of the App including possible error ca
 
 
 ### Step 9: Upload all changes to your GitHub repository
-After developing the App code and updating all required files, upload/push all changes to your App's GitHub repository. The following three files are mandatory for running on MoveApps: `./appspec.json`, `./environment.yml`, `./app/app.py` and a documentation file (needs to be`./README.md`). Additional files can be included (see image above), but are not required.
+After developing the App code and updating all required files, upload/push all changes to your App's GitHub repository. The following three files are mandatory for running on MoveApps: `./appspec.json`, `./environment.yml`, `./app/app.py` and a documentation file (needs to be `./README.md`). Additional files can be included (see image above), but are not required.
 
 
 ### Step 10: Create a Tag/Release

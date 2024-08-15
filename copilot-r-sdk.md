@@ -117,7 +117,7 @@ rFunction <- function(data) {
 }
 ```
 
-#### Producing App artifacts
+#### Producing artifacts
 MoveApps allows the creation and saving of different files directly through the R function (e.g. csv, pdf, png), so called `artifacts`. Those artifacts can be created by the usual R command for saving the specific type of file. To get a valid path for the artifact use the SDK function `appArtifactPath(*.***)` (`*.***` is the name of the file, see example for csv and png below). After running the App, the artifacts can then be downloaded by the user from the Workflow `Output` overview.
 
 ##### Example
