@@ -124,7 +124,7 @@ MoveApps allows the creation and saving of different files directly through the 
 ```
 *R code*
 
-rFunction <- function(data, year) {
+rFunction <- function(data) {
     # Do something
     write.csv(artifact, file = appArtifactPath("artifact.csv"))
 	
@@ -142,9 +142,9 @@ rFunction <- function(data, year) {
 
 library('zip')
 dir.create(targetDirFiles <- tempdir())
-...
+
 # add any files to targetDirFiles
-...
+
 zip_file <- appArtifactPath(paste0("myfiles.zip"))
 zip::zip(zip_file, 
     files = list.files(targetDirFiles, full.names = TRUE),
