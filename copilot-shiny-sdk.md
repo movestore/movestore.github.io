@@ -13,10 +13,12 @@ Please use one of these GitHub templates: [Template R Shiny App](https://github.
 - It is possible to use parallel computing within MoveApps, please check out [this page](parallelcomp.md).
 
 
-## Creating a Shiny Module for MoveApps
+## Creating the functions
 In order to develop Shiny Modules for MoveApps, at least the two functions `shinyModuleUserInterface` and `shinyModule` must be provided. These functions must be stored in a file called `ShinyModule.R`.
 
-### shinyModuleUserInterface() - defining the User Interface
+Please keep the number of packages (libraries) as low as possible. Advice: use list.functions.in.file("ShinyModule.R") from R package NCmisc to check which libraries are used by your code.
+
+#### shinyModuleUserInterface() - defining the User Interface
 Within this function the Shiny User Interface (UI) must be defined . All input and output and brush IDs that appear in the function body need to be wrapped in a call to the namespace function `ns()`.
 
 ##### Example
@@ -53,8 +55,7 @@ shinyModuleUserInterface <- function(id, label) {
 }
 ```
 
-
-### shinyModule() - defining the module server functions
+#### shinyModule() - defining the module server functions
 This function contains the module server functions. When `uiOutput`/`renderUI` is used, the IDs of the inputs/outputs also need to be wrapped in the `ns()` function.
 
 ##### Example
@@ -73,7 +74,7 @@ shinyModule <- function(input, output, session) {
 
 ### App Input
 
-#### Input from the previous App
+#### Input from previous App
 In order to use the result of the previous App in the Workflow, one of the parameters of the `shinyModule` function must be named `data`. Note that the data type (IO type) of `data` is defining your App's input type that you need to specify at App initialization. Currently, the most widely used IO type is `move2::move2_loc`. [This page](IO_types.md) contains an overview of all available IO types and instructions on how to request a new IO type.
 
 ##### Example
@@ -89,6 +90,42 @@ shinyModule <- function(input, output, session, data) {
 !\> The data parameter, in turn, is **not** passed on to the `shinyModuleUserInterface` function.
 
 
+#### MoveApps parameters
+You can receive parameters or settings for your `Shiny Module` function from the App's User Interface. These parameters/settings can be configured by the user within MoveApps.
+
+A button called `Store settings` will appear automatically on the bottom left side of the Shiny App. Here the user can store the personalized settings for subsequent runs of an (automatic) Workflow. The values stored are those that are entered and modified in the user interface function `shinyModuleUserInterface()`. This is achieved by using the `shiny::bookmarkButton()` embedded in the `ui` function in the MoveApps system (see [`./src/moveapps.R`](https://github.com/movestore/Template_R_Shiny_App/blob/master/src/moveapps.R) in the template for reference).
+
+When `shiny::bookmarkButton()` is used locally, after clicking on the button by default a folder named `shiny_bookmarks` is created which contains a file named `input.rds`. This `input.rds` file can be downloaded from the App on MoveApps by downloading the file `Stored Settings`, enabeling the use of the same settings also locally.
+
+##### Example from [`Simple Map`](https://github.com/movestore/simple-map/blob/master/ShinyModule.R)
+```
+*R code*
+
+shinyModuleUserInterface <- function(id, label) {
+	ns <- NS(id)
+  
+	tagList(
+		titlePanel("Simple map with coastlines"),
+		sliderInput(inputId = ns("num"), 
+			label = "Choose edge size", 
+			value = 0, min = 0, max = 30),
+		withSpinner(plotOutput(ns("map"),height="90vh"))
+	)
+}
+
+shinyModule <- function(input, output, session, data) {
+
+	plotInput <- reactive({
+		map("world",xlim=c(min(lon())-input$num,max(lon())+input$num),ylim=c(min(lat())-input$num,max(lat())+input$num))
+	})
+	
+	
+}
+```
+
+!\>  **Limitation** You cannot use `data` as a parameter name. This is reserved for the input that is passed on from the previous App.
+
+
 #### Auxiliary input files
 It is possible to design Apps that require auxiliary files as input, e.g. a map with environmental information, that are useful for analysis with the tracking data. There are three types of auxiliary files (see below). For more details and to integrate the full functionality into an App see the [detailed description](auxiliary.md).
 
@@ -97,17 +134,6 @@ It is possible to design Apps that require auxiliary files as input, e.g. a map 
 2. **Local upload auxiliary files** that have to be provided by the App user when the Workflow is created, i.e. during configuration of the App settings. If the App user has not uploaded the required auxiliary files, the App cannot run correctly.
 
 3. **Local upload auxiliary files with fixed fallback files** that are a combination of the above. The App developer provides a set of fallback files in the GitHub repository. These files will be used if the App user does not upload the required auxiliary files. However, if the App user does upload the required auxiliary files from their local system, the uploaded files are used instead of the fallback files.
-
-
-### Store Settings
-A button called `Store settings` will appear automatically on the bottom left side of the Shiny App. Here the user can store the personalized settings for subsequent runs of a Workflow. The values stored are those that are entered and modified in the user interface function `shinyModuleUserInterface()`. This is achieved by using the `shiny::bookmarkButton()` embedded in the `ui` function in the MoveApps system (see `./src/moveapps.R` in the template for reference).
-
-When `shiny::bookmarkButton()` is used locally, after clicking on the button by default a folder named `shiny_bookmarks` is created which contains a file named `input.rds`. This `input.rds` file can be downloaded from the App on MoveApps by downloading the file `Stored Settings`, enabeling the use of the same settings also locally.
-
-!\>  **Limitation** You cannot use `data` as a parameter name. This is reserved for the input that is passed on from the previous App.
-
-#### Integrate Shiny Apps into an automatic Workflow
-Shiny Apps can also be integrated into an automatic Workflow without the user having to interact with the App directly. This allows the Workflow to run automatically without interruptions. A `Store settings` button will always appear on the bottom left side of the Shiny App, which the user can use to store the final settings of the Shiny App that should be used in the Workflow.
 
 
 ### App Output

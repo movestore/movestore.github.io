@@ -126,8 +126,8 @@ It is possible to design Apps that require auxiliary files as input, e.g. a map 
  2. **Local upload auxiliary files** that have to be provided by the App user when the Workflow is created, i.e. during configuration of the App settings. If the App user has not uploaded the required auxiliary files, the App cannot run correctly.
 
  3. **Local upload auxiliary files with fixed fallback files** that are a combination of the above. The App developer provides a set of fallback files in the GitHub repository. These files will be used if the App user does not upload the required auxiliary files. However, if the App user does upload the required auxiliary files from their local system, the uploaded files are used instead of the fallback files.
- 
- 
+
+
 ## App Output
 The result of the function must be defined as a return value at the end of the function code. Then, this object can be processed accordingly as input in the next App of the Workflow. Note that the data type (IO type) of `result` is defining your App's output type that you need to specify at App initialization. Currently, the only available IO type for Python is `MovingPandas.TrajectoryCollection`. [This page](IO_types.md) contains an overview of all available IO types and instructions on how to request a new IO type.
 
