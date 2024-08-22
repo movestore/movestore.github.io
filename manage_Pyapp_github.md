@@ -39,6 +39,8 @@ This feature was introduced in June 2023. If you created your App before this da
 3. Once these files are added you can manually execute the GH action named *Template Synchronization*.
 To do this, in your GitHub repository go to `Actions > Template Synchronization > Run workflow > Run workflow`
 
+4. Add the library `deprecated` to your `environment.yml` file.
+
 <kbd>![](files/sync_py_template.png)</kbd>
 
 
