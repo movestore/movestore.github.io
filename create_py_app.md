@@ -2,22 +2,22 @@
 
 Here you find a step-by-step guide on creating a MoveApps Python App. **Please carefully follow the steps below to create an App.**
 
-All Apps to be submitted must be managed in a public [GitHub](https://github.com ':ignore') repository. When creating Python Apps, the repository should contain the program code for executing the App (in a file named `./app/app/py`), a specification of the App represented by an [`./appspec.json`](appspec.md) file and a documentation file (called `./README.md`), which needs to be the repository README.
+All Apps to be submitted must be managed in a public [GitHub](https://github.com ':ignore') repository. When creating Python Apps, the repository should contain the program code for executing the App (in a file named `./app/app.py`), a specification of the App represented by an [`./appspec.json`](appspec.md) file and a documentation file (called `./README.md`), which needs to be the repository README.
 
 For Python Apps we provide a template containing a Software Development Kit (SDK) that allows Apps to run and perform as if in the MoveApps interface. We encourage you to use the [GitHub templates](https://github.com/movestore/Template_Python_App ':ignore'). Please read the `developer_README.md` contained in the template for more information about the usage and the optional tools provided with it. The GitHub template includes all necessary files and example data for testing your App. We recommend using PyCharm or Visual Studio Code (VSC) for local development and Conda for dependency management.
 
 The following image contains an overview of the files in the template and whether they need to be adapted or not.
 
-![](files/TemplateFilesPurpose_py.jpg)
+![](files/TemplateFilesPurpose_py.jpg ':size=800x')
 
 This description is applicable only for Python Apps, see our [R Tutorial](create_app.md) for instructions on how to create an R or R-Shiny App.
 
 #### Notes and recommendations
 - Interactive Python Apps are currently not possible in MoveApps. We are working on sketching out the details and soon a new App type `Python GUI` will become available. Please let us know if you are interested to submit such an App.
 
-- Stepwise App review is running! The new trial stage allows you to test your App in MoveApps before it will become available to all users.
+- Stepwise App review is now implemented! The new trial stage allows you to test your App in MoveApps before it will become available to all users.
 
-- Don’t be afraid to hand in a preliminary App, a warning message can be applied.
+- Don’t be afraid to hand in a preliminary App, you can add a warning message that can be seen by all users.
 
 - Make sure that users of your App are enabled to understand what is required of input data, what happens in the App and how the method works, so that they can interpret the results correctly and understand possible issues.
 
@@ -33,13 +33,19 @@ The MoveApps system uses Conda as library manager and all required libraries are
 
 
 ### Step 3: Ensure that our template runs properly on your system
+The template includes a file `./sdk.py` which can be used for testing the `./app/app.py` file. When running the `sdk.py` file it emulates how MoveApps would behave when running your App (i.e. the `app.py`).
+
 Execute `python sdk.py` in a terminal or run `sdk.py` interactively to ensure that our template runs properly on your system. Make sure that the SDK executes the vanilla template App code (i.e. without alterations and without additional libraries). Everything is set up correctly if no error occurs and you see something like *Welcome to the {'app-name': 'MoveApps Python SDK'}*.
+
+<kbd>![](files/PyCharm_sdk.png ':size=800x')</kbd>
 
 More information on the files in the template and their functions can be found in the [`developer_README.md`](https://github.com/movestore/Template_Python_App/blob/main/developer_README.md ':ignore') in the template.
 
 
 ### Step 4: Develop the App code locally within the template
-MoveApps Apps can be developed in your usual compiler/editor (e.g. PyCharm). The App Python code has to be saved in the file `./app/app.py`. MoveApps will call your custom App business logic and will instantiate the class `App`. Note that it is possible to add additional `.py` files to `./app/**` from which functions can be imported into the main `app.py` file. We provide instructions on [writing Python App code](copilot-python-sdk.md), including information on input files and parameters.
+MoveApps Apps can be developed in your usual compiler/editor (e.g. PyCharm). The App Python code has to be saved in the file `./app/app.py`. MoveApps will call your custom App logic from this file and will instantiate the class `App`. Note that it is possible to add additional `.py` files to `./app/**` from which functions can be imported into the main `app.py` file. We provide instructions on [writing Python App code](copilot-python-sdk.md), including information on input files and parameters.
+
+<kbd>![](files/Appdevel_pycharm.png ':size=650x')</kbd>
 
 !\> The class must be named `App` and the file must be named `./app/app.py`, do not alter it.
 
@@ -87,7 +93,7 @@ The link to your repository (**Repository URL**) has to end with `.git`; please 
 
 Each App is defined by a **Runtime Environment** and an **Input Type** and **Output Type** (IO types) that have to be specified. Possible environments are R, R-Shiny and Python. Input and output (IO) types for Python are so far restricted to `MovingPandas.TrajectoryCollection`. MovingPandas Trajectory Collections can easily be transformed to GeoPandas objects. However, IO types can now be extended to any other movement related data types. 
 
-After selecting Python as your Runtime Environment, check which types are available in the dropdown list. If you need a new IO type for your App, please check out the instructions on how to [request a new IO type](IO_types.md).
+After selecting Python as your Runtime Environment, check which IO types are available in the dropdown list. If you need a new IO type for your App, please check out the instructions on how to [request a new IO type](IO_types.md).
 
 <kbd>![](files/initializeApp_sub3.png ':size=600x')</kbd>
 
