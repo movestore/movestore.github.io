@@ -1,14 +1,14 @@
-# How to create an R or RShiny App
+# How to create an R or R-Shiny App
 
 Here you find a step-by-step guide on creating a MoveApps R App. **Please carefully follow the steps below to create an App.**
 
 All Apps to be submitted must be managed in a public [GitHub](https://github.com ':ignore') repository. When creating R Apps, the repository should contain the program code for executing the App (in a file named `RFunction.R` for R-Apps or `ShinyModule.R` for R-Shiny Apps), a specification of the App represented by an [`appspec.json`](appspec.md) file and a documentation file (called `README.md`), which needs to be the repository README.
 
-For R and R-Shiny Apps we provide templates containing Software Development Kits (SDK) with an RStudio Project that allows Apps to run and perform as if in the MoveApps interface. We encourage you to use one of these GitHub templates: [Template R Function App](https://github.com/movestore/Template_R_Function_App ':ignore'), [Template R Shiny App](https://github.com/movestore/Template_R_Shiny_App ':ignore'), [Template R Shinydashboard App](https://github.com/movestore/Template_R_Shinydashboard_App ':ignore') . Please read the `developer_README.md` contained in each template for more information about the usage and the optional tools provided with it. The GitHub templates include all necessary files and example data for testing your App. 
+For R and R-Shiny Apps we provide templates containing Software Development Kits (SDK) with an RStudio Project that allows Apps to run and perform as if in the MoveApps interface. We encourage you to use one of these GitHub templates: [Template R Function App](https://github.com/movestore/Template_R_Function_App ':ignore'), [Template R Shiny App](https://github.com/movestore/Template_R_Shiny_App ':ignore'), [Template R Shinydashboard App](https://github.com/movestore/Template_R_Shinydashboard_App ':ignore') . Please read the `developer_README.md` contained in each template for more information about the usage and the optional tools provided with it. The GitHub templates include all necessary files and example data for testing your App. We recommend using RStudio for local development of the App.
 
 The following image contains an overview of the files in each of the templates and whether they need to be adapted or not.
   
-![](files/TemplateFilesPurpose_R.jpg)
+![](files/TemplateFilesPurpose_R.jpg ':size=800x')
 
 This description is applicable only for R and R-Shiny Apps, see our [Python Tutorial](create_py_app.md) for instructions on how to create a Python App.
 
@@ -19,7 +19,7 @@ This description is applicable only for R and R-Shiny Apps, see our [Python Tuto
 
 - Don’t be afraid to hand in a preliminary App, you can add a warning message that can be seen by all users.
 
-- Make sure that users of your App are enabled to understand what is required of input data, what happens in the App and how the method works, that they can interpret the results correctly and understand possible issues.
+- Make sure that users of your App are enabled to understand what is required of input data, what happens in the App and how the method works, so that they can interpret the results correctly and understand possible issues.
 
 
 ## Steps to create an App
@@ -33,23 +33,24 @@ The template includes a file `sdk.R` which can be used for testing the `RFunctio
 
 Execute `Rscript sdk.R` in a terminal or run `sdk.R` interactively in RStudio to ensure that our template runs properly on your system. Make sure that the SDK executes the vanilla template App code (i.e. without alterations and without locading additional packages). Everything is set up correctly if no error occurs and you see something like *Welcome to the MoveApps R SDK*.
 
-<kbd>![](files/RStudio_sdk.png)</kbd>
+<kbd>![](files/RStudio_sdk.png ':size=800x')</kbd>
 
 More information on the files in the templates and their functions can be found in the `developer_README.md` in the templates: [R Function App](https://github.com/movestore/Template_R_Function_App/blob/master/developer_README.md ':ignore'), [R Shiny App](https://github.com/movestore/Template_R_Shiny_App/blob/master/developer_README.md ':ignore'), [R Shinydashboard App](https://github.com/movestore/Template_R_Shinydashboard_App/blob/master/developer_README.md ':ignore').
 
 
 ### Step 3: Develop the App code locally within the template
-MoveApps Apps can be developed in your usual compiler/editor (e.g. RStudio). The App R code has to be saved in one file either named `RFunction.R` or `ShinyModule.R`. We provide instructions on [writing `R Function` App code](copilot-r-sdk.md) and on [writing `Shiny Module` App code](copilot-shiny-sdk.md), including information on input files and parameters.
+MoveApps Apps can be developed in your usual compiler/editor (e.g. RStudio). The App R code has to be saved in one file either named `RFunction.R` or `ShinyModule.R`. This file is the entrypoint for your App logic.  We provide instructions on [writing `R Function` App code](copilot-r-sdk.md) and on [writing `Shiny Module` App code](copilot-shiny-sdk.md), including information on input files and parameters.
 
-<kbd>![](files/Appdevel_rstudio.png)</kbd>
+<kbd>![](files/Appdevel_rstudio.png ':size=650x')</kbd>
 
+!\> The file must be named `RFunction.R` or `ShinyModule.R`, do not alter it.
 
 ### Step 4: Test your App locally
 MoveApps Apps should be thoroughly tested locally before submission to MoveApps. All Apps must be tested using all provided data sets in the folder `./data/raw/`. To test the App locally, use the file `sdk.R` in combination with `.env` and `app-configuration.json` which emulate running behaviour (almost) like on the online MoveApps system. Have a look at [this compilation of edge case data sets](https://github.com/movestore/Movebank_Example_Datasets ':ignore') for more intensive testing and development.
 
 The two files emulating MoveApps interactive behaviour locally are `.env` (this file is hidden by default), which defines the input and output files path (please only adapt the source file path here), and `app-configuration.json`, which allows you to adapt the App settings for local testing. Note that the json format is required here. The fourth included file that you must use for development is the `RFunction.R`. This is the file into which all your App code is supposed to go and the only R file that is actually integrated into MoveApps when your App is built.
 
-In addition, we require unit tests using `testthat`. Follow the example in the folder `./tests/testthat/` and adapt the file `./tests/testthat/test_RFunction.R` to work with your App code.
+In addition, we require unit tests for `RFunction` Apps using `testthat`. Follow the example in the folder [`./tests/testthat/`](https://github.com/movestore/Template_R_Function_App/tree/master/tests/testthat ':ignore') and adapt the file `./tests/testthat/test_RFunction.R` to work with your App code.
 
 
 ### Step 5: Write App specifications
