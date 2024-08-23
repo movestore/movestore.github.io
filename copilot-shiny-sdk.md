@@ -91,7 +91,7 @@ shinyModule <- function(input, output, session, data) {
 
 
 #### MoveApps parameters
-You can receive parameters or settings for your `Shiny Module` function from the App's User Interface. These parameters/settings can be configured by the user within MoveApps.
+The User Interface (UI) created with the `shinyModuleUserInterface()` function will be made available to the user once the App has run within a Workflow. The button `OPEN APP UI` will be made available to access the UI you created. This button will be active 8h (the remaining time is displayed). After 8h, the App will need to be run again in order to access the UI.
 
 A button called `Store settings` will appear automatically on the bottom left side of the Shiny App. Here the user can store the personalized settings for subsequent runs of an (automatic) Workflow. The values stored are those that are entered and modified in the user interface function `shinyModuleUserInterface()`. This is achieved by using the `shiny::bookmarkButton()` embedded in the `ui` function in the MoveApps system (see [`./src/moveapps.R`](https://github.com/movestore/Template_R_Shiny_App/blob/master/src/moveapps.R) in the template for reference).
 
