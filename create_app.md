@@ -93,7 +93,7 @@ After selecting R or R-Shiny as your Runtime Environment, check which IO types a
 
 <kbd>![](files/initializeApp_sub3.png ':size=600x')</kbd>
 
-Once you have filled the form, click on `Initialize App`.When you have successfully created the App, it will be listed in the overview `My Apps > App Overview`
+Once you have filled the form, click on `Initialize App`. When you have successfully created the App, it will be listed in the overview `My Apps > App Overview`
 
 !\> Note that the repository link, IO types and runtime environment will be fixed to the App and cannot be changed afterwards. 
 

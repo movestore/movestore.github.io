@@ -75,13 +75,19 @@ After developing the App code and updating all required files, upload/push all c
 
 
 ### Step 10: Create a Tag/Release
-Create a Tag in your project's GitHub repository by clicking on `Create a new release`.
+Create a Tag in your project's GitHub repository by clicking on `Create a new release`. Note: if you have already created a release before, click on `Releases > Draft a new release`.
 
 <kbd>![](files/CreateTag.png ':size=250x')</kbd>
 
+Choose a tag (version name, e.g. v0.1) and choose a release title (e.g. first version). You can choose to add a description ot this release, or to attach files (see [auxiliary files](auxiliary.md#adding-large-fixed-or-fallback-files-to-an-app) for a case where this may be desired). Then, click on `Publish release`.
+
+<kbd>![](files/CreateTagForm.png ':size=800x')</kbd>
+
 
 ### Step 11: Initialize the App on MoveApps
-After you have successfully written a functioning App, copied it or used the template (together with the [appspec.json](appspec.md)) into your GitHub App repository and described its details in the `README.md` file, you can initiate it on MoveApps. To do this, select `My Apps > Create new app` from the menu in your Dashboard and fill out the form. 
+After you have successfully written a functioning App, copied it or used the template (together with the [appspec.json](appspec.md)) into your GitHub App repository and described its details in the `README.md` file, you can initiate it on MoveApps. To do this, select `My Apps > Create new app` from the menu in your Dashboard, or click on `Initialize a New App` in your `App Overview` and fill out the form. 
+
+<kbd>![](files/initializeAppDashboard.png ':size=800x')</kbd>
 
 For the **App Title**/name please stick to our convention of Title Case without hyphens (e.g. `My New App`). The **description** should be identical with the short description in your documentation README. You can add a **Warning Note** that will be highlighted to any MoveApps user adding your App to a Workflow. Note that the Title, Description and Warning note can be edited at any time.
 
@@ -97,17 +103,23 @@ After selecting Python as your Runtime Environment, check which IO types are ava
 
 <kbd>![](files/initializeApp_sub3.png ':size=600x')</kbd>
 
+Once you have filled the form, click on `Initialize App`. When you have successfully created the App, it will be listed in the overview `My Apps > App Overview`
+
 When you have successfully created the App, it will be listed in the overview `My Apps > App Overview`
 
 !\> Note that the repository link, IO types and runtime environment will be fixed to the App and cannot be changed afterwards. 
 
 
 ### Step 12: Submit a first App version
-After initializing the App in MoveApps, you can to submit a first (or later updated) App version to MoveApps. In order to create your first (or any updated new) App version, you must create a `Tag` (via `Release`) of your GitHub repository in its present state (see Step 8). After you have created the `Tag`, go to the MoveApps site and press the `Add Version` button in the detailed view of your App (via `My Apps > App Overview > AppName > Details`). Select the `Tag` from the list of available `Tags` and press `Create Version`. A new App version is only available if your tag creation in GitHub was successful. To submit the new version, you must include a description detailing the changes and select/update a Category that fits your App. If you want to request an additional Category, please suggest it in the interface. After entering all information, click `Save and Submit`.
+After initializing the App in MoveApps, you can to submit a first (or later updated) App version to MoveApps. In order to create your first (or any updated new) App version, you must create a `Tag` (via `Release`) of your GitHub repository in its present state (see Step 8). After you have created the `Tag`, go to the MoveApps site and press the `Add Version` button in the detailed view of your App (via `My Apps > App Overview > AppName`). Select the `Tag` from the list of available `Tags` and press `Create Version`. A new App version is only available if your tag creation in GitHub was successful. 
 
-<kbd>![](files/Appdevel_createNewAppVersion.png)</kbd>
+<kbd>![](files/Appdevel_createNewAppVersion.png ':size=900x')</kbd>
 
- One of the MoveApps administrators will check the App for functionality, performant `appspec.json` and possible issues regarding our Terms of Use. Then, the App will be build into a docker container for intergration into the platform. If the App has built successfully, it will acquire private trial status. You will receive an e-mail.
+To submit the new version, you must include a description detailing the changes and select/update a Category that fits your App. If you want to request an additional Category, please suggest it in the interface (see our instructions on how to [request a new App Category](IO_types.md)). In the bottom panel of this page, you can check, among others, the settings of your App, and the people that were specified in the `appspec.json` file. After entering and checking all information, click `Save and Submit`.
+
+<kbd>![](files/AppSubmission_AddVersion.png ':size=700x')</kbd>
+
+One of the MoveApps administrators will check the App for functionality, performant `appspec.json` and possible issues regarding our Terms of Use. Then, the App will be build into a docker container for intergration into the platform. If the App has built successfully, it will acquire private trial status. You will receive an e-mail.
 
 
 ### Step 13: Test a private trial version on MoveApps
