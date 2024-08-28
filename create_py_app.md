@@ -79,9 +79,11 @@ Create a Tag in your project's GitHub repository by clicking on `Create a new re
 
 <kbd>![](files/CreateTag.png ':size=250x')</kbd>
 
-Choose a tag (version name, e.g. v0.1) and choose a release title (e.g. first version). You can choose to add a description ot this release, or to attach files (see [auxiliary files](auxiliary.md#adding-large-fixed-or-fallback-files-to-an-app) for a case where this may be desired). Then, click on `Publish release`.
+Choose a tag (version name, e.g. v0.1) and choose a release title (e.g. first version). You can choose to add a description to this release, or to attach files (see [auxiliary files](auxiliary.md#adding-large-fixed-or-fallback-files-to-an-app) for a case where this may be desired). Then, click on `Publish release`.
 
 <kbd>![](files/CreateTagForm.png ':size=800x')</kbd>
+
+!\>If you missed something in the release and want to add/adjust this, you can delete the release (under `Releases > Releases`). Note that it is then also **required to delete the associated tag** (under `Releases > Tags`) before creating a new release. If you do not delete the associated tag, MoveApps will use the old (deleted) release.
 
 
 ### Step 11: Initialize the App on MoveApps
