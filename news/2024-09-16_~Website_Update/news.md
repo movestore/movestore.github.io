@@ -1,4 +1,4 @@
-# MoveApps Website Update
+# Website Update & new Video Tutorials
 
 ![Website Update](ui_tutorial.jpg)
 
