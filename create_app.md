@@ -1,6 +1,6 @@
 # How to create an R or R-Shiny App
 
-Here you find a step-by-step guide on creating a MoveApps R App. **Please carefully follow the steps below to create an App.**
+Here you find a step-by-step guide on creating a MoveApps R App. **Please carefully follow the steps below to create an App.** Before starting, we recommend to check out our **[video tutorials](video_tutorials.md)**.
 
 All Apps to be submitted must be managed in a public [GitHub](https://github.com ':ignore') repository. When creating R Apps, the repository should contain the program code for executing the App (in a file named `RFunction.R` for R-Apps or `ShinyModule.R` for R-Shiny Apps), a specification of the App represented by an [`appspec.json`](appspec.md) file and a documentation file (called `README.md`), which needs to be the repository README.
 
@@ -31,7 +31,7 @@ Login to GitHub and go to either the [Template R Function App](https://github.co
 ### Step 2: Ensure that our template runs properly on your system
 The template includes a file `sdk.R` which can be used for testing the `RFunction.R` file. When running the `sdk.R` file in the RStudio project it emulates how MoveApps would behave when running your App (i.e. the `RFunction.R`).
 
-Execute `Rscript sdk.R` in a terminal or run `sdk.R` interactively in RStudio to ensure that our template runs properly on your system. Make sure that the SDK executes the vanilla template App code (i.e. without alterations and without locading additional packages). Everything is set up correctly if no error occurs and you see something like *Welcome to the MoveApps R SDK*.
+Execute `Rscript sdk.R` in a terminal or run `sdk.R` interactively in RStudio (open RStudio and start the R project `Template_R_Function_App.Rproj` before running `sdk.R`) to ensure that our template runs properly on your system. Make sure that the SDK executes the vanilla template App code (i.e. without alterations and without locading additional packages). Everything is set up correctly if no error occurs and you see something like *Welcome to the MoveApps R SDK*.
 
 <kbd>![](files/RStudio_sdk.png ':size=800x')</kbd>
 
