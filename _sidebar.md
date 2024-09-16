@@ -1,3 +1,5 @@
+- Video Tutorials
+  - [Videos](video_tutorials.md)
 - Workflows 
   - Tutorials
     - [Hello world! A Workflow example](hello_world_workflow.md)
