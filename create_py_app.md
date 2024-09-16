@@ -1,6 +1,6 @@
 # How to create a Python App
 
-Here you find a step-by-step guide on creating a MoveApps Python App. **Please carefully follow the steps below to create an App.**
+Here you find a step-by-step guide on creating a MoveApps Python App. **Please carefully follow the steps below to create an App.** Before starting, we recommend to check out our **[video tutorials](video_tutorials.md)**.
 
 All Apps to be submitted must be managed in a public [GitHub](https://github.com ':ignore') repository. When creating Python Apps, the repository should contain the program code for executing the App (in a file named `./app/app.py`), a specification of the App represented by an [`./appspec.json`](appspec.md) file and a documentation file (called `./README.md`), which needs to be the repository README.
 
