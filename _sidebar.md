@@ -71,3 +71,6 @@
   - [What is next?](whatsnext.md)
   - [Join us!](reachout.md)
   - [Support and report errors](support.md)
+
+- Resources
+  - [Data](resources_data.md)
