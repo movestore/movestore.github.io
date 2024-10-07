@@ -8,6 +8,7 @@ In MoveApps, every [Workflow starts](create_workflow.md) with an App that loads 
 
 We have compiled a [list of example data sets](https://github.com/movestore/Movebank_Example_Datasets) that can be used for more intensive testing and development of Apps. These data sets are publicly available and can therefore also be used to build and run Workflows.
 
+Make sure that you comply with the license terms under which the data are made publicly available in case you what to use the data for a scientific publication or any other type publication of the results. The first time you download a study, if they have license terms these will be prompted and you will have to accept them to proceed. But they can be checked any time on the overview page of the study on Movebank. Please check them before publishing any results or distributing the data.
 
 ## Data in csv or rds format
 
