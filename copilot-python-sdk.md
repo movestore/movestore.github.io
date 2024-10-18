@@ -168,16 +168,24 @@ plot.figure.savefig(self.moveapps_io.create_artifacts_file('plot.png'))
 ```
 *Python code*
 
-from tempfile import TemporaryDirectory
-from zipfile import ZipFile, ZIP_DEFLATED
-from glob import glob
+import tempfile
+import zipfile
+import glob
 
-temp_dir = TemporaryDirectory()
+# create a temporary directory
+with tempfile.TemporaryDirectory(dir=".") as tempdir:
+    
+    # add any files to tempdir. The files below act as an example
+    with open(str(tempdir) + "/file1.txt", 'w') as f:
+        f.write("This is example file 1.")
+    data.to_csv(str(tempdir) + "/file2.csv")
+    
+    # get a list of all files
+    files = glob.glob(str(tempdir) + "/*")
 
-# add any files to temp_dir
-
-zip_file = self.moveapps_io.create_artifacts_file('myfiles.zip')
-with ZipFile(zip_file, 'w', ZIP_DEFLATED) as myzip:
-    for f in files:
-    myzip.write(f)
+    # create a zip file
+    zip_file = self.moveapps_io.create_artifacts_file('myfiles.zip')
+    with zipfile.ZipFile(zip_file, 'w', zipfile.ZIP_DEFLATED) as myzip:
+        for f in files:
+            myzip.write(f)
 ```
