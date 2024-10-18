@@ -111,7 +111,7 @@ settings:[{
 shpA_path <- getAuxiliaryFilePath("aux_id_A")
 dir.create(targetDirFiles <- tempdir())
 unzip(shpA_path, exdir = targetDirFiles)
-sf::st_read(list.files(targetDirFiles,pattern=".shp",recursive=T))
+shpA <- sf::st_read(list.files(targetDirFiles,pattern=".shp",recursive=T))
 
 tableB <- read.csv(getAuxiliaryFilePath("aux_id_B"))
 
@@ -187,7 +187,7 @@ settings:[{
 shpA_path <- getAuxiliaryFilePath("aux_id_A")
 dir.create(targetDirFiles <- tempdir())
 unzip(shpA_path, exdir = targetDirFiles)
-sf::st_read(list.files(targetDirFiles,pattern=".shp",recursive=T))
+shpA <- sf::st_read(list.files(targetDirFiles,pattern=".shp",recursive=T))
 
 tableB <- read.csv(getAuxiliaryFilePath("aux_id_B"))
 
