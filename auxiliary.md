@@ -20,19 +20,25 @@ In the past, the `LOCAL_FILE` setting required the App developer to define the e
 
 ## Fixed auxiliary files
 
-Any auxiliary files that the App developer wants to provide as fixed files have to be saved in the GitHub repository. The names of the files have to fit with the file names as used in the App's function code. For review and container building in MoveApps, the provision of these files has to be communicated in the [`appspec.json`](appspec.md) specification file via `providedAppFiles` (see example below).
- 
-Please keep the files in (a) separate folder(s) in the GitHub repository, the folder name is required as input for the `providedAppFiles` specification (`from`). The `settingId` sets the name of the folder in the App container (on MoveApps) into which the content of the `providedAppFiles` folder is bundled and from where it can be called by the App's function code at run time (see example below and details in the templates for [R](https://github.com/movestore/Template_R_Function_App/blob/master/src/io/app_files.R), [R Shiny](https://github.com/movestore/Template_R_Shiny_App/blob/master/src/io/app_files.R), [R Shinydashboard](https://github.com/movestore/Template_R_Shinydashboard_App/blob/master/src/io/app_files.R), and [Python](https://github.com/movestore/Template_Python_App/blob/main/sdk/moveapps_io.py) Apps).
+Any auxiliary files that the App developer wants to provide as fixed files have to be saved in the GitHub repository within the folder `auxiliary/user-files/provided-app-files/`. The provision of these files has to be communicated in the [`appspec.json`](appspec.md) specification file via [`providedAppFiles`](appspec/current/settings/user_file.md). Please keep the files in (a) separate folder(s) in the GitHub repository, the folder name is required as input for the `providedAppFiles` specification (`from`). The `settingId` has to be unique for each fixed file and will be used to refer to it in the code via the function `getAuxiliaryFilePath()` in `R` and `MoveAppsIo.get_auxiliary_file_path()` in `Python`. These functions will read in the content of the stated folder in the appspecs.json, therefore only one file should be included in each folder. See examples below.
+
 
 #### Example
+*All App templates also contain a working example of auxiliary files*
+
+###### R Apps
 
 ```
 *appspec.json*
 
 "providedAppFiles": [
   {
-    "settingId": "app_file1",
-    "from": "provided-app-files/app_file1/"
+    "settingId": "aux_id_A",
+    "from": "data/auxiliary/user-files/provided-app-files/aux_A/"
+  },
+  {
+    "settingId": "aux_id_B",
+    "from": "data/auxiliary/user-files/provided-app-files/aux_B/"
   }
 ]
 ```
@@ -40,90 +46,137 @@ Please keep the files in (a) separate folder(s) in the GitHub repository, the fo
 ```
 *R code*
 
-read.csv(getAuxiliaryFilePath("app_file1"))
+fileA <- read.csv(getAuxiliaryFilePath("aux_id_A"))
+rastB <- rast(getAuxiliaryFilePath("aux_id_B"))
+```
+
+###### Python Apps
+
+```
+*appspec.json*
+
+"providedAppFiles": [
+  {
+    "settingId": "aux_id_A",
+    "from": "resources/auxiliary/user-files/provided-app-files/aux_A/"
+  },
+  {
+    "settingId": "aux_id_B",
+    "from": "resources/auxiliary/user-files/provided-app-files/aux_B/"
+  }
+]
 ```
 
 ```
 *Python code*
 
-def _consume_app_file(self):
-    app_file_base_dir = self.moveapps_io.get_app_file_path('my-app-files')
-    if app_file_base_dir:
-        expected_file = os.path.join(app_file_root_dir, 'the-file.csv')
-        # do something with this file
+import pandas as pd
+fileA = pd.read_csv(MoveAppsIo.get_auxiliary_file_path("aux_id_A"))
+
+auxiliary_file_b = MoveAppsIo.get_auxiliary_file_path("aux_id_B")
+with open(auxiliary_file_b) as f:
+	fileB = [line.rstrip() for line in f]
+
 ```
 
 ## Local upload auxiliary files
 
-Apps that allow/require the App user to upload an auxiliary file during App settings configuration need to specify the `USER_FILE` setting in the `appspec.json`. This setting has to be understood as a kind of file definition. Depending on how many actions in the App require auxiliary files, it may be necessary to define more than one `USER_FILE` setting, i.e. if one action requires a zipped shapefile, the related 4 or 5 files should be directed to `USER_FILE` setting _A_ (see example `app_file1`) and if another action requires a csv table this file must be written into another directory `USER_FILE` setting _B_ (see example `app_file2`). 
+Apps that allow/require the App user to upload an auxiliary file during App settings configuration need to specify the [`USER_FILE`](appspec/current/settings/user_file.md) setting in the `appspec.json`. If multiple files can be uploaded each of them will require a separate `USER_FILE` setting with a different `id`. In the case of shapefiles we recommend to give the instructions to the user to zip all files and upload them as a zipped file.
 
-All `USER_FILE` settings (with names as given in `id`) have to be provided as parameters in the App's code function (e.g. `rFunction <- function(data, app_file1=NULL)`). These parameters do not initiate the auxiliary files to be passed on, but contain meta data required for file access. Do not use this parameter in your function! Instead, the `id` of each `USER_FILE` setting has to be referenced in the App's function code to access the App user's data for analysis in the App. (see example below and details in the Templates for [R](https://github.com/movestore/Template_R_Function_App/blob/master/src/io/app_files.R), [R Shiny](https://github.com/movestore/Template_R_Shiny_App/blob/master/src/io/app_files.R), [R Shinydashboard](https://github.com/movestore/Template_R_Shinydashboard_App/blob/master/src/io/app_files.R), and [Python](https://github.com/movestore/Template_Python_App/blob/main/sdk/moveapps_io.py) Apps).
+The `id` in the `USER_FILE` setting in the `appspec.json` has to be unique for each upload file option, and will be used to refer to it in the code via the function `getAuxiliaryFilePath()` in `R` and `MoveAppsIo.get_auxiliary_file_path()` in `Python`. These functions will read in the uploaded file. Ensure that the `rFunction` contains `...` at the end of the list of arguments, as this will enable reading in the uploaded files(s) (e.g. `rFunction <- function(data, ...)`. See examples below.
 
 #### Example
+*All App templates also contain a working example of auxiliary files*
 
 ```
 *appspec.json*
 
-{
-  "id": "app_file1",
+settings:[{
+  "id": "aux_id_A",
   "name": "My auxiliary zipfile",
   "description": "Files for running the XY analysis. The App expects a zipped file set with the extension: 1. `.cpg`, 2. `.dbf`, 3. `.prj`, 4. `.shp`, 5. `.shx`.",
   "type": "USER_FILE"
 },
 {
-  "id": "app_file2",
+  "id": "aux_id_B",
   "name": "My auxiliary csv",
   "description": "File for running the YZ analysis. The App expects a file with the extension: `.csv`.",
   "type": "USER_FILE"
-}
+}]
 ```
 
 ```
 *R code*
 
-read.csv(getAuxiliaryFilePath("app_file2"))
+shpA_path <- getAuxiliaryFilePath("aux_id_A")
+dir.create(targetDirFiles <- tempdir())
+unzip(shpA_path, exdir = targetDirFiles)
+shpA <- sf::st_read(list.files(targetDirFiles,pattern=".shp",recursive=T))
+
+tableB <- read.csv(getAuxiliaryFilePath("aux_id_B"))
+
 ```
 
 ```
 *Python code*
-aux_file = self.moveapps_io.get_app_file_path('app_file1')
 
+import tempfile
+import zipfile
+import glob
+import geopandas
+
+shpA_path = zipfile.ZipFile(MoveAppsIo.get_auxiliary_file_path("aux_id_A"))
+
+with tempfile.TemporaryDirectory(dir=".") as tempdir:
+
+    with shpA_path as zip_ref:
+        zip_ref.extractall(tempdir)
+    files = glob.glob(str(tempdir)+"/**/*.shp")
+    shpA = []
+    for file in files:
+        shpA.append(geopandas.read_file(file))
+
+
+import pandas as pd
+tableB = pd.read_csv(MoveAppsIo.get_auxiliary_file_path("aux_id_B"))
 ```
 
 ## Local upload auxiliary files with fixed fallback files
 
-For Apps that allow/require the App user to upload an auxiliary file during App settings configuration it is advisable that the App developer provides a fallback file in case no file is/can be uploaded. This allows a correct run of the App at all times. We advice this type for all Apps with user upload possibility. Fallback files should have global coverage, so they work for all tracks. A usual use case can be to provide a low resolution fallback file, but allow local upload of a higher resolution local file that overlaps with the analysed tracks and is provided by the App user. 
+For Apps that allow/require the App user to upload an auxiliary file during App settings configuration it is advisable that the App developer provides a fallback file in case no file is/can be uploaded. This allows a correct run of the App at all times. We advice this type for all Apps with user file upload possibility. Fallback files should have global coverage, so they work for all tracks. A usual use case can be to provide a low resolution fallback file, but allow local upload of a higher resolution local file that overlaps with the analysed tracks and is provided by the App user. 
 
-To set up Apps with this functionality, the above two cases have to be combined (also see example below). The only addition is that the `settingId` of the `providedAppFiles` specification has to match with the `id` of the `USER_FILE` setting. Here, again, multiple such files are possible. Use the helper function from the Templates for [R](https://github.com/movestore/Template_R_Function_App/blob/master/src/io/app_files.R), [R Shiny](https://github.com/movestore/Template_R_Shiny_App/blob/master/src/io/app_files.R), [R Shinydashboard](https://github.com/movestore/Template_R_Shinydashboard_App/blob/master/src/io/app_files.R), and [Python](https://github.com/movestore/Template_Python_App/blob/main/sdk/moveapps_io.py) Apps for accessing the App user's (or fallback) data in the App code (see also example below). Note that the option `fallbackToProvidedFiles` in this function allows the App developer to specify if fallback files shall be used or not. See the code of this function for details and also how info messages about file usage are passed on to the App user.
+To set up Apps with this functionality, the above two cases have to be combined (also see example below). The only addition is that in the [`appspecs.json`](appspec/current/settings/user_file.md) the `settingId` of the `providedAppFiles` specification has to match with the `id` of the `USER_FILE` setting. Here, again, multiple such files are possible. Also ensure that the `rFunction` contains `...` at the end of the list of arguments, as this will enable reading in the uploaded files(s) (e.g. `rFunction <- function(data, ...)`. See examples below.
+
 
 #### Example
+*All App templates also contain a working example of auxiliary files*
+
+###### R Apps
 
 ```
 *appspec.json*
 
-"settings": [
-  {
-  "id": "app_file1",
+settings:[{
+  "id": "aux_id_A",
   "name": "My auxiliary zipfile",
   "description": "Files for running the XY analysis. The App expects a zipped file set with the extension: 1. `.cpg`, 2. `.dbf`, 3. `.prj`, 4. `.shp`, 5. `.shx`.",
   "type": "USER_FILE"
-  },
-  {
-  "id": "app_file2",
-  "name": "My auxiliary csv table",
+},
+{
+  "id": "aux_id_B",
+  "name": "My auxiliary csv",
   "description": "File for running the YZ analysis. The App expects a file with the extension: `.csv`.",
   "type": "USER_FILE"
-  }
-],
-  
+}]
+
 "providedAppFiles": [
   {
-    "settingId": "app_file1",
-    "from": "provided-app-files/app_file1/"
+    "settingId": "aux_id_A",
+    "from": "data/auxiliary/user-files/provided-app-files/aux_A/"
   },
-    {
-    "settingId": "app_file2",
-    "from": "provided-app-files/app_file2/"
+  {
+    "settingId": "aux_id_B",
+    "from": "data/auxiliary/user-files/provided-app-files/aux_B/"
   }
 ]
 ```
@@ -131,18 +184,65 @@ To set up Apps with this functionality, the above two cases have to be combined 
 ```
 *R code*
 
-getAuxiliaryFilePath("app_file1")
+shpA_path <- getAuxiliaryFilePath("aux_id_A")
+dir.create(targetDirFiles <- tempdir())
+unzip(shpA_path, exdir = targetDirFiles)
+shpA <- sf::st_read(list.files(targetDirFiles,pattern=".shp",recursive=T))
 
-getAuxiliaryFilePath("app_file2")
+tableB <- read.csv(getAuxiliaryFilePath("aux_id_B"))
+
 ```
+###### Python Apps
 
+```
+*appspec.json*
+
+settings:[{
+  "id": "aux_id_A",
+  "name": "My auxiliary zipfile",
+  "description": "Files for running the XY analysis. The App expects a zipped file set with the extension: 1. `.cpg`, 2. `.dbf`, 3. `.prj`, 4. `.shp`, 5. `.shx`.",
+  "type": "USER_FILE"
+},
+{
+  "id": "aux_id_B",
+  "name": "My auxiliary csv",
+  "description": "File for running the YZ analysis. The App expects a file with the extension: `.csv`.",
+  "type": "USER_FILE"
+}]
+
+"providedAppFiles": [
+  {
+    "settingId": "aux_id_A",
+    "from": "resources/auxiliary/user-files/provided-app-files/aux_A/"
+  },
+  {
+    "settingId": "aux_id_B",
+    "from": "resources/auxiliary/user-files/provided-app-files/aux_B/"
+  }
+]
+```
 ```
 *Python code*
 
-self.moveapps_io.get_app_file_path('app_file1')
+import tempfile
+import zipfile
+import glob
+import geopandas
 
-self.moveapps_io.get_app_file_path('app_file2')
+shpA_path = zipfile.ZipFile(MoveAppsIo.get_auxiliary_file_path("aux_id_A"))
 
+with tempfile.TemporaryDirectory(dir=".") as tempdir:
+
+    with shpA_path as zip_ref:
+        zip_ref.extractall(tempdir)
+    files = glob.glob(str(tempdir)+"/**/*.shp")
+    shpA = []
+    for file in files:
+        shpA.append(geopandas.read_file(file))
+
+
+import pandas as pd
+tableB = pd.read_csv(MoveAppsIo.get_auxiliary_file_path("aux_id_B"))
 ```
 
 ## Adding large fixed or fallback files to an App
