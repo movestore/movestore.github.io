@@ -184,7 +184,7 @@ with tempfile.TemporaryDirectory(dir=".") as tempdir:
     files = glob.glob(str(tempdir) + "/*")
 
     # create a zip file
-    zip_file = "./resources/output/outputfiles.zip"
+    zip_file = self.moveapps_io.create_artifacts_file('myfiles.zip')
     with zipfile.ZipFile(zip_file, 'w', zipfile.ZIP_DEFLATED) as myzip:
         for f in files:
             myzip.write(f)
