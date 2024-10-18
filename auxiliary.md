@@ -70,7 +70,12 @@ rastB <- rast(getAuxiliaryFilePath("aux_id_B"))
 ```
 *Python code*
 
-fileA = MoveAppsIo.get_auxiliary_file_path("aux_id_A")
+import pandas as pd
+fileA = pd.read_csv(MoveAppsIo.get_auxiliary_file_path("aux_id_A"))
+
+auxiliary_file_b = MoveAppsIo.get_auxiliary_file_path("aux_id_B")
+with open(auxiliary_file_b) as f:
+	fileB = [line.rstrip() for line in f]
 
 ```
 
@@ -108,15 +113,32 @@ dir.create(targetDirFiles <- tempdir())
 unzip(shpA_path, exdir = targetDirFiles)
 sf::st_read(list.files(targetDirFiles,pattern=".shp",recursive=T))
 
-tableA <- read.csv(getAuxiliaryFilePath("aux_id_B"))
+tableB <- read.csv(getAuxiliaryFilePath("aux_id_B"))
 
 ```
 
 ```
 *Python code*
-aux_A_path = self.moveapps_io.get_app_file_path('aux_id_A')
-aux_B_path = self.moveapps_io.get_app_file_path('aux_id_B')
 
+import tempfile
+import zipfile
+import glob
+import geopandas
+
+shpA_path = zipfile.ZipFile(MoveAppsIo.get_auxiliary_file_path("aux_id_A"))
+
+with tempfile.TemporaryDirectory(dir=".") as tempdir:
+
+    with shpA_path as zip_ref:
+        zip_ref.extractall(tempdir)
+    files = glob.glob(str(tempdir)+"/**/*.shp")
+    shpA = []
+    for file in files:
+        shpA.append(geopandas.read_file(file))
+
+
+import pandas as pd
+tableB = pd.read_csv(MoveAppsIo.get_auxiliary_file_path("aux_id_B"))
 ```
 
 ## Local upload auxiliary files with fixed fallback files
@@ -167,7 +189,7 @@ dir.create(targetDirFiles <- tempdir())
 unzip(shpA_path, exdir = targetDirFiles)
 sf::st_read(list.files(targetDirFiles,pattern=".shp",recursive=T))
 
-tableA <- read.csv(getAuxiliaryFilePath("aux_id_B"))
+tableB <- read.csv(getAuxiliaryFilePath("aux_id_B"))
 
 ```
 ###### Python Apps
@@ -202,10 +224,25 @@ settings:[{
 ```
 *Python code*
 
-self.moveapps_io.get_app_file_path('aux_id_A')
+import tempfile
+import zipfile
+import glob
+import geopandas
 
-self.moveapps_io.get_app_file_path('aux_id_B')
+shpA_path = zipfile.ZipFile(MoveAppsIo.get_auxiliary_file_path("aux_id_A"))
 
+with tempfile.TemporaryDirectory(dir=".") as tempdir:
+
+    with shpA_path as zip_ref:
+        zip_ref.extractall(tempdir)
+    files = glob.glob(str(tempdir)+"/**/*.shp")
+    shpA = []
+    for file in files:
+        shpA.append(geopandas.read_file(file))
+
+
+import pandas as pd
+tableB = pd.read_csv(MoveAppsIo.get_auxiliary_file_path("aux_id_B"))
 ```
 
 ## Adding large fixed or fallback files to an App
