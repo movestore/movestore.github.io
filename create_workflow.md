@@ -34,7 +34,7 @@ By clicking on the `+` to the right of an App container, you can browse, search 
 
 !\> Note that [depredated Apps](app_deprecation.md) do not appear in this list by default. Depredated Apps cannot be added to new Workflows any more, because the App developer has stopped maintainance.
 
-## Run the workflow
+## Run the Workflow
 
 Select `Start Workflow` to begin running the Apps within a Workflow in the order that you have arranged them. You can follow the progress of the Workflow by the change in colour of the action point in the top right of each App container. On the right side of the Workflow name there is also an action point which will indicate if the Workflow Instance is "running" or "stopped". Note that if the Workflow contains a Shiny App its status will be "running" for a few hours, also after finishing, in order to allow the interaction with the App User Interface.
 
@@ -42,7 +42,43 @@ The Workflow continues running and results are stored even if you leave the site
 
 <kbd>![](files/Workflow_menu_2023.png ':size=400x')</kbd>
 
-## Menus, Settings and Error logs
+## Solving potential errors
+
+When running a Workflow, Apps may give an error (see image below) and subsequent Apps will not run.
+
+<kbd>![](files/error0.png ':size=400x')</kbd>
+
+We recommend trying out the following actions to try to solve the error.
+
+#### Consult error details and App logs
+Take a look at the error message by clicking on `Error details`. The error message may already indicate the problem. 
+
+<kbd>![](files/error2.png ':size=700x')</kbd>
+
+In some cases, the `Error details` do not provide helpful information. In these cases, the `app logs` may contain more information about the error. The App Logs can be accessed by clicking on `app logs` in the window with error details, or through the App Menu (see [Menu, Settings and Logs](#menu--settings-and-logs)).
+
+<kbd>![](files/error1.png ':size=700x')</kbd>
+
+In the App documentation (App Menu (see [Menu, Settings and Logs](#menu--settings-and-logs) > `App Details`, or click on the book icon in the App container), there is a section covering the most common errors. Your error may be covered here together with a potential solution.
+
+#### Revise App settings
+
+In some cases, the error details or App logs indicate a problem with the App settings. In these cases, and also generally when encountering an error, we recommend to revise the App settings. App settings can be accessed through the App Menu (see [Menu, Settings and Logs](#menu--settings-and-logs)), or for Shiny Apps throught the User Interface.
+
+#### Check out issues in the App repository
+
+Lastly, App users can create an "issue" in the App's GitHub repository to notify the App developer about problems with their App. You can access the issue site by clicking on `issue at the app repository` in the window with error details.
+
+<kbd>![](files/error1.png ':size=700x')</kbd>
+
+Alternatively, you can reach the issue site through the App documentation in the App's GitHub repository. Click on the book icon in the App container, or on `App Details` in the App Menu (see [Menu, Settings and Logs](#menu--settings-and-logs)). In the GitHub repository, click on `Issues` to reach the issue site.
+
+On the issue site, you can check whether others have had the same problem. If you cannot understand and/or solve the errors, and there are no exisiting issues indicating the same problem, please create a `New issue` in GitHub in the App repositoriy (you need a [GitHub](https://github.com/) account for this). 
+
+<kbd>![](files/GitHubIssue.png ':size=700x')</kbd>
+
+
+## Menus, Settings and Logs
 
 There is a menu on the right of each App container in a Workflow. The R and Python apps include the below options. R-Shiny-Apps do not provide Settings in this menu, but directly in the User Interface (UI). Those settings can be stored on MoveApps from within the UI (bookmark feature).
 
@@ -69,7 +105,7 @@ For R-Shiny Apps that return User Interfaces (UI), the UI can be accessed after 
 
 <kbd>![](files/App_storesettings_shiny.png ':size=500x')</kbd>
 
-## Download workflow output
+## Download Workflow output
 
 In addition to the direct click-download of files that appear in the App containers after the workflow has run, the `Output` button gives you access to all output files that the Workflow is generating. Each output file of Apps can be downloaded separately or a selection of files can be bundled and downloaded as a zip file. In case of one or more .pdf products, it is also possible to download a bundled pdf, unsecured or as encrypted file for sensitive tracking data (see buttons on top right).
 
