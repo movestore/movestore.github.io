@@ -44,7 +44,7 @@ The Workflow continues running and results are stored even if you leave the site
 
 ## Solving potential errors
 
-When running a Workflow, Apps may give an error (see image below) and subsequent Apps will not run.
+When running a Workflow, Apps may give an error and subsequent Apps will not run.
 
 <kbd>![](files/error0.png ':size=400x')</kbd>
 
@@ -53,13 +53,13 @@ We recommend trying out the following actions to try to solve the error.
 #### Consult error details and App logs
 Take a look at the error message by clicking on `Error details`. The error message may already indicate the problem. 
 
-<kbd>![](files/error2.png ':size=700x')</kbd>
+<kbd>![](files/error2.png ':size=600x')</kbd>
 
 In some cases, the `Error details` do not provide helpful information. In these cases, the `app logs` may contain more information about the error. The App Logs can be accessed by clicking on `app logs` in the window with error details, or through the App Menu (see [Menu, Settings and Logs](#menu--settings-and-logs)).
 
 <kbd>![](files/error1.png ':size=700x')</kbd>
 
-In the App documentation (App Menu (see [Menu, Settings and Logs](#menu--settings-and-logs) > `App Details`, or click on the book icon in the App container), there is a section covering the most common errors. Your error may be covered here together with a potential solution.
+In the App documentation (App Menu (see [Menu, Settings and Logs](#menu--settings-and-logs) > `App Details > Documentation`, or click on the book icon in the App container), there is a section covering the most common errors. Your error may be covered here together with a potential solution.
 
 #### Revise App settings
 
@@ -67,11 +67,11 @@ In some cases, the error details or App logs indicate a problem with the App set
 
 #### Check out issues in the App repository
 
-Lastly, App users can create an "issue" in the App's GitHub repository to notify the App developer about problems with their App. You can access the issue site by clicking on `issue at the app repository` in the window with error details.
+Lastly, App users can create an "issue" in the App's GitHub repository to notify the App developer about problems with their App. You can access the issue site by clicking on `issue at the App repository` in the window with error details.
 
 <kbd>![](files/error1.png ':size=700x')</kbd>
 
-Alternatively, you can reach the issue site through the App documentation in the App's GitHub repository. Click on the book icon in the App container, or on `App Details` in the App Menu (see [Menu, Settings and Logs](#menu--settings-and-logs)). In the GitHub repository, click on `Issues` to reach the issue site.
+Alternatively, you can reach the issue site through the App documentation in the App's GitHub repository. Click on the book icon in the App container and then in the GitHub repository on `Issues`, or on `App Details > Issues` in the App Menu (see [Menu, Settings and Logs](#menu--settings-and-logs)).
 
 On the issue site, you can check whether others have had the same problem. If you cannot understand and/or solve the errors, and there are no exisiting issues indicating the same problem, please create a `New issue` in GitHub in the App repositoriy (you need a [GitHub](https://github.com/) account for this). 
 
