@@ -13,6 +13,25 @@ You can directly download the code as a `.zip` (`Code > Download ZIP`) file from
 ### Running the App locally
 Once you have the code on your local system (details on how to clone your GitHub repository locally for R Apps [here](manage_Rapp_github.md) and for Python Apps [here](manage_Pyapp_github.md)), you can run the App emulating (almost) the online MoveApps system. To do this, you will need to use the following files from the App code:
 
-- `app-configuration.json` to adjust the settings of the App. Note that this file needs to be filled in [json format](https://en.wikipedia.org/wiki/JSON). To enter or modify settings you have used previously in MoveApps, you can find them printed in json format in the App logs. In case of an App based on R-Shiny this file does not exist, the settings can be adjusted once the UI opens.
-- `.env` to indicate which file to use as an input (`SOURCE_FILE=`) and where to find [auxiliary](https://docs.moveapps.org/#/auxiliary) files (`USER_APP_FILE_HOME_DIR=`), if used by the App. You can always use the `app-output.rds` or `app-output.pickle` file created by any App in a Workflow as input data. *Note:* The `.env` and other files in the code beginning with `.` may be hidden on your computer. Update your PC settings to show hidden files in order to see and open them.
-- `sdk.R`/`sdk.py` is the Software Development Kit that will execute the App. Run this script and the App will be executed. The results will be saved under the path stated in `OUTPUT_FILE=` in the `.env` file, and in case of a Shiny App, the UI will open.
+#### 1. File `app-configuration.json` 
+
+to adjust the settings of the App. Note that this file needs to be filled in [json format](https://en.wikipedia.org/wiki/JSON). To enter or modify settings you have used previously in MoveApps, you can find them printed in json format in the App logs. In case of an App based on R-Shiny this file does not exist, the settings can be adjusted once the UI opens. 
+- Notation of some settings: 
+   - If a setting needs a timestamp as an input, this has to be formatted as `yyyy-mm-ddTHH:MM:SSZ`, e.g. `2014-08-14T20:51:07Z`, note the `T` and the `Z`. 
+  - If setting needs a string of words (e.g. attributes) as an input, state all of them coma separated between quotes, e.g. `"tag_voltage,ground_speed"`. If the settings allows for a string of numeric values, also state them the same way, e.g. `"0.25,0.5,0.9"`.
+  - `false`, `true` or `null` have to be written in lower-case.
+  - if a setting should be left empty, use as a value `{}`.
+
+#### 2. File`.env` 
+
+The setting names in this file are fixed, the paths can be adjusted, but changing names of the settings will lead to an error.
+
+Here the list of the most common ones that one might want to adjust:
+- `SOURCE_FILE=`: indicate which file to use as an input. Test data sets are located in `./data/raw/` for `R` Apps and `./resources/samples/` for `Python` Apps. You can also always use the `app-output.rds` or `app-output.pickle` file created by any App in a Workflow as input data, or any other data set saved as `.rds` for `R` or `.pickle` for `Python` Apps.
+- `USER_APP_FILE_HOME_DIR=`: where to find [auxiliary](https://docs.moveapps.org/#/auxiliary) files if used by the App. 
+
+ *Note:* The `.env` and other files in the code beginning with `.` may be hidden on your computer. Update your PC settings to show hidden files in order to see and open them.
+ 
+#### 3. File `sdk.R`/`sdk.py` 
+
+is the Software Development Kit that will execute the App. Run/Source this script and the App will be executed. The results will be saved under the path stated in `OUTPUT_FILE=` in the `.env` file, and in case of a Shiny App, the UI will open.

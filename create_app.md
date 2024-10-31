@@ -52,6 +52,48 @@ The two files emulating MoveApps interactive behaviour locally are `.env` (this 
 
 In addition, we require unit tests for `RFunction` Apps using `testthat`. Follow the example in the folder [`./tests/testthat/`](https://github.com/movestore/Template_R_Function_App/tree/master/tests/testthat ':ignore') and adapt the file `./tests/testthat/test_RFunction.R` to work with your App code.
 
+#### Details on the manipulation of the files needed to test the Apps locally:
+
+**File `app-configuration.json`**: to adjust the settings of the App. Note that this file needs to be filled in [json format](https://en.wikipedia.org/wiki/JSON). In case of an App based on R-Shiny this file does not exist, the settings can be adjusted once the UI opens. 
+- Notation of some settings: 
+   - If a setting needs a timestamp as an input, this has to be formatted as `yyyy-mm-ddTHH:MM:SSZ`, e.g. `2014-08-14T20:51:07Z`, note the `T` and the `Z`. 
+  - If setting needs a string of words (e.g. attributes) as an input, state all of them coma separated between quotes, e.g. `"tag_voltage,ground_speed"`. If the settings allows for a string of numeric values, also state them the same way, e.g. `"0.25,0.5,0.9"`.
+  - `false`, `true` or `null` have to be written in lower-case.
+  - if a setting should be left empty, use as a value `{}`.
+
+**File`.env`**: the paths can be adjusted, but changing names of the settings will lead to an error.
+Here the list of the most common ones that one might want to adjust:
+- `SOURCE_FILE=`: indicate which file to use as an input. Test data sets are located in `./data/raw/`. You can also always use the `app-output.rds` file created by any App in a Workflow as input data, or any other data set saved as `.rds`.
+- `USER_APP_FILE_HOME_DIR=`: where to find [auxiliary](https://docs.moveapps.org/#/auxiliary) files if used by the App. 
+
+ *Note:* The `.env` and other files in the code beginning with `.` may be hidden on your computer. Update your PC settings to show hidden files in order to see and open them.
+ 
+**File `sdk.R`**: is the Software Development Kit that will execute the App. Run/Source this script and the App will be executed. The results will be saved under the path stated in `OUTPUT_FILE=` in the `.env` file, and in case of a Shiny App, the UI will open.
+
+
+**Dealing with passwords**: some Apps require passwords, usernames, personal API keys, etc that one does not want to share and make pubic. Specially when developing Apps and making the code public on GitHub, it is important to not accidentally publish these personal passwords. Here are the steps to automatically use your personal passwords, without them being visible to anyone by accident:
+
+1. Make sure that your R function contains the arguments referring to the needed passwords, usernames, etc:
+
+<kbd>![](files/secret_rfunction.png ':size=500x')</kbd>
+
+2. Add these arguments with the value secret to the `app-configuration.json`:
+
+<kbd>![](files/secret_appconfig.png ':size=200x')</kbd>
+
+3. Create a `xxx.env` file containing your passwords saved in the folder of the App:
+E.g. `myPersonalPasswords.env` which for this example would contain the following:
+
+<kbd>![](files/secret_envfile.png ':size=200x')</kbd>
+
+4. In the `sdk.R`, right under the line `args <- configuration()` add the correspondence between your created `xxx.env` file and the arguments of your function: 
+
+<kbd>![](files/secret_sdk.png ':size=500x')</kbd>
+
+5. Finally, but very important, add the created `xxx.env` file to your `.gitignore` file to avoid accidental publishing it on your repository:
+
+<kbd>![](files/secret_gitignore.png ':size=200x')</kbd>
+
 
 ### Step 5: Write App specifications
 App specifications should be written into the file `appspec.json` to define the App's metadata and the user interface to specify MoveApps App parameters (see [App specifications](appspec.md)). You can test this file for compliance in the [Settings editor](https://www.moveapps.org/apps/settingseditor ':ignore').
