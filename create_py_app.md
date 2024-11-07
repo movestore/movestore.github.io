@@ -57,6 +57,44 @@ The two files emulating MoveApps interactive behaviour locally are `./.env` (thi
 
 In addition, we also require unit tests to be defined in the `./tests/**` folder. See an [example](https://github.com/movestore/Template_Python_App/blob/main/tests/app/test_app.py ':ignore') in the template.
 
+#### Details on the manipulation of the files needed to test the Apps locally
+
+**File `app-configuration.json`**: to adjust the input for the settings of the App. Note that this file needs to be filled in [json format](https://en.wikipedia.org/wiki/JSON).
+- Notation of some settings: 
+   - If a setting needs a timestamp as an input, this has to be formatted as `yyyy-mm-ddTHH:MM:SSZ`, e.g. `2014-08-14T20:51:07Z`, note the `T` and the `Z`. 
+  - If a setting needs a string of words (e.g. attributes) as an input, state all of them comma separated between quotes, e.g. `"tag_voltage,ground_speed"`. If the setting asks for a string of numeric values, also state them the same way, e.g. `"0.25,0.5,0.9"`.
+  - `false`, `true` or `null` have to be written in lower-case and without quotes.
+  - if a setting should be left empty, use `{}`.
+
+**File`.env`**: the paths to files can be adjusted, but changing names of the settings will lead to an error.
+The most common setting that you might want to adjust:
+- `SOURCE_FILE=`: indicates which file to use as an input. Test data sets are located in `./resources/samples/`. You can also always use the `app-output.pickle` file created by any App in a Workflow as input data, or any other data set saved as `.pickle`.
+
+*Note:* The `.env` and other files in the template beginning with `.` may be hidden on your computer. Update your PC settings to show hidden files in order to see and open them.
+ 
+**File `sdk.py`**: is the Software Development Kit that will execute the App. Run this script and the App will be executed. The results will be saved in `./resources/output/`.
+
+#### Dealing with passwords
+Some Apps require passwords, usernames, personal API keys, etc. that one does not want to share and make public. Especially when developing Apps and making the code public on GitHub, it is important to not accidentally publish these personal passwords. We suggest the following steps to automatically use your personal passwords, without them being visible to anyone by accident:
+
+1. Add the necessary arguments with the value "secret" to the `app-configuration.json` file:
+
+<kbd>![](files/secretpy_appconfig.png ':size=200x')</kbd>
+
+2. Create a `xxx.env` file containing your passwords saved in the folder of the App, e.g. `myPersonalPasswords.env`, which for this example would contain the following:
+
+<kbd>![](files/secret_envfile.png ':size=200x')</kbd>
+
+3. In the file `./sdk/moveapps_execution.py`, in the static method `__load_config()` add the indicated lines corresponding to your created `xxx.env` file and the `app-configuration.json` file:
+
+<kbd>![](files/secretpy_sdkexecution.png ':size=500x')</kbd>
+
+4. Finally, but **very important**, add the created `xxx.env` file to your `.gitignore` file to avoid accidentally publishing it on your repository.
+
+<kbd>![](files/secretpy_gitignore.png ':size=200x')</kbd>
+
+Now you can safely use the passwords as all other variables through `config`.
+
 
 ### Step 6: Write App specifications
 App specifications should be written into the file `./appspec.json` to define the App's metadata and the user interface to specify MoveApps App parameters (see [App specifications](appspec.md)). You can test this file for compliance in the [Settings editor](https://www.moveapps.org/apps/settingseditor ':ignore'). Note that for Python Apps no dependencies have to be added to this file.

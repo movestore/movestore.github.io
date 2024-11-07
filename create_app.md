@@ -57,9 +57,9 @@ In addition, we require unit tests for `RFunction` Apps using `testthat`. Follow
 **File `app-configuration.json`**: to adjust the settings of the App. Note that this file needs to be filled in [json format](https://en.wikipedia.org/wiki/JSON). In case of an App based on R-Shiny this file does not exist, the settings can be adjusted once the UI opens. 
 - Notation of some settings: 
    - If a setting needs a timestamp as an input, this has to be formatted as `yyyy-mm-ddTHH:MM:SSZ`, e.g. `2014-08-14T20:51:07Z`, note the `T` and the `Z`. 
-  - If setting needs a string of words (e.g. attributes) as an input, state all of them coma separated between quotes, e.g. `"tag_voltage,ground_speed"`. If the settings allows for a string of numeric values, also state them the same way, e.g. `"0.25,0.5,0.9"`.
+  - If a setting needs a string of words (e.g. attributes) as an input, state all of them comma separated between quotes, e.g. `"tag_voltage,ground_speed"`. If the settings allows for a string of numeric values, also state them the same way, e.g. `"0.25,0.5,0.9"`.
   - `false`, `true` or `null` have to be written in lower-case.
-  - if a setting should be left empty, use as a value `{}`.
+  - if a setting should be left empty, use `{}`.
 
 **File`.env`**: the paths can be adjusted, but changing names of the settings will lead to an error.
 Here the list of the most common ones that one might want to adjust:
@@ -71,7 +71,8 @@ Here the list of the most common ones that one might want to adjust:
 **File `sdk.R`**: is the Software Development Kit that will execute the App. Run/Source this script and the App will be executed. The results will be saved under the path stated in `OUTPUT_FILE=` in the `.env` file, and in case of a Shiny App, the UI will open.
 
 
-**Dealing with passwords**: some Apps require passwords, usernames, personal API keys, etc that one does not want to share and make pubic. Specially when developing Apps and making the code public on GitHub, it is important to not accidentally publish these personal passwords. Here are the steps to automatically use your personal passwords, without them being visible to anyone by accident:
+#### Dealing with passwords
+Some Apps require passwords, usernames, personal API keys, etc that one does not want to share and make public. Specially when developing Apps and making the code public on GitHub, it is important to not accidentally publish these personal passwords. Here are the steps to automatically use your personal passwords, without them being visible to anyone by accident:
 
 1. Make sure that your R function contains the arguments referring to the needed passwords, usernames, etc:
 
@@ -90,7 +91,7 @@ E.g. `myPersonalPasswords.env` which for this example would contain the followin
 
 <kbd>![](files/secret_sdk.png ':size=500x')</kbd>
 
-5. Finally, but very important, add the created `xxx.env` file to your `.gitignore` file to avoid accidental publishing it on your repository:
+5. Finally, but **very important**, add the created `xxx.env` file to your `.gitignore` file to avoid accidental publishing it on your repository:
 
 <kbd>![](files/secret_gitignore.png ':size=200x')</kbd>
 
