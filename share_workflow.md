@@ -1,6 +1,6 @@
 # Share Workflows with other Users
 
-For replication, collaboration or other joint work, it is possible to share your Workflow with other users.  A Workflow can be shared globally with all MoveApps users or specific users can be invited by their nickname. The recipients can load the privately shared or any public Workflow into their account and edit it there independently of the original Workflow and its creator. The Workflow will be available with all Apps in the same versions as shared by the creator originally, they can be updated by the receiving user (however, without the option to go back). Note that users have 30 days to accept a privately shared Workflow. Public Workflows stay available permanently. 
+For replication, collaboration or other joint work, it is possible to share your Workflow with other users.  A Workflow can be shared globally with all MoveApps users or specific users can be invited by their nickname. The recipients can load the privately shared or any public Workflow into their account and edit it there independently of the original Workflow and its creator. The Workflow will be available with all Apps in the same versions as shared by the creator originally, they can be updated by the receiving user (however, without the option to go back). Note that users have 30 days to accept a privately shared Workflow. Public Workflows stay available permanently untill the creator deletes them (note that public Workflows that are [published with a DOI](publish_workflow.md) cannot be deleted). 
 
 ## How to share your Workflow
 
@@ -29,6 +29,9 @@ Once finished, please press `Save & Share Workflow`.
 ![](files/Share_WF_3_23.png ':size=1200x')</kbd>
 
 !\> Note that as the original owner of a public Workflow, you can edit the title and description of the Workflow and all shared Workflow Instances, the shared message and Workflow references/urls at any time under `Details` in the public Workflow table (use the `Edit` button at the top). Note that the shared Workflow itself cannot be changed after sharing it, and that changes to the Workflow in the owner's private Workflow overview will not be incorporated in the shared Workflow.
+
+!\> When publicly sharing a Workflow that is based on data that is not publicly available, please add an additional Workflow Instance that runs with publicly available data. This will enable other users to make optimal use of your public Workflow.
+
 
 ## How to accept a shared Workflow
 
