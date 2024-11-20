@@ -1,6 +1,6 @@
 # How to create a Python App
 
-Here you find a step-by-step guide on creating a MoveApps Python App. **Please carefully follow the steps below to create an App.** Before starting, we recommend to check out our **[video tutorials](video_tutorials.md)**.
+Here you find a step-by-step guide on creating a MoveApps Python App. **Please carefully follow the steps below to create an App.** Before starting, we recommend to check out our **[video tutorials](video_tutorials.md)** and to follow along with the example App [Hello World!](hello_world_py_app.md).
 
 All Apps to be submitted must be managed in a public [GitHub](https://github.com ':ignore') repository. When creating Python Apps, the repository should contain the program code for executing the App (in a file named `./app/app.py`), a specification of the App represented by an [`./appspec.json`](appspec.md) file and a documentation file (called `./README.md`), which needs to be the repository README.
 
@@ -29,7 +29,9 @@ Login to GitHub and go to the [Template Python App](https://github.com/movestore
 
 
 ### Step 2: Create the Conda environment
-The MoveApps system uses Conda as library manager and all required libraries are specified in the file `environment.yml`. To sucessfully use the template and test your App, you need to create the Conda environment by running `conda env create -n APP_NAME --file environment.yml` in the terminal or by clicking on the top left option in the PyCharm window. When using a terminal, make sure to activate the environment by `conda activate APP_NAME`.
+The MoveApps system uses Conda as library manager and all required libraries are specified in the file `environment.yml`. To sucessfully use the template and test your App, you need to create the Conda environment. This can be done by running `conda env create -n APP_NAME --file environment.yml` in the terminal and then `conda activate APP_NAME` to activate the Conda environment.
+
+Alternatively, you can click on `Create a conda environment using environment.yml` in the PyCharm window. In case this option does not show up in the PyCharm window, click on `<No interpreter>` at the bottom right of the PyCharm window, followed by `Interpreter settings > Project Structure > Add Content Root`, select the directory of your App and click `OK` twice to go back to the main window. Then, open `sdk.py` (under `Project Files`) and click on `Create a conda environment using environment.yml`. If the bottom right still indicates `<No interpreter>`, click on it and you can select the Conda environment for your App from the list.
 
 
 ### Step 3: Ensure that our template runs properly on your system
