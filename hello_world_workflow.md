@@ -6,7 +6,7 @@ In the instructions below, buttons on the website are shown in `orange`.
 ## Download your data from Movebank
 From the main menu in your `Dashboard`, select `Workflows` and then `Create New Workflow`. 
 
-<kbd>![](files/Dashboard_Workflow.png 'size=600x')
+<kbd>![](files/Dashboard_Workflow.png ':size=700x')
 
 After providing a name for the Workflow, you will be asked to `Select A Data Source`. Choose `Movebank Location` and provide your [Movebank](https://www.movebank.org) login details.
 
@@ -19,7 +19,7 @@ For this example let us select the public study `Migration timing in white-front
 
 For shorter run times in this example let us select data of only two animals, say 700 and 712. As the data sets are not very dense, for now a time range selection is not necessary. Select `Finish` in the final Overview window. Your first Workflow, made up of one App, is now available for running.
 
-<kbd>![](files/Hello_world_workflow.png ':size=400x')</kdb>
+<kbd>![](files/Hello_world_workflow.png ':size=500x')</kdb>
 
 If you like, go ahead and click on `> Start` at the top right and, after the run is finished, explore the downloaded data (Output Details) in the `Cargo Agent`, which can be accessed via the small green circle appearing on the right side of the App Container (red arrow) once the run is finished. Explore the coloured dots (by hovering over them) that indicate the status of each App's performance (blue arrow). On the right side of the Workflow name there is also a action point which will indicate if the Workflow instance is "running" or "stopped" (yellow arrow). Note that if the Workflow contains a Shiny App its status will always be "running", also after finishing, in order to allow the interaction with the App User Interface (UI).
 

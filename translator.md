@@ -1,6 +1,6 @@
 # Connect Apps of different types with `Translator` Apps
 
-!\>  **Caution!**  Unexpected difficulties with the Translator App `move2_loc to MovingPandas` might lead to errors in new Workflows that contain Python Apps. Many of the Python Apps currently give errors, the developers of these Apps are working on new versions to get these Apps working again. Meanwhile, please continue using your old Workflows (with the deprecated `Movebank Location move1` starting App). Please bear with us, we will inform you when the updates are completed. *(20 Dec 2023)*
+!\>  **Caution!**  Unexpected difficulties with the Translator App `move2_loc to MovingPandas` might lead to errors in new Workflows that contain Python Apps. Some of the Python Apps currently give errors, the developers of these Apps are working on new versions to get these Apps working again. Meanwhile, please continue using your old Workflows when using these Apps (with the deprecated `Movebank Location move1` starting App). Please bear with us, we will inform you when the updates are completed. *(22 Nov 2024)*
 
 ## Input and output types in MoveApps
 
@@ -14,7 +14,7 @@ Before you start a Workflow, it is advisable to use the [App Browser](https://ww
 
 ## Connecting Apps of different types
 
-When adding a new App to the Workflow by clicking on the `+` only those Apps that match the IO type(s) of the adjacent App(s) will appear in the list.
+When adding a new App to the Workflow by clicking on the `+` only those Apps that match the IO type(s) of the adjacent App(s) will appear in the list (see [How to Create a Workflow](create_workflow.md) for instructions on how to build a Workflow).
 
 Note the message above the list of Apps: In our example, it is informing that only Apps that have an input and output type `move2::move2_loc` are listed. 
 
@@ -24,7 +24,7 @@ There are a series of Apps in the category `Translator` within the class `Helper
 
 In the "Input/Output" column of a `Translator` App you can quickly see what output/input types are being translated.
 
-<kbd>![](files/TranslatorExample.png ':size=700x')</kbd>
+<kbd>![](files/TranslatorExample.png ':size=1000x')</kbd>
 
 !\> Be aware that not all input/output types can be translated into all other types. These have to be equivalent. E.g. `ctmm::telemetry.list` cannot be translated into a `move2::move2_nonloc` as the first contains location data (e.g. GPS) and the second contains non-location data (e.g. acceleration).
 
