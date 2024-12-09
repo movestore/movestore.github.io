@@ -57,7 +57,6 @@ MoveApps Apps should be thoroughly tested locally before submission to MoveApps.
 
 The two files emulating MoveApps interactive behaviour locally are `./.env` (this file is hidden by default), which defines the input and output files path (please only adapt the source file path here), and `./app-configuration.json`, which allows you to adapt the App settings for local testing. Note that the json format is required here. The fourth included file that you must use for development is the `./app/app.py`. This is the entrypoint for your App logic. MoveApps will call the class App in this file during a Workflow execution which includes your App. 
 
-In addition, we also require unit tests to be defined in the `./tests/**` folder. See an [example](https://github.com/movestore/Template_Python_App/blob/main/tests/app/test_app.py ':ignore') in the template.
 
 #### Details on the manipulation of the files needed to test the Apps locally
 
@@ -98,23 +97,29 @@ Some Apps require passwords, usernames, personal API keys, etc. that one does no
 Now you can safely use the passwords as all other variables through `config`.
 
 
-### Step 6: Write App specifications
+### Step 6: Unit tests
+To ensure correct behavior of the code, we require unit tests to be defined in the `./tests/**` folder. See an [example](https://github.com/movestore/Template_Python_App/blob/main/tests/app/test_app.py ':ignore') in the template.
+
+*more details and examples coming soon*
+
+
+### Step 7: Write App specifications
 App specifications should be written into the file `./appspec.json` to define the App's metadata and the user interface to specify MoveApps App parameters (see [App specifications](appspec.md)). You can test this file for compliance in the [Settings editor](https://www.moveapps.org/apps/settingseditor ':ignore'). Note that for Python Apps no dependencies have to be added to this file.
 
 
-### Step 7: Store environment dependencies
+### Step 8: Store environment dependencies
 The MoveApps system uses Conda as library manager and to enable your App to run successfully on our system, all required libraries need to be specified in the file `./environment.yml`. For each library, you can optionally define which version must be loaded.
 
 
-### Step 8: Write a documentation file
+### Step 9: Write a documentation file
 Write about the detailed function and use of the App including possible error cases. We recommend using the [`README.md`](https://github.com/movestore/Template_Python_App/blob/main/README.md ':ignore') that is provided as a template in the App template.
 
 
-### Step 9: Upload all changes to your GitHub repository
+### Step 10: Upload all changes to your GitHub repository
 After developing the App code and updating all required files, upload/push all changes to your App's GitHub repository. The following three files are mandatory for running on MoveApps: `./appspec.json`, `./environment.yml`, `./app/app.py` and a documentation file (needs to be `./README.md`). Additional files can be included (see image above), but are not required.
 
 
-### Step 10: Create a Tag/Release
+### Step 11: Create a Tag/Release
 Create a Tag in your project's GitHub repository by clicking on `Create a new release`. Note: if you have already created a release before, click on `Releases > Draft a new release`.
 
 <kbd>![](files/CreateTag.png ':size=250x')</kbd>
@@ -126,7 +131,7 @@ Choose a tag (version name, e.g. v0.1) and choose a release title (e.g. first ve
 !\>If you missed something in the release and want to add/adjust this, you can delete the release (under `Releases > Releases`). Note that it is then also **required to delete the associated tag** (under `Releases > Tags`) before creating a new release. If you do not delete the associated tag, MoveApps will use the old (deleted) release.
 
 
-### Step 11: Initialize the App on MoveApps
+### Step 12: Initialize the App on MoveApps
 After you have successfully written a functioning App, copied it or used the template (together with the [appspec.json](appspec.md)) into your GitHub App repository and described its details in the `README.md` file, you can initiate it on MoveApps. To do this, select `My Apps > Create new app` from the menu in your Dashboard, or click on `Initialize a New App` in your `App Overview` and fill out the form. 
 
 <kbd>![](files/initializeAppDashboard.png ':size=800x')</kbd>
@@ -152,8 +157,8 @@ When you have successfully created the App, it will be listed in the overview `M
 !\> Note that the repository link, IO types and runtime environment will be fixed to the App and cannot be changed afterwards. 
 
 
-### Step 12: Submit a first App version
-After initializing the App in MoveApps, you can to submit a first (or later updated) App version to MoveApps. In order to create your first (or any updated new) App version, you must create a `Tag` (via `Release`) of your GitHub repository in its present state (see Step 8). After you have created the `Tag`, go to the MoveApps site and press the `Add Version` button in the detailed view of your App (via `My Apps > App Overview > AppName`). Select the `Tag` from the list of available `Tags` and press `Create Version`. A new App version is only available if your tag creation in GitHub was successful. 
+### Step 13: Submit a first App version
+After initializing the App in MoveApps, you can to submit a first (or later updated) App version to MoveApps. In order to create your first (or any updated new) App version, you must create a `Tag` (via `Release`) of your GitHub repository in its present state (see Step 11). After you have created the `Tag`, go to the MoveApps site and press the `Add Version` button in the detailed view of your App (via `My Apps > App Overview > AppName`). Select the `Tag` from the list of available `Tags` and press `Create Version`. A new App version is only available if your tag creation in GitHub was successful. 
 
 <kbd>![](files/Appdevel_createNewAppVersion.png ':size=900x')</kbd>
 
@@ -164,7 +169,7 @@ To submit the new version, you must include a description detailing the changes 
 One of the MoveApps administrators will check the App for functionality, performant `appspec.json` and possible issues regarding our Terms of Use. Then, the App will be build into a docker container for intergration into the platform. If the App has built successfully, it will acquire private trial status. You will receive an e-mail.
 
 
-### Step 13: Test a private trial version on MoveApps
+### Step 14: Test a private trial version on MoveApps
 Upon successful review and built, your App version will enter the `TRIAL` stage and you will receive an E-mail from the system, possibly with comments from the administator. In case your App does not pass the review or the building process was unsuccessful, the administrator will reject your App version and you will get an E-mail with details about it. Please address any raised concerns and submit a new App version then.
 
 Once your App is in status `TRIAL`, it becomes possible for only you (and the system administrators) to add this App to a Workflow in your MoveApps account. It appears in the list of Apps possible to add to your Workflow (with fitting IO type) in `TRIAL` design (see figure below). Also when included in a Workflow, the App will be highlighted with colour as a `TRIAL` App.
@@ -175,7 +180,7 @@ Once your App is in status `TRIAL`, it becomes possible for only you (and the sy
 Please, [create some Workflows](create_workflow.md) and test if the App version is working as you expect within the MoveApps platform. Test your App for different data sets and parameter settings, use e.g. the wealth of open data sets on Movebank.  Have a look at [this compilation of edge case data sets](https://github.com/movestore/Movebank_Example_Datasets ':ignore') for more intensive testing and development.
 
 
-### Step 14: Approve (or retract) your App version
+### Step 15: Approve (or retract) your App version
 If the App is performing well, please select `APPROVE` in the respective App version of the App in your App Overview (`My Apps > App Overview > *your_app_name*`). The App version will aquire the status `APPROVED`and become visible and usable for all registered MoveApps users. In case the App version does not perform as expected, please `RETRACT` it from the system, adapt your code and submit a new version. In the Workflow where the `TRIAL` App has been included, it will be marked as `Retracted` and give an error if executed.
 
 <kbd>![](files/Trial_AppVersion.png)</kbd>
