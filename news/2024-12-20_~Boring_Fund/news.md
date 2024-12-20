@@ -1,6 +1,6 @@
 # MoveApps winner of The Boring Fund 2024
 
-![Boring Fund](theboringfund_small.png)
+![Boring Fund](theboringfund_small.jpg)
 
 We are honored to be among the [winners of The Boring Fund 2024](https://wildlabs.net/article/meet-winners-boring-fund-2024) from [WILDLABS](https://wildlabs.net/) in partnership with Arm.
 
