@@ -24,6 +24,7 @@
       - [Writing R App code](copilot-r-sdk.md)
       - [Writing R-Shiny App code](copilot-shiny-sdk.md)
   - Python Tutorials
+      - [Hello world! A Python App example](hello_world_py_app.md)
       - [How to create a Python App](create_py_app.md)
       - [Programming with IO type MovingPandas.TrajectoryCollection](movingPandas_colnames.md)
       - [Manage your Python Apps with GitHub](manage_Pyapp_github.md)
