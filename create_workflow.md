@@ -107,13 +107,13 @@ For R-Shiny Apps that return User Interfaces (UI), the UI can be accessed after 
 
 ## Download Workflow output
 
-In addition to the direct click-download of files that appear in the App containers after the workflow has run, the `Output` button gives you access to all output files that the Workflow is generating. Each output file of Apps can be downloaded separately or a selection of files can be bundled and downloaded as a zip file. In case of one or more .pdf products, it is also possible to download a bundled pdf, unsecured or as encrypted file for sensitive tracking data (see buttons on top right).
+In addition to the direct click-download of files that appear in the App containers after the workflow has run, the `Output` button gives you access to all output files that the Workflow is generating. Each output file of the Apps can be downloaded locally or uploaded to a cloud storage provider. A selection of files can be bundled and downloaded as a zip file. In case of one or more .pdf products, it is also possible to download a bundled pdf, unsecured or as encrypted file for sensitive tracking data (see buttons on top right).
 
-Note that it is possible to select products from Apps for inclusion in E-mail attachments (see [scheduling](scheduled_runs.md)). At the top of the page, you can access our [API service](scheduled_runs.md) that allows to create a stable http link to any of the products created by the workflow.
+At the top of the page, you can access our [API service](scheduled_runs.md) that allows to create a stable http link to any of the products created by the workflow.
 
 <kbd>![](files/output_button2.png ':size=300x')</kbd>
 
-<kbd>![](files/output_save_view2.png ':size=1400x')</kbd>
+<kbd>![](files/output_save_view2.png ':size=600x')</kbd>
 
 ## Workflow Instances
 
