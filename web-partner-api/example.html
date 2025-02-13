@@ -136,18 +136,18 @@
             .then(data => {
                 console.log('success!', data);
                 // a video
-                let animationArtifact = data.results[3]
+                let animationArtifact = data.results[2]
                 if (animationArtifact.fileName.endsWith('mp4')) {
                     handleVideo(animationArtifact.links.self, animationArtifact.modifiedAt)
                 } else {
-                    throw Error('selected artifact is not the expected one! has the workflow- / output-configuration changed?', animationArtifact)
+                    throw Error('selected artifact (mp4) is not the expected one! has the workflow- / output-configuration changed?', animationArtifact)
                 }
                 // a pdf
                 let pdfArtifact = data.results[5]
                 if (pdfArtifact.fileName.endsWith('pdf')) {
                     handlePdf(pdfArtifact.links.self, pdfArtifact.modifiedAt)
                 } else {
-                    throw Error('selected artifact is not the expected one! has the workflow- / output-configuration changed?', pdfArtifact)
+                    throw Error('selected artifact (pdf) is not the expected one! has the workflow- / output-configuration changed?', pdfArtifact)
                 }
             })
             .catch(err => console.warn('Something went wrong.', err))
