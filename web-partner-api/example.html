@@ -59,16 +59,16 @@
             <li>Localize and press the link on this screen named <em>this overview</em></li>
             <li>On this overview all the files produced by your Workflow Instance are listed. Use these links to your seletion of files for the next sections.</li>
         </ol>
-        <p> The <a target="_blank" href="https://www.moveapps.org/web-partner/v1/workflowInstances/8b536ed8-a681-4786-aa01-b26040106f9f/results/index?api-key=bdl@2nq@9SD!i31a1M7HxG7GQG93IQ0a">mentioned overview for this example</a> (use something that can parse XML!).</p>
+        <p> The <a target="_blank" href="https://www.moveapps.org/web-partner/v1/workflowInstances/a04d9517-43bb-4d5f-9391-18c0259439af/artifacts/index?api-key=DJobF2rKZtjHgahvZX0bWRA444lF5qg3">mentioned overview for this example</a> (use something that can parse XML!).</p>
     </section>
 
     <section>
         <h2>Just a basic list of links</h2>
         <ul>
             <!-- keep in mind that these API keys will be visible to the public -->
-            <li><a target="_blank" href="https://www.moveapps.org/web-partner/v1/workflowInstances/8b536ed8-a681-4786-aa01-b26040106f9f/apps/4/results/MorningReport_overviewTable.pdf?api-key=bdl@2nq@9SD!i31a1M7HxG7GQG93IQ0a">some PDF document (opens in new tab)</a></li>
-            <li><a download href="https://www.moveapps.org/web-partner/v1/workflowInstances/8b536ed8-a681-4786-aa01-b26040106f9f/apps/5/results/data_shps.zip?api-key=bdl@2nq@9SD!i31a1M7HxG7GQG93IQ0a">some ZIP file (will be downloaded)</a></li>
-            <li><a download href="https://www.moveapps.org/web-partner/v1/workflowInstances/8b536ed8-a681-4786-aa01-b26040106f9f/apps/6/results/data.csv?api-key=bdl@2nq@9SD!i31a1M7HxG7GQG93IQ0a">some CSV file (will be downloaded)</a></li>
+            <li><a target="_blank" href="https://www.moveapps.org/web-partner/v1/workflowInstances/a04d9517-43bb-4d5f-9391-18c0259439af/apps/3/results/MorningReport_overviewTable.pdf?api-key=DJobF2rKZtjHgahvZX0bWRA444lF5qg3">some PDF document (opens in new tab)</a></li>
+            <li><a download href="https://www.moveapps.org/web-partner/v1/workflowInstances/a04d9517-43bb-4d5f-9391-18c0259439af/apps/4/results/data_points_shps.zip?api-key=DJobF2rKZtjHgahvZX0bWRA444lF5qg3">some ZIP file (will be downloaded)</a></li>
+            <li><a download href="https://www.moveapps.org/web-partner/v1/workflowInstances/a04d9517-43bb-4d5f-9391-18c0259439af/apps/5/results/data.csv?api-key=DJobF2rKZtjHgahvZX0bWRA444lF5qg3">some CSV file (will be downloaded)</a></li>
         </ul>
     </section>
 
@@ -83,7 +83,7 @@
 
         <!-- keep in mind that these API keys will be visible to the public -->
         <object 
-            data="https://www.moveapps.org/web-partner/v1/workflowInstances/8b536ed8-a681-4786-aa01-b26040106f9f/apps/4/results/MorningReport_overviewTable.pdf?api-key=bdl@2nq@9SD!i31a1M7HxG7GQG93IQ0a"
+            data="https://www.moveapps.org/web-partner/v1/workflowInstances/a04d9517-43bb-4d5f-9391-18c0259439af/apps/3/results/MorningReport_overviewTable.pdf?api-key=DJobF2rKZtjHgahvZX0bWRA444lF5qg3"
             type="application/pdf"
             width="100%"
             height="600px"
@@ -114,10 +114,10 @@
     </section>
     <script>
         // The MoveApps Web-Partner-API credentials provided by the "output" section of the workflow:
-        let username = '8b536ed8-a681-4786-aa01-b26040106f9f'
+        let username = 'a04d9517-43bb-4d5f-9391-18c0259439af'
         // Keep in mind that this token will be visible to the public. That is okay for workflows which generate public resources (aka artifacts).
         // If your workflow produces sensitive resources consider consuming the artifacts by an own backend system in order to hide this token from the public.
-        let token = 'bdl@2nq@9SD!i31a1M7HxG7GQG93IQ0a'
+        let token = 'DJobF2rKZtjHgahvZX0bWRA444lF5qg3'
         document.getElementById('username').innerHTML = username
         document.getElementById('apiToken').innerHTML = token
         document.getElementById('apiTokenUrlEncoded').innerHTML = encodeURI(document.getElementById('apiToken').innerHTML)
