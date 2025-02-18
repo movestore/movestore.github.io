@@ -1,5 +1,5 @@
 # Improvement of scheduled Workflows and API link
 
-![scheduled WF!](4960565.jpg)
+![scheduled WF!](continuous-improvement_freepik_blue.png)
 
-over the last weeks we have improved functionalities mostly related to scheduled Workflows and the API link. Read about all the details in the [latest newsletter](NewsletterFeb25.pdf).
+Over the last weeks we have improved functionalities mostly related to scheduled Workflows and the API link. Read about all the details in the [latest newsletter](NewsletterFeb25.pdf).
