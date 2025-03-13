@@ -1,4 +1,4 @@
-# Connect Apps of different types with `Translator` Apps
+# How to connect Apps with Translators
 
 !\>  **Caution!**  Unexpected difficulties with the Translator App `move2_loc to MovingPandas` might lead to errors in new Workflows that contain Python Apps. Some of the Python Apps currently give errors, the developers of these Apps are working on new versions to get these Apps working again. Meanwhile, please continue using your old Workflows when using these Apps (with the deprecated `Movebank Location move1` starting App). Please bear with us, we will inform you when the updates are completed. *(22 Nov 2024)*
 
