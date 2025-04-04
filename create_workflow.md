@@ -31,7 +31,8 @@ Note that recently, we have added the option to download non-location data from 
 By clicking on the `+` to the right of an App container, you can browse, search and select the next App to add to your Workflow for filtering, analysis or visualisation of the downloaded data. You can only insert Apps within the Workflow if they are compatible with the required input and output (IO) types. The list of Apps to choose from will only include those that comply with the required IO types for the specific position in your Workflow. To see also incompatible Apps activate the `Include incompatible Apps` switch. Use the [Translator Apps](translator.md) to transform IO types enabling to connect Apps with different IO types.
 By clicking on the App name you are directed to the App Details that also contain links to the documentation, code and issues.
 
-<kbd>![](files/Workflow_addApp_Apr25.png ':size=900x')</kbd>
+<kbd>![](files/Workflow_addApp_tiles.png ':size=900x')</kbd>
+<kbd>![](files/Workflow_addApp_list.png ':size=900x')</kbd>
 
 !\> Note that [depredated Apps](app_deprecation.md) do not appear in this list by default. Deprecated Apps cannot be added to new Workflows any more, because the App developer has stopped maintenance.
 
