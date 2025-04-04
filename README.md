@@ -13,7 +13,7 @@ The navigation bar at the top of the MoveApps website contains several buttons. 
 
 <kbd>![MoveApps navigation bar](files/MoveApps_navigationbar.png ':size=800x')</kbd>
 
-- **App browser**: here you find an overview of all existing Apps with Categories and other information.
+- **App browser**: here you find an overview of all existing Apps by Categories and other information.
 - **News**: important new features and exciting MoveApps news will be presented here.
 - **User manual**: the user manual contains all explanation you need to get started on MoveApps.
 - **Forum**: this links to the MoveApps GitHub page where you can start or contribute to existing discussions.

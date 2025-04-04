@@ -28,8 +28,7 @@ To extend the functionality of MoveApps, it is possible to request new IO types.
 # App Categories
 When submitting an App, you will be asked to assign one or more Categories to your App. Assigning appropriate Categories to your App ensures that it can easily be found by other users. In the App Browser, Apps can be filtered or searched by their Category. The Categories are currently grouped within the Classes `Location Data`, `Integration`, `Helper`. Check out the [App Browser](https://www.moveapps.org/apps/browser) for a list of all available App Categories.
 
-If your App does not fit into any of the existing Categories, you can request an additional Category in the interface when submitting an App. You will also need to describe why your App does not fit into any existing Category. Your Category request will be reviewed by a system administrator. Once an administrator has approved your request, it will be available on the MoveApps platform.
+If your App does not fit into any of the existing Categories, you can request an additional Category in the interface when submitting an App. You will also need to describe why your App does not fit into any existing Category. Your Category request will be reviewed by a system administrator. Once an administrator has approved your request, it will be available on the MoveApps platform and automatically added to your App.
 
-*It will soon be possible to request a new Category before starting the App submission.*
 
-<kbd>![](files/ReqNewCat_2024.png)</kbd>
+<kbd>![](files/ReqNewCat_2025.png)</kbd>
