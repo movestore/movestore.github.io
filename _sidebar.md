@@ -15,7 +15,7 @@
   - [Coding best practices for MoveApps](best_practices_coding.md)
   - [Parallel computing in MoveApps](parallelcomp.md)
   - [How to run Apps locally](run_app_locally.md)
-  - [Input/Output types and App Categories in MoveApps](IO_types.md)
+  - [Input/Output types and App Categories](IO_types.md)
   - R Tutorials
       - [Hello world! An R App example](hello_world_app.md)
       - [How to create an R App](create_app.md)
