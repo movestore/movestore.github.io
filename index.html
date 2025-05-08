@@ -8,6 +8,8 @@
     <!-- plugins -->
     <!-- for collapsing sidebar -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
+    <!-- enables anchor links (kudos: https://github.com/docsifyjs/docsify/issues/351#issuecomment-528318227) -->
+    <script src="https://cdn.jsdelivr.net/gh/rizdaprasetya/docsify-fix-pageload-scroll@master/index.js"></script>
     <title>MoveApps User Manual</title>
     </script>
     <style type="text/css">
@@ -81,7 +83,10 @@
             // To avoid search index collision
             // between multiple websites under the same domain
             namespace: 'moveapps',
-        }
+        },
+        plugins: [
+            DocsifyPageloadScrollPlugin.create({isDebug: false, scrollDelay: 500})
+        ]
     };
 </script>
 <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
