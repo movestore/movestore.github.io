@@ -50,7 +50,7 @@ When running a Workflow, Apps may give an error and subsequent Apps will not run
 
 <kbd>![](files/error0.png ':size=400x')</kbd>
 
-We recommend trying out the following actions to try to solve the error.
+We recommend the following actions to try to solve the error.
 
 #### Consult error details and App logs
 Take a look at the error message by clicking on `Error details`. The error message may already indicate the problem. 
@@ -61,23 +61,29 @@ In some cases, the `Error details` do not provide helpful information. In these 
 
 <kbd>![](files/error1.png ':size=700x')</kbd>
 
-In the App documentation (App Menu (see [Menu, Settings and Logs](#menu--settings-and-logs) > `App Details > Documentation`, or click on the book icon in the App container), there is a section covering the most common errors. Your error may be covered here together with a potential solution.
+In the App documentation (click on the book icon in the App container), there often is a section covering the most common errors. Your error may be covered here together with a potential solution.
 
 #### Revise App settings
+In some cases, the error details or App logs indicate a problem with the App settings. In these cases, and also generally when encountering an error, we recommend to revise the App settings. App settings can be accessed through the App Menu (see [Menu, Settings and Logs](#menu--settings-and-logs)), or for Shiny Apps through the User Interface.
 
-In some cases, the error details or App logs indicate a problem with the App settings. In these cases, and also generally when encountering an error, we recommend to revise the App settings. App settings can be accessed through the App Menu (see [Menu, Settings and Logs](#menu--settings-and-logs)), or for Shiny Apps throught the User Interface.
-
-#### Check out issues in the App repository
-
-Lastly, App users can create an "issue" in the App's GitHub repository to notify the App developer about problems with their App. You can access the issue site by clicking on `issue at the App repository` in the window with error details.
+#### Getting help to solve errors and bugs
+###### GitHub issue
+App users can create an "issue" in the App's GitHub repository to notify the App developer about problems with their App. You can access the issue site by clicking on `issue at the App repository` in the window with error details, or through the `App Details` that can be accessed via the App Menu (see [Menu, Settings and Logs](#menu-settings-and-logs)). Have a look at the list of issues on the App's repository, maybe other users encountered the same problem. 
+If not, create a `New issue` in GitHub in the App repository (you need a [GitHub](https://github.com/) account for this). To facilitate solving the error we recommend attaching to the issue the log file of the App. This file, `log.txt`, can be found in the output of each App. In the case of interactive Apps (Shiny Apps) this file only becomes available once the App in inactive (after 8h), but can always be downloaded from the logs overview which can be accessed via `Show Logs` in the App Menu (see [Menu, Settings and Logs](#menu-settings-and-logs)). Before making the logs public, please ensure that it does not contain any sensitive information.
 
 <kbd>![](files/error1.png ':size=700x')</kbd>
 
-Alternatively, you can reach the issue site through the App documentation in the App's GitHub repository. Click on the book icon in the App container and then in the GitHub repository on `Issues`, or on `App Details > Issues` in the App Menu (see [Menu, Settings and Logs](#menu--settings-and-logs)).
-
-On the issue site, you can check whether others have had the same problem. If you cannot understand and/or solve the errors, and there are no exisiting issues indicating the same problem, please create a `New issue` in GitHub in the App repositoriy (you need a [GitHub](https://github.com/) account for this). 
-
 <kbd>![](files/GitHubIssue.png ':size=700x')</kbd>
+
+###### Contact App developer
+If you do not have a GitHub account, you can always also email the App developer. The email can be found in the the `App Details` that can be accessed via the App Menu (see [Menu, Settings and Logs](#menu-settings-and-logs)). To speed up the error solving remember to attach the `log.txt`, that can be found in the output of each App. In the case of interactive Apps (Shiny Apps) this file only becomes available once the App in inactive (after 8h), but can always be downloaded from the logs overview which can be accessed via `Show Logs` in the App Menu (see [Menu, Settings and Logs](#menu-settings-and-logs)). Before sharing the logs, please ensure that it does not contain any sensitive information.
+
+###### Contact MoveApps support
+You can always contact MoveApps support (support@moveapps.org) for any issue you may encounter. 
+When an error occurs, by clicking on `MoveApps support` you can directly send a message to the support (with you in CC) that will contain your email, the name of the App and the logs of the App.
+If the App has issues but is not producing an error, you can always download `log.txt`, that can be found in the output of each App. In the case of interactive Apps (Shiny Apps) this file only becomes available once the App in inactive (after 8h), but can always be downloaded from the logs overview which can be accessed via `Show Logs` in the App Menu (see [Menu, Settings and Logs](#menu-settings-and-logs)). Before sharing the logs, please ensure that it does not contain any sensitive information.
+
+<kbd>![](files/error_report_support.png ':size=700x')</kbd>
 
 
 ## Menus, Settings and Logs
