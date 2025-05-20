@@ -247,6 +247,6 @@ tableB = pd.read_csv(MoveAppsIo.get_auxiliary_file_path("aux_id_B"))
 
 ## Adding large fixed or fallback files to an App
 
-You cannot add files larger than 100MB to your repository as [GitHub blocks larger them](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github). The solution is to add the files to your release. To do this go to `Releases > Create a new release` in your GitHub repository and add your files.
+If your files are larger than 100MB [GitHub blocks them](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github). Please do not include these into your repository via SCM or GitLFS, but add the files to your release. To do this go to `Releases > Create a new release` in your GitHub repository and add your files.
 
-After submitting your App on MoveApps, please inform us (support@moveapps.org) about the addition of the large file(s) to the release so we can perform the necessary adjustments while building your App.
+After submitting your App on MoveApps, please inform us (support@moveapps.org) about the addition of the large file(s) to the release so we can perform the necessary adjustments while building your App. The addition of the large files only has to be done once, new versions of the App can be created without having to add the large files to each release. If these files should change, please inform us when submitting this new version, with the newly added files, so we can update the path to fetch these data.
