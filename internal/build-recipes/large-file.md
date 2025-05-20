@@ -3,7 +3,7 @@
 ```
 FROM registry.gitlab.com/couchbits/movestore/movestore-groundcontrol/co-pilot-v1-r:geospatial-4.2.2-3188
 
-# store the large file in the GitHub release - DO NOT include it into the repository (SCM or GitLSF)
+# store the large file in the GitHub release - DO NOT include it into the repository (SCM or GitLFS)
 ADD https://github.com/movestore/Add_Elevation/releases/download/v2.0/us_nga_egm2008_1.tif .
 # adjust permission
 USER root
