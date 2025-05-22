@@ -13,6 +13,13 @@
 1. Storing large files via git-lfs at github (w/ is the "normal" way for our app developers) is a problem from time to time as GitHub has a quota limit of [100GB bandwidth](https://docs.github.com/en/billing/managing-billing-for-your-products/managing-billing-for-git-large-file-storage/about-billing-for-git-large-file-storage#included-bandwidth-and-storage-per-month) [per month](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-storage-and-bandwidth-usage).
 1. As MoveApps hits this limit we established the workaround to store large files in the GitHub release and delete it from there via HTTP during the app build
 
+This is an example error message hitting the github limit:
+
+```
+Downloading data/local_app_files/provided-app-files/raster_file/raster.tif (401 MB)
+Error downloading object: data/local_app_files/provided-app-files/raster_file/raster.tif (b0ca341): Smudge error: Error downloading data/local_app_files/provided-app-files/raster_file/raster.tif (b0ca3413fec67b05d4ab69939c1a359b640af700bd89c169174205993e44fccf): batch response: This repository exceeded its LFS budget. The account responsible for the budget should increase it to restore access.
+```
+
 ## Receipt
 
 ```
