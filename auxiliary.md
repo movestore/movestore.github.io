@@ -12,9 +12,9 @@ Any combination of these three types of auxiliary files can be integrated into a
 
 The App developer has the responsibility to decide if an auxiliary file is necessary for their App and if it can be an advantage to allow the App user to upload such a file to the App. We advise developers to provide a fixed auxiliary file or sensible fallback auxiliary files, so that the App can still run if the App user does not or cannot provide any file during App configuration. For example, it might be possible to provide a global map of lower resolution as fallback, but allow local upload of regional, higher resolution maps for analysis with tracks of that region. If the auxiliary file is optional, the code should be tested thoroughly to ensure that the App runs successfully with and without this file.  
 
-In the past, the `LOCAL_FILE` setting required the App developer to define the exact name of the auxiliary file that the App users had to provide in line with the instructions, with the introduction of the `USER_FILE` setting this is not necessary any more. However, only one file can be uploaded per `USER_FILE` setting, else the use of zipping is necessary.
+In the past, the `LOCAL_FILE` setting required the App developer to define the exact name of the auxiliary file that the App users had to provide in line with the instructions, with the introduction of the `USER_FILE` setting this is not necessary any more. However, only one file can be uploaded per `USER_FILE` setting, you can add as many `USER_FILE` settings as need. If input data, e.g. a shapefile, contain several files, these will need to be added to the folder as a .zip file, and this file will then need to be unziped in the code.
 
-!> Note that local testing of Apps with auxiliary files is possible with the SDK (Software Development Kit, provided in the templates) only if the folder for these files is called `provided-app-files`. This folder is located in `./data/auxiliary/user-files/provided-app-files/` in the R templates and in `./resources/auxiliary/user-files/provided-app-files/` in the Python template.
+!> Note that local testing of Apps with auxiliary files is possible with the SDK (Software Development Kit, provided in the templates) only if the folder for these files is called `provided-app-files`. This folder is located in `./data/auxiliary/user-files/provided-app-files/` in the R templates and in `./resources/auxiliary/user-files/provided-app-files/` in the Python template. In both cases, for the local testing to work, the "settingId" and the subfolder name (see examples below) will need to have an identical name.
 
 !> If your fixed or fallback file is larger than 100MB GitHub will not allow it to be uploaded to the repository. At the end of this page you can find the instructions to overcome this issue.
 
@@ -33,11 +33,11 @@ Any auxiliary files that the App developer wants to provide as fixed files have 
 
 "providedAppFiles": [
   {
-    "settingId": "aux_id_A",
+    "settingId": "aux_A",
     "from": "data/auxiliary/user-files/provided-app-files/aux_A/"
   },
   {
-    "settingId": "aux_id_B",
+    "settingId": "aux_B",
     "from": "data/auxiliary/user-files/provided-app-files/aux_B/"
   }
 ]
@@ -46,8 +46,8 @@ Any auxiliary files that the App developer wants to provide as fixed files have 
 ```
 *R code*
 
-fileA <- read.csv(getAuxiliaryFilePath("aux_id_A"))
-rastB <- rast(getAuxiliaryFilePath("aux_id_B"))
+fileA <- read.csv(getAuxiliaryFilePath("aux_A"))
+rastB <- rast(getAuxiliaryFilePath("aux_B"))
 ```
 
 ###### Python Apps
@@ -57,11 +57,11 @@ rastB <- rast(getAuxiliaryFilePath("aux_id_B"))
 
 "providedAppFiles": [
   {
-    "settingId": "aux_id_A",
+    "settingId": "aux_A",
     "from": "resources/auxiliary/user-files/provided-app-files/aux_A/"
   },
   {
-    "settingId": "aux_id_B",
+    "settingId": "aux_B",
     "from": "resources/auxiliary/user-files/provided-app-files/aux_B/"
   }
 ]
@@ -71,9 +71,9 @@ rastB <- rast(getAuxiliaryFilePath("aux_id_B"))
 *Python code*
 
 import pandas as pd
-fileA = pd.read_csv(MoveAppsIo.get_auxiliary_file_path("aux_id_A"))
+fileA = pd.read_csv(MoveAppsIo.get_auxiliary_file_path("aux_A"))
 
-auxiliary_file_b = MoveAppsIo.get_auxiliary_file_path("aux_id_B")
+auxiliary_file_b = MoveAppsIo.get_auxiliary_file_path("aux_B")
 with open(auxiliary_file_b) as f:
 	fileB = [line.rstrip() for line in f]
 
@@ -92,13 +92,13 @@ The `id` in the `USER_FILE` setting in the `appspec.json` has to be unique for e
 *appspec.json*
 
 settings:[{
-  "id": "aux_id_A",
+  "id": "aux_A",
   "name": "My auxiliary zipfile",
   "description": "Files for running the XY analysis. The App expects a zipped file set with the extension: 1. `.cpg`, 2. `.dbf`, 3. `.prj`, 4. `.shp`, 5. `.shx`.",
   "type": "USER_FILE"
 },
 {
-  "id": "aux_id_B",
+  "id": "aux_B",
   "name": "My auxiliary csv",
   "description": "File for running the YZ analysis. The App expects a file with the extension: `.csv`.",
   "type": "USER_FILE"
@@ -108,12 +108,12 @@ settings:[{
 ```
 *R code*
 
-shpA_path <- getAuxiliaryFilePath("aux_id_A")
+shpA_path <- getAuxiliaryFilePath("aux_A")
 dir.create(targetDirFiles <- tempdir())
 unzip(shpA_path, exdir = targetDirFiles)
 shpA <- sf::st_read(list.files(targetDirFiles,pattern=".shp",recursive=T))
 
-tableB <- read.csv(getAuxiliaryFilePath("aux_id_B"))
+tableB <- read.csv(getAuxiliaryFilePath("aux_B"))
 
 ```
 
@@ -125,7 +125,7 @@ import zipfile
 import glob
 import geopandas
 
-shpA_path = zipfile.ZipFile(MoveAppsIo.get_auxiliary_file_path("aux_id_A"))
+shpA_path = zipfile.ZipFile(MoveAppsIo.get_auxiliary_file_path("aux_A"))
 
 with tempfile.TemporaryDirectory(dir=".") as tempdir:
 
@@ -138,7 +138,7 @@ with tempfile.TemporaryDirectory(dir=".") as tempdir:
 
 
 import pandas as pd
-tableB = pd.read_csv(MoveAppsIo.get_auxiliary_file_path("aux_id_B"))
+tableB = pd.read_csv(MoveAppsIo.get_auxiliary_file_path("aux_B"))
 ```
 
 ## Local upload auxiliary files with fixed fallback files
@@ -157,13 +157,13 @@ To set up Apps with this functionality, the above two cases have to be combined 
 *appspec.json*
 
 settings:[{
-  "id": "aux_id_A",
+  "id": "aux_A",
   "name": "My auxiliary zipfile",
   "description": "Files for running the XY analysis. The App expects a zipped file set with the extension: 1. `.cpg`, 2. `.dbf`, 3. `.prj`, 4. `.shp`, 5. `.shx`.",
   "type": "USER_FILE"
 },
 {
-  "id": "aux_id_B",
+  "id": "aux_B",
   "name": "My auxiliary csv",
   "description": "File for running the YZ analysis. The App expects a file with the extension: `.csv`.",
   "type": "USER_FILE"
@@ -171,11 +171,11 @@ settings:[{
 
 "providedAppFiles": [
   {
-    "settingId": "aux_id_A",
+    "settingId": "aux_A",
     "from": "data/auxiliary/user-files/provided-app-files/aux_A/"
   },
   {
-    "settingId": "aux_id_B",
+    "settingId": "aux_B",
     "from": "data/auxiliary/user-files/provided-app-files/aux_B/"
   }
 ]
@@ -184,12 +184,12 @@ settings:[{
 ```
 *R code*
 
-shpA_path <- getAuxiliaryFilePath("aux_id_A")
+shpA_path <- getAuxiliaryFilePath("aux_A")
 dir.create(targetDirFiles <- tempdir())
 unzip(shpA_path, exdir = targetDirFiles)
 shpA <- sf::st_read(list.files(targetDirFiles,pattern=".shp",recursive=T))
 
-tableB <- read.csv(getAuxiliaryFilePath("aux_id_B"))
+tableB <- read.csv(getAuxiliaryFilePath("aux_B"))
 
 ```
 ###### Python Apps
@@ -198,13 +198,13 @@ tableB <- read.csv(getAuxiliaryFilePath("aux_id_B"))
 *appspec.json*
 
 settings:[{
-  "id": "aux_id_A",
+  "id": "aux_A",
   "name": "My auxiliary zipfile",
   "description": "Files for running the XY analysis. The App expects a zipped file set with the extension: 1. `.cpg`, 2. `.dbf`, 3. `.prj`, 4. `.shp`, 5. `.shx`.",
   "type": "USER_FILE"
 },
 {
-  "id": "aux_id_B",
+  "id": "aux_B",
   "name": "My auxiliary csv",
   "description": "File for running the YZ analysis. The App expects a file with the extension: `.csv`.",
   "type": "USER_FILE"
@@ -212,11 +212,11 @@ settings:[{
 
 "providedAppFiles": [
   {
-    "settingId": "aux_id_A",
+    "settingId": "aux_A",
     "from": "resources/auxiliary/user-files/provided-app-files/aux_A/"
   },
   {
-    "settingId": "aux_id_B",
+    "settingId": "aux_B",
     "from": "resources/auxiliary/user-files/provided-app-files/aux_B/"
   }
 ]
@@ -229,7 +229,7 @@ import zipfile
 import glob
 import geopandas
 
-shpA_path = zipfile.ZipFile(MoveAppsIo.get_auxiliary_file_path("aux_id_A"))
+shpA_path = zipfile.ZipFile(MoveAppsIo.get_auxiliary_file_path("aux_A"))
 
 with tempfile.TemporaryDirectory(dir=".") as tempdir:
 
@@ -242,11 +242,13 @@ with tempfile.TemporaryDirectory(dir=".") as tempdir:
 
 
 import pandas as pd
-tableB = pd.read_csv(MoveAppsIo.get_auxiliary_file_path("aux_id_B"))
+tableB = pd.read_csv(MoveAppsIo.get_auxiliary_file_path("aux_B"))
 ```
 
 ## Adding large fixed or fallback files to an App
 
-You cannot add files larger than 100MB to your repository as [GitHub blocks larger them](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github). The solution is to add the files to your release. To do this go to `Releases > Create a new release` in your GitHub repository and add your files.
+If your files are larger than 100MB [GitHub blocks them](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github). Please do not include these into your repository via SCM or GitLFS, but add the files to your release. To do this go to `Releases > Create a new release` in your GitHub repository and add your files as an `asset`. If you are adding multiple files, each of them has to be added separately.
 
-After submitting your App on MoveApps, please inform us (support@moveapps.org) about the addition of the large file(s) to the release so we can perform the necessary adjustments while building your App.
+Add a `providedAppFiles` setting for each of the added files in the `appspecs.json`. For creating and testing the App, proceed as usual (see [Fixed auxiliary files](https://docs.moveapps.org/#/auxiliary?id=fixed-auxiliary-files), [Local upload auxiliary files with fixed fallback files](https://docs.moveapps.org/#/auxiliary?id=local-upload-auxiliary-files-with-fixed-fallback-files)), the only difference is that the large data are uploaded differently to the GitHub repository. To exclude these large files from being listed in the files to commit to GitHub, you can add `data/auxiliary/user-files/provided-app-files/**` to the file `.gitignore`.
+
+After submitting your App on MoveApps, please inform us (support@moveapps.org) about the addition of the large file(s) to the release so we can perform the necessary adjustments while building your App. Please let us know which file (uploaded as an asset to the release) corresponds to which `providedAppFiles` setting (providing the `settingId` name should be sufficient), so we can copy the file in the correct folder. The addition of the large files only has to be done once, new versions of the App can be created without having to add the large files to each release. If these files should change, please inform us when submitting this new version, with the newly added files, so we can update the path to fetch these data.
