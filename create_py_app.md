@@ -76,21 +76,29 @@ The most common setting that you might want to adjust:
 **File `sdk.py`**: is the Software Development Kit that will execute the App. Run this script and the App will be executed. The results will be saved in `./resources/output/`.
 
 #### Dealing with passwords
-Some Apps require passwords, usernames, personal API keys, etc. that one does not want to share and make public. Especially when developing Apps and making the code public on GitHub, it is important to not accidentally publish these personal passwords. We suggest the following steps to automatically use your personal passwords, without them being visible to anyone by accident:
+Some Apps require passwords, personal API keys, etc that one does not want to share and make public. We have made available a input type, [SECRET](appspec/current/settings/secret.md), that will encode this information and prevent it from being shared. 
+
+When using the input type `SECRET` the sensitive information typed into this field will not be visible in the settings configuration in the logs of the App, and will also not be passed on when sharing a Workflow with another user or making it public.
+
+For local testing of your App:
 
 1. Add the necessary arguments with the value "secret" to the `app-configuration.json` file:
 
 <kbd>![](files/secretpy_appconfig.png ':size=200x')</kbd>
 
-2. Create a `xxx.env` file containing your passwords saved in the folder of the App, e.g. `myPersonalPasswords.env`, which for this example would contain the following:
+2. If you add the argument `MASK_SETTING_IDS` to the `.env` file, than the passwords will also not be visible in the logs of the local testing.
+
+<kbd>![](files/secret_env.png ':size=200x')</kbd>
+
+3. Create a `xxx.env` file containing your passwords saved in the folder of the App, e.g. `myPersonalPasswords.env`, which for this example would contain the following:
 
 <kbd>![](files/secret_envfile.png ':size=200x')</kbd>
 
-3. In the file `./sdk/moveapps_execution.py`, in the static method `__load_config()` add the indicated lines corresponding to your created `xxx.env` file and the `app-configuration.json` file:
+4. In the file `./sdk/moveapps_execution.py`, in the static method `__load_config()` add the indicated lines corresponding to your created `xxx.env` file and the `app-configuration.json` file:
 
 <kbd>![](files/secretpy_sdkexecution.png ':size=500x')</kbd>
 
-4. Finally, but **very important**, add the created `xxx.env` file to your `.gitignore` file to avoid accidentally publishing it on your repository.
+5. Finally, but **very important**, add the created `xxx.env` file to your `.gitignore` file to avoid accidentally publishing it on your repository.
 
 <kbd>![](files/secretpy_gitignore.png ':size=200x')</kbd>
 

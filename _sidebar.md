@@ -39,6 +39,7 @@
         - [Radiobuttons](/appspec/current/settings/radiobuttons.md)
         - [Checkboxes](/appspec/current/settings/checkbox.md)
         - [Dropdown](/appspec/current/settings/dropdown.md)
+        - [Passwords](appspec/current/settings/secret.md)
         - [User file](/appspec/current/settings/user_file.md)
       - [Dependencies](/appspec/current/dependencies_appspec.md)
       - [License](/appspec/current/license_appspec.md)

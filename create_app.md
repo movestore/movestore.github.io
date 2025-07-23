@@ -71,15 +71,22 @@ Here the list of the most common ones that one might want to adjust:
 
 
 #### Dealing with passwords
-Some Apps require passwords, usernames, personal API keys, etc that one does not want to share and make public. Specially when developing Apps and making the code public on GitHub, it is important to not accidentally publish these personal passwords. Here are the steps to automatically use your personal passwords, without them being visible to anyone by accident:
+Some Apps require passwords, personal API keys, etc that one does not want to share and make public. We have made available a input type that will encode this information and prevent it from being shared. 
 
-1. Make sure that your R function contains the arguments referring to the needed passwords, usernames, etc:
+- `R` Apps: use the input type [SECRET](appspec/current/settings/secret.md)
+- `R-Shiny` Apps: use the function [shiny::passwordInput](https://shiny.posit.co/r/reference/shiny/latest/passwordinput.html)
 
-<kbd>![](files/secret_rfunction.png ':size=500x')</kbd>
+When using the input type `SECRET` the sensitive information typed into this field will not be visible in the settings configuration in the logs of the App, and will also not be passed on when sharing a Workflow with another user or making it public.
 
-2. Add these arguments with the value secret to the `app-configuration.json`:
+For local testing of your App:
+
+1. Add the necessary arguments with the value "secret" to the `app-configuration.json`:
 
 <kbd>![](files/secret_appconfig.png ':size=200x')</kbd>
+
+2. If you add the argument `MASK_SETTING_IDS` to the `.env` file, than the passwords will also not be visible in the logs of the local testing.
+
+<kbd>![](files/secret_env.png ':size=200x')</kbd>
 
 3. Create a `xxx.env` file containing your passwords saved in the folder of the App:
 E.g. `myPersonalPasswords.env` which for this example would contain the following:
