@@ -121,15 +121,23 @@ At the top of the page, you can access our [API service](scheduled_runs.md) that
 
 <kbd>![](files/output_button2.png ':size=300x')</kbd>
 
-<kbd>![](files/output_save_view2.png ':size=600x')</kbd>
+<kbd>![](files/output_save_view.png ':size=600x')</kbd>
+
+### Download Selected App Settings
+
+In the Wokrflow output we provide a file named **"Selected App-Settings.pdf"**, this file will contain the selected settings for each App of the Workflow instance. In order to save the settings of interactive Apps with a User Interface (UI), the `Store settings` button must be clicked after customizing the settings. 
+
 
 ## Workflow Instances
 
 Each Workflow can be run and saved in several Instances, allowing you to combine the same Apps in the same order, but with different settings. It is important to note that changes in the selection and order of Apps (not their settings) in one Workflow Instance will be applied to all other Instances of the Workflow.
 
-Every additional Workflow Instance must be initialised in the `Workflows` overview (via the main menu in your `Dashboard`). Navigate to the respective Workflow and click on `Start new instance`. 
+Every additional Workflow Instance can be added via the left side menu via `+ New instance` or can be added in the `Workflows` overview (via the main menu in your `Dashboard`). Navigate to the respective Workflow and click on `Start new instance`. 
 
-<kbd>![](files/Add_WorkflowInstance.png ':size=600x')</kbd>
+<kbd>![](files/Add_WorkflowInstanceSide.png ':size=250x')</kbd>
+
+<kbd>![](files/Add_WorkflowInstance.png ':size=450x')</kbd>
+
 
 In the menu of each Instance (three dots next to the `Output` button), it is possible to `Edit Instance Details`, `Edit Workflow Details` and `Schedule Instance` (see [scheduling](scheduled_runs.md)) or to `Delete Workflow Instance`. If not empty, the description/details of the Workflow and/or Workflow Instance will be shown on the top of the page.
 

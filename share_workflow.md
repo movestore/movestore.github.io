@@ -23,7 +23,7 @@ Fourth, the Datasource Message is by default filled in with the settings of the 
 
 Finally, it is possible to add a url to a Workflow (`Add Reference`), which can, for example, point towards a description of the Workflow, a paper that is using it or a more thorough methods description.
 
-Once finished, please press `Save & Share Workflow`.
+Once finished, please press `Save & Share Workflow`. You will receive an email containing the information of the shared Workflow, this way you can keep track which Workflows you have shared with which user.
 
 <kbd>![](files/Share_WF_1_25.png ':size=1200x')
 ![](files/Share_WF_2_25.png ':size=1200x')</kbd>
@@ -35,7 +35,8 @@ Once finished, please press `Save & Share Workflow`.
 
 ## How to accept a shared Workflow
 
-If a Workflow has been shared with you by another MoveApps user it will appear in the Workflow overview. It states the nickname of the user that invited you, the names of the Workflow and Workflow Instances as well as both messages. You can decline or accept the invitation. At acceptance the Workflow will be added to your account's list. Note that at the bottom of the Workflow invitation it is indicated for how long it will stay available for you to accept. When accepting the invitation, it appears in the Category `Imported Directly Shared Workflows`. The Category can be adapted afterwards.
+If a Workflow has been shared with you by another MoveApps user it will appear in the Workflow overview. It states the nickname of the user that invited you, the names of the Workflow and Workflow Instances as well as both messages. You can decline or accept the invitation. At acceptance the Workflow will be added to your account's list. Note that at the bottom of the Workflow invitation it is indicated for how long it will stay available for you to accept. When accepting the invitation, it appears in the Category `Imported Directly Shared Workflows`. The Category can be adapted afterwards. Each Workflow Instance will contain also the personal message of the user sharing the Workflow with you. This message can be removed at any time, be aware that if you remove it from one instance, it will be removed from all instances of that workflow. 
+
 
 <kbd>![](files/Share_invite_23.png ':size=600x')</kbd>
 
