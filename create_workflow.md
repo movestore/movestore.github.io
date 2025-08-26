@@ -154,4 +154,26 @@ Workflows can be grouped by assigning them a Workflow Category name. If no Categ
 
 ## Overview of 'Your Workflows'
 
-*Info coming soon*
+<kbd>![](files/yourWF_overview.png ':size=600x')</kbd>
+
+**Search:** you can search in the title and description of your Workflows and Workflow instances
+
+<kbd>![](files/yourWFtable_categories2.png ':size=500x')</kbd>
+
+**Categories:** display of all categories. You can select one category at a time, edit them via the menu (1) or add a new category. The number next to each category name is the number of Workflows that have this category assigned. If non are selected, all Workflows will be displayed in the table below.
+
+<kbd>![](files/yourwf_table2.png ':size=500x')</kbd>
+
+**Table**: you can use each column to order your workflows. If Workflow instance names are long, it might happen that the table does not fit into your window size and seems to be cut off, you can use bar at the bottom of the table to move the table left and right.
+
+- **Workflow**: in this column all Workflows with their respective Workflow instances are displayed. By clicking on a Workflow instance name you will open it. Each Workflow instance can be edited via the menu (2). The instances are ordered by 'last start', i.e. how long ago you last clicked the button `Start` or `Rerun`, or when a scheduled instance started.
+On the right side of this column you can click to see the Workflow and Workflow instance description (3).
+The menu (4) to edit and share the Workflow can be found at the end of the table next to the column `Category`.
+
+- **Category**: in this column the categories are displayed, select a category by clicking on it.
+
+- **Last start**: this column displays how long ago you last clicked the button `Start` or `Rerun`, or when a scheduled instance started of a instance of the Workflow
+
+- **Created**: this column displays how long ago the Workflow was created.
+
+
