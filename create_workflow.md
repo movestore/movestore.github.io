@@ -132,11 +132,10 @@ In the Wokrflow output we provide a file named **"Selected App-Settings.pdf"**, 
 
 Each Workflow can be run and saved in several Instances, allowing you to combine the same Apps in the same order, but with different settings. It is important to note that changes in the selection and order of Apps (not their settings) in one Workflow Instance will be applied to all other Instances of the Workflow.
 
-Every additional Workflow Instance can be added via the left side menu via `+ New instance` or can be added in the `Workflows` overview (via the main menu in your `Dashboard`). Navigate to the respective Workflow and click on `Start new instance`. 
+Every additional Workflow Instance can be added via the left side menu via `+ New instance` or can be added in the `Your Workflows` overview (via the main menu in your `Dashboard`). You can find the button `+ New instance` next to your existing instances.
 
-<kbd>![](files/Add_WorkflowInstanceSide.png ':size=250x')</kbd>
-
-<kbd>![](files/Add_WorkflowInstance.png ':size=450x')</kbd>
+<kbd>![](files/Add_WorkflowInstanceSide.png ':size=200x')</kbd>
+<kbd>![](files/Add_WorkflowInstance.png ':size=200x')</kbd>
 
 
 In the menu of each Instance (three dots next to the `Output` button), it is possible to `Edit Instance Details`, `Edit Workflow Details` and `Schedule Instance` (see [scheduling](scheduled_runs.md)) or to `Delete Workflow Instance`. If not empty, the description/details of the Workflow and/or Workflow Instance will be shown on the top of the page.
@@ -147,9 +146,9 @@ Once an Instance of a Workflow is opened, you can switch between all Instances o
 
 ## Organizing Workflows
 
-Workflows can be grouped by assigning them a Workflow Category name. If no Category is assigned, they will appear under "Uncategorized". At any time Categories, Workflows and Instances can be edited, and workflows can be shared or published via the `Workflows` overview page. When adding Workflows that have been privately shared with you, they appear in the Category "Imported Privately Shared Workflows". Added public Workflows are initially stored in the Category "Imported Public Shared Workflows". Any added Workflows are only copies, they can be changed and reworked in any way and the Workflow Category adapted.
-
 <kbd>![](files/Workflow_start.png ':size=800x')</kbd>
+
+Workflows can be grouped by assigning them a Workflow Category name. If no Category is assigned, they will appear under "Uncategorized" (2). At any time Categories(1), Workflows(5) and Instances(4) can be edited, and workflows can be shared or published (5) via the `Your Workflows` overview page. Also nwe Categories can be added at any time (3). When adding Workflows that have been privately shared with you, they appear in the Category "Imported Privately Shared Workflows". Added public Workflows are initially stored in the Category "Imported Public Shared Workflows". Any added Workflows are only copies, they can be changed and reworked in any way and the Workflow Category adapted. 
 
 
 ## Overview of 'Your Workflows'
