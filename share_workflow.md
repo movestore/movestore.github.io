@@ -4,9 +4,11 @@ For replication, collaboration or other joint work, it is possible to share your
 
 ## How to share your Workflow
 
-To share one of your Workflows, you need to select `Share` in the Workflow menu at the `Workflows` overview.
+To share one of your Workflows, you need to select `Share` in the Workflow menu at the `Your Workflows` overview, or in the menu in the Workflow instance next to the `Output` button.
 
 <kbd>![](files/Share_WF_overview.png ':size=800x')</kbd>
+<kbd>![](files/Workflow_menu.png ':size=200x')</kbd>
+
 
 In the Share Workflow dialog you then have fill in several details.  
 

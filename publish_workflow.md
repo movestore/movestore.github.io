@@ -6,7 +6,12 @@ To make your work reproducible, we offer the archival with DOI/publication of Wo
 If you plan a publication of your Workflow in a scientific paper or a manuscript on bioRxiv, there is the additional option of acquiring a DOI (Digital Object Identifier) for your Workflow. Thereby, your Workflow will become permanently reproducible. The provision of a DOI is arranged by the Communication, Information and Media Centre (KIM) of the University of Konstanz and requires the archival of the related data in the [Movebank Data Repository](https://www.datarepository.movebank.org/). Please contact [mdr.kim@uni-konstanz.de](mdr.kim@uni-konstanz.de).
 
 ## How to archive your Workflow
-In order to have all the required information for the archival of a Workflow gathered, please complete the `Archive with DOI` dialog that you can access via the Workflow menu in the Workflow overview. Carefully follow the provided instructions and select Workflow instances to be included. Once you are finished press `Save & Publish` and a message with all relevant information will be sent to our data repository and we will come back to you about it personally. Please add the archived Workflow also into the list of publicly shared Workflows by using the `Share` option, this is a requirement for publication, as it ensures future reproducibility. Archived and publicly shared Workflows are fixed and available with the original versions of all included Apps, i.e. they can be run as originally contributed. Apps can be updated if users have added public Workflows to their dashboard.
+In order to have all the required information for the archival of a Workflow gathered, please complete the `Archive with DOI` dialog that you can access via the Workflow menu in the `Your Workflow` overview or in the menu in the Workflow instance next to the `Output` button.
+
+<kbd>![](files/Share_WF_overview.png ':size=800x')</kbd>
+<kbd>![](files/Workflow_menu.png ':size=200x')</kbd>
+
+Carefully follow the provided instructions and select Workflow instances to be included. Once you are finished press `Save & Publish` and a message with all relevant information will be sent to our data repository and we will come back to you about it personally. Please add the archived Workflow also into the list of publicly shared Workflows by using the `Share` option, this is a requirement for publication, as it ensures future reproducibility. Archived and publicly shared Workflows are fixed and available with the original versions of all included Apps, i.e. they can be run as originally contributed. Apps can be updated if users have added public Workflows to their dashboard.
 
 <kbd>![](files/Workflow_publish1_Dec2023.png)
 ![](files/Workflow_publish2_Dec2023.png)</kbd>

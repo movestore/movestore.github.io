@@ -21,7 +21,7 @@ To prevent having scheduled Workflows running forever in case they are forgotten
 
 !> Note that pins to your Workflow Instance are affecting the scheduled runs. So, if you want an automated new data download, unpin any Apps in your Workflow.
 
-<kbd><img src="files/schedule_button.png" width="450"></kbd>
+<kbd>![](files/Workflow_menu.png ':size=300x')</kbd>
 
 <kbd><img src="files/Schedule_settings.png" width="600"></kbd>
 
