@@ -27,6 +27,14 @@ rFunction <- function() {
 
 Please keep the number of packages (libraries) as low as possible. *Advice*: use `list.functions.in.file("RFunction.R")` from R package `NCmisc` to check which libraries are used by your code.
 
+#### Source aditional R scripts
+
+If you rather divide the code of your App into several files, you can do this by following these steps:
+
+- Create the folders `src/app` within your repository
+- Place all your additional scripts in the folder `app`
+- Ensure to source your additional scripts in the `RFunction.R` file from home (`./`) so it can be read in while testing and on MoveApps e.g. `source(./src/app/myHelperFunction.R)`
+
 
 ## App Input
 
