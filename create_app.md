@@ -39,7 +39,7 @@ More information on the files in the templates and their functions can be found 
 
 
 ### Step 3: Develop the App code locally within the template
-MoveApps Apps can be developed in your usual compiler/editor (e.g. RStudio). The App R code has to be saved in one file either named `RFunction.R` or `ShinyModule.R`. This file is the entrypoint for your App logic.  We provide instructions on [writing `R Function` App code](copilot-r-sdk.md) and on [writing `Shiny Module` App code](copilot-shiny-sdk.md), including information on input files and parameters.
+MoveApps Apps can be developed in your usual compiler/editor (e.g. RStudio). The App R code has to be saved in one file either named `RFunction.R` or `ShinyModule.R`. This file is the entrypoint for your App logic.  We provide instructions on [writing `R Function` App code](copilot-r-sdk.md) and on [writing `Shiny Module` App code](copilot-shiny-sdk.md), including information on input files, parameters and the possibility to source additional R scripts.
 
 <kbd>![](files/Appdevel_rstudio.png ':size=650x')</kbd>
 
