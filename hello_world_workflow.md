@@ -10,7 +10,7 @@ From the main menu in your `Dashboard`, select `Workflows` and then `Create New 
 
 After providing a name for the Workflow, you will be asked to `Select A Data Source`. Choose `Movebank Location` and provide your [Movebank](https://www.movebank.org) login details.
 
-<kbd>![](files/HelloWorld_selectDataSource.png ':size=700x')</kbd>
+<kbd>![](files/HelloWorld_selectDataSource.png ':size=500x')</kbd>
 
 In a succession of settings windows you can select a study from which you have access to download data, individual animals, and an option to set a time window of required data.
 For this example let us select the public study `Migration timing in white-fronted geese (data from Kölzsch et al. 2016)`, note that you can search for studies. 
