@@ -69,11 +69,7 @@
   - [Publish/Archive with DOI of Workflows](publish_workflow.md)
   - [Selecting your License](license.md)
 
-- Discussions
-  - [What is next?](whatsnext.md)
-  - [Join us!](reachout.md)
-  - [Support and report errors](support.md)
-
 - Resources
   - [Data](resources_data.md)
   - [Movement Analysis](resources_movementanalysis.md)
+  - [MoveApps related Publications](moveapps_publication.md)
