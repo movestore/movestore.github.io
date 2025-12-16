@@ -10,29 +10,29 @@ To share one of your Workflows, you need to select `Share` in the Workflow menu 
 <kbd>![](files/Workflow_menu.png ':size=200x')</kbd>
 
 
-In the Share Workflow dialog you then have fill in several details.  
+In the 'Share Workflow' dialog you then have to fill in several details.  
 
-First, add a description to the Workflow.
+<First>, add a description to the Workflow.
 
-Second, define with whom you want to share your Workflow. You can select to `Share with all users on MoveApps` (*Public share with all users*) and/or select one or more specific MoveApps users by searching for their nicknames (*Direct share with users*), that you should personally ask of the person(s) beforehand (users can find their nickname in their user `Profile`). Only users that have agreed that their nicknames can be used for this option during the registration process can be found here. It is possible to update this setting in the user `Profile`. When specific users are invited to receive a shared Workflow, they will receive an e-mail about the invitation.
+<Second>, define with whom you want to share your Workflow. You can select to `Share with all users on MoveApps` (*Public share with all users*) and/or select one or more specific MoveApps users by searching for their nicknames (*Direct share with users*), that you should personally ask for of the person(s) beforehand (users can find their nickname in their user `Profile`). Only users that have agreed that their nicknames can be used for this option during the registration process can be found here. It is possible to update this setting in the user `Profile`. When specific users are invited to receive a shared Workflow, they will receive an e-mail about the invitation.
 When sharing with one or more specific MoveApps users remember to add a message that accompanies your invitation to point out why you are sharing it.
 
 <kbd>![](files/allow_profile_discov.png ':size=800x')<kbd/>
 
-Third, you can select which of the Workflow Instances you want to share. The selection of at least one of them is mandatory.
+<Third>, you can select which of the Workflow Instances you want to share. The selection of at least one of them is mandatory.
 
-Fourth, the Datasource Message is by default filled in with the settings of the data source selection App of all selected Workflow instances. This allows the new user to download the same data from e.g. Movebank as the original user, but with their own private account. The data message appears during the configuration of the Data Source App once the Workflow has been loaded/accepted (see below), so that the user can easily adapt it. Note that the data source details can be edited, replaced or deleted before sharing.
+<Fourth>, the Datasource Message is by default filled in with the settings of the data source selection App of all selected Workflow instances. This allows the new user to download the same data from e.g. Movebank as the original user, but with their own private account. The data message appears during the configuration of the Data Source App once the Workflow has been loaded/accepted (see below), so that the user can easily adapt it. Note that the data source details can be edited, replaced or deleted before sharing.
 
-Finally, it is possible to add a url to a Workflow (`Add Reference`), which can, for example, point towards a description of the Workflow, a paper that is using it or a more thorough methods description.
+<Finally>, it is possible to add a url to a Workflow (`Add Reference`), which can, for example, point towards a description of the Workflow, a paper that is using it or a more thorough methods description.
 
 Once finished, please press `Save & Share Workflow`. You will receive an email containing the information of the shared Workflow, this way you can keep track which Workflows you have shared with which user.
 
-<kbd>![](files/Share_WF_1_25.png ':size=1200x')
-![](files/Share_WF_2_25.png ':size=1200x')</kbd>
-
 !\> Note that as the original owner of a public Workflow, you can edit the title and description of the Workflow and all shared Workflow Instances, the shared message and Workflow references/urls at any time under `Details` in the public Workflow table (use the `Edit` button at the top). Note that the shared Workflow itself cannot be changed after sharing it, and that changes to the Workflow in the owner's private Workflow overview will not be incorporated in the shared Workflow.
 
-!\> When publicly sharing a Workflow that is based on data that is not publicly available, please add an additional Workflow Instance that runs with publicly available data. This will enable other users to make optimal use of your public Workflow.
+!\> When publicly sharing a Workflow that is based on data that is not publicly available, please add an additional Workflow Instance that runs with publicly available data. This will enable other users to make optimal use of your public Workflow. In the 'Movebank Location' and Movebank Non-Location' Apps you can filter with "only open access" for studies that are publicly available. If you have troubles finding a suitable study, please contact us.
+
+<kbd>![](files/Share_WF_1_25.png ':size=1200x')
+![](files/Share_WF_2_25.png ':size=1200x')</kbd>
 
 
 ## How to accept a shared Workflow
@@ -44,7 +44,7 @@ If a Workflow has been shared with you by another MoveApps user it will appear i
 
 ## How to find and add public Workflows
 
-All available public Workflows are listed under "Public Workflows" in the Workflow overview. They are sorted by category and can be searched for by the Workflow title and description. They can be filtered by category and by the nickname of the user that shared the Workflow. By clicking on the WOrkflow name you are directed to the details overview (title, description, included Apps, shared by and publish date ) and press `Add` if you want to add it to your list of Workflows. This will create a local copy of the Workflow that you can independently edit. The added public Workflow will initially be stored in the Category `Imported Public Shared Workflows`, which can be adapted afterwards. All public Workflow details pages have stable links that can be used for communication.
+All available public Workflows are listed under "Public Workflows" in the Workflow overview. They are sorted by category and can be searched for by the Workflow title and description. They can be filtered by category and by the nickname of the user that shared the Workflow. By clicking on the Workflow name you are directed to the details overview (title, description, included Apps, shared by and publish date ) and press `Add` if you want to add it to your list of Workflows. This will create a local copy of the Workflow that you can independently edit. The added public Workflow will initially be stored in the Category `Imported Public Shared Workflows`, which can be adapted afterwards. All public Workflow details pages have stable links that can be used for communication.
 
 <kbd>![](files/PWF_overview_25.png ':size=1000x')</kbd>
 

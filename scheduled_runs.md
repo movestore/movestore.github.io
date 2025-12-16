@@ -34,4 +34,6 @@ The emails received for the successful runs have two options: (1) the email cont
 <kbd><img src="files/schedule_email.png" width="550"></kbd>
 
 
-Note that there is an App that has been developed to modify the E-mail message of the scheduled runs based on results from the Workflow: the ["Email Alert"](https://www.moveapps.org/apps/browser/362b42c7-d7a2-4fa6-8d08-b3ddae002f9e) App. It creates a text file called `email_alert_text.txt` that will be automatically added to the text of the E-mail message. It allows, e.g. an alert message to be sent if a certain condition is fulfilled in the analysed data set.
+### Recieving alert emails
+
+The ["Email Alert"](https://www.moveapps.org/apps/browser/89ed5ab9-67fd-441e-8ec6-9d5b690a443f) App can be added to a scheduled Workflow to alert the user when a user defined condition has been met. When the defined condition has been met, the user will receive an email with tables and a interactive map of the data complying with the condition.
