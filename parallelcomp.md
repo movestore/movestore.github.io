@@ -6,4 +6,4 @@ It is possible to programm Apps in a way as to enable parallel computing of suit
 For R Apps we suggest usage of the package "future" with the option 'cluster': `future::plan("cluster")`. Note that the option 'multisession' does not work in Docker containers ([see more](https://github.com/dmpstats/moveapps-check-parallel/issues/2)), and therefore is not an option for MoveApps Apps. For more details of how to go for parallel computing in R Apps, look at this testing App of Bruno Caneco, a most helpful collaborator: https://github.com/dmpstats/moveapps-check-parallel.
 
 #### Parallel computing in Python Apps
-*Upcoming*
+For Python Apps we suggest usage of the library "multiprocessing". For more details of how to go for parallel computing in Python Apps, look at this testing App: https://github.com/IrisDB/Test-Parallel-Python.
