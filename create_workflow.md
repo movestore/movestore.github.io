@@ -57,14 +57,14 @@ Take a look at the error message by clicking on `Error details`. The error messa
 
 <kbd>![](files/error2.png ':size=600x')</kbd>
 
-In some cases, the `Error details` do not provide helpful information. In these cases, the `app logs` may contain more information about the error. The App Logs can be accessed by clicking on `app logs` in the window with error details, or through the App Menu (see [Menu, Settings and Logs](#menu--settings-and-logs)).
+In some cases, the `Error details` do not provide helpful information. In these cases, the `app logs` may contain more information about the error. The App Logs can be accessed by clicking on `app logs` in the window with error details, or through the App Menu (see [Menu, Settings and Logs](#menu-settings-and-logs)).
 
 <kbd>![](files/error1.png ':size=700x')</kbd>
 
 In the App documentation (click on the book icon in the App container), there often is a section covering the most common errors. Your error may be covered here together with a potential solution.
 
 #### Revise App settings
-In some cases, the error details or App logs indicate a problem with the App settings. In these cases, and also generally when encountering an error, we recommend to revise the App settings. App settings can be accessed through the App Menu (see [Menu, Settings and Logs](#menu--settings-and-logs)), or for Shiny Apps through the User Interface.
+In some cases, the error details or App logs indicate a problem with the App settings. In these cases, and also generally when encountering an error, we recommend to revise the App settings. App settings can be accessed through the App Menu (see [Menu, Settings and Logs](#menu-settings-and-logs)), or for Shiny Apps through the User Interface.
 
 #### Getting help to solve errors and bugs
 ###### GitHub issue
