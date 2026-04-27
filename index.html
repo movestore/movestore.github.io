@@ -48,9 +48,7 @@
 
 <body>
 <div id="app"></div>
-<!-- enables anchor links (kudos: https://github.com/docsifyjs/docsify/issues/351#issuecomment-528318227) -->
-<!-- load before docsify configuration in order to pass params to this plugin -->
-<script src="//cdn.jsdelivr.net/gh/rizdaprasetya/docsify-fix-pageload-scroll@master/index.js"></script>
+<script src="assets/js/anchor-scroll.js"></script>
 <script>
     window.$docsify = {
         name: 'MoveApps',
@@ -86,7 +84,7 @@
             namespace: 'moveapps',
         },
         plugins: [
-            DocsifyPageloadScrollPlugin.create({isDebug: false, scrollDelay: 500})
+            AnchorScrollPlugin.create({ isDebug: false })
         ]
     };
 </script>
