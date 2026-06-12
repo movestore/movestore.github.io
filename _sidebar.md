@@ -70,6 +70,7 @@
   - [Selecting your License](license.md)
 
 - Resources
+  - [Glossary](glossary.md)
   - [Data](resources_data.md)
   - [Movement Analysis](resources_movementanalysis.md)
   - [MoveApps related Publications](moveapps_publication.md)
