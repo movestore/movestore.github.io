@@ -1,0 +1,14 @@
+- Apps
+  - [Review Apps](admin_manual/review_apps.md)
+  - [Existing Apps](admin_manual/existing_apps.md)
+  - [Build `move` Apps](admin_manual/move1-move2-baseImages.md)
+- OI types
+  - [New IO types](admin_manual/new_IO.md)
+- App categories
+  - [Manage categories](admin_manual/app_categoriess.md)
+- Public Workflows
+  - [Workflow categories](admin_manual/public_workflow_categories.md)
+  - [Manage Public Workflow](admin_manual/public_workflow.md)
+- Users
+  - [Manage users](admin_manual/users.md)  
+

@@ -1,0 +1,1 @@
+Manual for Admins, accessible from the Admin sidebar in MoveApps
