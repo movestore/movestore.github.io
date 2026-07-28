@@ -15,5 +15,6 @@ If the App developer can/wants to provide either fixed or fallback auxiliary fil
 ```
 
 For more detailed explanations, examples and local testing instructions please see the section [Auxiliary Files](auxiliary.md).
+
 To enable users to upload their own files see [`USER_FILE`](appspec/current/settings/user_file.md)
 
