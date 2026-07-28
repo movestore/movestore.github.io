@@ -41,6 +41,7 @@
         - [Dropdown](/appspec/current/settings/dropdown.md)
         - [Passwords](appspec/current/settings/secret.md)
         - [User file](/appspec/current/settings/user_file.md)
+      - [Provided auxiliary files](/appspec/current/providedAppFiles_appspec.md)  
       - [Dependencies](/appspec/current/dependencies_appspec.md)
       - [License](/appspec/current/license_appspec.md)
       - [Language](/appspec/current/language_appspec.md)

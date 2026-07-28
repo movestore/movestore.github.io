@@ -1,30 +1,32 @@
 # Auxiliary Files for Analysis with Tracks in an App
 
-It is possible to design Apps that require auxiliary files, e.g. a map with environmental information, that are useful for analysis with the tracking data. The App needs the auxiliary files during its run time. Therefore, they have to be either provided permanently by the App developer or uploaded to MoveApps from a local system by the App user. This leads to three types of auxiliary files:
+It is possible to design Apps that require auxiliary files, e.g. a map with environmental information, that are useful for analysis with the tracking data. The App needs the auxiliary files during its run time. Therefore, they have to be either provided permanently by the App developer [`providedAppFiles`](appspec/current/settings/providedAppFiles_appspec.md) or uploaded to MoveApps from a local system by the App user [`USER_FILE`](appspec/current/settings/user_file.md). This leads to three types of auxiliary files:
 
- 1. **Fixed auxiliary file** that the App developer provides in the GitHub repository. This file will be used for all analyses independent of the input data sets. We advice these data to be of global coverage.
+ 1. [**Fixed auxiliary file**](#fixed-auxiliary-files) that the App developer provides in the GitHub repository. This file will be used for all analyses independent of the input data sets. We advice these data to be of global coverage. See more details, also for local testing below.
 
- 2. **Local upload auxiliary file** that is provided by the App user when the Workflow is created, i.e. during configuration of the App settings. It can be overwritten whenever necessary. If an auxiliary file is required by the App and the user has not uploaded one, the App cannot run correctly.
+ 2. [**Local upload auxiliary file**](#local-upload-auxiliary-files) that is provided by the App user when the Workflow is created, i.e. during configuration of the App settings. It can be overwritten whenever necessary. If an auxiliary file is required by the App and the user has not uploaded one, the App cannot run correctly. See more details, also for local testing below.
 
- 3. **Local upload auxiliary file with fixed fallback file** that is a combination of the above. The App developer provides a fallback file in the GitHub repository. This file will be used if the App user does not upload the required auxiliary file. However, if the App user does upload the required auxiliary file with correct extension from their local system, the fallback file is not used, but the uploaded one. This file can be overwritten whenever necessary.
+ 3. [**Local upload auxiliary file with fixed fallback file**](#local-upload-auxiliary-files-with-fixed-fallback-files) that is a combination of the above. The App developer provides a fallback file in the GitHub repository. This file will be used if the App user does not upload the required auxiliary file. However, if the App user does upload the required auxiliary file with correct extension from their local system, the fallback file is not used, but the uploaded one. This file can be overwritten whenever necessary. See more details, also for local testing below.
  
 Any combination of these three types of auxiliary files can be integrated into an App.
 
 The App developer has the responsibility to decide if an auxiliary file is necessary for their App and if it can be an advantage to allow the App user to upload such a file to the App. We advise developers to provide a fixed auxiliary file or sensible fallback auxiliary files, so that the App can still run if the App user does not or cannot provide any file during App configuration. For example, it might be possible to provide a global map of lower resolution as fallback, but allow local upload of regional, higher resolution maps for analysis with tracks of that region. If the auxiliary file is optional, the code should be tested thoroughly to ensure that the App runs successfully with and without this file.  
 
-In the past, the `LOCAL_FILE` setting required the App developer to define the exact name of the auxiliary file that the App users had to provide in line with the instructions, with the introduction of the `USER_FILE` setting this is not necessary any more. However, only one file can be uploaded per `USER_FILE` setting, you can add as many `USER_FILE` settings as need. If input data, e.g. a shapefile, contain several files, these will need to be added to the folder as a .zip file, and this file will then need to be unziped in the code.
+!> If your fixed or fallback file is larger than 100MB GitHub will not allow it to be uploaded to the repository. At the end of this page you can find the [instructions](#adding-large-fixed-or-fallback-files-to-an-app) to overcome this issue.
 
-!> Note that local testing of Apps with auxiliary files is possible with the SDK (Software Development Kit, provided in the templates) only if the folder for these files is called `provided-app-files`. This folder is located in `./data/auxiliary/user-files/provided-app-files/` in the R templates and in `./resources/auxiliary/user-files/provided-app-files/` in the Python template. In both cases, for the local testing to work, the "settingId" and the subfolder name (see examples below) will need to have an identical name.
+## 1. Fixed auxiliary files
 
-!> If your fixed or fallback file is larger than 100MB GitHub will not allow it to be uploaded to the repository. At the end of this page you can find the instructions to overcome this issue.
+Any auxiliary files that the App developer wants to provide as fixed files have to be saved in the GitHub repository within the folder `auxiliary/user-files/provided-app-files/`. The provision of these files has to be communicated in the [`appspec.json`](appspec.md) specification file via [`providedAppFiles`](appspec/current/settings/providedAppFiles_appspec.md). Please keep each file in (a) separate folder in the GitHub repository, the folder name is required as input for the `providedAppFiles` specification (`from`). The `settingId` has to be unique for each fixed file and will be used to refer to it in the code via the function `getAuxiliaryFilePath()` in `R` and `MoveAppsIo.get_auxiliary_file_path()` in `Python`. These functions will read in the content of the stated folder in the `appspecs.json`, therefore only one file should be included in each folder. If it is a multi-file data set like e.g. *Shapefiles*, these have to be zipped (see example in section 2). See examples below.
 
-## Fixed auxiliary files
-
-Any auxiliary files that the App developer wants to provide as fixed files have to be saved in the GitHub repository within the folder `auxiliary/user-files/provided-app-files/`. The provision of these files has to be communicated in the [`appspec.json`](appspec.md) specification file via [`providedAppFiles`](appspec/current/settings/user_file.md). Please keep the files in (a) separate folder(s) in the GitHub repository, the folder name is required as input for the `providedAppFiles` specification (`from`). The `settingId` has to be unique for each fixed file and will be used to refer to it in the code via the function `getAuxiliaryFilePath()` in `R` and `MoveAppsIo.get_auxiliary_file_path()` in `Python`. These functions will read in the content of the stated folder in the appspecs.json, therefore only one file should be included in each folder. See examples below.
+#### Local testing
+Local testing of Apps with fixed auxiliary files is possible with the SDK (Software Development Kit, provided in the templates) only if the folder for these files is called `provided-app-files`. Within this folder, create a folder in which each of the provided files is placed. This folder is located in `./data/auxiliary/user-files/provided-app-files/` in the R templates and in `./resources/auxiliary/user-files/provided-app-files/` in the Python template. In both cases, for the local testing to work, the "settingId" and the subfolder name (see examples below) will need to have an identical name.
 
 
 #### Example
 *All App templates also contain a working example of auxiliary files*
+
+Folder structure: within `auxiliary/user-files/provided-app-files/` there is a folder called `aux_A` which contains a `.csv` file, the name of the csv file is unrestricted. Within the `/provided-app-files/` folder there is also a folder called `aux_B` which contains another file to be read in.
+
 
 ###### R Apps
 
@@ -79,14 +81,20 @@ with open(auxiliary_file_b) as f:
 
 ```
 
-## Local upload auxiliary files
+## 2. Local upload auxiliary files
 
-Apps that allow/require the App user to upload an auxiliary file during App settings configuration need to specify the [`USER_FILE`](appspec/current/settings/user_file.md) setting in the `appspec.json`. If multiple files can be uploaded each of them will require a separate `USER_FILE` setting with a different `id`. In the case of shapefiles we recommend to give the instructions to the user to zip all files and upload them as a zipped file.
+Apps that allow/require the App user to upload an auxiliary file during App settings configuration need to have specified the [`USER_FILE`](appspec/current/settings/user_file.md) setting in the `appspec.json`. If multiple files can be uploaded each of them will require a separate `USER_FILE` setting with a different `id`. In the case of *shapefiles* we recommend to give the instructions to the user to zip all files and upload them as a zipped file.
 
 The `id` in the `USER_FILE` setting in the `appspec.json` has to be unique for each upload file option, and will be used to refer to it in the code via the function `getAuxiliaryFilePath()` in `R` and `MoveAppsIo.get_auxiliary_file_path()` in `Python`. These functions will read in the uploaded file. Ensure that the `rFunction` contains `...` at the end of the list of arguments, as this will enable reading in the uploaded files(s) (e.g. `rFunction <- function(data, ...)`. See examples below.
 
+#### Local testing
+
+For local testing, to simulate the upload of the file by the user, place the file in the folder `uploaded-app-files`. Within this folder, create a folder in which each of the provided files is placed. This folder is located in `./data/auxiliary/user-files/uploaded-app-files/` in the R templates and in `./resources/auxiliary/user-files/uploaded-app-files/` in the Python template. For the local testing to work, the  `id` of the `USER_FILE` setting needs to be identical to the folder name where the file is placed (see examples below).
+
 #### Example
 *All App templates also contain a working example of auxiliary files*
+
+Folder structure for local testing: within `auxiliary/user-files/uploaded-app-files/` there is a folder called `aux_A` which contains a `.zip` file, the name of the zip file is unrestricted. Within the `/uploaded-app-files/` folder there is also a folder called `aux_B` which contains a csv file to be read in. 
 
 ```
 *appspec.json*
@@ -141,15 +149,21 @@ import pandas as pd
 tableB = pd.read_csv(MoveAppsIo.get_auxiliary_file_path("aux_B"))
 ```
 
-## Local upload auxiliary files with fixed fallback files
+## 3. Local upload auxiliary files with fixed fallback files
 
 For Apps that allow/require the App user to upload an auxiliary file during App settings configuration it is advisable that the App developer provides a fallback file in case no file is/can be uploaded. This allows a correct run of the App at all times. We advice this type for all Apps with user file upload possibility. Fallback files should have global coverage, so they work for all tracks. A usual use case can be to provide a low resolution fallback file, but allow local upload of a higher resolution local file that overlaps with the analysed tracks and is provided by the App user. 
 
-To set up Apps with this functionality, the above two cases have to be combined (also see example below). The only addition is that in the [`appspecs.json`](appspec/current/settings/user_file.md) the `settingId` of the `providedAppFiles` specification has to match with the `id` of the `USER_FILE` setting. Here, again, multiple such files are possible. Also ensure that the `rFunction` contains `...` at the end of the list of arguments, as this will enable reading in the uploaded files(s) (e.g. `rFunction <- function(data, ...)`. See examples below.
+To set up Apps with this functionality, the above two cases (user uploaded file + fixed file) have to be combined (also see example below). The only addition is that in the the `settingId` of the [`providedAppFiles`](appspec/current/settings/providedAppFiles_appspec.md) specification has to match with the `id` of the [`USER_FILE`](appspec/current/settings/user_file.md) setting. Here, again, multiple such files are possible. Also ensure that the `rFunction` contains `...` at the end of the list of arguments, as this will enable reading in the uploaded files(s) (e.g. `rFunction <- function(data, ...)`. See examples below.
+
+#### Local testing
+For local testing see the examples of section 1 and 2, and ensure that the `id` of the `USER_FILE` setting (and corresponding folder names) are identical to their corresponding fixed fallback file `settingId` of the `providedAppFiles` (and corresponding folder names).
 
 
 #### Example
 *All App templates also contain a working example of auxiliary files*
+
+Folder structure for local testing: within `auxiliary/user-files/uploaded-app-files/` there is a folder called `aux_A` which contains a `.zip` file, the name of the zip file is unrestricted. Within the `/uploaded-app-files/` folder there is also a folder called `aux_B` which contains a csv file to be read in. 
+Folder structure for the fallback files: within `auxiliary/user-files/provided-app-files/` there is a folder called `aux_A` which contains the fallback `.zip` file, the name of the zip file is unrestricted. Within the `/provided-app-files/` folder there is also a folder called `aux_B` which contains the fallback of the csv file.
 
 ###### R Apps
 
@@ -249,6 +263,6 @@ tableB = pd.read_csv(MoveAppsIo.get_auxiliary_file_path("aux_B"))
 
 If your files are larger than 100MB [GitHub blocks them](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github). Please do not include these into your repository via SCM or GitLFS, but add the files to your release. To do this go to `Releases > Create a new release` in your GitHub repository and add your files as an `asset`. If you are adding multiple files, each of them has to be added separately.
 
-Add a `providedAppFiles` setting for each of the added files in the `appspecs.json`. For creating and testing the App, proceed as usual (see [Fixed auxiliary files](https://docs.moveapps.org/#/auxiliary?id=fixed-auxiliary-files), [Local upload auxiliary files with fixed fallback files](https://docs.moveapps.org/#/auxiliary?id=local-upload-auxiliary-files-with-fixed-fallback-files)), the only difference is that the large data are uploaded differently to the GitHub repository. To exclude these large files from being listed in the files to commit to GitHub, you can add `data/auxiliary/user-files/provided-app-files/**` to the file `.gitignore`.
+Add a [`providedAppFiles`](appspec/current/settings/providedAppFiles_appspec.md) for each of the added files in the `appspecs.json`. For creating and testing the App, proceed as usual (see [**Fixed auxiliary file**](#fixed-auxiliary-files), [**Local upload auxiliary file with fixed fallback file**](#local-upload-auxiliary-files-with-fixed-fallback-files)), the only difference is that the large data are uploaded differently to the GitHub repository. To exclude these large files from being listed in the files to commit to GitHub, you can add `data/auxiliary/user-files/provided-app-files/**` to the file `.gitignore`.
 
 After submitting your App on MoveApps, please inform us (support@moveapps.org) about the addition of the large file(s) to the release so we can perform the necessary adjustments while building your App. Please let us know which file (uploaded as an asset to the release) corresponds to which `providedAppFiles` setting (providing the `settingId` name should be sufficient), so we can copy the file in the correct folder. The addition of the large files only has to be done once, new versions of the App can be created without having to add the large files to each release. If these files should change, please inform us when submitting this new version, with the newly added files, so we can update the path to fetch these data.
