@@ -89,3 +89,13 @@ If the build runs into an error, open the logs:
 - if the error is that a library cannot be installed or has not been installed
   - check if the library is base, if yes exclude it from the docker
   - check if the library has system dependencies that need to be installed
+  - for Python apps, users wishing to depend on apps that are not on `conda-forge` must be installed by pip in `environment.yml`. If these exist on PyPI, they can be installed by name. If installing from GitHub, provide the HTTPS path to the library repository:
+
+```
+dependencies:
+  ...
+  - pip
+  - pip:
+    - my-python-library
+    - 'my-python-library @ git+https://github.com/user/my-python-library.git'
+```
