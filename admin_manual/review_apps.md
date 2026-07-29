@@ -55,7 +55,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && apt-get update && apt-get install -y --no-install-recommends \
         google-chrome-stable \
     && rm -rf /var/lib/apt/lists/*
-    USER $UID:$GID
+USER $UID:$GID
 
 ```
 
