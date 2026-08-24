@@ -5,7 +5,7 @@
 1. The Apps listed under `....` are ready for revision. Their status is described under `Version status`: `UNKOWN`, `BUILDING`, `DONE`, `ERROR`
 1. Select the App 
 1. Check code and adjust docker if needed (and save)
-1. If new [category](admin_manual/app_categoriess.md#When-new-category-is-handed-in-with-App-submission) or new [IO type](admin_manual/new_IO.md) was submitted go to respective sections. 
+1. If new [category](/admin_manual/app_categories.md#when-new-category-is-handed-in-with-app-submission) or new [IO type](/admin_manual/new_IO.md) was submitted go to respective sections. 
 1. Build App
 1. Release for trial if build was success
 1. If problems were found during review of the code, or the build gives an error we cannot fix: Reject App
@@ -60,7 +60,7 @@ USER $UID:$GID
 ```
 
 #### Adding large auxiliary files
-Large auxiliary files can be appended to a release. This needs to be specified in the docker. The developer needs to inform about the existence of these files, and which correspond to which stated provided file in the `appspecs.json`. More details [here](admin_manual/large-file.md).
+Large auxiliary files can be appended to a release. This needs to be specified in the docker. The developer needs to inform about the existence of these files, and which correspond to which stated provided file in the `appspecs.json`. More details [here](/admin_manual/large-file.md).
 
 Example:
 ```
