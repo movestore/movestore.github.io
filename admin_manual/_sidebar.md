@@ -1,14 +1,16 @@
+- [Admin Manual](/admin_manual/)
 - Apps
-  - [Review Apps](admin_manual/review_apps.md)
-  - [Existing Apps](admin_manual/existing_apps.md)
-  - [Build `move` Apps](admin_manual/move1-move2-baseImages.md)
-- OI types
-  - [New IO types](admin_manual/new_IO.md)
+  - [Review Apps](/admin_manual/review_apps.md)
+  - [Existing Apps](/admin_manual/existing_apps.md)
+  - [Build `move` Apps](/admin_manual/move1-move2-baseImages.md)
+  - [Large files in Apps](/admin_manual/large-file.md)
+- IO types
+  - [New IO types](/admin_manual/new_IO.md)
 - App categories
-  - [Manage categories](admin_manual/app_categoriess.md)
+  - [Manage categories](/admin_manual/app_categories.md)
 - Public Workflows
-  - [Workflow categories](admin_manual/public_workflow_categories.md)
-  - [Manage Public Workflow](admin_manual/public_workflow.md)
+  - [Workflow categories](/admin_manual/public_workflows_categories.md)
+  - [Manage Public Workflows](/admin_manual/public_workflows.md)
 - Users
-  - [Manage users](admin_manual/users.md)  
-
+  - [Manage users](/admin_manual/users.md)
+- [&larr; User Manual](/)

@@ -56,7 +56,9 @@
         basePath: '/',
         alias: {
             '/.*/_navbar.md': '/_navbar.md',
-            '/.*/_sidebar.md': '/_sidebar.md',
+            // every section shares the root sidebar - except admin_manual,
+            // which has its own (docsify's nested-sidebar default)
+            '/(?!admin_manual/).*/_sidebar.md': '/_sidebar.md',
             '/de-de/(.*)': '/$1',
         },
         loadSidebar: true,
