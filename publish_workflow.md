@@ -3,7 +3,7 @@
 To make your work reproducible, we offer the archival with DOI/publication of Workflows in combination with published papers and data sets.
 
 ## Archive with DOI
-If you plan a publication of your Workflow in a scientific paper or a manuscript on bioRxiv, there is the additional option of acquiring a DOI (Digital Object Identifier) for your Workflow. Thereby, your Workflow will become permanently reproducible. The provision of a DOI is arranged by the Communication, Information and Media Centre (KIM) of the University of Konstanz and requires the archival of the related data in the [Movebank Data Repository](https://www.datarepository.movebank.org/). Please contact [mdr.kim@uni-konstanz.de](mdr.kim@uni-konstanz.de).
+If you plan a publication of your Workflow in a scientific paper or a manuscript on bioRxiv, there is the additional option of acquiring a DOI (Digital Object Identifier) for your Workflow. Thereby, your Workflow will become permanently reproducible. The provision of a DOI is arranged by the Communication, Information and Media Centre (KIM) of the University of Konstanz and requires the archival of the related data in the [Movebank Data Repository](https://www.datarepository.movebank.org/). Please contact [mdr.kim@uni-konstanz.de](mailto:mdr.kim@uni-konstanz.de).
 
 ## How to archive your Workflow
 In order to have all the required information for the archival of a Workflow gathered, please complete the `Archive with DOI` dialog that you can access via the Workflow menu in the `Your Workflow` overview or in the menu in the Workflow instance next to the `Output` button.
