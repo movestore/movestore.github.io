@@ -2,7 +2,7 @@
 
 Within MoveApps, existing Apps can be combined into a Workflow, allowing you to define an ordered set of steps to access, process and analyse data. These Workflows can then be saved, edited and used for specific use cases. Before starting, we recommend to check out our **[video tutorials](video_tutorials.md)** and to follow along with the example Workflow [Hello world!](hello_world_workflow.md).
 
-Every Workflow starts with an App that loads data into the system (e.g. from [Movebank](https://www.movebank.org), the user's local system, Dropbox/Google Drive or an output from another MoveApps workflow). The data are then passed on to the next App and analysed by it accordingly. Every App requires data of a defined input type (mostly `move2::move2_loc`, but others are available and the numbers are growing) and can pass on output of a defined type. See [Translator Apps](translator.md) for instructions on how to connect Apps with different output and input types.
+Every Workflow starts with an App that loads data into the system (e.g. from [Movebank](https://www.movebank.org), the user's local system, Dropbox/Google Drive or an output from another MoveApps workflow). The data are then passed on to the next App and analysed by it accordingly. 
 
 Some Apps provide an interactive User Interface (R-Shiny). Many Apps produce output products or artifacts, which can be downloaded as files, in formats such as .pdf, .csv, .png, .html among others. App output data can also be downloaded as an object of the defined App output type in R format `app-output.rds` or Python format `app-output.pickle`. Any App artifacts or outputs are also available via our [API](API.md).
 
@@ -28,13 +28,13 @@ Note that recently, we have added the option to download non-location data from 
 
 ## Add Apps to a Workflow
 
-By clicking on the `+` to the right of an App container, you can browse, search and select the next App to add to your Workflow for filtering, analysis or visualisation of the downloaded data. You can only insert Apps within the Workflow if they are compatible with the required input and output (IO) types. The list of Apps to choose from will only include those that comply with the required IO types for the specific position in your Workflow. To see also incompatible Apps activate the `Include incompatible Apps` switch. Use the [Translator Apps](translator.md) to transform IO types enabling to connect Apps with different IO types.
+By clicking on the `+` to the right of an App container, you can browse, search and select the next App to add to your Workflow for filtering, analysis or visualisation of the downloaded data. You can only insert Apps within the Workflow if they are compatible with the required input and output (IO) types, translations between different IO types are automatically added. The list of Apps to choose from will only include those that comply with the required IO types for the specific position in your Workflow. To see also incompatible Apps activate the `Include incompatible Apps` switch, you can find more details in the section [Not all Apps can be connected](translator.md#not-all-apps-can-be-connected). 
 By clicking on the App name you are directed to the App Details that also contain links to the documentation, code and issues.
 
 <kbd>![](files/Workflow_addApp_tiles.png ':size=900x')</kbd>
 <kbd>![](files/Workflow_addApp_list.png ':size=900x')</kbd>
 
-!\> Note that [depredated Apps](app_deprecation.md) do not appear in this list by default. Deprecated Apps cannot be added to new Workflows any more, because the App developer has stopped maintenance.
+!\> Note that [depredated Apps](app_deprecation.md) do not appear in this list by default. Deprecated Apps **cannot** be added to new Workflows any more, because the App developer has stopped maintenance.
 
 ## Run the Workflow
 
