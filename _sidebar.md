@@ -4,7 +4,7 @@
   - Tutorials
     - [Hello world! A Workflow example](hello_world_workflow.md)
     - [How to create a Workflow](create_workflow.md)
-    - [Connect Apps of different types with Translators](translator.md)
+    - [Connect Apps of different types](translator.md)
 
   - Features
     - [Share Workflows](share_workflow.md)
