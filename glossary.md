@@ -56,7 +56,7 @@
 
 <a id="i-mp"></a>
 
-<a id="io-type"></a>**IO type**: Short for *input/output type*. Every App declares one input IO type and one output IO type, fixed to its runtime environment (R, R-Shiny, or Python). Apps can only be chained in a Workflow when the upstream output type matches the downstream input type. To connect Apps with different IO types, [Translator](#translator) Apps are often available.
+<a id="io-type"></a>**IO type**: Short for *input/output type*. Every App declares one input IO type and one output IO type, fixed to its runtime environment (R, R-Shiny, or Python). Apps can only be chained in a Workflow when the upstream output type matches the downstream input type. To connect Apps with different IO types, [Translator](#translator) Apps are often available and will be added automatically.
 
 <a id="n-mp"></a>
 
@@ -90,11 +90,11 @@
 
 <a id="t-mp"></a>
 
-<a id="translator"></a>**Translator**: A category of helper App that converts data from one [IO type](#io-type) to another, so that Apps with otherwise mismatched input and output types can still be combined in the same Workflow. Not all IO types can be translated into one another. In the near future this will happen automatically and the user will not have to worry about it.
+<a id="translator"></a>**Translator**: A category of helper App that converts data from one [IO type](#io-type) to another, so that Apps with otherwise mismatched input and output types can still be combined in the same Workflow. Not all IO types can be translated into one another. The addition of translator Apps when available happens automatically. The user does not have to do anything. Workflows build before the automatic addition of translators was available sill work. If the translator App is removed, it will be substituted by the automatic adition of the translator App icon.
 
 <a id="w-mp"></a>
 
-<a id="workflow"></a>**Workflow**: An ordered chain of [Apps](#app) configured to ingest, process, and analyse movement data. Every Workflow begins with a data source App (e.g. *Movebank Location*, *Upload File from Local System*), and every subsequent App must accept the upstream App's output [IO type](#io-type) — or be preceded by a [Translator](#translator).
+<a id="workflow"></a>**Workflow**: An ordered chain of [Apps](#app) configured to ingest, process, and analyse movement data. Every Workflow begins with a data source App (e.g. *Movebank Location*, *Upload File from Local System*), and every subsequent App must accept the upstream App's output [IO type](#io-type), sometimes by adding automatically a translator App.
 
 <a id="workflow-category"></a>**Workflow Category**: A user-defined grouping label for Workflows in the dashboard's *Your Workflows* overview. Imported Workflows that the user has not yet recategorised land under reserved labels: `Imported Public Shared Workflows` or `Imported Directly Shared Workflows`.
 

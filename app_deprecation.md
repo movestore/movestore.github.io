@@ -22,7 +22,7 @@ For quick recognition, deprecated Apps are marked with a yellow `Deprecated` lab
 
 ## Public Workflows with deprecated Apps
 
-Public Workflows that contain at least one deprecated App are marked as `deprecated` in the list. That does NOT mean that they are non-functional. They can still be copied/added to your Dashboard and executed. This is the only way that deprecated Apps can be used anew, which we must provide for reproducibility reasons. Most deprecated Apps will still be running as expected, but if they interact with outside ressources (e.g. Movebank), functionality cannot be guaranteed. Therefore, for new, independent analyses we recommend to replace the deprecated Apps in the Workflow. Note that such replacement might not be easily possible due to App compatibility problems if Input/Output types of Apps differ. Consider the usage of [Translator Apps](translator.md) or build a new Workflow from scratch.
+Public Workflows that contain at least one deprecated App are marked as `deprecated` in the list. That does NOT mean that they are non-functional. They can still be copied/added to your Dashboard and executed. This is the only way that deprecated Apps can be used anew, which we must provide for reproducibility reasons. Most deprecated Apps will still be running as expected, but if they interact with outside ressources (e.g. Movebank), functionality cannot be guaranteed. Therefore, for new, independent analyses we recommend to replace the deprecated Apps in the Workflow. Note that such replacement might not be easily possible due to App compatibility problems if Input/Output types of Apps differ. Consider building a new Workflow from scratch.
 
 <kbd>![](files/deprec_publicWFs2.png)</kbd>
 
